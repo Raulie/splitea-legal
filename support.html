@@ -14,24 +14,30 @@
             min-height: 100vh;
         }
         .header {
-            padding: 64px 24px 40px;
-            text-align: center;
+            padding: 20px 24px;
             border-bottom: 1px solid #e5e5e7;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         .logo {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 20px;
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
         }
         .header h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 6px;
+            font-size: 17px;
+            font-weight: 600;
         }
         .header p {
             font-size: 17px;
             color: #86868b;
+        }
+        .header-divider {
+            color: #d2d2d7;
+            font-weight: 300;
         }
         .content {
             max-width: 600px;
@@ -123,6 +129,7 @@
         <path d="M31.0849 116.105C57.2791 70.6708 96.5016 37.4614 141.309 18.4699L1.76218 260.514C-4.21754 212.159 4.8907 161.538 31.0849 116.105Z" fill="#1d1d1f"/>
     </svg>
     <h1>Splitea</h1>
+    <span class="header-divider">/</span>
     <p data-lang="en" class="active">Support</p>
     <p data-lang="es">Soporte</p>
     <p data-lang="de">Unterstützung</p>
