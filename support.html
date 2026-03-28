@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitea - Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: #f5f5f7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero {
+            background: linear-gradient(135deg, #d4a745 0%, #b8860b 100%);
+            width: 100%;
+            padding: 60px 24px 48px;
+            text-align: center;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+        }
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        .hero p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+        }
+        .content {
+            max-width: 560px;
+            width: 100%;
+            padding: 32px 24px 48px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        .card h2 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        .card p {
+            font-size: 15px;
+            color: #424245;
+            margin-bottom: 12px;
+        }
+        .card p:last-child { margin-bottom: 0; }
+        a { color: #d4a745; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .contact-link:last-child { border-bottom: none; }
+        .contact-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #f5f5f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .contact-label { font-size: 13px; color: #86868b; }
+        .contact-value { font-size: 15px; color: #1d1d1f; }
+        .faq-item { margin-bottom: 16px; }
+        .faq-item:last-child { margin-bottom: 0; }
+        .faq-item strong { display: block; font-size: 15px; margin-bottom: 4px; color: #1d1d1f; }
+        .faq-item p { font-size: 14px; color: #636366; margin: 0; }
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: #86868b;
+        }
+        .footer a { color: #86868b; font-weight: 400; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #000; color: #f5f5f7; }
+            .hero { background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%); }
+            .card { background: #1c1c1e; box-shadow: none; }
+            .card h2 { color: #f5f5f7; }
+            .card p { color: #a1a1a6; }
+            .contact-link { border-bottom-color: #2c2c2e; }
+            .contact-icon { background: #2c2c2e; }
+            .contact-value { color: #f5f5f7; }
+            .faq-item strong { color: #f5f5f7; }
+            .faq-item p { color: #8e8e93; }
+        }
+        [data-lang] { display: none; }
+        [data-lang].active { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M283.862 238.563C394.874 302.746 432.953 444.821 368.915 555.895C304.877 666.969 162.97 704.982 51.9581 640.799C51.7784 640.695 51.5994 640.59 51.4201 640.486L283.322 238.253C283.502 238.356 283.682 238.459 283.862 238.563Z" fill="white"/>
+        <path d="M305.526 11.984C320.035 16.8555 334.276 23.2417 348.041 31.2006C348.221 31.3045 348.4 31.4094 348.58 31.5137L116.678 433.747C116.498 433.644 116.318 433.541 116.138 433.437C102.372 425.478 89.7289 416.32 78.2617 406.174L305.526 11.984Z" fill="white"/>
+        <path d="M204.565 1.64437C222.213 -0.466666 240.159 -0.561847 258.041 1.4558L45.4142 370.256C34.7286 355.757 25.8379 340.146 18.8394 323.785L204.565 1.64437Z" fill="white"/>
+        <path d="M31.0849 116.105C57.2791 70.6708 96.5016 37.4614 141.309 18.4699L1.76218 260.514C-4.21754 212.159 4.8907 161.538 31.0849 116.105Z" fill="white"/>
+    </svg>
+    <h1>Splitea</h1>
+    <p data-lang="en" class="active">Support</p>
+    <p data-lang="es">Soporte</p>
+    <p data-lang="de">Unterstützung</p>
+    <p data-lang="fr">Assistance</p>
+    <p data-lang="it">Supporto</p>
+    <p data-lang="ja">サポート</p>
+    <p data-lang="ko">지원</p>
+    <p data-lang="pt">Suporte</p>
+    <p data-lang="zh">支持</p>
+</div>
+
+<div class="content">
+    <div data-lang="en" class="active">
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <strong>How does receipt scanning work?</strong>
+                <p>Point your camera at any receipt. Splitea uses AI to read the items and prices automatically — no manual entry needed.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Which payment apps are supported?</strong>
+                <p>Splitea supports popular payment apps available in your region, including Venmo, Cash App, PayPal, Revolut, and Google Pay.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Is my data stored on your servers?</strong>
+                <p>No. Receipt images are processed in real-time and never stored. Your data stays on your device and syncs via iCloud.</p>
+            </div>
+            <div class="faq-item">
+                <strong>How do I cancel my subscription?</strong>
+                <p>Go to Settings > Apple ID > Subscriptions on your device. You can cancel anytime before the next renewal period.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Can I request a refund?</strong>
+                <p>All purchases are processed by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> to request a refund.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="es">
+        <div class="card">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes una pregunta, encontraste un error o quieres sugerir una función? Nos encantaría saber de ti.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">Correo electrónico</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <strong>¿Cómo funciona el escaneo de recibos?</strong>
+                <p>Apunta tu cámara a cualquier recibo. Splitea usa IA para leer los artículos y precios automáticamente.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Qué aplicaciones de pago son compatibles?</strong>
+                <p>Splitea es compatible con las aplicaciones de pago populares disponibles en tu región.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Se almacenan mis datos en sus servidores?</strong>
+                <p>No. Las imágenes de recibos se procesan en tiempo real y nunca se almacenan. Tus datos permanecen en tu dispositivo y se sincronizan vía iCloud.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Cómo cancelo mi suscripción?</strong>
+                <p>Ve a Configuración > Apple ID > Suscripciones en tu dispositivo. Puedes cancelar en cualquier momento.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Puedo solicitar un reembolso?</strong>
+                <p>Todas las compras son procesadas por Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> para solicitar un reembolso.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="de">
+        <div class="card">
+            <h2>Kontakt</h2>
+            <p>Haben Sie eine Frage, einen Fehler gefunden oder möchten Sie eine Funktion vorschlagen? Wir freuen uns auf Ihre Nachricht.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">E-Mail</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Häufig gestellte Fragen</h2>
+            <div class="faq-item">
+                <strong>Wie funktioniert das Scannen von Belegen?</strong>
+                <p>Richten Sie Ihre Kamera auf einen Beleg. Splitea liest Artikel und Preise automatisch mithilfe von KI.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Werden meine Daten auf Ihren Servern gespeichert?</strong>
+                <p>Nein. Belegbilder werden in Echtzeit verarbeitet und nie gespeichert. Ihre Daten bleiben auf Ihrem Gerät und werden über iCloud synchronisiert.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Wie kündige ich mein Abonnement?</strong>
+                <p>Gehen Sie zu Einstellungen > Apple-ID > Abonnements auf Ihrem Gerät.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="fr">
+        <div class="card">
+            <h2>Contactez-nous</h2>
+            <p>Vous avez une question, trouvé un bug ou souhaitez suggérer une fonctionnalité ? Nous serions ravis de vous entendre.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">E-mail</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-item">
+                <strong>Comment fonctionne le scan des reçus ?</strong>
+                <p>Pointez votre caméra vers un reçu. Splitea lit les articles et prix automatiquement grâce à l'IA.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Mes données sont-elles stockées sur vos serveurs ?</strong>
+                <p>Non. Les images sont traitées en temps réel et jamais stockées. Vos données restent sur votre appareil et se synchronisent via iCloud.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Comment annuler mon abonnement ?</strong>
+                <p>Allez dans Réglages > Apple ID > Abonnements sur votre appareil.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="it">
+        <div class="card">
+            <h2>Contattaci</h2>
+            <p>Hai una domanda, hai trovato un bug o vuoi suggerire una funzionalità? Saremo felici di sentirti.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">E-mail</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Domande frequenti</h2>
+            <div class="faq-item">
+                <strong>Come funziona la scansione degli scontrini?</strong>
+                <p>Punta la fotocamera su uno scontrino. Splitea legge articoli e prezzi automaticamente grazie all'IA.</p>
+            </div>
+            <div class="faq-item">
+                <strong>I miei dati vengono conservati sui vostri server?</strong>
+                <p>No. Le immagini vengono elaborate in tempo reale e mai conservate. I dati restano sul tuo dispositivo e si sincronizzano via iCloud.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Come cancello il mio abbonamento?</strong>
+                <p>Vai in Impostazioni > Apple ID > Abbonamenti sul tuo dispositivo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="ja">
+        <div class="card">
+            <h2>お問い合わせ</h2>
+            <p>ご質問、バグの報告、機能のご提案がありましたらお気軽にご連絡ください。</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">メール</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>よくある質問</h2>
+            <div class="faq-item">
+                <strong>レシートスキャンはどのように機能しますか？</strong>
+                <p>レシートにカメラを向けるだけ。SpliteaがAIで商品と価格を自動的に読み取ります。</p>
+            </div>
+            <div class="faq-item">
+                <strong>データはサーバーに保存されますか？</strong>
+                <p>いいえ。画像はリアルタイムで処理され、保存されません。データはデバイスに残り、iCloudで同期されます。</p>
+            </div>
+            <div class="faq-item">
+                <strong>サブスクリプションを解約するには？</strong>
+                <p>設定 > Apple ID > サブスクリプションから解約できます。</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="ko">
+        <div class="card">
+            <h2>문의하기</h2>
+            <p>질문, 버그 신고 또는 기능 제안이 있으시면 연락해 주세요.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">이메일</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>자주 묻는 질문</h2>
+            <div class="faq-item">
+                <strong>영수증 스캔은 어떻게 작동하나요?</strong>
+                <p>영수증에 카메라를 향하세요. Splitea가 AI로 항목과 가격을 자동으로 읽어냅니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>데이터가 서버에 저장되나요?</strong>
+                <p>아니요. 이미지는 실시간으로 처리되며 저장되지 않습니다. 데이터는 기기에 남아 iCloud로 동기화됩니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>구독을 취소하려면?</strong>
+                <p>설정 > Apple ID > 구독에서 취소할 수 있습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="pt">
+        <div class="card">
+            <h2>Fale Conosco</h2>
+            <p>Tem uma pergunta, encontrou um bug ou quer sugerir uma funcionalidade? Adoraríamos ouvir de você.</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">E-mail</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-item">
+                <strong>Como funciona o escaneamento de recibos?</strong>
+                <p>Aponte sua câmera para qualquer recibo. Splitea usa IA para ler os itens e preços automaticamente.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Meus dados são armazenados nos seus servidores?</strong>
+                <p>Não. As imagens são processadas em tempo real e nunca armazenadas. Seus dados ficam no seu dispositivo e sincronizam via iCloud.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Como cancelo minha assinatura?</strong>
+                <p>Vá em Ajustes > Apple ID > Assinaturas no seu dispositivo.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-lang="zh">
+        <div class="card">
+            <h2>联系我们</h2>
+            <p>有问题、发现bug或想建议新功能？我们很乐意听到您的声音。</p>
+            <div class="contact-link">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <div class="contact-label">电子邮件</div>
+                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h2>常见问题</h2>
+            <div class="faq-item">
+                <strong>收据扫描如何工作？</strong>
+                <p>将相机对准任何收据。Splitea使用AI自动读取商品和价格。</p>
+            </div>
+            <div class="faq-item">
+                <strong>我的数据会存储在服务器上吗？</strong>
+                <p>不会。图片实时处理，从不存储。您的数据留在设备上，通过iCloud同步。</p>
+            </div>
+            <div class="faq-item">
+                <strong>如何取消订阅？</strong>
+                <p>前往设置 > Apple ID > 订阅进行取消。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+        <br>© 2026 Raúl Mora
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    let lang = params.get('lang') || navigator.language.slice(0, 2) || 'en';
+    const supported = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
+    const active = supported.includes(lang) ? lang : 'en';
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('active', el.dataset.lang === active);
+    });
+    document.documentElement.lang = active;
+</script>
+</body>
+</html>
