@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitea - Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1d1d1f; background: #fff; padding: 24px; max-width: 680px; margin: 0 auto; }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        h2 { font-size: 20px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
+        p, li { font-size: 15px; color: #424245; margin-bottom: 12px; }
+        ul { padding-left: 20px; }
+        .updated { font-size: 13px; color: #86868b; margin-bottom: 32px; }
+        a { color: #0066cc; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 28, 2026</p>
+
+    <p>Splitea ("we", "our", or "the app") is a bill-splitting app developed by Raul Mora. This Privacy Policy explains how we collect, use, and protect your information.</p>
+
+    <h2>Information We Collect</h2>
+
+    <p><strong>Camera and Photos.</strong> We access your camera to scan receipts and your photo library to select receipt images. Receipt images are sent to our server for processing and are not stored after parsing is complete.</p>
+
+    <p><strong>Contacts.</strong> We access your device contacts so you can select people to split bills with. Contact names, phone numbers, and photos are used locally for display purposes. Payment usernames (Venmo, PayPal, etc.) are stored in your device's contact records.</p>
+
+    <p><strong>Location.</strong> We request approximate location to determine local tax rates for accurate bill calculations. Location data is sent with receipt images for processing and is not stored.</p>
+
+    <p><strong>User Profile.</strong> Your name, phone number, avatar, and payment usernames are stored locally on your device using Apple's SwiftData framework and may sync across your devices via iCloud.</p>
+
+    <p><strong>Scan Usage.</strong> We track the number of receipt scans you perform using Apple's iCloud Key-Value Store to manage free tier limits. This data syncs across your devices via your Apple ID.</p>
+
+    <h2>How We Process Data</h2>
+
+    <p>When you scan a receipt, the image is sent to our server (hosted on Cloudflare Workers) which forwards it to a third-party AI service (currently Google Gemini) for text extraction and parsing. The image is processed in real-time and is not stored on our servers or by the AI service beyond the processing request.</p>
+
+    <h2>Third-Party Services</h2>
+    <ul>
+        <li><strong>Apple iCloud</strong> — syncs your profile, saved receipts, and scan usage across your devices.</li>
+        <li><strong>Cloudflare Workers</strong> — processes receipt images. Subject to <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
+        <li><strong>Google Gemini AI</strong> — parses receipt content. Subject to <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+        <li><strong>Firebase Remote Config</strong> — delivers app configuration. No personal data is collected. Subject to <a href="https://firebase.google.com/support/privacy">Firebase's Privacy Policy</a>.</li>
+        <li><strong>Apple StoreKit</strong> — handles subscriptions and purchases. Managed entirely by Apple.</li>
+    </ul>
+
+    <h2>Data We Do Not Collect</h2>
+    <ul>
+        <li>We do not collect analytics or usage tracking data.</li>
+        <li>We do not use advertising or ad tracking.</li>
+        <li>We do not sell, share, or rent your personal information to third parties.</li>
+        <li>We do not store receipt images on our servers.</li>
+    </ul>
+
+    <h2>Data Storage and Security</h2>
+    <p>Your data is stored locally on your device and synced via Apple's iCloud using end-to-end encryption managed by Apple. Communication between the app and our server is encrypted via HTTPS. Requests to our server are authenticated using Apple's App Attest to ensure only legitimate app instances can access the service.</p>
+
+    <h2>Data Retention and Deletion</h2>
+    <p>All user data is stored on your device and in your iCloud account. You can delete your data at any time by deleting saved receipts within the app or by deleting the app, which removes all local data. iCloud data can be managed through your device's Settings under iCloud Storage.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Splitea is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
+</body>
+</html>
