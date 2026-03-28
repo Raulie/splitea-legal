@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splitea - Terms of Service</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1d1d1f; background: #fff; padding: 24px; max-width: 680px; margin: 0 auto; }
-        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
-        h2 { font-size: 20px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
-        p, li { font-size: 15px; color: #424245; margin-bottom: 12px; }
-        ul { padding-left: 20px; }
-        .updated { font-size: 13px; color: #86868b; margin-bottom: 32px; }
-        a { color: #0066cc; text-decoration: none; }
-        [data-lang] { display: none; }
-        [data-lang].active { display: block; }
-        @media (prefers-color-scheme: dark) {
-            body { background: #1c1c1e; color: #f5f5f7; }
-            p, li { color: #a1a1a6; }
-            .updated { color: #636366; }
-            a { color: #5ac8fa; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div data-lang="en" class="active">
+<div class="header">
+    <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M283.862 238.563C394.874 302.746 432.953 444.821 368.915 555.895C304.877 666.969 162.97 704.982 51.9581 640.799C51.7784 640.695 51.5994 640.59 51.4201 640.486L283.322 238.253C283.502 238.356 283.682 238.459 283.862 238.563Z" fill="#1d1d1f"/>
+        <path d="M305.526 11.984C320.035 16.8555 334.276 23.2417 348.041 31.2006C348.221 31.3045 348.4 31.4094 348.58 31.5137L116.678 433.747C116.498 433.644 116.318 433.541 116.138 433.437C102.372 425.478 89.7289 416.32 78.2617 406.174L305.526 11.984Z" fill="#1d1d1f"/>
+        <path d="M204.565 1.64437C222.213 -0.466666 240.159 -0.561847 258.041 1.4558L45.4142 370.256C34.7286 355.757 25.8379 340.146 18.8394 323.785L204.565 1.64437Z" fill="#1d1d1f"/>
+        <path d="M31.0849 116.105C57.2791 70.6708 96.5016 37.4614 141.309 18.4699L1.76218 260.514C-4.21754 212.159 4.8907 161.538 31.0849 116.105Z" fill="#1d1d1f"/>
+    </svg>
+    <h1>Splitea</h1>
+    <span class="header-divider">/</span>
+    <p data-lang="en" class="active">Terms of Use</p>
+    <p data-lang="es">Términos</p>
+    <p data-lang="de">Nutzungsbedingungen</p>
+    <p data-lang="fr">Conditions</p>
+    <p data-lang="it">Termini</p>
+    <p data-lang="ja">利用規約</p>
+    <p data-lang="ko">이용약관</p>
+    <p data-lang="pt">Termos</p>
+    <p data-lang="zh">使用条款</p>
+</div>
+
+<div class="content">
+<div class="legal-content" data-lang="en" class="active">
     <h1>Terms of Service</h1>
     <p class="updated">Last updated: March 28, 2026</p>
     <p>By using Splitea ("the app"), you agree to these Terms of Service. If you do not agree, do not use the app.</p>
@@ -55,7 +59,7 @@
     <p>If you have questions, contact us at <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
 </div>
 
-<div data-lang="es">
+<div class="legal-content" data-lang="es">
     <h1>Términos de Servicio</h1>
     <p class="updated">Última actualización: 28 de marzo de 2026</p>
     <p>Al usar Splitea ("la aplicación"), aceptas estos Términos de Servicio. Si no estás de acuerdo, no uses la aplicación.</p>
@@ -85,7 +89,7 @@
     <p>Para preguntas, contáctanos en <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
 </div>
 
-<div data-lang="de">
+<div class="legal-content" data-lang="de">
     <h1>Nutzungsbedingungen</h1>
     <p class="updated">Zuletzt aktualisiert: 28. März 2026</p>
     <p>Durch die Nutzung von Splitea ("die App") stimmen Sie diesen Nutzungsbedingungen zu.</p>
@@ -114,7 +118,7 @@
     <p>Bei Fragen: <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
 </div>
 
-<div data-lang="fr">
+<div class="legal-content" data-lang="fr">
     <h1>Conditions d'Utilisation</h1>
     <p class="updated">Dernière mise à jour : 28 mars 2026</p>
     <p>En utilisant Splitea ("l'application"), vous acceptez ces Conditions d'Utilisation.</p>
@@ -143,7 +147,7 @@
     <p>Pour toute question : <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
 </div>
 
-<div data-lang="it">
+<div class="legal-content" data-lang="it">
     <h1>Termini di Servizio</h1>
     <p class="updated">Ultimo aggiornamento: 28 marzo 2026</p>
     <p>Utilizzando Splitea ("l'app"), accettate questi Termini di Servizio.</p>
@@ -172,7 +176,7 @@
     <p>Per domande: <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
 </div>
 
-<div data-lang="ja">
+<div class="legal-content" data-lang="ja">
     <h1>利用規約</h1>
     <p class="updated">最終更新日：2026年3月28日</p>
     <p>Splitea（「本アプリ」）を使用することにより、この利用規約に同意したものとみなされます。</p>
@@ -201,7 +205,7 @@
     <p>ご質問は<a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>まで。</p>
 </div>
 
-<div data-lang="ko">
+<div class="legal-content" data-lang="ko">
     <h1>이용약관</h1>
     <p class="updated">최종 업데이트: 2026년 3월 28일</p>
     <p>Splitea("본 앱")를 사용함으로써 이 이용약관에 동의하는 것으로 간주됩니다.</p>
@@ -230,7 +234,7 @@
     <p>질문이 있으시면 <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>으로 연락해 주세요.</p>
 </div>
 
-<div data-lang="pt">
+<div class="legal-content" data-lang="pt">
     <h1>Termos de Serviço</h1>
     <p class="updated">Última atualização: 28 de março de 2026</p>
     <p>Ao usar o Splitea ("o aplicativo"), você concorda com estes Termos de Serviço.</p>
@@ -259,7 +263,7 @@
     <p>Para perguntas: <a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>.</p>
 </div>
 
-<div data-lang="zh">
+<div class="legal-content" data-lang="zh">
     <h1>服务条款</h1>
     <p class="updated">最后更新：2026年3月28日</p>
     <p>使用Splitea（"本应用"）即表示您同意这些服务条款。</p>
@@ -287,11 +291,16 @@
     <h2>联系方式</h2>
     <p>如有疑问，请联系<a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a>。</p>
 </div>
+</div>
+
+<div class="footer">
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a>
+    <br>© 2026 Raúl Mora
+</div>
 
 <script>
     const params = new URLSearchParams(window.location.search);
     let lang = params.get('lang') || navigator.language.slice(0, 2) || 'en';
-    if (lang === 'pt') lang = 'pt';
     const supported = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
     const active = supported.includes(lang) ? lang : 'en';
     document.querySelectorAll('[data-lang]').forEach(el => {

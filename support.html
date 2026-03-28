@@ -4,120 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splitea - Support</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
-            color: #1d1d1f;
-            background: #fff;
-            min-height: 100vh;
-        }
-        .header {
-            padding: 20px 24px;
-            border-bottom: 1px solid #e5e5e7;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .logo {
-            width: 32px;
-            height: 32px;
-            flex-shrink: 0;
-        }
-        .header h1 {
-            font-size: 17px;
-            font-weight: 600;
-        }
-        .header p {
-            font-size: 17px;
-            color: #86868b;
-        }
-        .header-divider {
-            color: #d2d2d7;
-            font-weight: 300;
-        }
-        .content {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 24px 64px;
-        }
-        section { margin-bottom: 48px; }
-        section:last-of-type { margin-bottom: 0; }
-        h2 {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: #86868b;
-            margin-bottom: 20px;
-        }
-        .contact-row {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 16px 0;
-        }
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            background: #f5f5f7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-        .contact-label { font-size: 13px; color: #86868b; }
-        .contact-value { font-size: 16px; font-weight: 500; }
-        a { color: #1d1d1f; text-decoration: none; }
-        a:hover { color: #424245; }
-        .faq-item {
-            padding: 20px 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .faq-item:first-child { padding-top: 0; }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-item strong {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-        .faq-item p {
-            font-size: 15px;
-            color: #424245;
-            margin: 0;
-        }
-        .faq-item a { color: #424245; text-decoration: underline; text-underline-offset: 2px; }
-        .footer {
-            border-top: 1px solid #e5e5e7;
-            text-align: center;
-            padding: 24px;
-            font-size: 13px;
-            color: #86868b;
-        }
-        .footer a { color: #86868b; text-decoration: none; }
-        .footer a:hover { color: #424245; }
-        @media (prefers-color-scheme: dark) {
-            body { background: #000; color: #f5f5f7; }
-            .header { border-bottom-color: #1c1c1e; }
-            .contact-icon { background: #1c1c1e; }
-            a { color: #f5f5f7; }
-            a:hover { color: #a1a1a6; }
-            .faq-item { border-bottom-color: #1c1c1e; }
-            .faq-item p { color: #a1a1a6; }
-            .faq-item a { color: #a1a1a6; }
-            .contact-value { color: #f5f5f7; }
-            .footer { border-top-color: #1c1c1e; }
-            .logo path { fill: #f5f5f7; }
-        }
-        [data-lang] { display: none; }
-        [data-lang].active { display: block; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -144,17 +31,20 @@
 <div class="content">
     <div data-lang="en" class="active">
         <section>
-            <h2>Contact</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>Contact</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>Frequently Asked Questions</h2>
+            <h1>FAQ</h1>
             <div class="faq-item">
                 <strong>How does receipt scanning work?</strong>
                 <p>Point your camera at any receipt. Splitea uses AI to read the items and prices automatically — no manual entry needed.</p>
@@ -180,17 +70,20 @@
 
     <div data-lang="es">
         <section>
-            <h2>Contacto</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">Correo electrónico</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>Contacto</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">Correo electrónico</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>Preguntas Frecuentes</h2>
+            <h1>Preguntas Frecuentes</h1>
             <div class="faq-item">
                 <strong>¿Cómo funciona el escaneo de recibos?</strong>
                 <p>Apunta tu cámara a cualquier recibo. Splitea usa IA para leer los artículos y precios automáticamente.</p>
@@ -216,17 +109,20 @@
 
     <div data-lang="de">
         <section>
-            <h2>Kontakt</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">E-Mail</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>Kontakt</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">E-Mail</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>Häufig gestellte Fragen</h2>
+            <h1>Häufig gestellte Fragen</h1>
             <div class="faq-item">
                 <strong>Wie funktioniert das Scannen von Belegen?</strong>
                 <p>Richten Sie Ihre Kamera auf einen Beleg. Splitea liest Artikel und Preise automatisch mithilfe von KI.</p>
@@ -248,17 +144,20 @@
 
     <div data-lang="fr">
         <section>
-            <h2>Contact</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">E-mail</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>Contact</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">E-mail</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>Questions fréquentes</h2>
+            <h1>Questions fréquentes</h1>
             <div class="faq-item">
                 <strong>Comment fonctionne le scan des reçus ?</strong>
                 <p>Pointez votre caméra vers un reçu. Splitea lit les articles et prix automatiquement grâce à l'IA.</p>
@@ -280,17 +179,20 @@
 
     <div data-lang="it">
         <section>
-            <h2>Contatti</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">E-mail</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>Contatti</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">E-mail</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>Domande frequenti</h2>
+            <h1>Domande frequenti</h1>
             <div class="faq-item">
                 <strong>Come funziona la scansione degli scontrini?</strong>
                 <p>Punta la fotocamera su uno scontrino. Splitea legge articoli e prezzi automaticamente grazie all'IA.</p>
@@ -312,17 +214,20 @@
 
     <div data-lang="ja">
         <section>
-            <h2>お問い合わせ</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">メール</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>お問い合わせ</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">メール</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>よくある質問</h2>
+            <h1>よくある質問</h1>
             <div class="faq-item">
                 <strong>レシートスキャンはどのように機能しますか？</strong>
                 <p>レシートにカメラを向けるだけ。SpliteaがAIで商品と価格を自動的に読み取ります。</p>
@@ -344,17 +249,20 @@
 
     <div data-lang="ko">
         <section>
-            <h2>문의</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">이메일</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>문의</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">이메일</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>자주 묻는 질문</h2>
+            <h1>자주 묻는 질문</h1>
             <div class="faq-item">
                 <strong>영수증 스캔은 어떻게 작동하나요?</strong>
                 <p>영수증에 카메라를 향하세요. Splitea가 AI로 항목과 가격을 자동으로 읽어냅니다.</p>
@@ -376,17 +284,20 @@
 
     <div data-lang="pt">
         <section>
-            <h2>Contato</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">E-mail</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>Contato</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">E-mail</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>Perguntas Frequentes</h2>
+            <h1>Perguntas Frequentes</h1>
             <div class="faq-item">
                 <strong>Como funciona o escaneamento de recibos?</strong>
                 <p>Aponte sua câmera para qualquer recibo. Splitea usa IA para ler os itens e preços automaticamente.</p>
@@ -408,17 +319,20 @@
 
     <div data-lang="zh">
         <section>
-            <h2>联系方式</h2>
-            <div class="contact-row">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <div class="contact-label">电子邮件</div>
-                    <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
+            <h1>联系方式</h1>
+            <a href="mailto:raulmoracolon@gmail.com?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">电子邮件</div>
+                        <div class="contact-value">raulmoracolon@gmail.com</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
                 </div>
-            </div>
+            </a>
         </section>
         <section>
-            <h2>常见问题</h2>
+            <h1>常见问题</h1>
             <div class="faq-item">
                 <strong>收据扫描如何工作？</strong>
                 <p>将相机对准任何收据。Splitea使用AI自动读取商品和价格。</p>
@@ -440,7 +354,7 @@
 </div>
 
 <div class="footer">
-    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a>
     <br>© 2026 Raúl Mora
 </div>
 
