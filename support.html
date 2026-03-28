@@ -8,74 +8,56 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #1d1d1f;
-            background: #f5f5f7;
+            background: #fff;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
-        .hero {
-            background: linear-gradient(135deg, #d4a745 0%, #b8860b 100%);
-            width: 100%;
-            padding: 60px 24px 48px;
+        .header {
+            padding: 64px 24px 40px;
             text-align: center;
+            border-bottom: 1px solid #e5e5e7;
         }
         .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 16px;
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
         }
-        .hero h1 {
-            font-size: 28px;
+        .header h1 {
+            font-size: 32px;
             font-weight: 700;
-            color: #fff;
-            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
         }
-        .hero p {
-            font-size: 15px;
-            color: rgba(255,255,255,0.85);
+        .header p {
+            font-size: 17px;
+            color: #86868b;
         }
         .content {
-            max-width: 560px;
-            width: 100%;
-            padding: 32px 24px 48px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 24px 64px;
         }
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-        }
-        .card h2 {
-            font-size: 17px;
+        section { margin-bottom: 48px; }
+        section:last-of-type { margin-bottom: 0; }
+        h2 {
+            font-size: 13px;
             font-weight: 600;
-            margin-bottom: 12px;
-            color: #1d1d1f;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #86868b;
+            margin-bottom: 20px;
         }
-        .card p {
-            font-size: 15px;
-            color: #424245;
-            margin-bottom: 12px;
-        }
-        .card p:last-child { margin-bottom: 0; }
-        a { color: #d4a745; text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-        .contact-link {
+        .contact-row {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 14px 0;
-            border-bottom: 1px solid #f0f0f0;
+            gap: 14px;
+            padding: 16px 0;
         }
-        .contact-link:last-child { border-bottom: none; }
         .contact-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
             background: #f5f5f7;
             display: flex;
             align-items: center;
@@ -84,29 +66,48 @@
             flex-shrink: 0;
         }
         .contact-label { font-size: 13px; color: #86868b; }
-        .contact-value { font-size: 15px; color: #1d1d1f; }
-        .faq-item { margin-bottom: 16px; }
-        .faq-item:last-child { margin-bottom: 0; }
-        .faq-item strong { display: block; font-size: 15px; margin-bottom: 4px; color: #1d1d1f; }
-        .faq-item p { font-size: 14px; color: #636366; margin: 0; }
+        .contact-value { font-size: 16px; font-weight: 500; }
+        a { color: #1d1d1f; text-decoration: none; }
+        a:hover { color: #424245; }
+        .faq-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .faq-item:first-child { padding-top: 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .faq-item p {
+            font-size: 15px;
+            color: #424245;
+            margin: 0;
+        }
+        .faq-item a { color: #424245; text-decoration: underline; text-underline-offset: 2px; }
         .footer {
+            border-top: 1px solid #e5e5e7;
             text-align: center;
             padding: 24px;
             font-size: 13px;
             color: #86868b;
         }
-        .footer a { color: #86868b; font-weight: 400; }
+        .footer a { color: #86868b; text-decoration: none; }
+        .footer a:hover { color: #424245; }
         @media (prefers-color-scheme: dark) {
             body { background: #000; color: #f5f5f7; }
-            .hero { background: linear-gradient(135deg, #b8860b 0%, #8b6914 100%); }
-            .card { background: #1c1c1e; box-shadow: none; }
-            .card h2 { color: #f5f5f7; }
-            .card p { color: #a1a1a6; }
-            .contact-link { border-bottom-color: #2c2c2e; }
-            .contact-icon { background: #2c2c2e; }
+            .header { border-bottom-color: #1c1c1e; }
+            .contact-icon { background: #1c1c1e; }
+            a { color: #f5f5f7; }
+            a:hover { color: #a1a1a6; }
+            .faq-item { border-bottom-color: #1c1c1e; }
+            .faq-item p { color: #a1a1a6; }
+            .faq-item a { color: #a1a1a6; }
             .contact-value { color: #f5f5f7; }
-            .faq-item strong { color: #f5f5f7; }
-            .faq-item p { color: #8e8e93; }
+            .footer { border-top-color: #1c1c1e; }
+            .logo path { fill: #f5f5f7; }
         }
         [data-lang] { display: none; }
         [data-lang].active { display: block; }
@@ -114,12 +115,12 @@
 </head>
 <body>
 
-<div class="hero">
+<div class="header">
     <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M283.862 238.563C394.874 302.746 432.953 444.821 368.915 555.895C304.877 666.969 162.97 704.982 51.9581 640.799C51.7784 640.695 51.5994 640.59 51.4201 640.486L283.322 238.253C283.502 238.356 283.682 238.459 283.862 238.563Z" fill="white"/>
-        <path d="M305.526 11.984C320.035 16.8555 334.276 23.2417 348.041 31.2006C348.221 31.3045 348.4 31.4094 348.58 31.5137L116.678 433.747C116.498 433.644 116.318 433.541 116.138 433.437C102.372 425.478 89.7289 416.32 78.2617 406.174L305.526 11.984Z" fill="white"/>
-        <path d="M204.565 1.64437C222.213 -0.466666 240.159 -0.561847 258.041 1.4558L45.4142 370.256C34.7286 355.757 25.8379 340.146 18.8394 323.785L204.565 1.64437Z" fill="white"/>
-        <path d="M31.0849 116.105C57.2791 70.6708 96.5016 37.4614 141.309 18.4699L1.76218 260.514C-4.21754 212.159 4.8907 161.538 31.0849 116.105Z" fill="white"/>
+        <path d="M283.862 238.563C394.874 302.746 432.953 444.821 368.915 555.895C304.877 666.969 162.97 704.982 51.9581 640.799C51.7784 640.695 51.5994 640.59 51.4201 640.486L283.322 238.253C283.502 238.356 283.682 238.459 283.862 238.563Z" fill="#1d1d1f"/>
+        <path d="M305.526 11.984C320.035 16.8555 334.276 23.2417 348.041 31.2006C348.221 31.3045 348.4 31.4094 348.58 31.5137L116.678 433.747C116.498 433.644 116.318 433.541 116.138 433.437C102.372 425.478 89.7289 416.32 78.2617 406.174L305.526 11.984Z" fill="#1d1d1f"/>
+        <path d="M204.565 1.64437C222.213 -0.466666 240.159 -0.561847 258.041 1.4558L45.4142 370.256C34.7286 355.757 25.8379 340.146 18.8394 323.785L204.565 1.64437Z" fill="#1d1d1f"/>
+        <path d="M31.0849 116.105C57.2791 70.6708 96.5016 37.4614 141.309 18.4699L1.76218 260.514C-4.21754 212.159 4.8907 161.538 31.0849 116.105Z" fill="#1d1d1f"/>
     </svg>
     <h1>Splitea</h1>
     <p data-lang="en" class="active">Support</p>
@@ -135,19 +136,18 @@
 
 <div class="content">
     <div data-lang="en" class="active">
-        <div class="card">
-            <h2>Contact Us</h2>
-            <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
-            <div class="contact-link">
+        <section>
+            <h2>Contact</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">Email</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <h2>FAQ</h2>
+        </section>
+        <section>
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
                 <strong>How does receipt scanning work?</strong>
                 <p>Point your camera at any receipt. Splitea uses AI to read the items and prices automatically — no manual entry needed.</p>
@@ -162,28 +162,27 @@
             </div>
             <div class="faq-item">
                 <strong>How do I cancel my subscription?</strong>
-                <p>Go to Settings > Apple ID > Subscriptions on your device. You can cancel anytime before the next renewal period.</p>
+                <p>Go to Settings > Apple ID > Subscriptions on your device. You can cancel anytime before the next renewal.</p>
             </div>
             <div class="faq-item">
                 <strong>Can I request a refund?</strong>
                 <p>All purchases are processed by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> to request a refund.</p>
             </div>
-        </div>
+        </section>
     </div>
 
     <div data-lang="es">
-        <div class="card">
-            <h2>Contáctanos</h2>
-            <p>¿Tienes una pregunta, encontraste un error o quieres sugerir una función? Nos encantaría saber de ti.</p>
-            <div class="contact-link">
+        <section>
+            <h2>Contacto</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">Correo electrónico</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>Preguntas Frecuentes</h2>
             <div class="faq-item">
                 <strong>¿Cómo funciona el escaneo de recibos?</strong>
@@ -195,32 +194,31 @@
             </div>
             <div class="faq-item">
                 <strong>¿Se almacenan mis datos en sus servidores?</strong>
-                <p>No. Las imágenes de recibos se procesan en tiempo real y nunca se almacenan. Tus datos permanecen en tu dispositivo y se sincronizan vía iCloud.</p>
+                <p>No. Las imágenes se procesan en tiempo real y nunca se almacenan. Tus datos permanecen en tu dispositivo y se sincronizan vía iCloud.</p>
             </div>
             <div class="faq-item">
                 <strong>¿Cómo cancelo mi suscripción?</strong>
-                <p>Ve a Configuración > Apple ID > Suscripciones en tu dispositivo. Puedes cancelar en cualquier momento.</p>
+                <p>Ve a Configuración > Apple ID > Suscripciones en tu dispositivo.</p>
             </div>
             <div class="faq-item">
                 <strong>¿Puedo solicitar un reembolso?</strong>
-                <p>Todas las compras son procesadas por Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> para solicitar un reembolso.</p>
+                <p>Todas las compras son procesadas por Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
             </div>
-        </div>
+        </section>
     </div>
 
     <div data-lang="de">
-        <div class="card">
+        <section>
             <h2>Kontakt</h2>
-            <p>Haben Sie eine Frage, einen Fehler gefunden oder möchten Sie eine Funktion vorschlagen? Wir freuen uns auf Ihre Nachricht.</p>
-            <div class="contact-link">
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">E-Mail</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>Häufig gestellte Fragen</h2>
             <div class="faq-item">
                 <strong>Wie funktioniert das Scannen von Belegen?</strong>
@@ -228,28 +226,31 @@
             </div>
             <div class="faq-item">
                 <strong>Werden meine Daten auf Ihren Servern gespeichert?</strong>
-                <p>Nein. Belegbilder werden in Echtzeit verarbeitet und nie gespeichert. Ihre Daten bleiben auf Ihrem Gerät und werden über iCloud synchronisiert.</p>
+                <p>Nein. Bilder werden in Echtzeit verarbeitet und nie gespeichert. Ihre Daten bleiben auf Ihrem Gerät.</p>
             </div>
             <div class="faq-item">
                 <strong>Wie kündige ich mein Abonnement?</strong>
                 <p>Gehen Sie zu Einstellungen > Apple-ID > Abonnements auf Ihrem Gerät.</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>Kann ich eine Rückerstattung beantragen?</strong>
+                <p>Alle Käufe werden von Apple abgewickelt. Besuchen Sie <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+            </div>
+        </section>
     </div>
 
     <div data-lang="fr">
-        <div class="card">
-            <h2>Contactez-nous</h2>
-            <p>Vous avez une question, trouvé un bug ou souhaitez suggérer une fonctionnalité ? Nous serions ravis de vous entendre.</p>
-            <div class="contact-link">
+        <section>
+            <h2>Contact</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">E-mail</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>Questions fréquentes</h2>
             <div class="faq-item">
                 <strong>Comment fonctionne le scan des reçus ?</strong>
@@ -257,28 +258,31 @@
             </div>
             <div class="faq-item">
                 <strong>Mes données sont-elles stockées sur vos serveurs ?</strong>
-                <p>Non. Les images sont traitées en temps réel et jamais stockées. Vos données restent sur votre appareil et se synchronisent via iCloud.</p>
+                <p>Non. Les images sont traitées en temps réel et jamais stockées. Vos données restent sur votre appareil.</p>
             </div>
             <div class="faq-item">
                 <strong>Comment annuler mon abonnement ?</strong>
                 <p>Allez dans Réglages > Apple ID > Abonnements sur votre appareil.</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>Puis-je demander un remboursement ?</strong>
+                <p>Tous les achats sont traités par Apple. Visitez <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+            </div>
+        </section>
     </div>
 
     <div data-lang="it">
-        <div class="card">
-            <h2>Contattaci</h2>
-            <p>Hai una domanda, hai trovato un bug o vuoi suggerire una funzionalità? Saremo felici di sentirti.</p>
-            <div class="contact-link">
+        <section>
+            <h2>Contatti</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">E-mail</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>Domande frequenti</h2>
             <div class="faq-item">
                 <strong>Come funziona la scansione degli scontrini?</strong>
@@ -286,28 +290,31 @@
             </div>
             <div class="faq-item">
                 <strong>I miei dati vengono conservati sui vostri server?</strong>
-                <p>No. Le immagini vengono elaborate in tempo reale e mai conservate. I dati restano sul tuo dispositivo e si sincronizzano via iCloud.</p>
+                <p>No. Le immagini vengono elaborate in tempo reale e mai conservate. I dati restano sul tuo dispositivo.</p>
             </div>
             <div class="faq-item">
                 <strong>Come cancello il mio abbonamento?</strong>
                 <p>Vai in Impostazioni > Apple ID > Abbonamenti sul tuo dispositivo.</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>Posso richiedere un rimborso?</strong>
+                <p>Tutti gli acquisti sono gestiti da Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+            </div>
+        </section>
     </div>
 
     <div data-lang="ja">
-        <div class="card">
+        <section>
             <h2>お問い合わせ</h2>
-            <p>ご質問、バグの報告、機能のご提案がありましたらお気軽にご連絡ください。</p>
-            <div class="contact-link">
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">メール</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>よくある質問</h2>
             <div class="faq-item">
                 <strong>レシートスキャンはどのように機能しますか？</strong>
@@ -321,22 +328,25 @@
                 <strong>サブスクリプションを解約するには？</strong>
                 <p>設定 > Apple ID > サブスクリプションから解約できます。</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>返金をリクエストできますか？</strong>
+                <p>すべての購入はAppleが処理します。<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>から申請してください。</p>
+            </div>
+        </section>
     </div>
 
     <div data-lang="ko">
-        <div class="card">
-            <h2>문의하기</h2>
-            <p>질문, 버그 신고 또는 기능 제안이 있으시면 연락해 주세요.</p>
-            <div class="contact-link">
+        <section>
+            <h2>문의</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">이메일</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>자주 묻는 질문</h2>
             <div class="faq-item">
                 <strong>영수증 스캔은 어떻게 작동하나요?</strong>
@@ -350,22 +360,25 @@
                 <strong>구독을 취소하려면?</strong>
                 <p>설정 > Apple ID > 구독에서 취소할 수 있습니다.</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>환불을 요청할 수 있나요?</strong>
+                <p>모든 구매는 Apple에서 처리합니다. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>에서 요청하세요.</p>
+            </div>
+        </section>
     </div>
 
     <div data-lang="pt">
-        <div class="card">
-            <h2>Fale Conosco</h2>
-            <p>Tem uma pergunta, encontrou um bug ou quer sugerir uma funcionalidade? Adoraríamos ouvir de você.</p>
-            <div class="contact-link">
+        <section>
+            <h2>Contato</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">E-mail</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>Perguntas Frequentes</h2>
             <div class="faq-item">
                 <strong>Como funciona o escaneamento de recibos?</strong>
@@ -373,28 +386,31 @@
             </div>
             <div class="faq-item">
                 <strong>Meus dados são armazenados nos seus servidores?</strong>
-                <p>Não. As imagens são processadas em tempo real e nunca armazenadas. Seus dados ficam no seu dispositivo e sincronizam via iCloud.</p>
+                <p>Não. As imagens são processadas em tempo real e nunca armazenadas. Seus dados ficam no seu dispositivo.</p>
             </div>
             <div class="faq-item">
                 <strong>Como cancelo minha assinatura?</strong>
                 <p>Vá em Ajustes > Apple ID > Assinaturas no seu dispositivo.</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>Posso solicitar reembolso?</strong>
+                <p>Todas as compras são processadas pela Apple. Visite <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+            </div>
+        </section>
     </div>
 
     <div data-lang="zh">
-        <div class="card">
-            <h2>联系我们</h2>
-            <p>有问题、发现bug或想建议新功能？我们很乐意听到您的声音。</p>
-            <div class="contact-link">
+        <section>
+            <h2>联系方式</h2>
+            <div class="contact-row">
                 <div class="contact-icon">✉️</div>
                 <div>
                     <div class="contact-label">电子邮件</div>
                     <div class="contact-value"><a href="mailto:raulmoracolon@gmail.com">raulmoracolon@gmail.com</a></div>
                 </div>
             </div>
-        </div>
-        <div class="card">
+        </section>
+        <section>
             <h2>常见问题</h2>
             <div class="faq-item">
                 <strong>收据扫描如何工作？</strong>
@@ -408,13 +424,17 @@
                 <strong>如何取消订阅？</strong>
                 <p>前往设置 > Apple ID > 订阅进行取消。</p>
             </div>
-        </div>
+            <div class="faq-item">
+                <strong>可以申请退款吗？</strong>
+                <p>所有购买由Apple处理。请访问<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>。</p>
+            </div>
+        </section>
     </div>
+</div>
 
-    <div class="footer">
-        <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
-        <br>© 2026 Raúl Mora
-    </div>
+<div class="footer">
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+    <br>© 2026 Raúl Mora
 </div>
 
 <script>
