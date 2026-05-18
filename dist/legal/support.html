@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Splitea Support — contact us, report or block users, manage your account and subscription, and find answers to common questions.">
     <title>Splitea - Support</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="header">
-    <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M283.862 238.563C394.874 302.746 432.953 444.821 368.915 555.895C304.877 666.969 162.97 704.982 51.9581 640.799C51.7784 640.695 51.5994 640.59 51.4201 640.486L283.322 238.253C283.502 238.356 283.682 238.459 283.862 238.563Z" fill="#1d1d1f"/>
         <path d="M305.526 11.984C320.035 16.8555 334.276 23.2417 348.041 31.2006C348.221 31.3045 348.4 31.4094 348.58 31.5137L116.678 433.747C116.498 433.644 116.318 433.541 116.138 433.437C102.372 425.478 89.7289 416.32 78.2617 406.174L305.526 11.984Z" fill="#1d1d1f"/>
         <path d="M204.565 1.64437C222.213 -0.466666 240.159 -0.561847 258.041 1.4558L45.4142 370.256C34.7286 355.757 25.8379 340.146 18.8394 323.785L204.565 1.64437Z" fill="#1d1d1f"/>
@@ -26,11 +27,19 @@
     <p data-lang="ko">지원</p>
     <p data-lang="pt">Suporte</p>
     <p data-lang="zh">支持</p>
+    <p data-lang="zh-Hant">支援</p>
 </div>
 
 <div class="content">
     <div data-lang="en" class="active">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">Contact</a>
+            <a class="chip" href="#report">Report a user</a>
+            <a class="chip" href="#block">Block a user</a>
+            <a class="chip" href="#delete-account">Delete account</a>
+            <a class="chip" href="#refund">Refund</a>
+        </nav>
+        <section id="contact">
             <h1>Contact</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -42,54 +51,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">We reply within 24 hours.</p>
         </section>
-        <section>
-            <h1>Report a User</h1>
-            <p>If you encounter a Splitea profile with an inappropriate photo or display name (hate speech, harassment, sexually explicit imagery, impersonation, or any other violation of our <a href="terms">Terms of Service</a>), you can report it from inside the app:</p>
-            <ol>
-                <li>Open the contact in Splitea.</li>
-                <li>Tap the contact name to open the edit-contact sheet.</li>
-                <li>Scroll to the bottom and tap <strong>Report this user</strong>.</li>
-                <li>Confirm to submit the report.</li>
-            </ol>
-            <p>We review every report within 24 hours. If the content violates our Terms, we remove the offending photo or display name from our user directory and may suspend or terminate the responsible account. For urgent reports involving immediate safety concerns, email <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+        <section id="safety">
+            <h1>Safety</h1>
+            <div class="faq-item" id="report">
+                <strong>How do I report a user?</strong>
+                <p>If you encounter a Splitea profile with an inappropriate photo or display name (hate speech, harassment, sexually explicit imagery, impersonation, or any other violation of our <a href="terms">Terms of Service</a>), report it from inside the app: open the contact, tap their name to open the edit-contact sheet, scroll to the bottom, and tap <strong>Report this user</strong>. Confirm to submit.</p>
+                <p>We review every report within 24 hours. If the content violates our Terms, we remove the offending photo or display name from our user directory and may suspend or terminate the responsible account. For urgent reports involving immediate safety concerns, email <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>How do I block someone?</strong>
+                <p>Splitea delivers payment requests through your phone's Messages app. The strongest way to stop receiving requests from someone is to block them at the iOS system level: in <strong>Messages</strong>, open the conversation, tap the contact name at the top, and tap <strong>Block this Caller</strong>; or in <strong>Contacts</strong>, open the contact, scroll down, and tap <strong>Block this Caller</strong>. Once blocked, their messages, calls, and FaceTime requests no longer reach you, regardless of which app sent them. You can also delete the contact from your device to remove their profile data from Splitea entirely.</p>
+            </div>
         </section>
-        <section>
-            <h1>Block a User</h1>
-            <p>Splitea delivers payment requests through your phone's Messages app. To stop receiving requests from someone, block them at the iOS system level — once blocked, their messages, calls, and FaceTime requests no longer reach you, regardless of which app sent them:</p>
-            <ul>
-                <li><strong>In Messages</strong>: Open the conversation, tap the contact name at the top, then tap <strong>Block this Caller</strong>.</li>
-                <li><strong>In Contacts</strong>: Open the contact, scroll down, and tap <strong>Block this Caller</strong>.</li>
-            </ul>
-            <p>iOS-level blocking is the strongest option available because it stops the message before it ever reaches Splitea. You can also delete the contact from your device to remove their profile data from Splitea entirely.</p>
-        </section>
-        <section>
-            <h1>FAQ</h1>
+        <section id="account">
+            <h1>Account &amp; Privacy</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>How do I delete my account?</strong>
+                <p>Open Splitea, go to <strong>Settings → Account → Delete account</strong>, and confirm. Deletion removes your profile (name, avatar, payment handles) from our user directory immediately. Receipts and contacts stored locally on your device or in your iCloud remain under your control — to remove those as well, delete the app or clear the receipts from inside it before deleting your account.</p>
+            </div>
             <div class="faq-item">
-                <strong>How does receipt scanning work?</strong>
-                <p>Point your camera at any receipt. Splitea uses AI to read the items and prices automatically — no manual entry needed.</p>
+                <strong>What data does Splitea store?</strong>
+                <p>Your saved receipts, contacts, and splits live locally on your device and sync across your devices via your private iCloud container — none of that history is kept on our servers. Receipt <strong>images</strong> are sent to our server during scanning so the AI can extract items and prices, and are discarded immediately after parsing. Profile data (name, avatar, payment handles, hashed phone number) is the only data we keep server-side, in our user directory, so contacts who use Splitea can see your profile when splitting a bill with you.</p>
+            </div>
+            <div class="faq-item">
+                <strong>How does iCloud sync work?</strong>
+                <p>Splitea uses Apple's CloudKit to sync data across your devices using your Apple ID. We don't have access to your iCloud container. To pause syncing, turn off Splitea under <strong>Settings → [your name] → iCloud → Apps Using iCloud</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Why does Splitea ask for Contacts access?</strong>
+                <p>To let you select people to split a bill with by name. Contact data is read locally on your device — names, phone numbers, and photos never leave your phone. Phone numbers are hashed before being checked against our user directory so we can show which of your contacts have Splitea profiles.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Using Splitea</h1>
+            <div class="faq-item">
+                <strong>How do I split a bill?</strong>
+                <p>Tap the camera button on the home screen and scan a receipt. Splitea's AI extracts the items and prices automatically. Tap each item to assign it to a person, or use the long-press menu to assign multiple at once. When you're done, tap each person's row to see their total and copy a payment link.</p>
+            </div>
+            <div class="faq-item">
+                <strong>The scan got an item wrong. How do I fix it?</strong>
+                <p>Tap any item to edit its name or price inline. To add a missing item, tap the <strong>+</strong> at the bottom of the item list. To delete one, swipe left on the row.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Can I share a bill with someone who doesn't have Splitea?</strong>
+                <p>Yes. After splitting, tap the share button to send a link via Messages. Anyone who taps the link sees the split in their web browser — they don't need to install Splitea to view it or open the payment app.</p>
             </div>
             <div class="faq-item">
                 <strong>Which payment apps are supported?</strong>
-                <p>Splitea supports popular payment apps available in your region, including Venmo, Cash App, PayPal, Revolut, and Google Pay.</p>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay (UPI), Monzo, and ATH Móvil. The available list depends on the region you're in.</p>
             </div>
             <div class="faq-item">
-                <strong>Is my data stored on your servers?</strong>
-                <p>No. Receipt images are processed in real-time and never stored. Your data stays on your device and syncs via iCloud.</p>
-            </div>
-            <div class="faq-item">
-                <strong>How do I cancel my subscription?</strong>
-                <p>Go to Settings > Apple ID > Subscriptions on your device. You can cancel anytime before the next renewal.</p>
-            </div>
-            <div class="faq-item">
-                <strong>Can I request a refund?</strong>
-                <p>All purchases are processed by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> to request a refund.</p>
+                <strong>ATH Móvil doesn't open on Android.</strong>
+                <p>Android requires the ATH Móvil app to be installed. If the app isn't installed, the payment link redirects to the Google Play Store so you can install it and try again. On iOS, ATH Móvil should open automatically.</p>
             </div>
         </section>
+        <section id="billing">
+            <h1>Subscriptions</h1>
+            <div class="faq-item">
+                <strong>How do I cancel my subscription?</strong>
+                <p>Go to <strong>Settings → [your name] → Subscriptions</strong> on your device, tap Splitea Pro, and tap <strong>Cancel Subscription</strong>. You'll keep Pro access until the end of your current billing period.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>How do I request a refund?</strong>
+                <p>All purchases are processed by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, sign in with your Apple ID, find your Splitea purchase, and select a reason. Apple handles refunds directly — we don't have access to billing information.</p>
+            </div>
+            <div class="faq-item">
+                <strong>How do I restore my subscription on a new device?</strong>
+                <p>Sign in to your new device with the same Apple ID, open Splitea, and tap <strong>Restore Purchases</strong> on the paywall. Your Pro status syncs automatically.</p>
+            </div>
+            <div class="faq-item">
+                <strong>What's the difference between free and Pro?</strong>
+                <p>The free tier includes a limited number of receipt scans per month. Splitea Pro removes the scan limit and is available as a monthly or yearly auto-renewable subscription, or as a one-time lifetime purchase.</p>
+            </div>
+        </section>
+        <section id="troubleshooting">
+            <h1>Troubleshooting</h1>
+            <div class="faq-item">
+                <strong>The payment button opens the wrong app.</strong>
+                <p>This usually means another app has registered the same URL scheme on your device. Try uninstalling unfamiliar apps that handle payment links, or open the share link from a different device. Email <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a> with the payment app and your iOS version if it keeps happening.</p>
+            </div>
+            <div class="faq-item">
+                <strong>A contact I added isn't showing up.</strong>
+                <p>Make sure you've granted Contacts access (<strong>Settings → Splitea → Contacts</strong>). If access is granted and the contact still doesn't appear, try closing and reopening Splitea — contact sync runs on launch and after returning from background.</p>
+            </div>
+            <div class="faq-item">
+                <strong>I'm not receiving payment requests.</strong>
+                <p>Payment requests arrive as iMessages with a splitea.app link. If you've blocked the sender at the iOS level, the message never reaches you. Check <strong>Settings → Messages → Blocked Contacts</strong> to confirm. Also make sure iMessage is enabled and your phone number is verified.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>Still need help? Email <a href="mailto:support@splitea.app">support@splitea.app</a> — we reply within 24 hours.</p>
+        </div>
     </div>
 
     <div data-lang="es">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">Contacto</a>
+            <a class="chip" href="#report">Reportar un usuario</a>
+            <a class="chip" href="#block">Bloquear un usuario</a>
+            <a class="chip" href="#delete-account">Eliminar cuenta</a>
+            <a class="chip" href="#refund">Reembolso</a>
+        </nav>
+        <section id="contact">
             <h1>Contacto</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -101,54 +166,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">Respondemos en un plazo de 24 horas.</p>
         </section>
-        <section>
-            <h1>Reportar un usuario</h1>
-            <p>Si encuentras un perfil de Splitea con una foto o nombre inapropiado (discurso de odio, acoso, contenido sexualmente explícito, suplantación de identidad o cualquier otra infracción de nuestros <a href="terms">Términos de Servicio</a>), puedes reportarlo desde la aplicación:</p>
-            <ol>
-                <li>Abre el contacto en Splitea.</li>
-                <li>Toca el nombre del contacto para abrir la hoja de edición.</li>
-                <li>Desplázate hasta el final y toca <strong>Reportar este usuario</strong>.</li>
-                <li>Confirma para enviar el reporte.</li>
-            </ol>
-            <p>Revisamos cada reporte en un plazo de 24 horas. Si el contenido infringe nuestros Términos, eliminamos la foto o el nombre infractor de nuestro directorio de usuarios y podemos suspender o terminar la cuenta responsable. Para reportes urgentes que impliquen problemas de seguridad inmediata, escribe a <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+        <section id="safety">
+            <h1>Seguridad</h1>
+            <div class="faq-item" id="report">
+                <strong>¿Cómo reporto a un usuario?</strong>
+                <p>Si encuentras un perfil de Splitea con una foto o nombre inapropiado (discurso de odio, acoso, contenido sexualmente explícito, suplantación de identidad o cualquier otra infracción de nuestros <a href="terms">Términos de Servicio</a>), repórtalo desde la aplicación: abre el contacto, toca su nombre para abrir la hoja de edición de contacto, desplázate hasta el final y toca <strong>Reportar este usuario</strong>. Confirma para enviarlo.</p>
+                <p>Revisamos cada reporte en un plazo de 24 horas. Si el contenido infringe nuestros Términos, eliminamos la foto o el nombre infractor de nuestro directorio de usuarios y podemos suspender o terminar la cuenta responsable. Para reportes urgentes que impliquen problemas de seguridad inmediata, escribe a <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>¿Cómo bloqueo a alguien?</strong>
+                <p>Splitea envía las solicitudes de pago a través de la aplicación Mensajes de tu teléfono. La forma más fuerte de dejar de recibir solicitudes de alguien es bloquearle a nivel de sistema iOS: en <strong>Mensajes</strong>, abre la conversación, toca el nombre del contacto en la parte superior y toca <strong>Bloquear este contacto</strong>; o en <strong>Contactos</strong>, abre el contacto, desplázate hacia abajo y toca <strong>Bloquear este contacto</strong>. Una vez bloqueado, sus mensajes, llamadas y solicitudes de FaceTime ya no te llegarán, sin importar la aplicación que los envíe. También puedes eliminar el contacto de tu dispositivo para retirar por completo sus datos de perfil de Splitea.</p>
+            </div>
         </section>
-        <section>
-            <h1>Bloquear a un usuario</h1>
-            <p>Splitea envía las solicitudes de pago a través de la aplicación Mensajes de tu teléfono. Para dejar de recibir solicitudes de alguien, bloquéalo a nivel de sistema iOS: una vez bloqueado, sus mensajes, llamadas y solicitudes de FaceTime ya no te llegarán, sin importar la aplicación que los envíe:</p>
-            <ul>
-                <li><strong>En Mensajes</strong>: abre la conversación, toca el nombre del contacto en la parte superior y, a continuación, toca <strong>Bloquear este contacto</strong>.</li>
-                <li><strong>En Contactos</strong>: abre el contacto, desplázate hacia abajo y toca <strong>Bloquear este contacto</strong>.</li>
-            </ul>
-            <p>El bloqueo a nivel de iOS es la opción más fuerte disponible porque detiene el mensaje antes de que llegue a Splitea. También puedes eliminar el contacto de tu dispositivo para retirar por completo sus datos de perfil de Splitea.</p>
-        </section>
-        <section>
-            <h1>Preguntas Frecuentes</h1>
+        <section id="account">
+            <h1>Cuenta y Privacidad</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>¿Cómo elimino mi cuenta?</strong>
+                <p>Abre Splitea, ve a <strong>Ajustes → Cuenta → Eliminar cuenta</strong> y confirma. La eliminación retira tu perfil (nombre, avatar, identificadores de pago) de nuestro directorio de usuarios de inmediato. Los recibos y contactos almacenados localmente en tu dispositivo o en tu iCloud permanecen bajo tu control — para borrarlos también, elimina la aplicación o vacía los recibos desde dentro antes de eliminar tu cuenta.</p>
+            </div>
             <div class="faq-item">
-                <strong>¿Cómo funciona el escaneo de recibos?</strong>
-                <p>Apunta tu cámara a cualquier recibo. Splitea usa IA para leer los artículos y precios automáticamente.</p>
+                <strong>¿Qué datos almacena Splitea?</strong>
+                <p>Tus recibos, contactos y divisiones guardados residen localmente en tu dispositivo y se sincronizan entre tus dispositivos mediante tu contenedor privado de iCloud — nada de ese historial se mantiene en nuestros servidores. Las <strong>imágenes</strong> de recibos se envían a nuestro servidor durante el escaneo para que la IA pueda extraer artículos y precios, y se descartan inmediatamente después del análisis. Los datos de perfil (nombre, avatar, identificadores de pago, número de teléfono cifrado) son los únicos que mantenemos en el servidor, en nuestro directorio de usuarios, para que los contactos que usan Splitea puedan ver tu perfil cuando dividan una cuenta contigo.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Cómo funciona la sincronización con iCloud?</strong>
+                <p>Splitea usa CloudKit de Apple para sincronizar datos entre tus dispositivos con tu Apple ID. No tenemos acceso a tu contenedor de iCloud. Para pausar la sincronización, desactiva Splitea en <strong>Ajustes → [tu nombre] → iCloud → Apps que usan iCloud</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Por qué Splitea pide acceso a los Contactos?</strong>
+                <p>Para que puedas seleccionar a las personas con quienes dividir una cuenta por su nombre. Los datos de contacto se leen localmente en tu dispositivo — los nombres, números de teléfono y fotos nunca salen de tu teléfono. Los números de teléfono se cifran mediante hash antes de comprobarlos contra nuestro directorio de usuarios para mostrarte cuáles de tus contactos tienen perfil de Splitea.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Usar Splitea</h1>
+            <div class="faq-item">
+                <strong>¿Cómo divido una cuenta?</strong>
+                <p>Toca el botón de cámara en la pantalla de inicio y escanea un recibo. La IA de Splitea extrae los artículos y precios automáticamente. Toca cada artículo para asignarlo a una persona, o usa el menú de pulsación larga para asignar varios a la vez. Cuando termines, toca la fila de cada persona para ver su total y copiar un enlace de pago.</p>
+            </div>
+            <div class="faq-item">
+                <strong>El escaneo se equivocó en un artículo. ¿Cómo lo corrijo?</strong>
+                <p>Toca cualquier artículo para editar su nombre o precio en línea. Para agregar un artículo que falta, toca el <strong>+</strong> al final de la lista de artículos. Para eliminar uno, desliza la fila hacia la izquierda.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Puedo compartir una cuenta con alguien que no tenga Splitea?</strong>
+                <p>Sí. Después de dividir, toca el botón de compartir para enviar un enlace por Mensajes. Cualquiera que toque el enlace verá la división en su navegador web — no necesita instalar Splitea para verla ni para abrir la aplicación de pago.</p>
             </div>
             <div class="faq-item">
                 <strong>¿Qué aplicaciones de pago son compatibles?</strong>
-                <p>Splitea es compatible con las aplicaciones de pago populares disponibles en tu región.</p>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay (UPI), Monzo y ATH Móvil. La lista disponible depende de la región en la que te encuentres.</p>
             </div>
             <div class="faq-item">
-                <strong>¿Se almacenan mis datos en sus servidores?</strong>
-                <p>No. Las imágenes se procesan en tiempo real y nunca se almacenan. Tus datos permanecen en tu dispositivo y se sincronizan vía iCloud.</p>
-            </div>
-            <div class="faq-item">
-                <strong>¿Cómo cancelo mi suscripción?</strong>
-                <p>Ve a Configuración > Apple ID > Suscripciones en tu dispositivo.</p>
-            </div>
-            <div class="faq-item">
-                <strong>¿Puedo solicitar un reembolso?</strong>
-                <p>Todas las compras son procesadas por Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+                <strong>ATH Móvil no se abre en Android.</strong>
+                <p>Android requiere que la aplicación ATH Móvil esté instalada. Si no lo está, el enlace de pago redirige a Google Play Store para que puedas instalarla y volver a intentarlo. En iOS, ATH Móvil debería abrirse automáticamente.</p>
             </div>
         </section>
+        <section id="billing">
+            <h1>Suscripciones</h1>
+            <div class="faq-item">
+                <strong>¿Cómo cancelo mi suscripción?</strong>
+                <p>Ve a <strong>Ajustes → [tu nombre] → Suscripciones</strong> en tu dispositivo, toca Splitea Pro y toca <strong>Cancelar suscripción</strong>. Conservarás el acceso Pro hasta el final del período de facturación actual.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>¿Cómo solicito un reembolso?</strong>
+                <p>Todas las compras son procesadas por Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, inicia sesión con tu Apple ID, encuentra tu compra de Splitea y selecciona un motivo. Apple gestiona los reembolsos directamente — no tenemos acceso a la información de facturación.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Cómo restauro mi suscripción en un dispositivo nuevo?</strong>
+                <p>Inicia sesión en tu nuevo dispositivo con el mismo Apple ID, abre Splitea y toca <strong>Restaurar compras</strong> en la pantalla de suscripción. Tu estado Pro se sincroniza automáticamente.</p>
+            </div>
+            <div class="faq-item">
+                <strong>¿Cuál es la diferencia entre la versión gratuita y Pro?</strong>
+                <p>El nivel gratuito incluye un número limitado de escaneos de recibos al mes. Splitea Pro elimina el límite de escaneos y está disponible como suscripción mensual o anual con renovación automática, o como compra única de por vida.</p>
+            </div>
+        </section>
+        <section id="troubleshooting">
+            <h1>Solución de problemas</h1>
+            <div class="faq-item">
+                <strong>El botón de pago abre la aplicación incorrecta.</strong>
+                <p>Esto suele significar que otra aplicación ha registrado el mismo esquema de URL en tu dispositivo. Prueba a desinstalar aplicaciones desconocidas que gestionen enlaces de pago, o abre el enlace compartido desde otro dispositivo. Si sigue ocurriendo, escribe a <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a> indicando la aplicación de pago y tu versión de iOS.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Un contacto que añadí no aparece.</strong>
+                <p>Asegúrate de haber concedido acceso a Contactos (<strong>Ajustes → Splitea → Contactos</strong>). Si el acceso está concedido y el contacto sigue sin aparecer, cierra Splitea y vuelve a abrirla — la sincronización de contactos se ejecuta al iniciar y al volver desde segundo plano.</p>
+            </div>
+            <div class="faq-item">
+                <strong>No recibo solicitudes de pago.</strong>
+                <p>Las solicitudes de pago llegan como iMessages con un enlace splitea.app. Si has bloqueado al remitente a nivel de iOS, el mensaje no te llega. Comprueba <strong>Ajustes → Mensajes → Bloqueados</strong>. Asegúrate también de que iMessage esté activado y de que tu número de teléfono esté verificado.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>¿Aún necesitas ayuda? Escribe a <a href="mailto:support@splitea.app">support@splitea.app</a> — respondemos en un plazo de 24 horas.</p>
+        </div>
     </div>
 
     <div data-lang="de">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">Kontakt</a>
+            <a class="chip" href="#report">Nutzer melden</a>
+            <a class="chip" href="#block">Nutzer blockieren</a>
+            <a class="chip" href="#delete-account">Konto löschen</a>
+            <a class="chip" href="#refund">Rückerstattung</a>
+        </nav>
+        <section id="contact">
             <h1>Kontakt</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -160,50 +281,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">Wir antworten innerhalb von 24 Stunden.</p>
         </section>
-        <section>
-            <h1>Einen Nutzer melden</h1>
-            <p>Wenn Sie auf ein Splitea-Profil mit einem unangemessenen Foto oder Anzeigenamen stoßen (Hassrede, Belästigung, sexuell explizite Darstellungen, Identitätsfälschung oder ein anderer Verstoß gegen unsere <a href="terms">Nutzungsbedingungen</a>), können Sie es direkt aus der App heraus melden:</p>
-            <ol>
-                <li>Öffnen Sie den Kontakt in Splitea.</li>
-                <li>Tippen Sie auf den Namen des Kontakts, um das Kontakt-Bearbeitungsblatt zu öffnen.</li>
-                <li>Scrollen Sie nach unten und tippen Sie auf <strong>Nutzer melden</strong>.</li>
-                <li>Bestätigen Sie, um die Meldung abzusenden.</li>
-            </ol>
-            <p>Wir prüfen jede Meldung innerhalb von 24 Stunden. Wenn der Inhalt gegen unsere Nutzungsbedingungen verstößt, entfernen wir das beanstandete Foto bzw. den Anzeigenamen aus unserem Nutzerverzeichnis und können das verantwortliche Konto sperren oder beenden. Bei dringenden Meldungen mit unmittelbaren Sicherheitsbedenken schreiben Sie an <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+        <section id="safety">
+            <h1>Sicherheit</h1>
+            <div class="faq-item" id="report">
+                <strong>Wie melde ich einen Nutzer?</strong>
+                <p>Wenn Sie auf ein Splitea-Profil mit einem unangemessenen Foto oder Anzeigenamen stoßen (Hassrede, Belästigung, sexuell explizite Darstellungen, Identitätsfälschung oder ein anderer Verstoß gegen unsere <a href="terms">Nutzungsbedingungen</a>), melden Sie es aus der App heraus: Öffnen Sie den Kontakt, tippen Sie auf den Namen, um das Kontakt-Bearbeitungsblatt zu öffnen, scrollen Sie nach unten und tippen Sie auf <strong>Nutzer melden</strong>. Bestätigen Sie, um die Meldung abzusenden.</p>
+                <p>Wir prüfen jede Meldung innerhalb von 24 Stunden. Wenn der Inhalt gegen unsere Nutzungsbedingungen verstößt, entfernen wir das beanstandete Foto bzw. den Anzeigenamen aus unserem Nutzerverzeichnis und können das verantwortliche Konto sperren oder beenden. Bei dringenden Meldungen mit unmittelbaren Sicherheitsbedenken schreiben Sie an <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>Wie blockiere ich jemanden?</strong>
+                <p>Splitea stellt Zahlungsanfragen über die Nachrichten-App Ihres Telefons zu. Der wirksamste Weg, keine Anfragen mehr von jemandem zu erhalten, ist die Blockierung auf iOS-Systemebene: In <strong>Nachrichten</strong> öffnen Sie die Unterhaltung, tippen oben auf den Namen des Kontakts und tippen auf <strong>Anrufer sperren</strong>; oder in <strong>Kontakte</strong> öffnen Sie den Kontakt, scrollen nach unten und tippen auf <strong>Anrufer sperren</strong>. Einmal blockiert, erreichen Sie deren Nachrichten, Anrufe und FaceTime-Anfragen nicht mehr, unabhängig davon, aus welcher App sie gesendet werden. Sie können den Kontakt auch von Ihrem Gerät löschen, um dessen Profildaten vollständig aus Splitea zu entfernen.</p>
+            </div>
         </section>
-        <section>
-            <h1>Einen Nutzer blockieren</h1>
-            <p>Splitea stellt Zahlungsanfragen über die Nachrichten-App Ihres Telefons zu. Um keine Anfragen von einer Person mehr zu erhalten, blockieren Sie diese auf iOS-Systemebene. Einmal blockiert, erreichen Sie deren Nachrichten, Anrufe und FaceTime-Anfragen nicht mehr, unabhängig davon, aus welcher App sie gesendet werden:</p>
-            <ul>
-                <li><strong>In Nachrichten</strong>: Öffnen Sie die Unterhaltung, tippen Sie oben auf den Namen des Kontakts und dann auf <strong>Anrufer sperren</strong>.</li>
-                <li><strong>In Kontakte</strong>: Öffnen Sie den Kontakt, scrollen Sie nach unten und tippen Sie auf <strong>Anrufer sperren</strong>.</li>
-            </ul>
-            <p>Die Blockierung auf iOS-Ebene ist die wirksamste verfügbare Option, da sie die Nachricht stoppt, bevor sie Splitea überhaupt erreicht. Sie können den Kontakt auch von Ihrem Gerät löschen, um dessen Profildaten vollständig aus Splitea zu entfernen.</p>
-        </section>
-        <section>
-            <h1>Häufig gestellte Fragen</h1>
-            <div class="faq-item">
-                <strong>Wie funktioniert das Scannen von Belegen?</strong>
-                <p>Richten Sie Ihre Kamera auf einen Beleg. Splitea liest Artikel und Preise automatisch mithilfe von KI.</p>
+        <section id="account">
+            <h1>Konto &amp; Datenschutz</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>Wie lösche ich mein Konto?</strong>
+                <p>Öffnen Sie Splitea, gehen Sie zu <strong>Einstellungen → Account → Account löschen</strong> und bestätigen Sie. Das Löschen entfernt Ihr Profil (Name, Avatar, Zahlungs-Handles) sofort aus unserem Nutzerverzeichnis. Lokal auf Ihrem Gerät oder in Ihrem iCloud gespeicherte Belege und Kontakte bleiben unter Ihrer Kontrolle — um diese ebenfalls zu entfernen, löschen Sie die App oder leeren Sie die Belege in der App, bevor Sie das Konto löschen.</p>
             </div>
             <div class="faq-item">
-                <strong>Werden meine Daten auf Ihren Servern gespeichert?</strong>
-                <p>Nein. Bilder werden in Echtzeit verarbeitet und nie gespeichert. Ihre Daten bleiben auf Ihrem Gerät.</p>
+                <strong>Welche Daten speichert Splitea?</strong>
+                <p>Ihre gespeicherten Belege, Kontakte und Aufteilungen liegen lokal auf Ihrem Gerät und werden über Ihren privaten iCloud-Container zwischen Ihren Geräten synchronisiert — nichts davon liegt auf unseren Servern. Beleg<strong>bilder</strong> werden beim Scannen an unseren Server gesendet, damit die KI Artikel und Preise extrahieren kann, und sofort nach der Analyse verworfen. Profildaten (Name, Avatar, Zahlungs-Handles, gehashte Telefonnummer) sind die einzigen Daten, die wir serverseitig in unserem Nutzerverzeichnis aufbewahren, damit Kontakte, die Splitea nutzen, Ihr Profil sehen können, wenn sie eine Rechnung mit Ihnen aufteilen.</p>
             </div>
+            <div class="faq-item">
+                <strong>Wie funktioniert die iCloud-Synchronisierung?</strong>
+                <p>Splitea verwendet Apples CloudKit, um Daten über Ihre Apple-ID zwischen Ihren Geräten zu synchronisieren. Wir haben keinen Zugriff auf Ihren iCloud-Container. Um die Synchronisierung zu pausieren, deaktivieren Sie Splitea unter <strong>Einstellungen → [Ihr Name] → iCloud → Apps, die iCloud verwenden</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Warum fragt Splitea nach Zugriff auf die Kontakte?</strong>
+                <p>Damit Sie Personen namentlich zum Aufteilen einer Rechnung auswählen können. Kontaktdaten werden lokal auf Ihrem Gerät gelesen — Namen, Telefonnummern und Fotos verlassen Ihr Telefon nie. Telefonnummern werden gehasht, bevor sie gegen unser Nutzerverzeichnis abgeglichen werden, damit wir Ihnen zeigen können, welche Ihrer Kontakte Splitea-Profile haben.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Splitea verwenden</h1>
+            <div class="faq-item">
+                <strong>Wie teile ich eine Rechnung auf?</strong>
+                <p>Tippen Sie auf dem Startbildschirm auf die Kamera-Schaltfläche und scannen Sie einen Beleg. Spliteas KI extrahiert Artikel und Preise automatisch. Tippen Sie auf jeden Artikel, um ihn einer Person zuzuweisen, oder verwenden Sie das Menü mit langem Drücken, um mehrere gleichzeitig zuzuweisen. Wenn Sie fertig sind, tippen Sie auf die Zeile jeder Person, um deren Gesamtbetrag zu sehen und einen Zahlungs-Link zu kopieren.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Der Scan hat einen Artikel falsch erkannt. Wie korrigiere ich das?</strong>
+                <p>Tippen Sie auf einen Artikel, um Namen oder Preis direkt zu bearbeiten. Um einen fehlenden Artikel hinzuzufügen, tippen Sie auf das <strong>+</strong> am Ende der Artikelliste. Um einen zu löschen, wischen Sie die Zeile nach links.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Kann ich eine Rechnung mit jemandem teilen, der Splitea nicht hat?</strong>
+                <p>Ja. Tippen Sie nach dem Aufteilen auf die Teilen-Schaltfläche, um einen Link über Nachrichten zu senden. Wer auf den Link tippt, sieht die Aufteilung im Webbrowser — Splitea muss nicht installiert werden, um sie anzusehen oder die Zahlungs-App zu öffnen.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Welche Zahlungs-Apps werden unterstützt?</strong>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay (UPI), Monzo und ATH Móvil. Die verfügbare Liste hängt von Ihrer Region ab.</p>
+            </div>
+            <div class="faq-item">
+                <strong>ATH Móvil öffnet sich auf Android nicht.</strong>
+                <p>Android erfordert die Installation der ATH-Móvil-App. Ist die App nicht installiert, leitet der Zahlungs-Link in den Google Play Store, sodass Sie sie installieren und es erneut versuchen können. Auf iOS sollte ATH Móvil automatisch geöffnet werden.</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>Abonnements</h1>
             <div class="faq-item">
                 <strong>Wie kündige ich mein Abonnement?</strong>
-                <p>Gehen Sie zu Einstellungen > Apple-ID > Abonnements auf Ihrem Gerät.</p>
+                <p>Gehen Sie auf Ihrem Gerät zu <strong>Einstellungen → [Ihr Name] → Abonnements</strong>, tippen Sie auf Splitea Pro und tippen Sie auf <strong>Abonnement kündigen</strong>. Sie behalten den Pro-Zugang bis zum Ende Ihres aktuellen Abrechnungszeitraums.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>Wie beantrage ich eine Rückerstattung?</strong>
+                <p>Alle Käufe werden von Apple abgewickelt. Besuchen Sie <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, melden Sie sich mit Ihrer Apple-ID an, finden Sie Ihren Splitea-Kauf und wählen Sie einen Grund. Apple wickelt Rückerstattungen direkt ab — wir haben keinen Zugriff auf Abrechnungsinformationen.</p>
             </div>
             <div class="faq-item">
-                <strong>Kann ich eine Rückerstattung beantragen?</strong>
-                <p>Alle Käufe werden von Apple abgewickelt. Besuchen Sie <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+                <strong>Wie stelle ich mein Abonnement auf einem neuen Gerät wieder her?</strong>
+                <p>Melden Sie sich auf Ihrem neuen Gerät mit derselben Apple-ID an, öffnen Sie Splitea und tippen Sie auf der Paywall auf <strong>Käufe wiederherstellen</strong>. Ihr Pro-Status synchronisiert sich automatisch.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Was ist der Unterschied zwischen kostenlos und Pro?</strong>
+                <p>Der kostenlose Tarif umfasst eine begrenzte Anzahl von Belegscans pro Monat. Splitea Pro hebt die Scan-Grenze auf und ist als monatliches oder jährliches automatisch verlängerbares Abonnement oder als einmaliger Lebenszeitkauf erhältlich.</p>
             </div>
         </section>
+        <section id="troubleshooting">
+            <h1>Fehlerbehebung</h1>
+            <div class="faq-item">
+                <strong>Die Zahlungs-Schaltfläche öffnet die falsche App.</strong>
+                <p>Das bedeutet meist, dass eine andere App auf Ihrem Gerät dasselbe URL-Schema registriert hat. Deinstallieren Sie unbekannte Apps, die Zahlungs-Links verarbeiten, oder öffnen Sie den geteilten Link von einem anderen Gerät. Falls das Problem bestehen bleibt, schreiben Sie an <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a> mit der Zahlungs-App und Ihrer iOS-Version.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Ein hinzugefügter Kontakt erscheint nicht.</strong>
+                <p>Vergewissern Sie sich, dass Sie Zugriff auf Kontakte gewährt haben (<strong>Einstellungen → Splitea → Kontakte</strong>). Ist der Zugriff erteilt und der Kontakt erscheint trotzdem nicht, schließen Sie Splitea und öffnen Sie es erneut — die Kontaktsynchronisierung läuft beim Start und nach Rückkehr aus dem Hintergrund.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Ich erhalte keine Zahlungsanfragen.</strong>
+                <p>Zahlungsanfragen kommen als iMessages mit einem splitea.app-Link an. Haben Sie den Absender auf iOS-Ebene blockiert, erreicht Sie die Nachricht nicht. Prüfen Sie <strong>Einstellungen → Nachrichten → Gesperrte Kontakte</strong>. Stellen Sie außerdem sicher, dass iMessage aktiviert und Ihre Telefonnummer verifiziert ist.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>Brauchen Sie weiterhin Hilfe? Schreiben Sie an <a href="mailto:support@splitea.app">support@splitea.app</a> — wir antworten innerhalb von 24 Stunden.</p>
+        </div>
     </div>
 
     <div data-lang="fr">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">Contact</a>
+            <a class="chip" href="#report">Signaler un utilisateur</a>
+            <a class="chip" href="#block">Bloquer un utilisateur</a>
+            <a class="chip" href="#delete-account">Supprimer le compte</a>
+            <a class="chip" href="#refund">Remboursement</a>
+        </nav>
+        <section id="contact">
             <h1>Contact</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -215,50 +396,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">Nous répondons dans un délai de 24 heures.</p>
         </section>
-        <section>
-            <h1>Signaler un utilisateur</h1>
-            <p>Si vous rencontrez un profil Splitea avec une photo ou un nom d'affichage inapproprié (discours haineux, harcèlement, images sexuellement explicites, usurpation d'identité ou toute autre violation de nos <a href="terms">Conditions d'Utilisation</a>), vous pouvez le signaler directement depuis l'application :</p>
-            <ol>
-                <li>Ouvrez le contact dans Splitea.</li>
-                <li>Touchez le nom du contact pour ouvrir la feuille de modification.</li>
-                <li>Faites défiler jusqu'en bas et touchez <strong>Signaler l'utilisateur</strong>.</li>
-                <li>Confirmez pour envoyer le signalement.</li>
-            </ol>
-            <p>Nous examinons chaque signalement dans un délai de 24 heures. Si le contenu enfreint nos Conditions, nous retirons la photo ou le nom incriminé de notre annuaire d'utilisateurs et pouvons suspendre ou résilier le compte responsable. Pour les signalements urgents impliquant un problème de sécurité immédiat, écrivez à <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+        <section id="safety">
+            <h1>Sécurité</h1>
+            <div class="faq-item" id="report">
+                <strong>Comment signaler un utilisateur ?</strong>
+                <p>Si vous rencontrez un profil Splitea avec une photo ou un nom d'affichage inapproprié (discours haineux, harcèlement, images sexuellement explicites, usurpation d'identité ou toute autre violation de nos <a href="terms">Conditions d'Utilisation</a>), signalez-le depuis l'application : ouvrez le contact, touchez son nom pour ouvrir la feuille de modification, faites défiler jusqu'en bas et touchez <strong>Signaler l'utilisateur</strong>. Confirmez pour envoyer.</p>
+                <p>Nous examinons chaque signalement dans un délai de 24 heures. Si le contenu enfreint nos Conditions, nous retirons la photo ou le nom incriminé de notre annuaire d'utilisateurs et pouvons suspendre ou résilier le compte responsable. Pour les signalements urgents impliquant un problème de sécurité immédiat, écrivez à <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>Comment bloquer quelqu'un ?</strong>
+                <p>Splitea envoie les demandes de paiement via l'application Messages de votre téléphone. La manière la plus forte de cesser de recevoir des demandes de quelqu'un est de le bloquer au niveau du système iOS : dans <strong>Messages</strong>, ouvrez la conversation, touchez le nom du contact en haut et touchez <strong>Bloquer ce correspondant</strong> ; ou dans <strong>Contacts</strong>, ouvrez le contact, faites défiler vers le bas et touchez <strong>Bloquer ce correspondant</strong>. Une fois bloqués, ses messages, appels et demandes FaceTime ne vous parviendront plus, quelle que soit l'application utilisée. Vous pouvez également supprimer le contact de votre appareil pour retirer entièrement ses données de profil de Splitea.</p>
+            </div>
         </section>
-        <section>
-            <h1>Bloquer un utilisateur</h1>
-            <p>Splitea envoie les demandes de paiement via l'application Messages de votre téléphone. Pour cesser de recevoir des demandes d'une personne, bloquez-la au niveau du système iOS : une fois bloqués, ses messages, appels et demandes FaceTime ne vous parviendront plus, quelle que soit l'application utilisée :</p>
-            <ul>
-                <li><strong>Dans Messages</strong> : ouvrez la conversation, touchez le nom du contact en haut, puis touchez <strong>Bloquer ce correspondant</strong>.</li>
-                <li><strong>Dans Contacts</strong> : ouvrez le contact, faites défiler vers le bas et touchez <strong>Bloquer ce correspondant</strong>.</li>
-            </ul>
-            <p>Le blocage au niveau d'iOS est l'option la plus forte disponible car elle arrête le message avant qu'il n'atteigne Splitea. Vous pouvez également supprimer le contact de votre appareil pour retirer entièrement ses données de profil de Splitea.</p>
-        </section>
-        <section>
-            <h1>Questions fréquentes</h1>
-            <div class="faq-item">
-                <strong>Comment fonctionne le scan des reçus ?</strong>
-                <p>Pointez votre caméra vers un reçu. Splitea lit les articles et prix automatiquement grâce à l'IA.</p>
+        <section id="account">
+            <h1>Compte et Confidentialité</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>Comment supprimer mon compte ?</strong>
+                <p>Ouvrez Splitea, allez dans <strong>Réglages → Compte → Supprimer le compte</strong> et confirmez. La suppression retire votre profil (nom, avatar, identifiants de paiement) de notre annuaire d'utilisateurs immédiatement. Les reçus et contacts stockés localement sur votre appareil ou dans votre iCloud restent sous votre contrôle — pour les supprimer également, supprimez l'application ou videz les reçus depuis celle-ci avant de supprimer votre compte.</p>
             </div>
             <div class="faq-item">
-                <strong>Mes données sont-elles stockées sur vos serveurs ?</strong>
-                <p>Non. Les images sont traitées en temps réel et jamais stockées. Vos données restent sur votre appareil.</p>
+                <strong>Quelles données Splitea stocke-t-il ?</strong>
+                <p>Vos reçus, contacts et partages enregistrés vivent localement sur votre appareil et se synchronisent entre vos appareils via votre conteneur iCloud privé — aucun de cet historique n'est conservé sur nos serveurs. Les <strong>images</strong> de reçus sont envoyées à notre serveur pendant la numérisation pour que l'IA puisse extraire articles et prix, et sont supprimées immédiatement après l'analyse. Les données de profil (nom, avatar, identifiants de paiement, numéro de téléphone haché) sont les seules données que nous conservons côté serveur, dans notre annuaire d'utilisateurs, afin que les contacts qui utilisent Splitea puissent voir votre profil lorsqu'ils partagent une facture avec vous.</p>
             </div>
+            <div class="faq-item">
+                <strong>Comment fonctionne la synchronisation iCloud ?</strong>
+                <p>Splitea utilise CloudKit d'Apple pour synchroniser les données entre vos appareils avec votre identifiant Apple. Nous n'avons pas accès à votre conteneur iCloud. Pour suspendre la synchronisation, désactivez Splitea dans <strong>Réglages → [votre nom] → iCloud → Apps utilisant iCloud</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Pourquoi Splitea demande-t-il l'accès aux Contacts ?</strong>
+                <p>Pour vous permettre de sélectionner par nom les personnes avec qui partager une facture. Les données de contact sont lues localement sur votre appareil — noms, numéros de téléphone et photos ne quittent jamais votre téléphone. Les numéros de téléphone sont hachés avant d'être comparés à notre annuaire d'utilisateurs pour vous montrer lesquels de vos contacts possèdent un profil Splitea.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Utiliser Splitea</h1>
+            <div class="faq-item">
+                <strong>Comment partager une facture ?</strong>
+                <p>Touchez le bouton caméra sur l'écran d'accueil et scannez un reçu. L'IA de Splitea extrait articles et prix automatiquement. Touchez chaque article pour l'attribuer à une personne, ou utilisez le menu d'appui long pour en attribuer plusieurs à la fois. Lorsque vous avez terminé, touchez la ligne de chaque personne pour voir son total et copier un lien de paiement.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Le scan s'est trompé sur un article. Comment le corriger ?</strong>
+                <p>Touchez un article pour modifier son nom ou son prix directement. Pour ajouter un article manquant, touchez le <strong>+</strong> en bas de la liste. Pour en supprimer un, balayez la ligne vers la gauche.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Puis-je partager une facture avec quelqu'un qui n'a pas Splitea ?</strong>
+                <p>Oui. Après le partage, touchez le bouton Partager pour envoyer un lien via Messages. Quiconque touche le lien voit la répartition dans son navigateur web — pas besoin d'installer Splitea pour la consulter ni pour ouvrir l'application de paiement.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Quelles applications de paiement sont prises en charge ?</strong>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay (UPI), Monzo et ATH Móvil. La liste disponible dépend de votre région.</p>
+            </div>
+            <div class="faq-item">
+                <strong>ATH Móvil ne s'ouvre pas sur Android.</strong>
+                <p>Android exige que l'application ATH Móvil soit installée. Si elle ne l'est pas, le lien de paiement redirige vers Google Play Store afin que vous puissiez l'installer et réessayer. Sur iOS, ATH Móvil devrait s'ouvrir automatiquement.</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>Abonnements</h1>
             <div class="faq-item">
                 <strong>Comment annuler mon abonnement ?</strong>
-                <p>Allez dans Réglages > Apple ID > Abonnements sur votre appareil.</p>
+                <p>Allez dans <strong>Réglages → [votre nom] → Abonnements</strong> sur votre appareil, touchez Splitea Pro et touchez <strong>Annuler l'abonnement</strong>. Vous conservez l'accès Pro jusqu'à la fin de votre période de facturation en cours.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>Comment demander un remboursement ?</strong>
+                <p>Tous les achats sont traités par Apple. Visitez <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, connectez-vous avec votre identifiant Apple, trouvez votre achat Splitea et sélectionnez un motif. Apple gère les remboursements directement — nous n'avons pas accès aux informations de facturation.</p>
             </div>
             <div class="faq-item">
-                <strong>Puis-je demander un remboursement ?</strong>
-                <p>Tous les achats sont traités par Apple. Visitez <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+                <strong>Comment restaurer mon abonnement sur un nouvel appareil ?</strong>
+                <p>Connectez-vous à votre nouvel appareil avec le même identifiant Apple, ouvrez Splitea et touchez <strong>Restaurer les achats</strong> sur l'écran d'abonnement. Votre statut Pro se synchronise automatiquement.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Quelle est la différence entre la version gratuite et Pro ?</strong>
+                <p>La version gratuite inclut un nombre limité de scans de reçus par mois. Splitea Pro supprime la limite de scans et est disponible en abonnement mensuel ou annuel à renouvellement automatique, ou en achat unique à vie.</p>
             </div>
         </section>
+        <section id="troubleshooting">
+            <h1>Dépannage</h1>
+            <div class="faq-item">
+                <strong>Le bouton de paiement ouvre la mauvaise application.</strong>
+                <p>Cela signifie généralement qu'une autre application a enregistré le même schéma d'URL sur votre appareil. Essayez de désinstaller les applications inconnues qui gèrent les liens de paiement, ou ouvrez le lien partagé depuis un autre appareil. Si cela persiste, écrivez à <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a> en précisant l'application de paiement et votre version d'iOS.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Un contact que j'ai ajouté n'apparaît pas.</strong>
+                <p>Assurez-vous d'avoir accordé l'accès aux Contacts (<strong>Réglages → Splitea → Contacts</strong>). Si l'accès est accordé et que le contact n'apparaît toujours pas, fermez et rouvrez Splitea — la synchronisation des contacts s'exécute au lancement et au retour de l'arrière-plan.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Je ne reçois pas de demandes de paiement.</strong>
+                <p>Les demandes de paiement arrivent sous forme d'iMessages avec un lien splitea.app. Si vous avez bloqué l'expéditeur au niveau iOS, le message ne vous parvient pas. Vérifiez <strong>Réglages → Messages → Bloqués</strong>. Assurez-vous également qu'iMessage est activé et que votre numéro de téléphone est vérifié.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>Besoin d'aide supplémentaire ? Écrivez à <a href="mailto:support@splitea.app">support@splitea.app</a> — nous répondons dans un délai de 24 heures.</p>
+        </div>
     </div>
 
     <div data-lang="it">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">Contatti</a>
+            <a class="chip" href="#report">Segnala un utente</a>
+            <a class="chip" href="#block">Blocca un utente</a>
+            <a class="chip" href="#delete-account">Elimina account</a>
+            <a class="chip" href="#refund">Rimborso</a>
+        </nav>
+        <section id="contact">
             <h1>Contatti</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -270,50 +511,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">Rispondiamo entro 24 ore.</p>
         </section>
-        <section>
-            <h1>Segnalare un utente</h1>
-            <p>Se incontrate un profilo Splitea con una foto o un nome visualizzato inappropriato (incitamento all'odio, molestie, immagini sessualmente esplicite, impersonificazione o qualsiasi altra violazione dei nostri <a href="terms">Termini di Servizio</a>), potete segnalarlo direttamente dall'app:</p>
-            <ol>
-                <li>Aprite il contatto in Splitea.</li>
-                <li>Toccate il nome del contatto per aprire il foglio di modifica.</li>
-                <li>Scorrete fino in fondo e toccate <strong>Segnala utente</strong>.</li>
-                <li>Confermate per inviare la segnalazione.</li>
-            </ol>
-            <p>Esaminiamo ogni segnalazione entro 24 ore. Se il contenuto viola i nostri Termini, rimuoviamo la foto o il nome offensivo dalla nostra directory utenti e possiamo sospendere o terminare l'account responsabile. Per segnalazioni urgenti che riguardano problemi di sicurezza immediata, scrivete a <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
-        </section>
-        <section>
-            <h1>Bloccare un utente</h1>
-            <p>Splitea invia le richieste di pagamento tramite l'app Messaggi del vostro telefono. Per smettere di ricevere richieste da qualcuno, bloccatelo a livello di sistema iOS: una volta bloccato, i suoi messaggi, chiamate e richieste FaceTime non vi raggiungeranno più, indipendentemente dall'app utilizzata:</p>
-            <ul>
-                <li><strong>In Messaggi</strong>: aprite la conversazione, toccate il nome del contatto in alto, quindi toccate <strong>Blocca questo numero</strong>.</li>
-                <li><strong>In Contatti</strong>: aprite il contatto, scorrete verso il basso e toccate <strong>Blocca questo numero</strong>.</li>
-            </ul>
-            <p>Il blocco a livello iOS è l'opzione più efficace disponibile perché ferma il messaggio prima ancora che raggiunga Splitea. Potete anche eliminare il contatto dal dispositivo per rimuovere completamente i suoi dati di profilo da Splitea.</p>
-        </section>
-        <section>
-            <h1>Domande frequenti</h1>
-            <div class="faq-item">
-                <strong>Come funziona la scansione degli scontrini?</strong>
-                <p>Punta la fotocamera su uno scontrino. Splitea legge articoli e prezzi automaticamente grazie all'IA.</p>
+        <section id="safety">
+            <h1>Sicurezza</h1>
+            <div class="faq-item" id="report">
+                <strong>Come segnalo un utente?</strong>
+                <p>Se incontrate un profilo Splitea con una foto o un nome visualizzato inappropriato (incitamento all'odio, molestie, immagini sessualmente esplicite, impersonificazione o qualsiasi altra violazione dei nostri <a href="terms">Termini di Servizio</a>), segnalatelo dall'app: aprite il contatto, toccate il nome per aprire la schermata di modifica, scorrete fino in fondo e toccate <strong>Segnala utente</strong>. Confermate per inviare.</p>
+                <p>Esaminiamo ogni segnalazione entro 24 ore. Se il contenuto viola i nostri Termini, rimuoviamo la foto o il nome offensivo dalla nostra directory utenti e possiamo sospendere o terminare l'account responsabile. Per segnalazioni urgenti che riguardano problemi di sicurezza immediata, scrivete a <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
             </div>
-            <div class="faq-item">
-                <strong>I miei dati vengono conservati sui vostri server?</strong>
-                <p>No. Le immagini vengono elaborate in tempo reale e mai conservate. I dati restano sul tuo dispositivo.</p>
-            </div>
-            <div class="faq-item">
-                <strong>Come cancello il mio abbonamento?</strong>
-                <p>Vai in Impostazioni > Apple ID > Abbonamenti sul tuo dispositivo.</p>
-            </div>
-            <div class="faq-item">
-                <strong>Posso richiedere un rimborso?</strong>
-                <p>Tutti gli acquisti sono gestiti da Apple. Visita <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+            <div class="faq-item" id="block">
+                <strong>Come blocco qualcuno?</strong>
+                <p>Splitea invia le richieste di pagamento tramite l'app Messaggi del vostro telefono. Il modo più efficace per smettere di ricevere richieste da qualcuno è bloccarlo a livello di sistema iOS: in <strong>Messaggi</strong>, aprite la conversazione, toccate il nome del contatto in alto e toccate <strong>Blocca questo numero</strong>; oppure in <strong>Contatti</strong>, aprite il contatto, scorrete verso il basso e toccate <strong>Blocca questo numero</strong>. Una volta bloccato, i suoi messaggi, chiamate e richieste FaceTime non vi raggiungeranno più, indipendentemente dall'app utilizzata. Potete anche eliminare il contatto dal dispositivo per rimuovere completamente i suoi dati di profilo da Splitea.</p>
             </div>
         </section>
+        <section id="account">
+            <h1>Account e Privacy</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>Come elimino il mio account?</strong>
+                <p>Aprite Splitea, andate su <strong>Impostazioni → Account → Elimina account</strong> e confermate. L'eliminazione rimuove il vostro profilo (nome, avatar, identificatori di pagamento) dalla nostra directory utenti immediatamente. Scontrini e contatti memorizzati localmente sul dispositivo o nel vostro iCloud restano sotto il vostro controllo — per rimuovere anche quelli, eliminate l'app o svuotate gli scontrini dall'interno prima di eliminare l'account.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Quali dati conserva Splitea?</strong>
+                <p>I vostri scontrini, contatti e divisioni salvati risiedono localmente sul dispositivo e si sincronizzano tra i vostri dispositivi tramite il contenitore iCloud privato — nulla di questa cronologia è conservato sui nostri server. Le <strong>immagini</strong> degli scontrini vengono inviate al nostro server durante la scansione affinché l'IA possa estrarre articoli e prezzi, e vengono scartate immediatamente dopo l'analisi. I dati di profilo (nome, avatar, identificatori di pagamento, numero di telefono sottoposto a hash) sono gli unici dati che conserviamo lato server, nella nostra directory utenti, affinché i contatti che usano Splitea possano vedere il vostro profilo quando dividono un conto con voi.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Come funziona la sincronizzazione con iCloud?</strong>
+                <p>Splitea usa CloudKit di Apple per sincronizzare i dati tra i vostri dispositivi tramite Apple ID. Non abbiamo accesso al vostro contenitore iCloud. Per mettere in pausa la sincronizzazione, disattivate Splitea in <strong>Impostazioni → [il vostro nome] → iCloud → App che usano iCloud</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Perché Splitea chiede l'accesso ai Contatti?</strong>
+                <p>Per permettervi di selezionare per nome le persone con cui dividere un conto. I dati dei contatti vengono letti localmente sul dispositivo — nomi, numeri di telefono e foto non lasciano mai il vostro telefono. I numeri di telefono vengono sottoposti a hash prima di essere confrontati con la nostra directory utenti per mostrarvi quali dei vostri contatti hanno profili Splitea.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Usare Splitea</h1>
+            <div class="faq-item">
+                <strong>Come divido un conto?</strong>
+                <p>Toccate il pulsante della fotocamera nella schermata Home e scansionate uno scontrino. L'IA di Splitea estrae articoli e prezzi automaticamente. Toccate ciascun articolo per assegnarlo a una persona, o usate il menu a pressione prolungata per assegnarne più alla volta. Quando avete finito, toccate la riga di ciascuna persona per vedere il totale e copiare un link di pagamento.</p>
+            </div>
+            <div class="faq-item">
+                <strong>La scansione ha sbagliato un articolo. Come la correggo?</strong>
+                <p>Toccate qualsiasi articolo per modificarne nome o prezzo in linea. Per aggiungere un articolo mancante, toccate il <strong>+</strong> in fondo all'elenco. Per eliminarne uno, scorrete la riga verso sinistra.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Posso condividere un conto con qualcuno che non ha Splitea?</strong>
+                <p>Sì. Dopo aver diviso, toccate il pulsante di condivisione per inviare un link tramite Messaggi. Chiunque tocchi il link vede la divisione nel browser web — non serve installare Splitea per visualizzarla o aprire l'app di pagamento.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Quali app di pagamento sono supportate?</strong>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay (UPI), Monzo e ATH Móvil. L'elenco disponibile dipende dalla regione in cui vi trovate.</p>
+            </div>
+            <div class="faq-item">
+                <strong>ATH Móvil non si apre su Android.</strong>
+                <p>Android richiede che l'app ATH Móvil sia installata. Se non lo è, il link di pagamento reindirizza al Google Play Store per consentirvi di installarla e riprovare. Su iOS, ATH Móvil dovrebbe aprirsi automaticamente.</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>Abbonamenti</h1>
+            <div class="faq-item">
+                <strong>Come annullo il mio abbonamento?</strong>
+                <p>Andate in <strong>Impostazioni → [il vostro nome] → Abbonamenti</strong> sul dispositivo, toccate Splitea Pro e toccate <strong>Annulla abbonamento</strong>. Manterrete l'accesso Pro fino al termine del periodo di fatturazione corrente.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>Come richiedo un rimborso?</strong>
+                <p>Tutti gli acquisti sono gestiti da Apple. Visitate <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, accedete con il vostro Apple ID, trovate il vostro acquisto Splitea e selezionate un motivo. Apple gestisce direttamente i rimborsi — non abbiamo accesso alle informazioni di fatturazione.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Come ripristino il mio abbonamento su un nuovo dispositivo?</strong>
+                <p>Accedete al nuovo dispositivo con lo stesso Apple ID, aprite Splitea e toccate <strong>Ripristina acquisti</strong> nella schermata di abbonamento. Il vostro stato Pro si sincronizza automaticamente.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Qual è la differenza tra gratuito e Pro?</strong>
+                <p>Il piano gratuito include un numero limitato di scansioni di scontrini al mese. Splitea Pro elimina il limite di scansioni ed è disponibile come abbonamento mensile o annuale a rinnovo automatico, o come acquisto unico a vita.</p>
+            </div>
+        </section>
+        <section id="troubleshooting">
+            <h1>Risoluzione dei problemi</h1>
+            <div class="faq-item">
+                <strong>Il pulsante di pagamento apre l'app sbagliata.</strong>
+                <p>Di solito significa che un'altra app ha registrato lo stesso schema URL sul vostro dispositivo. Provate a disinstallare app sconosciute che gestiscono link di pagamento, o aprite il link condiviso da un altro dispositivo. Se persiste, scrivete a <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a> indicando l'app di pagamento e la vostra versione di iOS.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Un contatto che ho aggiunto non viene visualizzato.</strong>
+                <p>Assicuratevi di aver concesso l'accesso ai Contatti (<strong>Impostazioni → Splitea → Contatti</strong>). Se l'accesso è concesso e il contatto non compare ugualmente, chiudete e riaprite Splitea — la sincronizzazione dei contatti viene eseguita all'avvio e al ritorno dallo sfondo.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Non ricevo richieste di pagamento.</strong>
+                <p>Le richieste di pagamento arrivano come iMessage con un link splitea.app. Se avete bloccato il mittente a livello di iOS, il messaggio non vi raggiunge. Verificate in <strong>Impostazioni → Messaggi → Bloccati</strong>. Assicuratevi inoltre che iMessage sia attivo e che il vostro numero di telefono sia verificato.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>Vi serve ancora aiuto? Scrivete a <a href="mailto:support@splitea.app">support@splitea.app</a> — rispondiamo entro 24 ore.</p>
+        </div>
     </div>
 
     <div data-lang="ja">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">お問い合わせ</a>
+            <a class="chip" href="#report">ユーザーを報告</a>
+            <a class="chip" href="#block">ユーザーをブロック</a>
+            <a class="chip" href="#delete-account">アカウント削除</a>
+            <a class="chip" href="#refund">返金</a>
+        </nav>
+        <section id="contact">
             <h1>お問い合わせ</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -325,50 +626,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">24時間以内に返信します。</p>
         </section>
-        <section>
-            <h1>ユーザーを報告する</h1>
-            <p>不適切な写真や表示名（ヘイトスピーチ、ハラスメント、性的に露骨な画像、なりすまし、その他<a href="terms">利用規約</a>違反）が含まれるSpliteaプロフィールを見つけた場合、アプリ内から報告できます:</p>
-            <ol>
-                <li>Splitea内で連絡先を開きます。</li>
-                <li>連絡先の名前をタップして編集シートを開きます。</li>
-                <li>一番下までスクロールし、<strong>ユーザーを報告</strong>をタップします。</li>
-                <li>確認して報告を送信します。</li>
-            </ol>
-            <p>すべての報告は24時間以内に審査します。コンテンツが利用規約に違反している場合、問題の写真または表示名を当社のユーザーディレクトリから削除し、責任のあるアカウントを停止または終了する場合があります。緊急の安全上の懸念を伴う報告は、<a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>までメールでお知らせください。</p>
+        <section id="safety">
+            <h1>安全</h1>
+            <div class="faq-item" id="report">
+                <strong>ユーザーを報告するには？</strong>
+                <p>不適切な写真や表示名（ヘイトスピーチ、ハラスメント、性的に露骨な画像、なりすまし、その他<a href="terms">利用規約</a>違反）のSpliteaプロフィールを見つけた場合、アプリ内から報告してください: 連絡先を開き、名前をタップして連絡先の編集シートを開き、一番下までスクロールして<strong>ユーザーを報告</strong>をタップします。確認して送信します。</p>
+                <p>すべての報告は24時間以内に審査します。コンテンツが利用規約に違反している場合、問題の写真または表示名を当社のユーザーディレクトリから削除し、責任のあるアカウントを停止または終了する場合があります。緊急の安全上の懸念を伴う報告は<a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>までメールでお知らせください。</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>相手をブロックするには？</strong>
+                <p>Spliteaは支払いリクエストをお使いの電話の「メッセージ」アプリ経由で配信します。特定の相手からのリクエストの受信を止める最も強力な方法は、iOSのシステムレベルでブロックすることです: <strong>メッセージ</strong>で会話を開き、上部の連絡先名をタップして、<strong>この発信者を着信拒否</strong>をタップします。または<strong>連絡先</strong>で連絡先を開き、下にスクロールして<strong>この発信者を着信拒否</strong>をタップします。一度ブロックすると、そのユーザーのメッセージ、通話、FaceTimeリクエストは、どのアプリから送信されたかにかかわらず届かなくなります。デバイスから連絡先を削除して、そのプロフィールデータをSpliteaから完全に取り除くこともできます。</p>
+            </div>
         </section>
-        <section>
-            <h1>ユーザーをブロックする</h1>
-            <p>Spliteaは支払いリクエストをお使いの電話の「メッセージ」アプリ経由で配信します。特定の相手からのリクエストの受信を停止するには、iOSのシステムレベルでブロックしてください。一度ブロックすると、そのユーザーのメッセージ、通話、FaceTimeリクエストは、どのアプリから送信されたかにかかわらず届かなくなります:</p>
-            <ul>
-                <li><strong>メッセージで</strong>: 会話を開き、上部の連絡先名をタップして、<strong>この発信者を着信拒否</strong>をタップします。</li>
-                <li><strong>連絡先で</strong>: 連絡先を開き、下にスクロールして、<strong>この発信者を着信拒否</strong>をタップします。</li>
-            </ul>
-            <p>iOSレベルでのブロックは、メッセージがSpliteaに届く前に停止するため、利用可能な最も強力なオプションです。デバイスから連絡先を削除すれば、そのプロフィールデータをSpliteaから完全に取り除くこともできます。</p>
-        </section>
-        <section>
-            <h1>よくある質問</h1>
-            <div class="faq-item">
-                <strong>レシートスキャンはどのように機能しますか？</strong>
-                <p>レシートにカメラを向けるだけ。SpliteaがAIで商品と価格を自動的に読み取ります。</p>
+        <section id="account">
+            <h1>アカウントとプライバシー</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>アカウントを削除するには？</strong>
+                <p>Spliteaを開き、<strong>設定 → アカウント → アカウントを削除</strong>に進んで確認します。削除すると、お客様のプロフィール（名前、アバター、決済ハンドル）は当社のユーザーディレクトリから直ちに削除されます。デバイスやiCloudにローカル保存されたレシートや連絡先はお客様の管理下に残ります — それらも削除するには、アカウントを削除する前にアプリ内で保存済みレシートを消去するか、アプリを削除してください。</p>
             </div>
             <div class="faq-item">
-                <strong>データはサーバーに保存されますか？</strong>
-                <p>いいえ。画像はリアルタイムで処理され、保存されません。データはデバイスに残り、iCloudで同期されます。</p>
+                <strong>Spliteaはどのようなデータを保存しますか？</strong>
+                <p>保存したレシート、連絡先、割り勘はお客様のデバイス上にあり、プライベートiCloudコンテナを介してデバイス間で同期されます — この履歴は当社のサーバーには保持されません。レシート<strong>画像</strong>はスキャン中にAIが項目と価格を抽出するために当社サーバーに送信され、解析直後に破棄されます。プロフィールデータ（名前、アバター、決済ハンドル、ハッシュ化された電話番号）は、Spliteaを使用する連絡先がお客様と割り勘する際にプロフィールを見られるよう、当社のユーザーディレクトリにサーバー側で保持する唯一のデータです。</p>
             </div>
+            <div class="faq-item">
+                <strong>iCloud同期はどう機能しますか？</strong>
+                <p>SpliteaはAppleのCloudKitを使用し、Apple IDでデバイス間のデータを同期します。当社はお客様のiCloudコンテナにアクセスできません。同期を一時停止するには、<strong>設定 → [お客様の名前] → iCloud → iCloudを使用しているApp</strong>でSpliteaをオフにします。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Spliteaが連絡先アクセスを求めるのはなぜですか？</strong>
+                <p>名前で割り勘する相手を選べるようにするためです。連絡先データはデバイス上でローカルに読み取られます — 名前、電話番号、写真は端末から外に出ません。電話番号は当社のユーザーディレクトリと照合する前にハッシュ化され、どの連絡先がSpliteaプロフィールを持っているかを表示できます。</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Spliteaを使う</h1>
+            <div class="faq-item">
+                <strong>割り勘するには？</strong>
+                <p>ホーム画面のカメラボタンをタップしてレシートをスキャンします。SpliteaのAIが項目と価格を自動で抽出します。各項目をタップして人物に割り当てるか、長押しメニューで複数を一度に割り当てます。完了したら、各人の行をタップして合計を確認し、支払いリンクをコピーします。</p>
+            </div>
+            <div class="faq-item">
+                <strong>スキャンで項目が間違っていました。どう直しますか？</strong>
+                <p>任意の項目をタップすると、その場で名前や価格を編集できます。不足項目を追加するには、項目リストの最下部にある<strong>+</strong>をタップします。削除するには行を左にスワイプします。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Spliteaを持っていない人と割り勘を共有できますか？</strong>
+                <p>はい。割り勘後、共有ボタンをタップして「メッセージ」でリンクを送信します。リンクをタップした人は、Webブラウザで割り勘内容を確認できます — 表示や支払いアプリの起動にSpliteaのインストールは不要です。</p>
+            </div>
+            <div class="faq-item">
+                <strong>サポートされている決済アプリは？</strong>
+                <p>Venmo、Cash App、PayPal、Revolut、Google Pay（UPI）、Monzo、ATH Móvil。利用可能なリストはお住まいの地域によります。</p>
+            </div>
+            <div class="faq-item">
+                <strong>AndroidでATH Móvilが開きません。</strong>
+                <p>AndroidではATH Móvilアプリのインストールが必要です。アプリがインストールされていない場合、支払いリンクはGoogle Playストアにリダイレクトされ、インストール後に再試行できます。iOSではATH Móvilが自動で開くはずです。</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>サブスクリプション</h1>
             <div class="faq-item">
                 <strong>サブスクリプションを解約するには？</strong>
-                <p>設定 > Apple ID > サブスクリプションから解約できます。</p>
+                <p>デバイスで<strong>設定 → [お客様の名前] → サブスクリプション</strong>へ進み、Splitea Proをタップして<strong>サブスクリプションをキャンセル</strong>をタップします。現在の請求期間が終了するまでProアクセスは継続します。</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>返金を申請するには？</strong>
+                <p>すべての購入はAppleが処理します。<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>にアクセスし、Apple IDでサインインしてSpliteaの購入を見つけ、理由を選択してください。返金はAppleが直接処理します — 当社は請求情報にアクセスできません。</p>
             </div>
             <div class="faq-item">
-                <strong>返金をリクエストできますか？</strong>
-                <p>すべての購入はAppleが処理します。<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>から申請してください。</p>
+                <strong>新しいデバイスでサブスクリプションを復元するには？</strong>
+                <p>同じApple IDで新しいデバイスにサインインし、Spliteaを開いてペイウォールの<strong>購入を復元</strong>をタップします。Proステータスは自動で同期されます。</p>
+            </div>
+            <div class="faq-item">
+                <strong>無料版とProの違いは？</strong>
+                <p>無料プランでは毎月のレシートスキャン回数が制限されています。Splitea Proはスキャン制限を解除し、月額または年額の自動更新サブスクリプション、または買い切りの永久購入として利用できます。</p>
             </div>
         </section>
+        <section id="troubleshooting">
+            <h1>トラブルシューティング</h1>
+            <div class="faq-item">
+                <strong>支払いボタンで違うアプリが開きます。</strong>
+                <p>これは通常、同じURLスキームを別のアプリがデバイスに登録していることを意味します。支払いリンクを扱う不明なアプリをアンインストールするか、別のデバイスから共有リンクを開いてみてください。それでも続く場合は、支払いアプリ名とiOSのバージョンを記載して<a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a>までメールでお知らせください。</p>
+            </div>
+            <div class="faq-item">
+                <strong>追加した連絡先が表示されません。</strong>
+                <p>連絡先アクセスを許可していることを確認してください（<strong>設定 → Splitea → 連絡先</strong>）。アクセスが許可されているのに表示されない場合、Spliteaを閉じて再度開いてみてください — 連絡先の同期は起動時とバックグラウンドから戻ったときに実行されます。</p>
+            </div>
+            <div class="faq-item">
+                <strong>支払いリクエストを受信できません。</strong>
+                <p>支払いリクエストはsplitea.appリンクを含むiMessageとして届きます。iOSレベルで送信者をブロックしていると、メッセージは届きません。<strong>設定 → メッセージ → 着信拒否設定</strong>で確認してください。iMessageが有効で、電話番号が認証済みであることも確認してください。</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>さらにサポートが必要ですか？<a href="mailto:support@splitea.app">support@splitea.app</a>までメールしてください — 24時間以内に返信します。</p>
+        </div>
     </div>
 
     <div data-lang="ko">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">문의</a>
+            <a class="chip" href="#report">사용자 신고</a>
+            <a class="chip" href="#block">사용자 차단</a>
+            <a class="chip" href="#delete-account">계정 삭제</a>
+            <a class="chip" href="#refund">환불</a>
+        </nav>
+        <section id="contact">
             <h1>문의</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -380,50 +741,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">24시간 이내에 답변드립니다.</p>
         </section>
-        <section>
-            <h1>사용자 신고</h1>
-            <p>부적절한 사진이나 표시 이름(혐오 발언, 괴롭힘, 성적으로 노골적인 이미지, 사칭 또는 기타 <a href="terms">이용약관</a> 위반)이 포함된 Splitea 프로필을 발견한 경우 앱 내에서 신고할 수 있습니다:</p>
-            <ol>
-                <li>Splitea에서 연락처를 엽니다.</li>
-                <li>연락처 이름을 탭하여 연락처 편집 시트를 엽니다.</li>
-                <li>맨 아래로 스크롤하여 <strong>사용자 신고</strong>를 탭합니다.</li>
-                <li>확인을 눌러 신고를 제출합니다.</li>
-            </ol>
-            <p>모든 신고는 24시간 이내에 검토합니다. 콘텐츠가 약관을 위반하는 경우 문제가 되는 사진이나 표시 이름을 사용자 디렉터리에서 제거하고 책임이 있는 계정을 중지하거나 종료할 수 있습니다. 즉각적인 안전 문제와 관련된 긴급 신고의 경우 <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>로 이메일을 보내주세요.</p>
-        </section>
-        <section>
-            <h1>사용자 차단</h1>
-            <p>Splitea는 결제 요청을 전화기의 메시지 앱을 통해 전달합니다. 특정 사용자의 요청을 더 이상 받지 않으려면 iOS 시스템 수준에서 차단하세요. 차단되면 해당 사용자의 메시지, 통화 및 FaceTime 요청은 어떤 앱에서 보내더라도 더 이상 도달하지 않습니다:</p>
-            <ul>
-                <li><strong>메시지에서</strong>: 대화를 열고 상단의 연락처 이름을 탭한 다음 <strong>이 발신자 차단</strong>을 탭합니다.</li>
-                <li><strong>연락처에서</strong>: 연락처를 열고 아래로 스크롤하여 <strong>이 발신자 차단</strong>을 탭합니다.</li>
-            </ul>
-            <p>iOS 수준의 차단은 메시지가 Splitea에 도달하기 전에 중지하기 때문에 사용 가능한 가장 강력한 옵션입니다. 기기에서 연락처를 삭제하여 해당 프로필 데이터를 Splitea에서 완전히 제거할 수도 있습니다.</p>
-        </section>
-        <section>
-            <h1>자주 묻는 질문</h1>
-            <div class="faq-item">
-                <strong>영수증 스캔은 어떻게 작동하나요?</strong>
-                <p>영수증에 카메라를 향하세요. Splitea가 AI로 항목과 가격을 자동으로 읽어냅니다.</p>
+        <section id="safety">
+            <h1>안전</h1>
+            <div class="faq-item" id="report">
+                <strong>사용자를 신고하려면 어떻게 하나요?</strong>
+                <p>부적절한 사진이나 표시 이름(혐오 발언, 괴롭힘, 성적으로 노골적인 이미지, 사칭 또는 기타 <a href="terms">이용약관</a> 위반)이 포함된 Splitea 프로필을 발견한 경우 앱 내에서 신고하세요: 연락처를 열고 이름을 탭하여 연락처 편집 시트를 연 다음, 맨 아래로 스크롤하여 <strong>사용자 신고</strong>를 탭합니다. 확인을 눌러 제출하세요.</p>
+                <p>모든 신고는 24시간 이내에 검토합니다. 콘텐츠가 약관을 위반하는 경우 문제가 되는 사진이나 표시 이름을 사용자 디렉터리에서 제거하고 책임이 있는 계정을 중지하거나 종료할 수 있습니다. 즉각적인 안전 문제와 관련된 긴급 신고의 경우 <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>로 이메일을 보내주세요.</p>
             </div>
-            <div class="faq-item">
-                <strong>데이터가 서버에 저장되나요?</strong>
-                <p>아니요. 이미지는 실시간으로 처리되며 저장되지 않습니다. 데이터는 기기에 남아 iCloud로 동기화됩니다.</p>
-            </div>
-            <div class="faq-item">
-                <strong>구독을 취소하려면?</strong>
-                <p>설정 > Apple ID > 구독에서 취소할 수 있습니다.</p>
-            </div>
-            <div class="faq-item">
-                <strong>환불을 요청할 수 있나요?</strong>
-                <p>모든 구매는 Apple에서 처리합니다. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>에서 요청하세요.</p>
+            <div class="faq-item" id="block">
+                <strong>다른 사람을 차단하려면?</strong>
+                <p>Splitea는 결제 요청을 전화기의 메시지 앱을 통해 전달합니다. 특정 사용자의 요청을 더 이상 받지 않는 가장 강력한 방법은 iOS 시스템 수준에서 차단하는 것입니다: <strong>메시지</strong>에서 대화를 열고 상단의 연락처 이름을 탭한 다음 <strong>이 발신자 차단</strong>을 탭하거나, <strong>연락처</strong>에서 연락처를 열고 아래로 스크롤하여 <strong>이 발신자 차단</strong>을 탭합니다. 차단되면 어떤 앱에서 보내더라도 해당 사용자의 메시지, 통화 및 FaceTime 요청은 더 이상 도달하지 않습니다. 기기에서 연락처를 삭제하여 해당 프로필 데이터를 Splitea에서 완전히 제거할 수도 있습니다.</p>
             </div>
         </section>
+        <section id="account">
+            <h1>계정 및 개인정보</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>계정을 어떻게 삭제하나요?</strong>
+                <p>Splitea를 열고 <strong>설정 → 계정 → 계정 삭제</strong>로 이동한 후 확인합니다. 삭제하면 프로필(이름, 아바타, 결제 핸들)이 사용자 디렉터리에서 즉시 제거됩니다. 기기 또는 iCloud에 로컬로 저장된 영수증과 연락처는 사용자의 관리하에 남아 있습니다 — 함께 제거하려면 계정을 삭제하기 전에 앱 내에서 영수증을 비우거나 앱을 삭제하세요.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Splitea는 어떤 데이터를 저장하나요?</strong>
+                <p>저장된 영수증, 연락처, 분할은 기기에 로컬로 저장되며 비공개 iCloud 컨테이너를 통해 기기 간에 동기화됩니다 — 이 기록은 당사 서버에 보관되지 않습니다. 영수증 <strong>이미지</strong>는 스캔 중에 AI가 항목과 가격을 추출할 수 있도록 당사 서버로 전송되며, 분석 직후 폐기됩니다. 프로필 데이터(이름, 아바타, 결제 핸들, 해시된 전화번호)는 Splitea를 사용하는 연락처가 귀하와 비용을 나눌 때 프로필을 볼 수 있도록 당사 사용자 디렉터리에 서버 측으로 보관하는 유일한 데이터입니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>iCloud 동기화는 어떻게 작동하나요?</strong>
+                <p>Splitea는 Apple의 CloudKit을 사용하여 Apple ID로 기기 간 데이터를 동기화합니다. 당사는 귀하의 iCloud 컨테이너에 접근할 수 없습니다. 동기화를 일시 중지하려면 <strong>설정 → [사용자 이름] → iCloud → iCloud를 사용하는 앱</strong>에서 Splitea를 끄세요.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Splitea가 연락처 접근을 요청하는 이유는?</strong>
+                <p>비용을 나눌 사람을 이름으로 선택할 수 있도록 하기 위함입니다. 연락처 데이터는 기기에서 로컬로 읽힙니다 — 이름, 전화번호, 사진은 기기 밖으로 나가지 않습니다. 전화번호는 어떤 연락처가 Splitea 프로필을 가지고 있는지 표시하기 위해 사용자 디렉터리와 대조하기 전에 해시 처리됩니다.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Splitea 사용하기</h1>
+            <div class="faq-item">
+                <strong>비용을 어떻게 나누나요?</strong>
+                <p>홈 화면의 카메라 버튼을 탭하여 영수증을 스캔합니다. Splitea의 AI가 항목과 가격을 자동으로 추출합니다. 각 항목을 탭하여 사람에게 할당하거나, 길게 눌러 한 번에 여러 개를 할당하세요. 완료되면 각 사람의 행을 탭하여 합계를 확인하고 결제 링크를 복사하세요.</p>
+            </div>
+            <div class="faq-item">
+                <strong>스캔이 항목을 잘못 인식했습니다. 어떻게 수정하나요?</strong>
+                <p>항목을 탭하면 이름이나 가격을 인라인으로 편집할 수 있습니다. 누락된 항목을 추가하려면 항목 목록 하단의 <strong>+</strong>를 탭합니다. 항목을 삭제하려면 행을 왼쪽으로 스와이프하세요.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Splitea가 없는 사람과 청구서를 공유할 수 있나요?</strong>
+                <p>네. 분할 후 공유 버튼을 탭하여 메시지로 링크를 전송하세요. 링크를 탭하는 누구나 웹 브라우저에서 분할 내역을 볼 수 있습니다 — 보거나 결제 앱을 열기 위해 Splitea를 설치할 필요가 없습니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>어떤 결제 앱이 지원되나요?</strong>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay(UPI), Monzo, ATH Móvil. 사용 가능한 목록은 지역에 따라 다릅니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Android에서 ATH Móvil이 열리지 않습니다.</strong>
+                <p>Android에서는 ATH Móvil 앱이 설치되어 있어야 합니다. 앱이 설치되어 있지 않은 경우 결제 링크는 Google Play Store로 리디렉션되어 설치 후 다시 시도할 수 있습니다. iOS에서는 ATH Móvil이 자동으로 열려야 합니다.</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>구독</h1>
+            <div class="faq-item">
+                <strong>구독을 어떻게 취소하나요?</strong>
+                <p>기기에서 <strong>설정 → [사용자 이름] → 구독</strong>으로 이동하여 Splitea Pro를 탭한 다음 <strong>구독 취소</strong>를 탭합니다. 현재 청구 주기 종료까지 Pro 액세스가 유지됩니다.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>환불을 어떻게 요청하나요?</strong>
+                <p>모든 구매는 Apple에서 처리합니다. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>에 접속하여 Apple ID로 로그인하고 Splitea 구매 항목을 찾아 사유를 선택하세요. 환불은 Apple이 직접 처리합니다 — 당사는 결제 정보에 접근할 수 없습니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>새 기기에서 구독을 복원하려면?</strong>
+                <p>동일한 Apple ID로 새 기기에 로그인하고 Splitea를 열어 결제 화면에서 <strong>구입 복원</strong>을 탭하세요. Pro 상태가 자동으로 동기화됩니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>무료와 Pro의 차이점은?</strong>
+                <p>무료 등급은 매월 영수증 스캔 횟수가 제한됩니다. Splitea Pro는 스캔 제한을 해제하며, 월간 또는 연간 자동 갱신 구독이나 일회성 평생 구매로 이용할 수 있습니다.</p>
+            </div>
+        </section>
+        <section id="troubleshooting">
+            <h1>문제 해결</h1>
+            <div class="faq-item">
+                <strong>결제 버튼이 잘못된 앱을 엽니다.</strong>
+                <p>이는 보통 다른 앱이 기기에서 동일한 URL 스킴을 등록했음을 의미합니다. 결제 링크를 처리하는 알 수 없는 앱을 제거하거나 다른 기기에서 공유 링크를 열어보세요. 계속되는 경우 결제 앱과 iOS 버전을 명시하여 <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a>로 이메일을 보내주세요.</p>
+            </div>
+            <div class="faq-item">
+                <strong>추가한 연락처가 나타나지 않습니다.</strong>
+                <p>연락처 접근 권한을 허용했는지 확인하세요(<strong>설정 → Splitea → 연락처</strong>). 권한이 허용되어 있는데도 연락처가 보이지 않으면 Splitea를 닫았다가 다시 열어보세요 — 연락처 동기화는 실행 시와 백그라운드에서 복귀 시 수행됩니다.</p>
+            </div>
+            <div class="faq-item">
+                <strong>결제 요청이 도착하지 않습니다.</strong>
+                <p>결제 요청은 splitea.app 링크가 포함된 iMessage로 도착합니다. iOS 수준에서 발신자를 차단했다면 메시지가 도달하지 않습니다. <strong>설정 → 메시지 → 차단된 연락처</strong>에서 확인하세요. 또한 iMessage가 활성화되어 있고 전화번호가 인증되었는지 확인하세요.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>도움이 더 필요하신가요? <a href="mailto:support@splitea.app">support@splitea.app</a>으로 이메일을 보내주세요 — 24시간 이내에 답변드립니다.</p>
+        </div>
     </div>
 
     <div data-lang="pt">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">Contato</a>
+            <a class="chip" href="#report">Denunciar usuário</a>
+            <a class="chip" href="#block">Bloquear usuário</a>
+            <a class="chip" href="#delete-account">Apagar conta</a>
+            <a class="chip" href="#refund">Reembolso</a>
+        </nav>
+        <section id="contact">
             <h1>Contato</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -435,50 +856,110 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">Respondemos em até 24 horas.</p>
         </section>
-        <section>
-            <h1>Denunciar um usuário</h1>
-            <p>Se você encontrar um perfil do Splitea com foto ou nome de exibição inadequados (discurso de ódio, assédio, imagens sexualmente explícitas, personificação ou qualquer outra violação dos nossos <a href="terms">Termos de Serviço</a>), você pode denunciá-lo de dentro do aplicativo:</p>
-            <ol>
-                <li>Abra o contato no Splitea.</li>
-                <li>Toque no nome do contato para abrir a tela de edição.</li>
-                <li>Role até o fim e toque em <strong>Denunciar usuário</strong>.</li>
-                <li>Confirme para enviar a denúncia.</li>
-            </ol>
-            <p>Revisamos todas as denúncias em até 24 horas. Se o conteúdo violar nossos Termos, removemos a foto ou o nome infrator do nosso diretório de usuários e podemos suspender ou encerrar a conta responsável. Para denúncias urgentes envolvendo questões imediatas de segurança, escreva para <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+        <section id="safety">
+            <h1>Segurança</h1>
+            <div class="faq-item" id="report">
+                <strong>Como denuncio um usuário?</strong>
+                <p>Se você encontrar um perfil do Splitea com foto ou nome de exibição inadequados (discurso de ódio, assédio, imagens sexualmente explícitas, personificação ou qualquer outra violação dos nossos <a href="terms">Termos de Serviço</a>), denuncie-o dentro do aplicativo: abra o contato, toque no nome para abrir a tela de edição, role até o final e toque em <strong>Denunciar usuário</strong>. Confirme para enviar.</p>
+                <p>Revisamos todas as denúncias em até 24 horas. Se o conteúdo violar nossos Termos, removemos a foto ou o nome infrator do nosso diretório de usuários e podemos suspender ou encerrar a conta responsável. Para denúncias urgentes envolvendo questões imediatas de segurança, escreva para <a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>.</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>Como bloqueio alguém?</strong>
+                <p>O Splitea entrega solicitações de pagamento pelo app Mensagens do seu telefone. A forma mais eficaz de parar de receber solicitações de alguém é bloqueá-lo no nível do sistema iOS: em <strong>Mensagens</strong>, abra a conversa, toque no nome do contato no topo e toque em <strong>Bloquear esta pessoa</strong>; ou em <strong>Contatos</strong>, abra o contato, role para baixo e toque em <strong>Bloquear esta pessoa</strong>. Uma vez bloqueado, suas mensagens, chamadas e solicitações de FaceTime deixam de chegar até você, independentemente do app que as enviou. Você também pode excluir o contato do seu dispositivo para remover totalmente os dados de perfil dele do Splitea.</p>
+            </div>
         </section>
-        <section>
-            <h1>Bloquear um usuário</h1>
-            <p>O Splitea entrega solicitações de pagamento pelo app Mensagens do seu telefone. Para parar de receber solicitações de alguém, bloqueie-o no nível do sistema iOS: uma vez bloqueado, suas mensagens, chamadas e solicitações de FaceTime deixam de chegar até você, independentemente do app que as enviou:</p>
-            <ul>
-                <li><strong>No app Mensagens</strong>: abra a conversa, toque no nome do contato no topo e, em seguida, toque em <strong>Bloquear esta pessoa</strong>.</li>
-                <li><strong>No app Contatos</strong>: abra o contato, role para baixo e toque em <strong>Bloquear esta pessoa</strong>.</li>
-            </ul>
-            <p>O bloqueio no nível do iOS é a opção mais forte disponível porque interrompe a mensagem antes mesmo de ela chegar ao Splitea. Você também pode excluir o contato do seu dispositivo para remover totalmente os dados de perfil dele do Splitea.</p>
-        </section>
-        <section>
-            <h1>Perguntas Frequentes</h1>
-            <div class="faq-item">
-                <strong>Como funciona o escaneamento de recibos?</strong>
-                <p>Aponte sua câmera para qualquer recibo. Splitea usa IA para ler os itens e preços automaticamente.</p>
+        <section id="account">
+            <h1>Conta e Privacidade</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>Como apago minha conta?</strong>
+                <p>Abra o Splitea, vá em <strong>Ajustes → Conta → Apagar conta</strong> e confirme. A exclusão remove imediatamente seu perfil (nome, avatar, identificadores de pagamento) do nosso diretório de usuários. Recibos e contatos armazenados localmente no dispositivo ou no seu iCloud permanecem sob seu controle — para apagar também, exclua o aplicativo ou limpe os recibos por dentro dele antes de apagar a conta.</p>
             </div>
             <div class="faq-item">
-                <strong>Meus dados são armazenados nos seus servidores?</strong>
-                <p>Não. As imagens são processadas em tempo real e nunca armazenadas. Seus dados ficam no seu dispositivo.</p>
+                <strong>Que dados o Splitea armazena?</strong>
+                <p>Seus recibos, contatos e divisões salvos ficam localmente no seu dispositivo e sincronizam entre seus dispositivos pelo seu contêiner privado do iCloud — nada desse histórico é guardado em nossos servidores. As <strong>imagens</strong> dos recibos são enviadas ao nosso servidor durante a leitura para que a IA possa extrair itens e preços, e são descartadas imediatamente após a análise. Os dados de perfil (nome, avatar, identificadores de pagamento, número de telefone com hash) são os únicos dados que mantemos no lado servidor, em nosso diretório de usuários, para que contatos que usam o Splitea possam ver seu perfil ao dividir uma conta com você.</p>
             </div>
+            <div class="faq-item">
+                <strong>Como funciona a sincronização do iCloud?</strong>
+                <p>O Splitea usa o CloudKit da Apple para sincronizar dados entre seus dispositivos com seu Apple ID. Não temos acesso ao seu contêiner do iCloud. Para pausar a sincronização, desative o Splitea em <strong>Ajustes → [seu nome] → iCloud → Apps que Usam o iCloud</strong>.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Por que o Splitea pede acesso aos Contatos?</strong>
+                <p>Para permitir que você selecione pelo nome as pessoas com quem dividir uma conta. Os dados dos contatos são lidos localmente no seu dispositivo — nomes, números de telefone e fotos nunca saem do seu telefone. Os números de telefone são submetidos a hash antes de serem comparados com nosso diretório de usuários, para mostrarmos quais dos seus contatos têm perfis no Splitea.</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>Usando o Splitea</h1>
+            <div class="faq-item">
+                <strong>Como divido uma conta?</strong>
+                <p>Toque no botão da câmera na tela inicial e escaneie um recibo. A IA do Splitea extrai itens e preços automaticamente. Toque em cada item para atribuí-lo a uma pessoa, ou use o menu de toque longo para atribuir vários ao mesmo tempo. Quando terminar, toque na linha de cada pessoa para ver o total e copiar um link de pagamento.</p>
+            </div>
+            <div class="faq-item">
+                <strong>A leitura errou um item. Como corrijo?</strong>
+                <p>Toque em qualquer item para editar nome ou preço diretamente. Para adicionar um item ausente, toque no <strong>+</strong> no final da lista. Para excluir um item, deslize a linha para a esquerda.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Posso compartilhar uma conta com alguém que não tem o Splitea?</strong>
+                <p>Sim. Após dividir, toque no botão de compartilhar para enviar um link via Mensagens. Qualquer pessoa que tocar no link verá a divisão no navegador web — não é necessário instalar o Splitea para visualizar nem para abrir o app de pagamento.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Quais apps de pagamento são suportados?</strong>
+                <p>Venmo, Cash App, PayPal, Revolut, Google Pay (UPI), Monzo e ATH Móvil. A lista disponível depende da região em que você está.</p>
+            </div>
+            <div class="faq-item">
+                <strong>ATH Móvil não abre no Android.</strong>
+                <p>O Android exige que o app ATH Móvil esteja instalado. Se o app não estiver instalado, o link de pagamento redireciona para a Google Play Store para você instalá-lo e tentar novamente. No iOS, o ATH Móvil deve abrir automaticamente.</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>Assinaturas</h1>
             <div class="faq-item">
                 <strong>Como cancelo minha assinatura?</strong>
-                <p>Vá em Ajustes > Apple ID > Assinaturas no seu dispositivo.</p>
+                <p>Vá em <strong>Ajustes → [seu nome] → Assinaturas</strong> no seu dispositivo, toque em Splitea Pro e toque em <strong>Cancelar assinatura</strong>. Você manterá o acesso Pro até o final do período de cobrança atual.</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>Como solicito um reembolso?</strong>
+                <p>Todas as compras são processadas pela Apple. Visite <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, entre com seu Apple ID, encontre sua compra do Splitea e selecione um motivo. A Apple processa os reembolsos diretamente — não temos acesso a informações de cobrança.</p>
             </div>
             <div class="faq-item">
-                <strong>Posso solicitar reembolso?</strong>
-                <p>Todas as compras são processadas pela Apple. Visite <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+                <strong>Como restauro minha assinatura em um novo dispositivo?</strong>
+                <p>Entre no novo dispositivo com o mesmo Apple ID, abra o Splitea e toque em <strong>Restaurar compras</strong> na tela de assinatura. Seu status Pro sincroniza automaticamente.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Qual a diferença entre o gratuito e o Pro?</strong>
+                <p>O nível gratuito inclui um número limitado de escaneamentos de recibos por mês. O Splitea Pro remove o limite de escaneamentos e está disponível como assinatura mensal ou anual com renovação automática, ou como compra única vitalícia.</p>
             </div>
         </section>
+        <section id="troubleshooting">
+            <h1>Solução de problemas</h1>
+            <div class="faq-item">
+                <strong>O botão de pagamento abre o app errado.</strong>
+                <p>Geralmente significa que outro app registrou o mesmo esquema de URL no seu dispositivo. Tente desinstalar apps desconhecidos que lidam com links de pagamento, ou abra o link compartilhado de outro dispositivo. Se continuar, escreva para <a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a> informando o app de pagamento e sua versão do iOS.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Um contato que adicionei não aparece.</strong>
+                <p>Verifique se concedeu acesso aos Contatos (<strong>Ajustes → Splitea → Contatos</strong>). Se o acesso estiver concedido e o contato ainda não aparecer, feche e abra o Splitea novamente — a sincronização de contatos é executada na inicialização e ao voltar do segundo plano.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Não estou recebendo solicitações de pagamento.</strong>
+                <p>As solicitações de pagamento chegam como iMessages com um link splitea.app. Se você bloqueou o remetente no nível do iOS, a mensagem não chega. Verifique em <strong>Ajustes → Mensagens → Bloqueados</strong>. Confirme também que o iMessage está ativado e seu número de telefone verificado.</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>Ainda precisa de ajuda? Escreva para <a href="mailto:support@splitea.app">support@splitea.app</a> — respondemos em até 24 horas.</p>
+        </div>
     </div>
 
     <div data-lang="zh">
-        <section>
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">联系方式</a>
+            <a class="chip" href="#report">举报用户</a>
+            <a class="chip" href="#block">屏蔽用户</a>
+            <a class="chip" href="#delete-account">删除账户</a>
+            <a class="chip" href="#refund">退款</a>
+        </nav>
+        <section id="contact">
             <h1>联系方式</h1>
             <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
                 <div class="contact-card">
@@ -490,46 +971,214 @@
                     <div class="contact-arrow">›</div>
                 </div>
             </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">我们会在24小时内回复。</p>
         </section>
-        <section>
-            <h1>举报用户</h1>
-            <p>如果您遇到含有不当照片或显示名称的Splitea个人资料（仇恨言论、骚扰、色情露骨图像、冒充身份或其他违反我们<a href="terms">服务条款</a>的内容），可以从应用内进行举报：</p>
-            <ol>
-                <li>在Splitea中打开该联系人。</li>
-                <li>点击联系人姓名以打开编辑联系人页面。</li>
-                <li>滚动到底部，点击<strong>举报用户</strong>。</li>
-                <li>确认以提交举报。</li>
-            </ol>
-            <p>我们会在24小时内审核每一份举报。如果内容违反我们的条款，我们会从用户目录中删除违规的照片或显示名称，并可能暂停或终止相关账户。如遇涉及人身安全的紧急举报，请发邮件至<a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>。</p>
+        <section id="safety">
+            <h1>安全</h1>
+            <div class="faq-item" id="report">
+                <strong>如何举报用户？</strong>
+                <p>如果您遇到含有不当照片或显示名称的Splitea个人资料（仇恨言论、骚扰、色情露骨图像、冒充身份或其他违反我们<a href="terms">服务条款</a>的内容），请从应用内进行举报：打开该联系人，点击姓名打开编辑联系人页面，滚动到底部并点击<strong>举报用户</strong>。确认提交。</p>
+                <p>我们会在24小时内审核每一份举报。如果内容违反我们的条款，我们会从用户目录中删除违规的照片或显示名称，并可能暂停或终止相关账户。如遇涉及人身安全的紧急举报，请发邮件至<a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>。</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>如何屏蔽某人？</strong>
+                <p>Splitea通过您手机的"信息"应用发送付款请求。停止接收某人请求最有效的方法是在iOS系统级别屏蔽对方：在<strong>信息</strong>中，打开对话，点击顶部的联系人姓名，然后点击<strong>屏蔽此来电号码</strong>；或在<strong>通讯录</strong>中，打开联系人，向下滚动并点击<strong>屏蔽此来电号码</strong>。屏蔽后，无论从哪个应用发送，对方的消息、电话和FaceTime请求都不会再到达您。您也可以从设备中删除该联系人，以将其个人资料数据从Splitea中完全移除。</p>
+            </div>
         </section>
-        <section>
-            <h1>屏蔽用户</h1>
-            <p>Splitea通过您手机的"信息"应用发送付款请求。要停止接收某人的请求，请在iOS系统级别屏蔽对方：屏蔽后，无论从哪个应用发送，对方的消息、电话和FaceTime请求都不会再到达您：</p>
-            <ul>
-                <li><strong>在"信息"中</strong>：打开对话，点击顶部的联系人姓名，然后点击<strong>屏蔽此来电号码</strong>。</li>
-                <li><strong>在"通讯录"中</strong>：打开联系人，向下滚动，然后点击<strong>屏蔽此来电号码</strong>。</li>
-            </ul>
-            <p>iOS级别屏蔽是最强的选项，因为它在消息到达Splitea之前就将其拦截。您也可以从设备中删除该联系人，以将其个人资料数据从Splitea中完全移除。</p>
-        </section>
-        <section>
-            <h1>常见问题</h1>
-            <div class="faq-item">
-                <strong>收据扫描如何工作？</strong>
-                <p>将相机对准任何收据。Splitea使用AI自动读取商品和价格。</p>
+        <section id="account">
+            <h1>账户与隐私</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>如何删除我的账户？</strong>
+                <p>打开Splitea，前往<strong>设置 → 账户 → 删除账户</strong>并确认。删除后会立即从我们的用户目录中移除您的个人资料（姓名、头像、支付账号）。本地存储在设备上或iCloud中的收据和联系人仍在您的控制之下 — 要一并删除，请在删除账户前在应用内清空收据，或先删除应用。</p>
             </div>
             <div class="faq-item">
-                <strong>我的数据会存储在服务器上吗？</strong>
-                <p>不会。图片实时处理，从不存储。您的数据留在设备上，通过iCloud同步。</p>
+                <strong>Splitea会存储哪些数据？</strong>
+                <p>您保存的收据、联系人和分账信息位于您的设备本地，并通过您的私有iCloud容器在您的设备之间同步 — 这些历史记录都不会保存在我们的服务器上。收据<strong>图像</strong>在扫描期间发送到我们的服务器以便AI提取商品和价格，解析后立即丢弃。资料数据（姓名、头像、支付账号、哈希后的电话号码）是我们在服务器端唯一保留的数据，存放在我们的用户目录中，以便使用Splitea的联系人在与您分账时能够看到您的资料。</p>
             </div>
+            <div class="faq-item">
+                <strong>iCloud同步如何工作？</strong>
+                <p>Splitea使用Apple的CloudKit通过您的Apple ID在您的设备之间同步数据。我们无法访问您的iCloud容器。要暂停同步，请在<strong>设置 → [您的姓名] → iCloud → 使用iCloud的应用</strong>中关闭Splitea。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Splitea为何请求通讯录权限？</strong>
+                <p>以便您按名字选择分账对象。联系人数据在您的设备本地读取 — 姓名、电话号码和照片永远不会离开您的手机。电话号码在与我们的用户目录比对前会进行哈希处理，以便显示您的联系人中哪些拥有Splitea资料。</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>使用Splitea</h1>
+            <div class="faq-item">
+                <strong>如何分账？</strong>
+                <p>在主屏幕点击相机按钮并扫描收据。Splitea的AI会自动提取商品和价格。点击每个商品将其分配给一个人，或使用长按菜单一次分配多个。完成后，点击每个人的行查看其总额并复制付款链接。</p>
+            </div>
+            <div class="faq-item">
+                <strong>扫描的商品有误，如何修正？</strong>
+                <p>点击任意商品即可就地编辑名称或价格。要添加遗漏的商品，请点击商品列表底部的<strong>+</strong>。要删除，请向左滑动该行。</p>
+            </div>
+            <div class="faq-item">
+                <strong>可以与没有Splitea的人共享账单吗？</strong>
+                <p>可以。分账后，点击分享按钮通过"信息"发送链接。任何人点击该链接都能在网页浏览器中查看分账 — 无需安装Splitea即可查看或打开付款应用。</p>
+            </div>
+            <div class="faq-item">
+                <strong>支持哪些付款应用？</strong>
+                <p>Venmo、Cash App、PayPal、Revolut、Google Pay（UPI）、Monzo和ATH Móvil。可用列表取决于您所在的地区。</p>
+            </div>
+            <div class="faq-item">
+                <strong>ATH Móvil在Android上无法打开。</strong>
+                <p>Android需要安装ATH Móvil应用。如果未安装，付款链接会跳转至Google Play商店，您可以在安装后重试。在iOS上，ATH Móvil应自动打开。</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>订阅</h1>
             <div class="faq-item">
                 <strong>如何取消订阅？</strong>
-                <p>前往设置 > Apple ID > 订阅进行取消。</p>
+                <p>在设备上前往<strong>设置 → [您的姓名] → 订阅</strong>，点击Splitea Pro，然后点击<strong>取消订阅</strong>。您将保留Pro访问权限直到当前计费周期结束。</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>如何申请退款？</strong>
+                <p>所有购买均由Apple处理。请访问<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>，用您的Apple ID登录，找到您的Splitea购买并选择原因。Apple会直接处理退款 — 我们无法访问账单信息。</p>
             </div>
             <div class="faq-item">
-                <strong>可以申请退款吗？</strong>
-                <p>所有购买由Apple处理。请访问<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>。</p>
+                <strong>如何在新设备上恢复订阅？</strong>
+                <p>用相同的Apple ID登录新设备，打开Splitea，在付费墙上点击<strong>恢复购买</strong>。您的Pro状态会自动同步。</p>
+            </div>
+            <div class="faq-item">
+                <strong>免费版和Pro有什么区别？</strong>
+                <p>免费等级每月包含有限次数的收据扫描。Splitea Pro取消扫描限制，可作为按月或按年自动续订的订阅，或一次性终身购买。</p>
             </div>
         </section>
+        <section id="troubleshooting">
+            <h1>疑难解答</h1>
+            <div class="faq-item">
+                <strong>付款按钮打开了错误的应用。</strong>
+                <p>这通常意味着另一个应用在您的设备上注册了相同的URL方案。请尝试卸载处理付款链接的不明应用，或从其他设备打开分享链接。如果问题持续，请将付款应用名称和iOS版本发送至<a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a>。</p>
+            </div>
+            <div class="faq-item">
+                <strong>添加的联系人没有显示。</strong>
+                <p>请确认已授予通讯录权限（<strong>设置 → Splitea → 通讯录</strong>）。如果已授予权限但联系人仍未出现，请关闭并重新打开Splitea — 联系人同步会在启动时和从后台返回后运行。</p>
+            </div>
+            <div class="faq-item">
+                <strong>我没有收到付款请求。</strong>
+                <p>付款请求以包含splitea.app链接的iMessage送达。如果您在iOS层级屏蔽了发件人，消息将无法送达。请在<strong>设置 → 信息 → 已屏蔽的联系人</strong>中确认。同时确保iMessage已启用且您的电话号码已验证。</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>仍需要帮助？请发送邮件至<a href="mailto:support@splitea.app">support@splitea.app</a> — 我们会在24小时内回复。</p>
+        </div>
+    </div>
+
+    <div data-lang="zh-Hant">
+        <nav class="quick-actions">
+            <a class="chip" href="#contact">聯絡方式</a>
+            <a class="chip" href="#report">回報使用者</a>
+            <a class="chip" href="#block">封鎖使用者</a>
+            <a class="chip" href="#delete-account">刪除帳戶</a>
+            <a class="chip" href="#refund">退款</a>
+        </nav>
+        <section id="contact">
+            <h1>聯絡方式</h1>
+            <a href="mailto:support@splitea.app?subject=Splitea%20Support" style="text-decoration:none">
+                <div class="contact-card">
+                    <div class="contact-icon"><svg class="contact-icon-svg" viewBox="0 0 39.052 27.7978" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2938 27.7978L33.7178 27.7978C36.8376 27.7978 38.677 25.9691 38.677 22.5466L38.677 5.2668C38.677 1.84434 36.827 0.015625 33.3782 0.015625L4.95921 0.015625C1.83937 0.015625 0 1.84434 0 5.2668L0 22.5466C0 25.9691 1.85003 27.7978 5.2938 27.7978ZM5.35408 24.5575C4.00098 24.5575 3.24026 23.8075 3.24026 22.4068L3.24026 5.38533C3.24026 3.9953 4.00098 3.25589 5.35408 3.25589L33.3073 3.25589C34.6604 3.25589 35.4367 3.9953 35.4367 5.39599L35.4367 22.4174C35.4367 23.8075 34.6604 24.5575 33.3073 24.5575ZM19.3307 18.2943C20.4549 18.2943 21.4385 17.8995 22.4385 16.9925L36.9677 3.9122L34.9154 1.84427L20.6717 14.691C20.237 15.0788 19.7966 15.272 19.3307 15.272C18.8697 15.272 18.4293 15.0788 17.9946 14.691L3.75092 1.84427L1.69365 3.9122L16.2278 16.9925C17.2228 17.8995 18.2114 18.2943 19.3307 18.2943ZM4.03001 25.3705L15.0592 14.3307L12.9771 12.2933L1.97274 23.2976ZM34.6576 25.3811L36.7149 23.3083L25.6999 12.2933L23.6072 14.3307Z" fill="currentColor" fill-opacity="0.85"/></svg></div>
+                    <div class="contact-text">
+                        <div class="contact-label">電子郵件</div>
+                        <div class="contact-value">support@splitea.app</div>
+                    </div>
+                    <div class="contact-arrow">›</div>
+                </div>
+            </a>
+            <p style="margin-top:12px;font-size:13px;color:#86868b;">我們會在24小時內回覆。</p>
+        </section>
+        <section id="safety">
+            <h1>安全</h1>
+            <div class="faq-item" id="report">
+                <strong>如何回報使用者？</strong>
+                <p>如果您遇到含有不當照片或顯示名稱的Splitea個人資料（仇恨言論、騷擾、色情露骨圖像、冒充身分或其他違反我們<a href="terms">服務條款</a>的內容），請從應用內進行回報：開啟該聯絡人，點擊姓名開啟編輯聯絡人頁面，捲動到底部並點擊<strong>回報使用者</strong>。確認以送出。</p>
+                <p>我們會在24小時內審核每一份回報。如果內容違反我們的條款，我們會從使用者目錄中刪除違規的照片或顯示名稱，並可能暫停或終止相關帳戶。如遇涉及人身安全的緊急回報，請寄送郵件至<a href="mailto:support@splitea.app?subject=Urgent%20Abuse%20Report">support@splitea.app</a>。</p>
+            </div>
+            <div class="faq-item" id="block">
+                <strong>如何封鎖某人？</strong>
+                <p>Splitea透過您手機的「訊息」App傳送付款請求。停止接收某人請求最有效的方法是在iOS系統層級封鎖對方：在<strong>訊息</strong>中，開啟對話，點擊頂部的聯絡人姓名，然後點擊<strong>封鎖此來電者</strong>；或在<strong>聯絡資訊</strong>中，開啟聯絡人，向下捲動並點擊<strong>封鎖此來電者</strong>。封鎖後，無論從哪個App傳送，對方的訊息、通話和FaceTime請求都不會再到達您。您也可以從裝置中刪除該聯絡人，以將其個人資料完全從Splitea中移除。</p>
+            </div>
+        </section>
+        <section id="account">
+            <h1>帳戶與隱私</h1>
+            <div class="faq-item" id="delete-account">
+                <strong>如何刪除我的帳戶？</strong>
+                <p>開啟Splitea，前往<strong>設定 → 帳戶 → 刪除帳戶</strong>並確認。刪除後會立即從我們的使用者目錄中移除您的個人資料（姓名、頭像、付款帳號）。本機儲存於裝置上或iCloud中的收據和聯絡人仍在您的控制之下 — 要一併刪除，請在刪除帳戶前在應用內清空收據，或先刪除應用。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Splitea會儲存哪些資料？</strong>
+                <p>您儲存的收據、聯絡人和分帳資訊位於您的裝置本機，並透過您的私人iCloud容器在您的裝置之間同步 — 這些歷史紀錄都不會儲存在我們的伺服器上。收據<strong>影像</strong>在掃描期間傳送到我們的伺服器以便AI擷取項目和價格，解析後立即捨棄。個人資料資料（姓名、頭像、付款帳號、雜湊後的電話號碼）是我們在伺服器端唯一保留的資料，存放在我們的使用者目錄中，以便使用Splitea的聯絡人在與您分帳時能夠看到您的個人資料。</p>
+            </div>
+            <div class="faq-item">
+                <strong>iCloud同步如何運作？</strong>
+                <p>Splitea使用Apple的CloudKit透過您的Apple ID在您的裝置之間同步資料。我們無法存取您的iCloud容器。要暫停同步，請在<strong>設定 → [您的姓名] → iCloud → 使用iCloud的App</strong>中關閉Splitea。</p>
+            </div>
+            <div class="faq-item">
+                <strong>Splitea為何要求聯絡資訊權限？</strong>
+                <p>以便您按名字選擇分帳對象。聯絡人資料在您的裝置本機讀取 — 姓名、電話號碼和照片永遠不會離開您的手機。電話號碼在與我們的使用者目錄比對前會進行雜湊處理，以便顯示您的聯絡人中哪些擁有Splitea個人資料。</p>
+            </div>
+        </section>
+        <section id="using">
+            <h1>使用Splitea</h1>
+            <div class="faq-item">
+                <strong>如何分帳？</strong>
+                <p>在主畫面點擊相機按鈕並掃描收據。Splitea的AI會自動擷取項目和價格。點擊每個項目將其指派給一個人，或使用長按選單一次指派多個。完成後，點擊每個人的列查看其總額並複製付款連結。</p>
+            </div>
+            <div class="faq-item">
+                <strong>掃描的項目有誤，如何修正？</strong>
+                <p>點擊任一項目即可就地編輯名稱或價格。要新增遺漏的項目，請點擊項目清單底部的<strong>+</strong>。要刪除，請向左滑動該列。</p>
+            </div>
+            <div class="faq-item">
+                <strong>可以與沒有Splitea的人共用帳單嗎？</strong>
+                <p>可以。分帳後，點擊分享按鈕透過「訊息」傳送連結。任何人點擊該連結都能在網頁瀏覽器中檢視分帳 — 無需安裝Splitea即可檢視或開啟付款App。</p>
+            </div>
+            <div class="faq-item">
+                <strong>支援哪些付款App？</strong>
+                <p>Venmo、Cash App、PayPal、Revolut、Google Pay（UPI）、Monzo和ATH Móvil。可用清單取決於您所在的地區。</p>
+            </div>
+            <div class="faq-item">
+                <strong>ATH Móvil在Android上無法開啟。</strong>
+                <p>Android需要安裝ATH Móvil App。如果未安裝，付款連結會跳轉至Google Play商店，您可以在安裝後重試。在iOS上，ATH Móvil應自動開啟。</p>
+            </div>
+        </section>
+        <section id="billing">
+            <h1>訂閱</h1>
+            <div class="faq-item">
+                <strong>如何取消訂閱？</strong>
+                <p>在裝置上前往<strong>設定 → [您的姓名] → 訂閱項目</strong>，點擊Splitea Pro，然後點擊<strong>取消訂閱</strong>。您將保留Pro存取權限直到目前計費週期結束。</p>
+            </div>
+            <div class="faq-item" id="refund">
+                <strong>如何申請退款？</strong>
+                <p>所有購買均由Apple處理。請造訪<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>，用您的Apple ID登入，找到您的Splitea購買並選擇原因。Apple會直接處理退款 — 我們無法存取帳單資訊。</p>
+            </div>
+            <div class="faq-item">
+                <strong>如何在新裝置上還原訂閱？</strong>
+                <p>用相同的Apple ID登入新裝置，開啟Splitea，在付費牆上點擊<strong>還原購買項目</strong>。您的Pro狀態會自動同步。</p>
+            </div>
+            <div class="faq-item">
+                <strong>免費版和Pro有什麼區別？</strong>
+                <p>免費等級每月包含有限次數的收據掃描。Splitea Pro取消掃描限制，可作為按月或按年自動續訂的訂閱，或一次性終身購買。</p>
+            </div>
+        </section>
+        <section id="troubleshooting">
+            <h1>疑難排解</h1>
+            <div class="faq-item">
+                <strong>付款按鈕開啟了錯誤的App。</strong>
+                <p>這通常意味著另一個App在您的裝置上註冊了相同的URL方案。請嘗試解除安裝處理付款連結的不明App，或從其他裝置開啟分享連結。如果問題持續，請將付款App名稱和iOS版本寄送至<a href="mailto:support@splitea.app?subject=Payment%20link%20opens%20wrong%20app">support@splitea.app</a>。</p>
+            </div>
+            <div class="faq-item">
+                <strong>新增的聯絡人沒有顯示。</strong>
+                <p>請確認已授予聯絡資訊權限（<strong>設定 → Splitea → 聯絡資訊</strong>）。如果已授予權限但聯絡人仍未出現，請關閉並重新開啟Splitea — 聯絡人同步會在啟動時和從背景返回後執行。</p>
+            </div>
+            <div class="faq-item">
+                <strong>我沒有收到付款請求。</strong>
+                <p>付款請求以包含splitea.app連結的iMessage送達。如果您在iOS層級封鎖了寄件人，訊息將無法送達。請在<strong>設定 → 訊息 → 已封鎖的聯絡人</strong>中確認。同時確保iMessage已啟用且您的電話號碼已驗證。</p>
+            </div>
+        </section>
+        <div class="tail-note">
+            <p>仍需要協助？請寄送郵件至<a href="mailto:support@splitea.app">support@splitea.app</a> — 我們會在24小時內回覆。</p>
+        </div>
     </div>
 </div>
 
@@ -540,8 +1189,14 @@
 
 <script>
     const params = new URLSearchParams(window.location.search);
-    let lang = params.get('lang') || navigator.language.slice(0, 2) || 'en';
-    const supported = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
+    let raw = params.get('lang') || navigator.language || 'en';
+    let lang;
+    if (raw.toLowerCase().startsWith('zh')) {
+        lang = /Hant|TW|HK|MO/i.test(raw) ? 'zh-Hant' : 'zh';
+    } else {
+        lang = raw.slice(0, 2);
+    }
+    const supported = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh', 'zh-Hant'];
     const active = supported.includes(lang) ? lang : 'en';
     document.querySelectorAll('[data-lang]').forEach(el => {
         el.classList.toggle('active', el.dataset.lang === active);

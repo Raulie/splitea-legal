@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Splitea Privacy Policy — how we collect, use, share, retain, and protect your information, plus your rights under GDPR and CCPA.">
     <title>Splitea - Privacy Policy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="header">
-    <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="logo" viewBox="0 0 400 672" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M283.862 238.563C394.874 302.746 432.953 444.821 368.915 555.895C304.877 666.969 162.97 704.982 51.9581 640.799C51.7784 640.695 51.5994 640.59 51.4201 640.486L283.322 238.253C283.502 238.356 283.682 238.459 283.862 238.563Z" fill="#1d1d1f"/>
         <path d="M305.526 11.984C320.035 16.8555 334.276 23.2417 348.041 31.2006C348.221 31.3045 348.4 31.4094 348.58 31.5137L116.678 433.747C116.498 433.644 116.318 433.541 116.138 433.437C102.372 425.478 89.7289 416.32 78.2617 406.174L305.526 11.984Z" fill="#1d1d1f"/>
         <path d="M204.565 1.64437C222.213 -0.466666 240.159 -0.561847 258.041 1.4558L45.4142 370.256C34.7286 355.757 25.8379 340.146 18.8394 323.785L204.565 1.64437Z" fill="#1d1d1f"/>
@@ -26,264 +27,1108 @@
     <p data-lang="ko">개인정보</p>
     <p data-lang="pt">Privacidade</p>
     <p data-lang="zh">隐私政策</p>
+    <p data-lang="zh-Hant">隱私政策</p>
 </div>
 
 <div class="content">
 <div class="legal-content" data-lang="en" class="active">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 28, 2026</p>
-    <p>Splitea ("we", "our", or "the app") is a bill-splitting app developed by Raúl Mora. This Privacy Policy explains how we collect, use, and protect your information.</p>
+    <p class="updated">Last updated: May 18, 2026</p>
+    <p>Splitea ("we", "our", or "the app") is a bill-splitting app. This Privacy Policy explains what information we collect, how we use it, who we share it with, how long we keep it, and the rights you have over it.</p>
+    <h2>Data Controller</h2>
+    <p>The data controller for personal information processed in connection with Splitea is:</p>
+    <p>Raúl Mora (sole proprietor)<br>[YOUR MAILING ADDRESS]<br>Email: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea is a one-person operation and is not required to designate a Data Protection Officer under GDPR Article 37. For any data-protection question, write to the email above.</p>
     <h2>Information We Collect</h2>
-    <p><strong>Camera and Photos.</strong> We access your camera to scan receipts and your photo library to select receipt images. Receipt images are sent to our server for processing and are not stored after parsing is complete.</p>
-    <p><strong>Contacts.</strong> We access your device contacts so you can select people to split bills with. Contact names, phone numbers, and photos are used locally for display purposes. Payment usernames (Venmo, PayPal, etc.) are stored in your device's contact records.</p>
-    <p><strong>Location.</strong> We request approximate location to determine local tax rates for accurate bill calculations. Location data is sent with receipt images for processing and is not stored.</p>
-    <p><strong>User Profile.</strong> Your name, phone number, avatar, and payment usernames are stored locally on your device using Apple's SwiftData framework and may sync across your devices via iCloud.</p>
-    <p><strong>Scan Usage.</strong> We track the number of receipt scans you perform using Apple's iCloud Key-Value Store to manage free tier limits. This data syncs across your devices via your Apple ID.</p>
+    <p><strong>Profile information.</strong> When you create a Splitea profile, your display name, avatar, payment-app usernames (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil), and phone number are stored in our user directory ("splitea-id") so contacts who use Splitea can see your profile when splitting a bill with you. The same profile is also kept on your device and synced across your devices via your private iCloud container.</p>
+    <p><strong>Contacts.</strong> If you grant Contacts access, Splitea reads names, phone numbers, and photos from your device's address book to let you pick people to split bills with. Names and photos stay on your device. Phone numbers are <strong>hashed</strong> (one-way cryptographic hash) before being sent to our user directory so we can tell you which of your contacts already use Splitea — we never see the raw numbers, and we don't store the hashes after the lookup.</p>
+    <p><strong>Camera and photos.</strong> Splitea uses your camera to scan receipts and your photo library to import receipt images. Each receipt image is sent to our server for AI parsing and is discarded immediately after the items and prices are extracted. We do not retain receipt images.</p>
+    <p><strong>Approximate location.</strong> If you grant location access, Splitea sends your approximate location with each scan request so the AI service can apply the correct local sales-tax rate. Location data is processed in real time with the scan and is not stored.</p>
+    <p><strong>Scan usage.</strong> We track the number of receipt scans you perform per billing period using Apple's iCloud Key-Value Store so we can apply the free-tier limit. This counter syncs across your devices via your Apple ID and is never read by our servers.</p>
+    <p><strong>Subscription status.</strong> Apple's StoreKit reports your Splitea Pro entitlement to the app on launch. We don't receive your Apple ID, payment method, or billing details — only a boolean indicating whether you have an active Pro subscription.</p>
+    <h2>How We Use Your Information</h2>
+    <p>We use the information above to:</p>
+    <ul>
+        <li>Provide core app functionality (scanning receipts, splitting bills, matching contacts who use Splitea).</li>
+        <li>Apply local tax rates to your split calculations.</li>
+        <li>Enforce free-tier limits and entitlement to Splitea Pro features.</li>
+        <li>Maintain the security and integrity of the service (App Attest, HTTPS, rate limiting).</li>
+        <li>Respond to your support inquiries.</li>
+    </ul>
+    <h2>Legal Basis for Processing (GDPR)</h2>
+    <p>If you are in the European Economic Area, the United Kingdom, or Switzerland, we rely on the following legal bases under GDPR Article 6:</p>
+    <ul>
+        <li><strong>Performance of a contract</strong> — to provide the core app functionality you signed up for (scanning, splitting, matching contacts, applying tax, enforcing entitlements). Without this processing we cannot deliver the service.</li>
+        <li><strong>Your consent</strong> — for optional permissions you grant at the OS level (Contacts, Camera, Photos, Location). You may revoke any of these at any time in your device Settings.</li>
+        <li><strong>Our legitimate interest</strong> — to keep the service secure, prevent abuse, and respond to support requests. We have weighed this against your rights and concluded the processing is proportionate.</li>
+    </ul>
     <h2>How We Process Data</h2>
-    <p>When you scan a receipt, the image is sent to our server (hosted on Cloudflare Workers) which forwards it to a third-party AI service for text extraction and parsing. The image is processed in real-time and is not stored on our servers or by the AI service beyond the processing request.</p>
+    <p>When you scan a receipt, the image is sent to our server (hosted on Cloudflare Workers) which forwards it to a third-party AI service for text extraction and parsing. The image and the extracted text are held in memory only for the duration of the request and are not persisted on our servers or by the AI service. The parsed item list returns to your device, where you can edit and save it locally.</p>
     <h2>Third-Party Services</h2>
     <ul>
-        <li><strong>Apple iCloud</strong> — syncs your profile, saved receipts, and scan usage across your devices.</li>
-        <li><strong>Cloudflare Workers</strong> — processes receipt images. Subject to <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
-        <li><strong>Firebase Remote Config</strong> — delivers app configuration. No personal data is collected. Subject to <a href="https://firebase.google.com/support/privacy">Firebase's Privacy Policy</a>.</li>
-        <li><strong>Apple StoreKit</strong> — handles subscriptions and purchases. Managed entirely by Apple.</li>
+        <li><strong>Apple iCloud / CloudKit</strong> — syncs your profile, saved receipts, and scan-usage counter across your devices. iCloud data sits in your private container; we have no access to it.</li>
+        <li><strong>Cloudflare Workers</strong> — hosts our server, proxies receipt scans to the AI service, and stores the user directory. Subject to <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
+        <li><strong>Third-party AI provider</strong> — extracts items and prices from receipt images. The provider processes each image as a stateless inference request and does not retain it.</li>
+        <li><strong>Firebase Remote Config</strong> — delivers app configuration. No personal data is sent to Firebase. Subject to <a href="https://firebase.google.com/support/privacy">Firebase's Privacy Policy</a>.</li>
+        <li><strong>Apple StoreKit</strong> — handles subscriptions and purchases. Managed entirely by Apple; we receive only entitlement status.</li>
     </ul>
+    <h2>International Data Transfers</h2>
+    <p>Our server is operated on Cloudflare's global edge network and our AI provider is based in the United States. If you use Splitea from outside the US, your data is transferred to and processed in jurisdictions that may not offer the same level of data protection as your home country. Where required by law, we rely on the European Commission's Standard Contractual Clauses or equivalent transfer safeguards offered by our sub-processors. You can request the relevant transfer documentation by writing to <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
     <h2>Data We Do Not Collect</h2>
     <ul>
-        <li>We do not collect analytics or usage tracking data.</li>
-        <li>We do not use advertising or ad tracking.</li>
-        <li>We do not sell, share, or rent your personal information to third parties.</li>
-        <li>We do not store receipt images on our servers.</li>
+        <li>We do not collect analytics, telemetry, or usage tracking.</li>
+        <li>We do not use advertising or ad-tracking SDKs.</li>
+        <li>We do not sell, rent, or share your personal information with third parties for their own marketing.</li>
+        <li>We do not store receipt images after parsing.</li>
+        <li>We do not store hashed phone numbers after the contact-lookup completes.</li>
     </ul>
     <h2>Data Storage and Security</h2>
-    <p>Your data is stored locally on your device and synced via Apple's iCloud using end-to-end encryption managed by Apple. Communication between the app and our server is encrypted via HTTPS. Requests to our server are authenticated using Apple's App Attest to ensure only legitimate app instances can access the service.</p>
-    <h2>Data Retention and Deletion</h2>
-    <p>All user data is stored on your device and in your iCloud account. You can delete your data at any time by deleting saved receipts within the app or by deleting the app, which removes all local data. iCloud data can be managed through your device's Settings under iCloud Storage.</p>
+    <p>Receipts, contacts, and splits stay on your device and sync via Apple's iCloud using encryption managed by Apple. Profile data in our user directory is encrypted in transit (TLS) and at rest. Requests to our server are authenticated using Apple's App Attest so only legitimate app instances can access the service.</p>
+    <h2>Data Retention</h2>
+    <p>Different data classes have different retention rules:</p>
+    <ul>
+        <li><strong>Profile (name, avatar, payment handles, phone number)</strong> — retained in the user directory until you delete your account, at which point it is removed within 30 days.</li>
+        <li><strong>Receipt images</strong> — not retained; discarded after parsing (seconds).</li>
+        <li><strong>Approximate location</strong> — not retained; processed with the scan and discarded.</li>
+        <li><strong>Hashed phone numbers</strong> — not retained after the contact-lookup completes.</li>
+        <li><strong>Receipts, contacts, splits</strong> — retained on your device and in your iCloud until you delete them. We do not control or store this data.</li>
+        <li><strong>Scan-usage counter</strong> — retained in your iCloud until you delete the app or your Apple ID; we do not control or store it.</li>
+        <li><strong>Support correspondence</strong> — retained in our email inbox for up to 2 years after the inquiry is resolved, unless you ask us to delete it sooner.</li>
+    </ul>
+    <h2>Account Deletion</h2>
+    <p>You can delete your Splitea account at any time inside the app: <strong>Settings → Account → Delete account</strong>. Deletion immediately removes your profile (name, avatar, payment handles, hashed phone) from our user directory. Receipts, contacts, and splits stored locally on your device or in your iCloud are not automatically removed — to delete those as well, clear your saved receipts inside the app or delete the app before deleting the account. iCloud data can be managed in <strong>Settings → [your name] → iCloud → Apps Using iCloud → Splitea</strong>.</p>
+    <h2>Your Rights</h2>
+    <p>If you are in the European Economic Area, the United Kingdom, Switzerland, or another jurisdiction with comparable data-protection law, you have the following rights over your personal data:</p>
+    <ul>
+        <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+        <li><strong>Rectification</strong> — correct inaccurate or incomplete data (you can update most fields directly in the app).</li>
+        <li><strong>Erasure</strong> — delete your data ("right to be forgotten"). Deleting your account in-app exercises this right for the user directory; for other categories, write to us.</li>
+        <li><strong>Restriction</strong> — ask us to stop processing your data while a complaint is investigated.</li>
+        <li><strong>Portability</strong> — receive your profile data in a structured, machine-readable format.</li>
+        <li><strong>Objection</strong> — object to processing based on our legitimate interests.</li>
+        <li><strong>Withdraw consent</strong> — revoke any permission you previously granted (Contacts, Camera, Photos, Location), in your device Settings. Withdrawal does not affect processing performed before withdrawal.</li>
+        <li><strong>Lodge a complaint</strong> — with your local data-protection supervisory authority.</li>
+    </ul>
+    <p>To exercise any of these rights, email <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>. We respond within 30 days.</p>
+    <h2>California Privacy Rights (CCPA / CPRA)</h2>
+    <p>If you are a California resident, the California Consumer Privacy Act and California Privacy Rights Act give you specific rights over your personal information.</p>
+    <p><strong>Categories of personal information we collect</strong> (per Cal. Civ. Code §1798.140):</p>
+    <ul>
+        <li>Identifiers — name, phone number, payment-app handles.</li>
+        <li>Commercial information — Splitea Pro subscription status (collected by Apple, reported to the app).</li>
+        <li>Geolocation data — approximate location at the time of a scan, not retained.</li>
+        <li>Internet/network activity — limited to what's necessary to deliver the service (App Attest tokens, request metadata).</li>
+    </ul>
+    <p><strong>Sources</strong>: directly from you and from your device. <strong>Purpose</strong>: as described in "How We Use Your Information" above. <strong>Recipients</strong>: as described in "Third-Party Services" above.</p>
+    <p><strong>We do not sell or share your personal information</strong> as defined by the CCPA. We have not sold or shared personal information in the prior 12 months.</p>
+    <p>Your California rights:</p>
+    <ul>
+        <li><strong>Know</strong> — request the specific pieces of personal information we hold about you.</li>
+        <li><strong>Delete</strong> — request deletion of your personal information (see "Account Deletion" above).</li>
+        <li><strong>Correct</strong> — request correction of inaccurate personal information.</li>
+        <li><strong>Opt out of sale or sharing</strong> — not applicable because we do not sell or share.</li>
+        <li><strong>Non-discrimination</strong> — we will not deny service, charge different prices, or provide a different level of service because you exercised any of these rights.</li>
+    </ul>
+    <p>To exercise these rights, email <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> from the address associated with your account or with sufficient information to verify your identity. We respond within 45 days.</p>
     <h2>Children's Privacy</h2>
-    <p>Splitea is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+    <p>Splitea is not directed at children under 13 (16 in the European Economic Area). We do not knowingly collect personal information from anyone under those ages. If you become aware that a child under the applicable minimum has provided us with personal information, contact <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> and we will delete the data promptly.</p>
     <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
+    <p>We may update this Privacy Policy from time to time. Material changes are reflected on this page with an updated "Last updated" date, and where required by law we may also notify you in-app.</p>
     <h2>Contact</h2>
-    <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <p>For privacy questions or to exercise any rights described above, email <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <div class="tail-note">
+        <p>Privacy questions or data requests? Email <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — we respond within 30 days.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="es">
     <h1>Política de Privacidad</h1>
-    <p class="updated">Última actualización: 28 de marzo de 2026</p>
-    <p>Splitea ("nosotros" o "la aplicación") es una aplicación para dividir cuentas desarrollada por Raúl Mora. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu información.</p>
+    <p class="updated">Última actualización: 18 de mayo de 2026</p>
+    <p>Splitea ("nosotros", "nuestro" o "la aplicación") es una aplicación para dividir cuentas. Esta Política de Privacidad explica qué información recopilamos, cómo la usamos, con quién la compartimos, cuánto tiempo la conservamos y los derechos que tienes sobre ella.</p>
+    <h2>Responsable del Tratamiento</h2>
+    <p>El responsable del tratamiento de los datos personales procesados en relación con Splitea es:</p>
+    <p>Raúl Mora (empresario individual)<br>[YOUR MAILING ADDRESS]<br>Correo electrónico: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea es una operación unipersonal y no está obligada a designar un Delegado de Protección de Datos conforme al artículo 37 del RGPD. Para cualquier consulta sobre protección de datos, escribe al correo anterior.</p>
     <h2>Información que Recopilamos</h2>
-    <p><strong>Cámara y Fotos.</strong> Accedemos a tu cámara para escanear recibos y a tu biblioteca de fotos para seleccionar imágenes de recibos. Las imágenes se envían a nuestro servidor para procesamiento y no se almacenan después de completar el análisis.</p>
-    <p><strong>Contactos.</strong> Accedemos a los contactos de tu dispositivo para que puedas seleccionar personas con quienes dividir cuentas. Los nombres, números de teléfono y fotos se usan localmente. Los nombres de usuario de pago (Venmo, PayPal, etc.) se almacenan en los registros de contactos de tu dispositivo.</p>
-    <p><strong>Ubicación.</strong> Solicitamos ubicación aproximada para determinar las tasas de impuestos locales. Los datos de ubicación se envían con las imágenes de recibos para procesamiento y no se almacenan.</p>
-    <p><strong>Perfil de Usuario.</strong> Tu nombre, número de teléfono, avatar y nombres de usuario de pago se almacenan localmente en tu dispositivo y pueden sincronizarse entre tus dispositivos a través de iCloud.</p>
-    <p><strong>Uso de Escaneos.</strong> Rastreamos la cantidad de escaneos de recibos que realizas para administrar los límites del nivel gratuito.</p>
+    <p><strong>Información de perfil.</strong> Cuando creas un perfil de Splitea, tu nombre visible, avatar, nombres de usuario de aplicaciones de pago (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) y número de teléfono se almacenan en nuestro directorio de usuarios ("splitea-id") para que los contactos que utilizan Splitea puedan ver tu perfil cuando dividan una cuenta contigo. El mismo perfil también se conserva en tu dispositivo y se sincroniza entre tus dispositivos mediante tu contenedor privado de iCloud.</p>
+    <p><strong>Contactos.</strong> Si concedes acceso a Contactos, Splitea lee nombres, números de teléfono y fotos de la agenda de tu dispositivo para que puedas elegir personas con quienes dividir cuentas. Los nombres y las fotos permanecen en tu dispositivo. Los números de teléfono se <strong>cifran mediante hash</strong> (hash criptográfico de un solo sentido) antes de enviarse a nuestro directorio de usuarios para indicarte qué contactos ya utilizan Splitea — nunca vemos los números en claro y no almacenamos los hashes una vez completada la consulta.</p>
+    <p><strong>Cámara y fotos.</strong> Splitea usa la cámara para escanear recibos y la fototeca para importar imágenes de recibos. Cada imagen de recibo se envía a nuestro servidor para su análisis con IA y se descarta inmediatamente después de extraer los artículos y precios. No conservamos imágenes de recibos.</p>
+    <p><strong>Ubicación aproximada.</strong> Si concedes acceso a la ubicación, Splitea envía tu ubicación aproximada con cada solicitud de escaneo para que el servicio de IA pueda aplicar el tipo impositivo local correcto. Los datos de ubicación se procesan en tiempo real con el escaneo y no se almacenan.</p>
+    <p><strong>Uso de escaneos.</strong> Realizamos un seguimiento del número de escaneos de recibos que efectúas por período de facturación usando el almacén de pares clave-valor de iCloud de Apple para aplicar el límite del nivel gratuito. Este contador se sincroniza entre tus dispositivos mediante tu Apple ID y nuestros servidores nunca lo leen.</p>
+    <p><strong>Estado de la suscripción.</strong> StoreKit de Apple informa a la aplicación de tu titularidad de Splitea Pro al iniciarla. No recibimos tu Apple ID, método de pago ni detalles de facturación — solo un valor booleano que indica si tienes una suscripción Pro activa.</p>
+    <h2>Cómo Usamos Tu Información</h2>
+    <p>Utilizamos la información anterior para:</p>
+    <ul>
+        <li>Proporcionar las funciones principales de la aplicación (escanear recibos, dividir cuentas, identificar contactos que usan Splitea).</li>
+        <li>Aplicar tipos impositivos locales a tus cálculos de división.</li>
+        <li>Aplicar los límites del nivel gratuito y la titularidad de las funciones Splitea Pro.</li>
+        <li>Mantener la seguridad e integridad del servicio (App Attest, HTTPS, limitación de tasa).</li>
+        <li>Responder a tus consultas de soporte.</li>
+    </ul>
+    <h2>Base Legal del Tratamiento (RGPD)</h2>
+    <p>Si te encuentras en el Espacio Económico Europeo, el Reino Unido o Suiza, nos basamos en las siguientes bases legales conforme al artículo 6 del RGPD:</p>
+    <ul>
+        <li><strong>Ejecución de un contrato</strong> — para ofrecer las funciones principales de la aplicación a las que te suscribiste (escanear, dividir, identificar contactos, aplicar impuestos, aplicar titularidades). Sin este tratamiento no podemos prestar el servicio.</li>
+        <li><strong>Tu consentimiento</strong> — para los permisos opcionales que concedes a nivel del sistema operativo (Contactos, Cámara, Fotos, Ubicación). Puedes revocarlos en cualquier momento en los Ajustes de tu dispositivo.</li>
+        <li><strong>Nuestro interés legítimo</strong> — para mantener el servicio seguro, prevenir abusos y responder a solicitudes de soporte. Hemos ponderado este interés frente a tus derechos y concluido que el tratamiento es proporcionado.</li>
+    </ul>
     <h2>Cómo Procesamos los Datos</h2>
-    <p>Cuando escaneas un recibo, la imagen se envía a nuestro servidor que la reenvía a un servicio de IA de terceros para extracción y análisis de texto. La imagen se procesa en tiempo real y no se almacena en nuestros servidores.</p>
+    <p>Cuando escaneas un recibo, la imagen se envía a nuestro servidor (alojado en Cloudflare Workers) que la reenvía a un servicio de IA de terceros para la extracción y análisis de texto. La imagen y el texto extraído se mantienen en memoria solo durante la solicitud y no se persisten ni en nuestros servidores ni en el servicio de IA. La lista de artículos analizados vuelve a tu dispositivo, donde puedes editarla y guardarla localmente.</p>
     <h2>Servicios de Terceros</h2>
-    <ul><li><strong>Apple iCloud</strong> — sincroniza tu perfil, recibos guardados y uso de escaneos entre tus dispositivos.</li><li><strong>Cloudflare Workers</strong> — procesa imágenes de recibos.</li><li><strong>Firebase Remote Config</strong> — entrega configuración de la aplicación. No se recopilan datos personales.</li><li><strong>Apple StoreKit</strong> — gestiona suscripciones y compras.</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — sincroniza tu perfil, recibos guardados y contador de escaneos entre tus dispositivos. Los datos de iCloud residen en tu contenedor privado; no tenemos acceso a ellos.</li>
+        <li><strong>Cloudflare Workers</strong> — aloja nuestro servidor, transmite los escaneos al servicio de IA y almacena el directorio de usuarios. Sujeto a la <a href="https://www.cloudflare.com/privacypolicy/">Política de Privacidad de Cloudflare</a>.</li>
+        <li><strong>Proveedor de IA de terceros</strong> — extrae artículos y precios de las imágenes de recibos. El proveedor procesa cada imagen como una solicitud de inferencia sin estado y no la conserva.</li>
+        <li><strong>Firebase Remote Config</strong> — entrega la configuración de la aplicación. No se envían datos personales a Firebase. Sujeto a la <a href="https://firebase.google.com/support/privacy">Política de Privacidad de Firebase</a>.</li>
+        <li><strong>Apple StoreKit</strong> — gestiona suscripciones y compras. Administrado íntegramente por Apple; solo recibimos el estado de titularidad.</li>
+    </ul>
+    <h2>Transferencias Internacionales de Datos</h2>
+    <p>Nuestro servidor opera en la red global de Cloudflare y nuestro proveedor de IA tiene su sede en los Estados Unidos. Si usas Splitea fuera de EE. UU., tus datos se transfieren y procesan en jurisdicciones que pueden no ofrecer el mismo nivel de protección de datos que tu país de origen. Cuando la ley lo exige, nos basamos en las Cláusulas Contractuales Tipo de la Comisión Europea o en garantías de transferencia equivalentes ofrecidas por nuestros subencargados. Puedes solicitar la documentación de transferencia correspondiente escribiendo a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
     <h2>Datos que No Recopilamos</h2>
-    <ul><li>No recopilamos datos de análisis ni seguimiento de uso.</li><li>No usamos publicidad ni seguimiento de anuncios.</li><li>No vendemos, compartimos ni alquilamos tu información personal a terceros.</li><li>No almacenamos imágenes de recibos en nuestros servidores.</li></ul>
-    <h2>Almacenamiento y Seguridad</h2>
-    <p>Tus datos se almacenan localmente en tu dispositivo y se sincronizan a través de iCloud de Apple con cifrado de extremo a extremo. La comunicación entre la aplicación y nuestro servidor está cifrada mediante HTTPS.</p>
-    <h2>Retención y Eliminación de Datos</h2>
-    <p>Todos los datos del usuario se almacenan en tu dispositivo y en tu cuenta de iCloud. Puedes eliminar tus datos en cualquier momento eliminando los recibos guardados dentro de la aplicación o eliminando la aplicación.</p>
+    <ul>
+        <li>No recopilamos datos analíticos, telemetría ni seguimiento de uso.</li>
+        <li>No usamos SDKs publicitarios ni de seguimiento de anuncios.</li>
+        <li>No vendemos, alquilamos ni compartimos tu información personal con terceros para su propio marketing.</li>
+        <li>No almacenamos imágenes de recibos tras su análisis.</li>
+        <li>No almacenamos números de teléfono cifrados tras completar la consulta de contactos.</li>
+    </ul>
+    <h2>Almacenamiento y Seguridad de los Datos</h2>
+    <p>Los recibos, contactos y divisiones permanecen en tu dispositivo y se sincronizan mediante iCloud de Apple con cifrado gestionado por Apple. Los datos de perfil de nuestro directorio de usuarios se cifran en tránsito (TLS) y en reposo. Las solicitudes a nuestro servidor se autentican con App Attest de Apple para que solo instancias legítimas de la aplicación puedan acceder al servicio.</p>
+    <h2>Conservación de los Datos</h2>
+    <p>Las distintas categorías de datos tienen reglas de conservación diferentes:</p>
+    <ul>
+        <li><strong>Perfil (nombre, avatar, identificadores de pago, número de teléfono)</strong> — se conserva en el directorio de usuarios hasta que elimines tu cuenta, momento en que se retira en un plazo de 30 días.</li>
+        <li><strong>Imágenes de recibos</strong> — no se conservan; se descartan tras el análisis (segundos).</li>
+        <li><strong>Ubicación aproximada</strong> — no se conserva; se procesa con el escaneo y se descarta.</li>
+        <li><strong>Números de teléfono cifrados</strong> — no se conservan tras completar la consulta de contactos.</li>
+        <li><strong>Recibos, contactos, divisiones</strong> — se conservan en tu dispositivo y en tu iCloud hasta que los elimines. No controlamos ni almacenamos estos datos.</li>
+        <li><strong>Contador de uso de escaneos</strong> — se conserva en tu iCloud hasta que elimines la aplicación o tu Apple ID; no lo controlamos ni lo almacenamos.</li>
+        <li><strong>Correspondencia de soporte</strong> — se conserva en nuestro buzón de correo hasta 2 años después de resolver la consulta, salvo que solicites su eliminación antes.</li>
+    </ul>
+    <h2>Eliminación de la Cuenta</h2>
+    <p>Puedes eliminar tu cuenta de Splitea en cualquier momento desde la aplicación: <strong>Ajustes → Cuenta → Eliminar cuenta</strong>. La eliminación retira inmediatamente tu perfil (nombre, avatar, identificadores de pago, teléfono cifrado) de nuestro directorio de usuarios. Los recibos, contactos y divisiones almacenados localmente en tu dispositivo o en tu iCloud no se eliminan automáticamente — para borrarlos también, vacía los recibos guardados dentro de la aplicación o elimina la aplicación antes de borrar la cuenta. Los datos de iCloud pueden gestionarse en <strong>Ajustes → [tu nombre] → iCloud → Apps que usan iCloud → Splitea</strong>.</p>
+    <h2>Tus Derechos</h2>
+    <p>Si te encuentras en el Espacio Económico Europeo, el Reino Unido, Suiza u otra jurisdicción con normativa de protección de datos equivalente, tienes los siguientes derechos sobre tus datos personales:</p>
+    <ul>
+        <li><strong>Acceso</strong> — solicitar una copia de los datos personales que conservamos sobre ti.</li>
+        <li><strong>Rectificación</strong> — corregir datos inexactos o incompletos (puedes actualizar la mayoría de los campos directamente en la aplicación).</li>
+        <li><strong>Supresión</strong> — eliminar tus datos ("derecho al olvido"). Eliminar tu cuenta dentro de la aplicación ejerce este derecho sobre el directorio de usuarios; para otras categorías, escríbenos.</li>
+        <li><strong>Limitación</strong> — pedirnos que detengamos el tratamiento de tus datos mientras se investiga una reclamación.</li>
+        <li><strong>Portabilidad</strong> — recibir tus datos de perfil en un formato estructurado y legible por máquina.</li>
+        <li><strong>Oposición</strong> — oponerte al tratamiento basado en nuestros intereses legítimos.</li>
+        <li><strong>Retirada del consentimiento</strong> — revocar cualquier permiso que hubieras concedido (Contactos, Cámara, Fotos, Ubicación), desde los Ajustes de tu dispositivo. La retirada no afecta al tratamiento previo a esta.</li>
+        <li><strong>Presentar una reclamación</strong> — ante tu autoridad local de protección de datos.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, escribe a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>. Respondemos en un plazo de 30 días.</p>
+    <h2>Derechos de Privacidad en California (CCPA / CPRA)</h2>
+    <p>Si eres residente de California, la California Consumer Privacy Act y la California Privacy Rights Act te otorgan derechos específicos sobre tu información personal.</p>
+    <p><strong>Categorías de información personal que recopilamos</strong> (conforme al Cal. Civ. Code §1798.140):</p>
+    <ul>
+        <li>Identificadores — nombre, número de teléfono, identificadores de aplicaciones de pago.</li>
+        <li>Información comercial — estado de la suscripción a Splitea Pro (recogido por Apple, comunicado a la aplicación).</li>
+        <li>Datos de geolocalización — ubicación aproximada en el momento de un escaneo, no se conserva.</li>
+        <li>Actividad de internet/red — limitada a lo necesario para prestar el servicio (tokens de App Attest, metadatos de solicitud).</li>
+    </ul>
+    <p><strong>Fuentes</strong>: directamente de ti y de tu dispositivo. <strong>Finalidad</strong>: la descrita en "Cómo Usamos Tu Información". <strong>Destinatarios</strong>: los descritos en "Servicios de Terceros".</p>
+    <p><strong>No vendemos ni compartimos tu información personal</strong> tal y como define la CCPA. No hemos vendido ni compartido información personal en los últimos 12 meses.</p>
+    <p>Tus derechos en California:</p>
+    <ul>
+        <li><strong>Conocer</strong> — solicitar los datos personales concretos que conservamos sobre ti.</li>
+        <li><strong>Eliminar</strong> — solicitar la eliminación de tu información personal (ver "Eliminación de la Cuenta").</li>
+        <li><strong>Corregir</strong> — solicitar la corrección de información personal inexacta.</li>
+        <li><strong>Oponerte a la venta o intercambio</strong> — no aplica porque no vendemos ni compartimos.</li>
+        <li><strong>No discriminación</strong> — no denegaremos el servicio, ni cobraremos precios distintos, ni proporcionaremos un nivel de servicio diferente por haber ejercido cualquiera de estos derechos.</li>
+    </ul>
+    <p>Para ejercer estos derechos, escribe a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> desde la dirección asociada a tu cuenta o con información suficiente para verificar tu identidad. Respondemos en un plazo de 45 días.</p>
     <h2>Privacidad de los Niños</h2>
-    <p>Splitea no está dirigida a niños menores de 13 años. No recopilamos intencionalmente información personal de niños.</p>
+    <p>Splitea no está dirigida a niños menores de 13 años (16 en el Espacio Económico Europeo). No recopilamos a sabiendas información personal de ninguna persona menor de esas edades. Si descubres que un menor por debajo del mínimo aplicable nos ha facilitado información personal, contacta con <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> y la eliminaremos sin demora.</p>
     <h2>Cambios a Esta Política</h2>
-    <p>Podemos actualizar esta Política de Privacidad de vez en cuando. Los cambios se reflejarán en esta página con una fecha actualizada.</p>
+    <p>Podemos actualizar esta Política de Privacidad de vez en cuando. Los cambios materiales se reflejan en esta página con una fecha actualizada de "Última actualización" y, cuando la ley lo exige, también podemos notificártelo dentro de la aplicación.</p>
     <h2>Contacto</h2>
-    <p>Si tienes preguntas, contáctanos en <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <p>Para preguntas de privacidad o para ejercer cualquiera de los derechos descritos arriba, escribe a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <div class="tail-note">
+        <p>¿Preguntas de privacidad o solicitudes de datos? Escribe a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — respondemos en un plazo de 30 días.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="de">
     <h1>Datenschutzrichtlinie</h1>
-    <p class="updated">Zuletzt aktualisiert: 28. März 2026</p>
-    <p>Splitea ("wir" oder "die App") ist eine App zum Aufteilen von Rechnungen, entwickelt von Raúl Mora. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen erfassen, verwenden und schützen.</p>
+    <p class="updated">Zuletzt aktualisiert: 18. Mai 2026</p>
+    <p>Splitea („wir", „unser" oder „die App") ist eine App zum Aufteilen von Rechnungen. Diese Datenschutzrichtlinie erklärt, welche Informationen wir erfassen, wie wir sie verwenden, mit wem wir sie teilen, wie lange wir sie aufbewahren und welche Rechte Sie daran haben.</p>
+    <h2>Verantwortlicher</h2>
+    <p>Der Verantwortliche für die im Zusammenhang mit Splitea verarbeiteten personenbezogenen Daten ist:</p>
+    <p>Raúl Mora (Einzelunternehmer)<br>[YOUR MAILING ADDRESS]<br>E-Mail: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea ist ein Ein-Personen-Betrieb und ist nicht verpflichtet, einen Datenschutzbeauftragten nach Art. 37 DSGVO zu benennen. Bei Datenschutzfragen wenden Sie sich an die oben genannte E-Mail-Adresse.</p>
     <h2>Informationen, die wir erfassen</h2>
-    <p><strong>Kamera und Fotos.</strong> Wir greifen auf Ihre Kamera zu, um Belege zu scannen, und auf Ihre Fotobibliothek, um Belegbilder auszuwählen. Belegbilder werden zur Verarbeitung an unseren Server gesendet und nach Abschluss der Analyse nicht gespeichert.</p>
-    <p><strong>Kontakte.</strong> Wir greifen auf Ihre Gerätekontakte zu, damit Sie Personen zum Aufteilen von Rechnungen auswählen können. Namen, Telefonnummern und Fotos werden lokal verwendet.</p>
-    <p><strong>Standort.</strong> Wir fordern einen ungefähren Standort an, um lokale Steuersätze zu bestimmen. Standortdaten werden nicht gespeichert.</p>
-    <p><strong>Benutzerprofil.</strong> Ihr Name, Ihre Telefonnummer, Ihr Avatar und Zahlungsbenutzernamen werden lokal auf Ihrem Gerät gespeichert und können über iCloud synchronisiert werden.</p>
-    <p><strong>Scan-Nutzung.</strong> Wir verfolgen die Anzahl der Belegscans, um die Grenzen des kostenlosen Tarifs zu verwalten.</p>
+    <p><strong>Profilinformationen.</strong> Wenn Sie ein Splitea-Profil erstellen, werden Ihr Anzeigename, Ihr Avatar, Ihre Benutzernamen für Zahlungs-Apps (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) und Ihre Telefonnummer in unserem Nutzerverzeichnis („splitea-id") gespeichert, damit Kontakte, die Splitea verwenden, Ihr Profil sehen können, wenn sie eine Rechnung mit Ihnen aufteilen. Dasselbe Profil wird zudem auf Ihrem Gerät gespeichert und über Ihren privaten iCloud-Container zwischen Ihren Geräten synchronisiert.</p>
+    <p><strong>Kontakte.</strong> Wenn Sie Zugriff auf Kontakte gewähren, liest Splitea Namen, Telefonnummern und Fotos aus dem Adressbuch Ihres Geräts, damit Sie Personen zum Aufteilen von Rechnungen auswählen können. Namen und Fotos verbleiben auf Ihrem Gerät. Telefonnummern werden vor dem Senden an unser Nutzerverzeichnis <strong>gehasht</strong> (kryptografischer Einwege-Hash), damit wir Ihnen anzeigen können, welche Ihrer Kontakte Splitea bereits verwenden — wir sehen die rohen Nummern nie und speichern die Hashes nach der Abfrage nicht.</p>
+    <p><strong>Kamera und Fotos.</strong> Splitea verwendet Ihre Kamera, um Belege zu scannen, und Ihre Fotomediathek, um Belegbilder zu importieren. Jedes Belegbild wird zur KI-Analyse an unseren Server gesendet und unmittelbar nach Extraktion der Artikel und Preise verworfen. Wir bewahren Belegbilder nicht auf.</p>
+    <p><strong>Ungefährer Standort.</strong> Wenn Sie Standortzugriff gewähren, sendet Splitea Ihren ungefähren Standort mit jeder Scan-Anfrage, damit der KI-Dienst den korrekten lokalen Mehrwertsteuersatz anwenden kann. Standortdaten werden in Echtzeit mit dem Scan verarbeitet und nicht gespeichert.</p>
+    <p><strong>Scan-Nutzung.</strong> Wir verfolgen die Anzahl der Belegscans, die Sie pro Abrechnungszeitraum durchführen, mithilfe des iCloud-Key-Value-Stores von Apple, um die Grenze des kostenlosen Tarifs anzuwenden. Dieser Zähler synchronisiert sich über Ihre Apple-ID zwischen Ihren Geräten und wird von unseren Servern nie gelesen.</p>
+    <p><strong>Abonnementstatus.</strong> Apples StoreKit meldet der App beim Start Ihre Splitea-Pro-Berechtigung. Wir erhalten weder Ihre Apple-ID noch Ihre Zahlungsmethode noch Ihre Abrechnungsdetails — nur einen booleschen Wert, der angibt, ob Sie ein aktives Pro-Abonnement haben.</p>
+    <h2>Wie wir Ihre Informationen verwenden</h2>
+    <p>Wir verwenden die oben genannten Informationen, um:</p>
+    <ul>
+        <li>die Kernfunktionen der App bereitzustellen (Belegscan, Rechnungsaufteilung, Abgleich von Kontakten, die Splitea verwenden).</li>
+        <li>lokale Steuersätze auf Ihre Aufteilungsberechnungen anzuwenden.</li>
+        <li>Grenzen des kostenlosen Tarifs und die Berechtigung für Splitea-Pro-Funktionen durchzusetzen.</li>
+        <li>die Sicherheit und Integrität des Dienstes zu gewährleisten (App Attest, HTTPS, Rate Limiting).</li>
+        <li>auf Ihre Support-Anfragen zu antworten.</li>
+    </ul>
+    <h2>Rechtsgrundlage der Verarbeitung (DSGVO)</h2>
+    <p>Wenn Sie sich im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz befinden, stützen wir uns auf folgende Rechtsgrundlagen nach Art. 6 DSGVO:</p>
+    <ul>
+        <li><strong>Vertragserfüllung</strong> — zur Bereitstellung der Kernfunktionen der App, für die Sie sich registriert haben (Scannen, Aufteilen, Kontaktabgleich, Steueranwendung, Berechtigungsprüfung). Ohne diese Verarbeitung können wir den Dienst nicht erbringen.</li>
+        <li><strong>Ihre Einwilligung</strong> — für optionale Berechtigungen, die Sie auf Betriebssystemebene erteilen (Kontakte, Kamera, Fotos, Standort). Sie können diese jederzeit in den Einstellungen Ihres Geräts widerrufen.</li>
+        <li><strong>Unser berechtigtes Interesse</strong> — um den Dienst sicher zu halten, Missbrauch zu verhindern und auf Support-Anfragen zu antworten. Wir haben dieses Interesse gegen Ihre Rechte abgewogen und sind zu dem Schluss gekommen, dass die Verarbeitung verhältnismäßig ist.</li>
+    </ul>
     <h2>Wie wir Daten verarbeiten</h2>
-    <p>Wenn Sie einen Beleg scannen, wird das Bild an unseren Server gesendet, der es an einen KI-Dienst eines Drittanbieters zur Textextraktion weiterleitet. Das Bild wird in Echtzeit verarbeitet und nicht auf unseren Servern gespeichert.</p>
+    <p>Wenn Sie einen Beleg scannen, wird das Bild an unseren Server (gehostet bei Cloudflare Workers) gesendet, der es zur Textextraktion und Analyse an einen KI-Dienst eines Drittanbieters weiterleitet. Das Bild und der extrahierte Text werden nur für die Dauer der Anfrage im Speicher gehalten und weder auf unseren Servern noch beim KI-Dienst persistiert. Die analysierte Artikelliste wird an Ihr Gerät zurückgesendet, wo Sie sie bearbeiten und lokal speichern können.</p>
     <h2>Drittanbieterdienste</h2>
-    <ul><li><strong>Apple iCloud</strong> — synchronisiert Ihr Profil und gespeicherte Belege.</li><li><strong>Cloudflare Workers</strong> — verarbeitet Belegbilder.</li><li><strong>Firebase Remote Config</strong> — liefert App-Konfiguration.</li><li><strong>Apple StoreKit</strong> — verwaltet Abonnements und Käufe.</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — synchronisiert Ihr Profil, gespeicherte Belege und den Scan-Zähler zwischen Ihren Geräten. iCloud-Daten liegen in Ihrem privaten Container; wir haben keinen Zugriff darauf.</li>
+        <li><strong>Cloudflare Workers</strong> — hostet unseren Server, leitet Belegscans an den KI-Dienst weiter und speichert das Nutzerverzeichnis. Es gilt die <a href="https://www.cloudflare.com/privacypolicy/">Datenschutzrichtlinie von Cloudflare</a>.</li>
+        <li><strong>KI-Anbieter eines Drittanbieters</strong> — extrahiert Artikel und Preise aus Belegbildern. Der Anbieter verarbeitet jedes Bild als zustandslose Inferenzanfrage und bewahrt es nicht auf.</li>
+        <li><strong>Firebase Remote Config</strong> — liefert die App-Konfiguration. An Firebase werden keine personenbezogenen Daten gesendet. Es gilt die <a href="https://firebase.google.com/support/privacy">Datenschutzrichtlinie von Firebase</a>.</li>
+        <li><strong>Apple StoreKit</strong> — verwaltet Abonnements und Käufe. Vollständig von Apple verwaltet; wir erhalten nur den Berechtigungsstatus.</li>
+    </ul>
+    <h2>Internationale Datenübermittlungen</h2>
+    <p>Unser Server wird im globalen Edge-Netzwerk von Cloudflare betrieben und unser KI-Anbieter hat seinen Sitz in den Vereinigten Staaten. Wenn Sie Splitea außerhalb der USA verwenden, werden Ihre Daten in Länder übermittelt und dort verarbeitet, die möglicherweise nicht das gleiche Datenschutzniveau bieten wie Ihr Heimatland. Sofern gesetzlich erforderlich, stützen wir uns auf die Standardvertragsklauseln der Europäischen Kommission oder gleichwertige Übermittlungsgarantien unserer Auftragsverarbeiter. Sie können die einschlägige Übermittlungsdokumentation unter <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> anfordern.</p>
     <h2>Daten, die wir nicht erfassen</h2>
-    <ul><li>Wir erfassen keine Analyse- oder Nutzungsverfolgungsdaten.</li><li>Wir verwenden keine Werbung oder Anzeigenverfolgung.</li><li>Wir verkaufen, teilen oder vermieten Ihre persönlichen Daten nicht an Dritte.</li><li>Wir speichern keine Belegbilder auf unseren Servern.</li></ul>
+    <ul>
+        <li>Wir erfassen keine Analyse-, Telemetrie- oder Nutzungsverfolgungsdaten.</li>
+        <li>Wir verwenden keine Werbe- oder Tracking-SDKs.</li>
+        <li>Wir verkaufen, vermieten oder teilen Ihre personenbezogenen Daten nicht mit Dritten zu deren eigenen Marketingzwecken.</li>
+        <li>Wir speichern keine Belegbilder nach der Analyse.</li>
+        <li>Wir speichern keine gehashten Telefonnummern nach Abschluss der Kontaktabfrage.</li>
+    </ul>
     <h2>Datenspeicherung und Sicherheit</h2>
-    <p>Ihre Daten werden lokal auf Ihrem Gerät gespeichert und über Apples iCloud mit Ende-zu-Ende-Verschlüsselung synchronisiert. Die Kommunikation ist über HTTPS verschlüsselt.</p>
-    <h2>Datenaufbewahrung und -löschung</h2>
-    <p>Alle Benutzerdaten werden auf Ihrem Gerät und in Ihrem iCloud-Konto gespeichert. Sie können Ihre Daten jederzeit löschen.</p>
+    <p>Belege, Kontakte und Aufteilungen bleiben auf Ihrem Gerät und synchronisieren sich über Apples iCloud mit von Apple verwalteter Verschlüsselung. Profildaten in unserem Nutzerverzeichnis werden während der Übertragung (TLS) und im Ruhezustand verschlüsselt. Anfragen an unseren Server werden über Apples App Attest authentifiziert, sodass nur legitime App-Instanzen auf den Dienst zugreifen können.</p>
+    <h2>Datenaufbewahrung</h2>
+    <p>Für unterschiedliche Datenkategorien gelten unterschiedliche Aufbewahrungsregeln:</p>
+    <ul>
+        <li><strong>Profil (Name, Avatar, Zahlungs-Handles, Telefonnummer)</strong> — wird im Nutzerverzeichnis aufbewahrt, bis Sie Ihr Konto löschen; ab diesem Zeitpunkt erfolgt die Entfernung innerhalb von 30 Tagen.</li>
+        <li><strong>Belegbilder</strong> — nicht aufbewahrt; nach der Analyse verworfen (Sekunden).</li>
+        <li><strong>Ungefährer Standort</strong> — nicht aufbewahrt; mit dem Scan verarbeitet und verworfen.</li>
+        <li><strong>Gehashte Telefonnummern</strong> — nach Abschluss der Kontaktabfrage nicht aufbewahrt.</li>
+        <li><strong>Belege, Kontakte, Aufteilungen</strong> — auf Ihrem Gerät und in Ihrem iCloud aufbewahrt, bis Sie sie löschen. Wir kontrollieren oder speichern diese Daten nicht.</li>
+        <li><strong>Scan-Nutzungszähler</strong> — in Ihrem iCloud aufbewahrt, bis Sie die App oder Ihre Apple-ID löschen; wir kontrollieren oder speichern ihn nicht.</li>
+        <li><strong>Support-Korrespondenz</strong> — bis zu 2 Jahre nach Lösung der Anfrage in unserem E-Mail-Posteingang aufbewahrt, sofern Sie nicht früher um Löschung bitten.</li>
+    </ul>
+    <h2>Kontolöschung</h2>
+    <p>Sie können Ihr Splitea-Konto jederzeit innerhalb der App löschen: <strong>Einstellungen → Account → Account löschen</strong>. Die Löschung entfernt Ihr Profil (Name, Avatar, Zahlungs-Handles, gehashte Telefonnummer) sofort aus unserem Nutzerverzeichnis. Lokal auf Ihrem Gerät oder in Ihrem iCloud gespeicherte Belege, Kontakte und Aufteilungen werden nicht automatisch entfernt — um auch diese zu löschen, leeren Sie Ihre gespeicherten Belege innerhalb der App oder löschen Sie die App, bevor Sie das Konto löschen. iCloud-Daten können unter <strong>Einstellungen → [Ihr Name] → iCloud → Apps, die iCloud verwenden → Splitea</strong> verwaltet werden.</p>
+    <h2>Ihre Rechte</h2>
+    <p>Wenn Sie sich im Europäischen Wirtschaftsraum, im Vereinigten Königreich, in der Schweiz oder in einer anderen Rechtsordnung mit vergleichbarem Datenschutzrecht befinden, haben Sie folgende Rechte in Bezug auf Ihre personenbezogenen Daten:</p>
+    <ul>
+        <li><strong>Auskunft</strong> — eine Kopie der personenbezogenen Daten anzufordern, die wir über Sie führen.</li>
+        <li><strong>Berichtigung</strong> — unrichtige oder unvollständige Daten zu korrigieren (die meisten Felder können Sie direkt in der App aktualisieren).</li>
+        <li><strong>Löschung</strong> — Ihre Daten zu löschen („Recht auf Vergessenwerden"). Das Löschen Ihres Kontos in der App nimmt dieses Recht für das Nutzerverzeichnis wahr; für andere Kategorien schreiben Sie uns.</li>
+        <li><strong>Einschränkung</strong> — uns aufzufordern, die Verarbeitung Ihrer Daten zu stoppen, während eine Beschwerde geprüft wird.</li>
+        <li><strong>Datenübertragbarkeit</strong> — Ihre Profildaten in einem strukturierten, maschinenlesbaren Format zu erhalten.</li>
+        <li><strong>Widerspruch</strong> — Widerspruch gegen die Verarbeitung auf Grundlage unserer berechtigten Interessen einzulegen.</li>
+        <li><strong>Widerruf der Einwilligung</strong> — jede zuvor erteilte Berechtigung (Kontakte, Kamera, Fotos, Standort) in den Einstellungen Ihres Geräts zu widerrufen. Der Widerruf berührt nicht die vor dem Widerruf erfolgte Verarbeitung.</li>
+        <li><strong>Beschwerde einlegen</strong> — bei Ihrer örtlichen Datenschutzaufsichtsbehörde.</li>
+    </ul>
+    <p>Um eines dieser Rechte auszuüben, schreiben Sie an <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>. Wir antworten innerhalb von 30 Tagen.</p>
+    <h2>Datenschutzrechte in Kalifornien (CCPA / CPRA)</h2>
+    <p>Wenn Sie in Kalifornien ansässig sind, gewähren Ihnen der California Consumer Privacy Act und der California Privacy Rights Act besondere Rechte in Bezug auf Ihre personenbezogenen Daten.</p>
+    <p><strong>Kategorien personenbezogener Daten, die wir erfassen</strong> (gemäß Cal. Civ. Code §1798.140):</p>
+    <ul>
+        <li>Identifikatoren — Name, Telefonnummer, Zahlungs-App-Handles.</li>
+        <li>Geschäftsinformationen — Status des Splitea-Pro-Abonnements (von Apple erfasst, der App gemeldet).</li>
+        <li>Geolokalisierungsdaten — ungefährer Standort zum Zeitpunkt eines Scans, nicht aufbewahrt.</li>
+        <li>Internet-/Netzwerkaktivität — beschränkt auf das, was zur Bereitstellung des Dienstes erforderlich ist (App-Attest-Token, Anfrage-Metadaten).</li>
+    </ul>
+    <p><strong>Quellen</strong>: direkt von Ihnen und von Ihrem Gerät. <strong>Zweck</strong>: wie oben unter „Wie wir Ihre Informationen verwenden" beschrieben. <strong>Empfänger</strong>: wie oben unter „Drittanbieterdienste" beschrieben.</p>
+    <p><strong>Wir verkaufen oder teilen Ihre personenbezogenen Daten nicht</strong> im Sinne des CCPA. Wir haben in den letzten 12 Monaten keine personenbezogenen Daten verkauft oder geteilt.</p>
+    <p>Ihre Rechte in Kalifornien:</p>
+    <ul>
+        <li><strong>Auskunft</strong> — die konkreten Stücke personenbezogener Daten anzufordern, die wir über Sie führen.</li>
+        <li><strong>Löschung</strong> — die Löschung Ihrer personenbezogenen Daten zu verlangen (siehe „Kontolöschung").</li>
+        <li><strong>Berichtigung</strong> — die Berichtigung unrichtiger personenbezogener Daten zu verlangen.</li>
+        <li><strong>Widerspruch gegen Verkauf oder Weitergabe</strong> — nicht anwendbar, da wir nicht verkaufen oder weitergeben.</li>
+        <li><strong>Nichtdiskriminierung</strong> — wir verweigern keinen Dienst, berechnen keine unterschiedlichen Preise und stellen keine anderen Servicelevel bereit, weil Sie eines dieser Rechte ausgeübt haben.</li>
+    </ul>
+    <p>Um diese Rechte auszuüben, schreiben Sie an <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> von der mit Ihrem Konto verknüpften Adresse oder mit ausreichenden Informationen zur Überprüfung Ihrer Identität. Wir antworten innerhalb von 45 Tagen.</p>
     <h2>Datenschutz für Kinder</h2>
-    <p>Splitea richtet sich nicht an Kinder unter 13 Jahren.</p>
+    <p>Splitea richtet sich nicht an Kinder unter 13 Jahren (16 Jahre im Europäischen Wirtschaftsraum). Wir erfassen wissentlich keine personenbezogenen Daten von Personen unter diesen Altersgrenzen. Sollten Sie feststellen, dass uns ein Kind unter dem jeweils geltenden Mindestalter personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>, und wir werden die Daten umgehend löschen.</p>
     <h2>Änderungen dieser Richtlinie</h2>
-    <p>Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren.</p>
+    <p>Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wesentliche Änderungen werden auf dieser Seite mit einem aktualisierten Datum „Zuletzt aktualisiert" widergespiegelt, und sofern gesetzlich erforderlich, können wir Sie auch in der App benachrichtigen.</p>
     <h2>Kontakt</h2>
-    <p>Bei Fragen kontaktieren Sie uns unter <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <p>Bei Datenschutzfragen oder zur Ausübung der oben beschriebenen Rechte schreiben Sie an <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <div class="tail-note">
+        <p>Datenschutzfragen oder Datenanfragen? Schreiben Sie an <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — wir antworten innerhalb von 30 Tagen.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="fr">
     <h1>Politique de Confidentialité</h1>
-    <p class="updated">Dernière mise à jour : 28 mars 2026</p>
-    <p>Splitea ("nous" ou "l'application") est une application de partage de factures développée par Raúl Mora. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations.</p>
+    <p class="updated">Dernière mise à jour : 18 mai 2026</p>
+    <p>Splitea (« nous », « notre » ou « l'application ») est une application de partage de factures. Cette Politique de Confidentialité explique quelles informations nous collectons, comment nous les utilisons, avec qui nous les partageons, combien de temps nous les conservons et les droits que vous avez sur celles-ci.</p>
+    <h2>Responsable du traitement</h2>
+    <p>Le responsable du traitement des données personnelles traitées dans le cadre de Splitea est :</p>
+    <p>Raúl Mora (entrepreneur individuel)<br>[YOUR MAILING ADDRESS]<br>E-mail : <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea est une activité individuelle et n'est pas tenue de désigner un Délégué à la Protection des Données au titre de l'article 37 du RGPD. Pour toute question relative à la protection des données, écrivez à l'adresse e-mail ci-dessus.</p>
     <h2>Informations que nous collectons</h2>
-    <p><strong>Caméra et Photos.</strong> Nous accédons à votre caméra pour scanner des reçus et à votre photothèque pour sélectionner des images de reçus. Les images sont envoyées à notre serveur pour traitement et ne sont pas stockées après l'analyse.</p>
-    <p><strong>Contacts.</strong> Nous accédons aux contacts de votre appareil pour vous permettre de sélectionner des personnes avec qui partager les factures.</p>
-    <p><strong>Localisation.</strong> Nous demandons une localisation approximative pour déterminer les taux d'imposition locaux. Les données de localisation ne sont pas stockées.</p>
-    <p><strong>Profil utilisateur.</strong> Vos informations sont stockées localement sur votre appareil et peuvent être synchronisées via iCloud.</p>
-    <p><strong>Utilisation des scans.</strong> Nous suivons le nombre de scans de reçus pour gérer les limites du niveau gratuit.</p>
+    <p><strong>Informations de profil.</strong> Lorsque vous créez un profil Splitea, votre nom d'affichage, votre avatar, vos identifiants d'applications de paiement (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) et votre numéro de téléphone sont stockés dans notre annuaire d'utilisateurs (« splitea-id ») afin que les contacts qui utilisent Splitea puissent voir votre profil lorsqu'ils partagent une facture avec vous. Le même profil est également conservé sur votre appareil et synchronisé entre vos appareils via votre conteneur iCloud privé.</p>
+    <p><strong>Contacts.</strong> Si vous accordez l'accès aux Contacts, Splitea lit les noms, numéros de téléphone et photos du carnet d'adresses de votre appareil pour vous permettre de choisir des personnes avec qui partager des factures. Les noms et les photos restent sur votre appareil. Les numéros de téléphone sont <strong>hachés</strong> (hachage cryptographique à sens unique) avant d'être envoyés à notre annuaire d'utilisateurs afin que nous puissions vous indiquer lesquels de vos contacts utilisent déjà Splitea — nous ne voyons jamais les numéros bruts et nous ne stockons pas les hachages après la recherche.</p>
+    <p><strong>Caméra et photos.</strong> Splitea utilise votre caméra pour scanner des reçus et votre photothèque pour importer des images de reçus. Chaque image de reçu est envoyée à notre serveur pour analyse par IA et est immédiatement supprimée après l'extraction des articles et prix. Nous ne conservons pas les images de reçus.</p>
+    <p><strong>Localisation approximative.</strong> Si vous accordez l'accès à la localisation, Splitea envoie votre localisation approximative avec chaque requête de scan afin que le service d'IA puisse appliquer le taux de TVA local correct. Les données de localisation sont traitées en temps réel avec le scan et ne sont pas stockées.</p>
+    <p><strong>Utilisation des scans.</strong> Nous suivons le nombre de scans de reçus que vous effectuez par période de facturation en utilisant le stockage de valeurs-clés iCloud d'Apple afin d'appliquer la limite du niveau gratuit. Ce compteur se synchronise entre vos appareils via votre identifiant Apple et n'est jamais lu par nos serveurs.</p>
+    <p><strong>Statut d'abonnement.</strong> StoreKit d'Apple signale à l'application votre droit Splitea Pro au lancement. Nous ne recevons pas votre identifiant Apple, votre mode de paiement ni vos informations de facturation — uniquement un booléen indiquant si vous disposez d'un abonnement Pro actif.</p>
+    <h2>Comment nous utilisons vos informations</h2>
+    <p>Nous utilisons les informations ci-dessus pour :</p>
+    <ul>
+        <li>Fournir les fonctionnalités principales de l'application (scanner les reçus, partager les factures, faire correspondre les contacts qui utilisent Splitea).</li>
+        <li>Appliquer les taux de taxe locaux à vos calculs de partage.</li>
+        <li>Faire respecter les limites du niveau gratuit et les droits sur les fonctionnalités Splitea Pro.</li>
+        <li>Maintenir la sécurité et l'intégrité du service (App Attest, HTTPS, limitation de débit).</li>
+        <li>Répondre à vos demandes de support.</li>
+    </ul>
+    <h2>Base légale du traitement (RGPD)</h2>
+    <p>Si vous êtes dans l'Espace économique européen, au Royaume-Uni ou en Suisse, nous nous appuyons sur les bases légales suivantes au titre de l'article 6 du RGPD :</p>
+    <ul>
+        <li><strong>Exécution d'un contrat</strong> — pour fournir les fonctionnalités principales auxquelles vous avez souscrit (scanner, partager, faire correspondre les contacts, appliquer la taxe, faire respecter les droits). Sans ce traitement, nous ne pouvons pas fournir le service.</li>
+        <li><strong>Votre consentement</strong> — pour les autorisations facultatives que vous accordez au niveau du système d'exploitation (Contacts, Caméra, Photos, Localisation). Vous pouvez les révoquer à tout moment dans les Réglages de votre appareil.</li>
+        <li><strong>Notre intérêt légitime</strong> — pour maintenir le service sécurisé, prévenir les abus et répondre aux demandes de support. Nous avons mis en balance cet intérêt avec vos droits et conclu que le traitement est proportionné.</li>
+    </ul>
     <h2>Comment nous traitons les données</h2>
-    <p>Lorsque vous scannez un reçu, l'image est envoyée à notre serveur qui la transmet à un service d'IA tiers pour l'extraction de texte. L'image est traitée en temps réel et n'est pas stockée.</p>
+    <p>Lorsque vous scannez un reçu, l'image est envoyée à notre serveur (hébergé sur Cloudflare Workers) qui la transmet à un service d'IA tiers pour l'extraction et l'analyse du texte. L'image et le texte extrait sont conservés en mémoire uniquement pendant la durée de la requête et ne sont persistés ni sur nos serveurs ni par le service d'IA. La liste d'articles analysée revient à votre appareil, où vous pouvez la modifier et l'enregistrer localement.</p>
     <h2>Services tiers</h2>
-    <ul><li><strong>Apple iCloud</strong> — synchronise votre profil et vos reçus sauvegardés.</li><li><strong>Cloudflare Workers</strong> — traite les images de reçus.</li><li><strong>Firebase Remote Config</strong> — fournit la configuration de l'application.</li><li><strong>Apple StoreKit</strong> — gère les abonnements et les achats.</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — synchronise votre profil, les reçus enregistrés et le compteur de scans entre vos appareils. Les données iCloud résident dans votre conteneur privé ; nous n'y avons pas accès.</li>
+        <li><strong>Cloudflare Workers</strong> — héberge notre serveur, transmet les scans de reçus au service d'IA et stocke l'annuaire d'utilisateurs. Soumis à la <a href="https://www.cloudflare.com/privacypolicy/">Politique de Confidentialité de Cloudflare</a>.</li>
+        <li><strong>Fournisseur d'IA tiers</strong> — extrait articles et prix des images de reçus. Le fournisseur traite chaque image comme une requête d'inférence sans état et ne la conserve pas.</li>
+        <li><strong>Firebase Remote Config</strong> — fournit la configuration de l'application. Aucune donnée personnelle n'est envoyée à Firebase. Soumis à la <a href="https://firebase.google.com/support/privacy">Politique de Confidentialité de Firebase</a>.</li>
+        <li><strong>Apple StoreKit</strong> — gère les abonnements et les achats. Entièrement géré par Apple ; nous recevons seulement le statut du droit.</li>
+    </ul>
+    <h2>Transferts internationaux de données</h2>
+    <p>Notre serveur fonctionne sur le réseau global de Cloudflare et notre fournisseur d'IA est basé aux États-Unis. Si vous utilisez Splitea depuis l'extérieur des États-Unis, vos données sont transférées et traitées dans des juridictions qui peuvent ne pas offrir le même niveau de protection des données que votre pays d'origine. Lorsque la loi l'exige, nous nous appuyons sur les Clauses Contractuelles Types de la Commission européenne ou sur des garanties de transfert équivalentes proposées par nos sous-traitants. Vous pouvez demander la documentation de transfert pertinente en écrivant à <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
     <h2>Données que nous ne collectons pas</h2>
-    <ul><li>Nous ne collectons pas de données analytiques ou de suivi.</li><li>Nous n'utilisons pas de publicité.</li><li>Nous ne vendons pas vos informations personnelles à des tiers.</li><li>Nous ne stockons pas les images de reçus sur nos serveurs.</li></ul>
+    <ul>
+        <li>Nous ne collectons pas de données analytiques, de télémétrie ou de suivi d'utilisation.</li>
+        <li>Nous n'utilisons pas de SDK publicitaires ou de suivi publicitaire.</li>
+        <li>Nous ne vendons, louons ni partageons vos informations personnelles avec des tiers à des fins de marketing.</li>
+        <li>Nous ne stockons pas les images de reçus après analyse.</li>
+        <li>Nous ne stockons pas les numéros de téléphone hachés après la recherche de contacts.</li>
+    </ul>
     <h2>Stockage et sécurité des données</h2>
-    <p>Vos données sont stockées localement et synchronisées via iCloud d'Apple avec chiffrement de bout en bout. La communication est chiffrée via HTTPS.</p>
-    <h2>Conservation et suppression des données</h2>
-    <p>Toutes les données utilisateur sont stockées sur votre appareil et dans votre compte iCloud. Vous pouvez les supprimer à tout moment.</p>
+    <p>Les reçus, contacts et partages restent sur votre appareil et se synchronisent via iCloud d'Apple avec un chiffrement géré par Apple. Les données de profil de notre annuaire d'utilisateurs sont chiffrées en transit (TLS) et au repos. Les requêtes vers notre serveur sont authentifiées via App Attest d'Apple, de sorte que seules les instances légitimes de l'application peuvent accéder au service.</p>
+    <h2>Conservation des données</h2>
+    <p>Différentes catégories de données ont des règles de conservation différentes :</p>
+    <ul>
+        <li><strong>Profil (nom, avatar, identifiants de paiement, numéro de téléphone)</strong> — conservé dans l'annuaire d'utilisateurs jusqu'à la suppression de votre compte, après quoi il est retiré dans un délai de 30 jours.</li>
+        <li><strong>Images de reçus</strong> — non conservées ; supprimées après analyse (quelques secondes).</li>
+        <li><strong>Localisation approximative</strong> — non conservée ; traitée avec le scan puis supprimée.</li>
+        <li><strong>Numéros de téléphone hachés</strong> — non conservés après la recherche de contacts.</li>
+        <li><strong>Reçus, contacts, partages</strong> — conservés sur votre appareil et dans votre iCloud jusqu'à ce que vous les supprimiez. Nous ne contrôlons ni ne stockons ces données.</li>
+        <li><strong>Compteur d'utilisation des scans</strong> — conservé dans votre iCloud jusqu'à ce que vous supprimiez l'application ou votre identifiant Apple ; nous ne le contrôlons ni ne le stockons.</li>
+        <li><strong>Correspondance de support</strong> — conservée dans notre boîte e-mail jusqu'à 2 ans après la résolution de la demande, sauf si vous nous demandez de la supprimer plus tôt.</li>
+    </ul>
+    <h2>Suppression du compte</h2>
+    <p>Vous pouvez supprimer votre compte Splitea à tout moment depuis l'application : <strong>Réglages → Compte → Supprimer le compte</strong>. La suppression retire immédiatement votre profil (nom, avatar, identifiants de paiement, téléphone haché) de notre annuaire d'utilisateurs. Les reçus, contacts et partages stockés localement sur votre appareil ou dans votre iCloud ne sont pas automatiquement supprimés — pour les effacer également, videz les reçus enregistrés dans l'application ou supprimez l'application avant de supprimer le compte. Les données iCloud peuvent être gérées dans <strong>Réglages → [votre nom] → iCloud → Apps utilisant iCloud → Splitea</strong>.</p>
+    <h2>Vos droits</h2>
+    <p>Si vous êtes dans l'Espace économique européen, au Royaume-Uni, en Suisse ou dans une autre juridiction dotée d'un droit comparable en matière de protection des données, vous disposez des droits suivants sur vos données personnelles :</p>
+    <ul>
+        <li><strong>Accès</strong> — demander une copie des données personnelles que nous détenons sur vous.</li>
+        <li><strong>Rectification</strong> — corriger des données inexactes ou incomplètes (vous pouvez mettre à jour la plupart des champs directement dans l'application).</li>
+        <li><strong>Effacement</strong> — supprimer vos données (« droit à l'oubli »). Supprimer votre compte dans l'application exerce ce droit pour l'annuaire d'utilisateurs ; pour les autres catégories, écrivez-nous.</li>
+        <li><strong>Limitation</strong> — nous demander de cesser le traitement de vos données pendant qu'une réclamation est examinée.</li>
+        <li><strong>Portabilité</strong> — recevoir vos données de profil dans un format structuré et lisible par machine.</li>
+        <li><strong>Opposition</strong> — vous opposer au traitement fondé sur nos intérêts légitimes.</li>
+        <li><strong>Retrait du consentement</strong> — révoquer toute autorisation que vous aviez précédemment accordée (Contacts, Caméra, Photos, Localisation), dans les Réglages de votre appareil. Le retrait n'affecte pas le traitement effectué avant le retrait.</li>
+        <li><strong>Déposer une réclamation</strong> — auprès de votre autorité locale de protection des données.</li>
+    </ul>
+    <p>Pour exercer l'un de ces droits, écrivez à <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>. Nous répondons dans un délai de 30 jours.</p>
+    <h2>Droits de confidentialité en Californie (CCPA / CPRA)</h2>
+    <p>Si vous êtes résident de Californie, le California Consumer Privacy Act et le California Privacy Rights Act vous accordent des droits spécifiques sur vos informations personnelles.</p>
+    <p><strong>Catégories d'informations personnelles que nous collectons</strong> (selon Cal. Civ. Code §1798.140) :</p>
+    <ul>
+        <li>Identifiants — nom, numéro de téléphone, identifiants d'applications de paiement.</li>
+        <li>Informations commerciales — statut d'abonnement Splitea Pro (collecté par Apple, transmis à l'application).</li>
+        <li>Données de géolocalisation — localisation approximative au moment d'un scan, non conservée.</li>
+        <li>Activité Internet/réseau — limitée à ce qui est nécessaire pour fournir le service (jetons App Attest, métadonnées de requête).</li>
+    </ul>
+    <p><strong>Sources</strong> : directement de vous et de votre appareil. <strong>Finalité</strong> : telle que décrite dans « Comment nous utilisons vos informations » ci-dessus. <strong>Destinataires</strong> : tels que décrits dans « Services tiers » ci-dessus.</p>
+    <p><strong>Nous ne vendons ni ne partageons vos informations personnelles</strong> au sens du CCPA. Nous n'avons ni vendu ni partagé d'informations personnelles au cours des 12 derniers mois.</p>
+    <p>Vos droits en Californie :</p>
+    <ul>
+        <li><strong>Savoir</strong> — demander les éléments précis d'informations personnelles que nous détenons sur vous.</li>
+        <li><strong>Supprimer</strong> — demander la suppression de vos informations personnelles (voir « Suppression du compte »).</li>
+        <li><strong>Corriger</strong> — demander la correction d'informations personnelles inexactes.</li>
+        <li><strong>Refuser la vente ou le partage</strong> — non applicable car nous ne vendons ni ne partageons.</li>
+        <li><strong>Non-discrimination</strong> — nous ne refuserons pas le service, ne facturerons pas de prix différents et ne fournirons pas un niveau de service différent parce que vous avez exercé l'un de ces droits.</li>
+    </ul>
+    <p>Pour exercer ces droits, écrivez à <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> depuis l'adresse associée à votre compte ou avec suffisamment d'informations pour vérifier votre identité. Nous répondons dans un délai de 45 jours.</p>
     <h2>Confidentialité des enfants</h2>
-    <p>Splitea ne s'adresse pas aux enfants de moins de 13 ans.</p>
+    <p>Splitea ne s'adresse pas aux enfants de moins de 13 ans (16 ans dans l'Espace économique européen). Nous ne collectons pas sciemment de données personnelles de personnes en dessous de ces âges. Si vous découvrez qu'un enfant en dessous de l'âge minimum applicable nous a fourni des informations personnelles, contactez <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> et nous supprimerons les données rapidement.</p>
     <h2>Modifications de cette politique</h2>
-    <p>Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps.</p>
+    <p>Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. Les modifications importantes sont reflétées sur cette page avec une date « Dernière mise à jour » mise à jour, et lorsque la loi l'exige, nous pouvons également vous en informer dans l'application.</p>
     <h2>Contact</h2>
-    <p>Pour toute question, contactez-nous à <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <p>Pour toute question relative à la confidentialité ou pour exercer l'un des droits décrits ci-dessus, écrivez à <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <div class="tail-note">
+        <p>Questions de confidentialité ou demandes de données ? Écrivez à <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — nous répondons dans un délai de 30 jours.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="it">
     <h1>Informativa sulla Privacy</h1>
-    <p class="updated">Ultimo aggiornamento: 28 marzo 2026</p>
-    <p>Splitea ("noi" o "l'app") è un'applicazione per dividere i conti sviluppata da Raúl Mora. Questa Informativa sulla Privacy spiega come raccogliamo, utilizziamo e proteggiamo le vostre informazioni.</p>
-    <h2>Informazioni che raccogliamo</h2>
-    <p><strong>Fotocamera e Foto.</strong> Accediamo alla fotocamera per scansionare scontrini e alla libreria foto per selezionare immagini di scontrini. Le immagini vengono inviate al nostro server per l'elaborazione e non vengono conservate.</p>
-    <p><strong>Contatti.</strong> Accediamo ai contatti del dispositivo per permettervi di selezionare persone con cui dividere i conti.</p>
-    <p><strong>Posizione.</strong> Richiediamo una posizione approssimativa per determinare le aliquote fiscali locali. I dati di posizione non vengono conservati.</p>
-    <p><strong>Profilo utente.</strong> Le informazioni vengono archiviate localmente sul dispositivo e possono essere sincronizzate tramite iCloud.</p>
-    <h2>Come elaboriamo i dati</h2>
-    <p>Quando scansionate uno scontrino, l'immagine viene inviata al nostro server che la inoltra a un servizio di IA di terze parti per l'estrazione del testo. L'immagine viene elaborata in tempo reale e non viene conservata.</p>
-    <h2>Servizi di terze parti</h2>
-    <ul><li><strong>Apple iCloud</strong> — sincronizza profilo e scontrini salvati.</li><li><strong>Cloudflare Workers</strong> — elabora le immagini degli scontrini.</li><li><strong>Firebase Remote Config</strong> — fornisce la configurazione dell'app.</li><li><strong>Apple StoreKit</strong> — gestisce abbonamenti e acquisti.</li></ul>
-    <h2>Dati che non raccogliamo</h2>
-    <ul><li>Non raccogliamo dati analitici o di tracciamento.</li><li>Non utilizziamo pubblicità.</li><li>Non vendiamo le vostre informazioni personali a terzi.</li><li>Non conserviamo immagini di scontrini sui nostri server.</li></ul>
-    <h2>Archiviazione e sicurezza</h2>
-    <p>I dati vengono archiviati localmente e sincronizzati tramite iCloud con crittografia end-to-end. La comunicazione è crittografata tramite HTTPS.</p>
-    <h2>Conservazione ed eliminazione dei dati</h2>
-    <p>Tutti i dati vengono archiviati sul dispositivo e nell'account iCloud. Potete eliminarli in qualsiasi momento.</p>
-    <h2>Privacy dei minori</h2>
-    <p>Splitea non è rivolta a minori di 13 anni.</p>
-    <h2>Modifiche a questa informativa</h2>
-    <p>Potremmo aggiornare questa Informativa sulla Privacy di tanto in tanto.</p>
+    <p class="updated">Ultimo aggiornamento: 18 maggio 2026</p>
+    <p>Splitea ("noi", "nostro" o "l'app") è un'applicazione per dividere i conti. Questa Informativa sulla Privacy spiega quali informazioni raccogliamo, come le utilizziamo, con chi le condividiamo, per quanto tempo le conserviamo e i diritti che avete su di esse.</p>
+    <h2>Titolare del Trattamento</h2>
+    <p>Il titolare del trattamento dei dati personali trattati in relazione a Splitea è:</p>
+    <p>Raúl Mora (ditta individuale)<br>[YOUR MAILING ADDRESS]<br>E-mail: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea è un'attività individuale e non è tenuta a designare un Responsabile della Protezione dei Dati ai sensi dell'articolo 37 del GDPR. Per qualsiasi domanda sulla protezione dei dati, scrivete all'indirizzo e-mail sopra indicato.</p>
+    <h2>Informazioni che Raccogliamo</h2>
+    <p><strong>Informazioni di profilo.</strong> Quando create un profilo Splitea, il vostro nome visualizzato, l'avatar, i nomi utente delle app di pagamento (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) e il numero di telefono vengono memorizzati nella nostra directory utenti ("splitea-id"), in modo che i contatti che usano Splitea possano vedere il vostro profilo quando dividono un conto con voi. Lo stesso profilo è anche conservato sul dispositivo e sincronizzato tra i vostri dispositivi tramite il contenitore iCloud privato.</p>
+    <p><strong>Contatti.</strong> Se concedete l'accesso ai Contatti, Splitea legge nomi, numeri di telefono e foto dalla rubrica del dispositivo per permettervi di scegliere le persone con cui dividere i conti. Nomi e foto restano sul dispositivo. I numeri di telefono vengono <strong>sottoposti a hash</strong> (hash crittografico a senso unico) prima di essere inviati alla nostra directory utenti per indicarvi quali dei vostri contatti usano già Splitea — non vediamo mai i numeri in chiaro e non conserviamo gli hash dopo la consultazione.</p>
+    <p><strong>Fotocamera e foto.</strong> Splitea usa la fotocamera per scansionare scontrini e la libreria foto per importare immagini di scontrini. Ogni immagine di scontrino viene inviata al nostro server per l'analisi tramite IA ed è scartata immediatamente dopo l'estrazione di articoli e prezzi. Non conserviamo le immagini degli scontrini.</p>
+    <p><strong>Posizione approssimativa.</strong> Se concedete l'accesso alla posizione, Splitea invia la vostra posizione approssimativa con ogni richiesta di scansione affinché il servizio di IA possa applicare la corretta aliquota IVA locale. I dati di posizione vengono elaborati in tempo reale con la scansione e non sono conservati.</p>
+    <p><strong>Utilizzo delle scansioni.</strong> Tracciamo il numero di scansioni di scontrini che effettuate per periodo di fatturazione utilizzando l'iCloud Key-Value Store di Apple per applicare il limite del piano gratuito. Questo contatore viene sincronizzato tra i vostri dispositivi tramite il vostro Apple ID e non viene mai letto dai nostri server.</p>
+    <p><strong>Stato dell'abbonamento.</strong> StoreKit di Apple comunica all'app il vostro diritto a Splitea Pro all'avvio. Non riceviamo il vostro Apple ID, metodo di pagamento o dettagli di fatturazione — solo un valore booleano che indica se avete un abbonamento Pro attivo.</p>
+    <h2>Come Utilizziamo le Vostre Informazioni</h2>
+    <p>Utilizziamo le informazioni sopra indicate per:</p>
+    <ul>
+        <li>Fornire le funzionalità principali dell'app (scansione scontrini, divisione conti, abbinamento dei contatti che usano Splitea).</li>
+        <li>Applicare le aliquote fiscali locali ai vostri calcoli di divisione.</li>
+        <li>Far rispettare i limiti del piano gratuito e i diritti sulle funzionalità Splitea Pro.</li>
+        <li>Mantenere la sicurezza e l'integrità del servizio (App Attest, HTTPS, rate limiting).</li>
+        <li>Rispondere alle vostre richieste di assistenza.</li>
+    </ul>
+    <h2>Base Giuridica del Trattamento (GDPR)</h2>
+    <p>Se vi trovate nello Spazio Economico Europeo, nel Regno Unito o in Svizzera, ci basiamo sulle seguenti basi giuridiche ai sensi dell'articolo 6 del GDPR:</p>
+    <ul>
+        <li><strong>Esecuzione di un contratto</strong> — per fornire le funzionalità principali dell'app a cui vi siete iscritti (scansione, divisione, abbinamento dei contatti, applicazione dell'imposta, applicazione dei diritti). Senza questo trattamento non possiamo erogare il servizio.</li>
+        <li><strong>Il vostro consenso</strong> — per i permessi facoltativi che concedete a livello di sistema operativo (Contatti, Fotocamera, Foto, Posizione). Potete revocarli in qualsiasi momento nelle Impostazioni del dispositivo.</li>
+        <li><strong>Il nostro legittimo interesse</strong> — per mantenere il servizio sicuro, prevenire abusi e rispondere alle richieste di assistenza. Abbiamo bilanciato questo interesse con i vostri diritti e concluso che il trattamento è proporzionato.</li>
+    </ul>
+    <h2>Come Elaboriamo i Dati</h2>
+    <p>Quando scansionate uno scontrino, l'immagine viene inviata al nostro server (ospitato su Cloudflare Workers) che la inoltra a un servizio di IA di terze parti per l'estrazione e l'analisi del testo. L'immagine e il testo estratto vengono mantenuti in memoria solo per la durata della richiesta e non sono persistiti né sui nostri server né dal servizio di IA. L'elenco degli articoli analizzati torna al vostro dispositivo, dove potete modificarlo e salvarlo localmente.</p>
+    <h2>Servizi di Terze Parti</h2>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — sincronizza il vostro profilo, gli scontrini salvati e il contatore di scansioni tra i vostri dispositivi. I dati iCloud risiedono nel vostro contenitore privato; non vi abbiamo accesso.</li>
+        <li><strong>Cloudflare Workers</strong> — ospita il nostro server, inoltra le scansioni al servizio di IA e memorizza la directory utenti. Soggetto alla <a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy di Cloudflare</a>.</li>
+        <li><strong>Fornitore di IA di terze parti</strong> — estrae articoli e prezzi dalle immagini di scontrini. Il fornitore elabora ogni immagine come una richiesta di inferenza stateless e non la conserva.</li>
+        <li><strong>Firebase Remote Config</strong> — fornisce la configurazione dell'app. A Firebase non sono inviati dati personali. Soggetto alla <a href="https://firebase.google.com/support/privacy">Privacy Policy di Firebase</a>.</li>
+        <li><strong>Apple StoreKit</strong> — gestisce abbonamenti e acquisti. Interamente gestito da Apple; riceviamo solo lo stato del diritto.</li>
+    </ul>
+    <h2>Trasferimenti Internazionali di Dati</h2>
+    <p>Il nostro server opera sulla rete edge globale di Cloudflare e il nostro fornitore di IA ha sede negli Stati Uniti. Se utilizzate Splitea al di fuori degli Stati Uniti, i vostri dati vengono trasferiti ed elaborati in giurisdizioni che potrebbero non offrire lo stesso livello di protezione dei dati del vostro Paese di origine. Ove richiesto dalla legge, ci basiamo sulle Clausole Contrattuali Tipo della Commissione Europea o su garanzie di trasferimento equivalenti fornite dai nostri sub-incaricati. Potete richiedere la documentazione di trasferimento pertinente scrivendo a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <h2>Dati che Non Raccogliamo</h2>
+    <ul>
+        <li>Non raccogliamo dati analitici, telemetria o tracciamento dell'utilizzo.</li>
+        <li>Non utilizziamo SDK pubblicitari o di tracciamento.</li>
+        <li>Non vendiamo, noleggiamo né condividiamo le vostre informazioni personali con terze parti per il loro marketing.</li>
+        <li>Non conserviamo immagini di scontrini dopo l'analisi.</li>
+        <li>Non conserviamo numeri di telefono sottoposti a hash dopo il completamento della consultazione dei contatti.</li>
+    </ul>
+    <h2>Archiviazione e Sicurezza</h2>
+    <p>Scontrini, contatti e divisioni restano sul vostro dispositivo e si sincronizzano tramite iCloud di Apple con cifratura gestita da Apple. I dati di profilo nella nostra directory utenti sono cifrati in transito (TLS) e a riposo. Le richieste al nostro server sono autenticate tramite App Attest di Apple, in modo che solo istanze legittime dell'app possano accedere al servizio.</p>
+    <h2>Conservazione dei Dati</h2>
+    <p>Le diverse categorie di dati hanno regole di conservazione diverse:</p>
+    <ul>
+        <li><strong>Profilo (nome, avatar, identificatori di pagamento, numero di telefono)</strong> — conservato nella directory utenti fino all'eliminazione dell'account, dopodiché viene rimosso entro 30 giorni.</li>
+        <li><strong>Immagini di scontrini</strong> — non conservate; scartate dopo l'analisi (secondi).</li>
+        <li><strong>Posizione approssimativa</strong> — non conservata; elaborata con la scansione e scartata.</li>
+        <li><strong>Numeri di telefono sottoposti a hash</strong> — non conservati dopo il completamento della consultazione dei contatti.</li>
+        <li><strong>Scontrini, contatti, divisioni</strong> — conservati sul vostro dispositivo e nel vostro iCloud finché non li eliminate. Non controlliamo né memorizziamo questi dati.</li>
+        <li><strong>Contatore di utilizzo delle scansioni</strong> — conservato nel vostro iCloud finché non eliminate l'app o il vostro Apple ID; non lo controlliamo né lo memorizziamo.</li>
+        <li><strong>Corrispondenza di assistenza</strong> — conservata nella nostra casella e-mail fino a 2 anni dopo la risoluzione della richiesta, salvo che chiediate di eliminarla prima.</li>
+    </ul>
+    <h2>Eliminazione dell'Account</h2>
+    <p>Potete eliminare il vostro account Splitea in qualsiasi momento dall'app: <strong>Impostazioni → Account → Elimina account</strong>. L'eliminazione rimuove immediatamente il vostro profilo (nome, avatar, identificatori di pagamento, telefono sottoposto a hash) dalla nostra directory utenti. Scontrini, contatti e divisioni archiviati localmente sul dispositivo o nel vostro iCloud non vengono rimossi automaticamente — per eliminare anche questi, svuotate gli scontrini salvati all'interno dell'app o eliminate l'app prima di eliminare l'account. I dati iCloud possono essere gestiti in <strong>Impostazioni → [il vostro nome] → iCloud → App che usano iCloud → Splitea</strong>.</p>
+    <h2>I Vostri Diritti</h2>
+    <p>Se vi trovate nello Spazio Economico Europeo, nel Regno Unito, in Svizzera o in un'altra giurisdizione con una normativa di protezione dei dati comparabile, avete i seguenti diritti sui vostri dati personali:</p>
+    <ul>
+        <li><strong>Accesso</strong> — richiedere una copia dei dati personali che deteniamo su di voi.</li>
+        <li><strong>Rettifica</strong> — correggere dati inesatti o incompleti (potete aggiornare la maggior parte dei campi direttamente nell'app).</li>
+        <li><strong>Cancellazione</strong> — eliminare i vostri dati ("diritto all'oblio"). L'eliminazione dell'account nell'app esercita questo diritto per la directory utenti; per altre categorie, scriveteci.</li>
+        <li><strong>Limitazione</strong> — chiederci di interrompere il trattamento dei vostri dati mentre una reclamo è oggetto di indagine.</li>
+        <li><strong>Portabilità</strong> — ricevere i vostri dati di profilo in un formato strutturato e leggibile da macchina.</li>
+        <li><strong>Opposizione</strong> — opporsi al trattamento basato sui nostri legittimi interessi.</li>
+        <li><strong>Revoca del consenso</strong> — revocare qualsiasi permesso precedentemente concesso (Contatti, Fotocamera, Foto, Posizione), nelle Impostazioni del dispositivo. La revoca non incide sul trattamento effettuato prima della revoca.</li>
+        <li><strong>Reclamo</strong> — presso la vostra autorità locale di protezione dei dati.</li>
+    </ul>
+    <p>Per esercitare uno qualsiasi di questi diritti, scrivete a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>. Rispondiamo entro 30 giorni.</p>
+    <h2>Diritti di Privacy in California (CCPA / CPRA)</h2>
+    <p>Se siete residenti in California, il California Consumer Privacy Act e il California Privacy Rights Act vi conferiscono diritti specifici sulle vostre informazioni personali.</p>
+    <p><strong>Categorie di informazioni personali che raccogliamo</strong> (ai sensi del Cal. Civ. Code §1798.140):</p>
+    <ul>
+        <li>Identificatori — nome, numero di telefono, identificatori delle app di pagamento.</li>
+        <li>Informazioni commerciali — stato dell'abbonamento Splitea Pro (raccolto da Apple, comunicato all'app).</li>
+        <li>Dati di geolocalizzazione — posizione approssimativa al momento di una scansione, non conservata.</li>
+        <li>Attività Internet/di rete — limitata a quanto necessario per erogare il servizio (token App Attest, metadati di richiesta).</li>
+    </ul>
+    <p><strong>Fonti</strong>: direttamente da voi e dal vostro dispositivo. <strong>Finalità</strong>: come descritto in "Come Utilizziamo le Vostre Informazioni" sopra. <strong>Destinatari</strong>: come descritto in "Servizi di Terze Parti" sopra.</p>
+    <p><strong>Non vendiamo né condividiamo le vostre informazioni personali</strong> come definito dal CCPA. Non abbiamo venduto o condiviso informazioni personali nei 12 mesi precedenti.</p>
+    <p>I vostri diritti in California:</p>
+    <ul>
+        <li><strong>Conoscere</strong> — richiedere gli specifici dati personali che deteniamo su di voi.</li>
+        <li><strong>Eliminare</strong> — richiedere l'eliminazione delle vostre informazioni personali (vedi "Eliminazione dell'Account").</li>
+        <li><strong>Correggere</strong> — richiedere la correzione di informazioni personali inesatte.</li>
+        <li><strong>Rifiutare la vendita o la condivisione</strong> — non applicabile perché non vendiamo né condividiamo.</li>
+        <li><strong>Non discriminazione</strong> — non rifiuteremo il servizio, applicheremo prezzi diversi o forniremo un livello di servizio differente per il fatto che avete esercitato uno qualsiasi di questi diritti.</li>
+    </ul>
+    <p>Per esercitare questi diritti, scrivete a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> dall'indirizzo associato al vostro account o con informazioni sufficienti a verificare la vostra identità. Rispondiamo entro 45 giorni.</p>
+    <h2>Privacy dei Minori</h2>
+    <p>Splitea non è rivolta a minori di 13 anni (16 anni nello Spazio Economico Europeo). Non raccogliamo intenzionalmente informazioni personali da nessuno al di sotto di tali età. Se venite a conoscenza che un minore al di sotto del limite minimo applicabile ci ha fornito informazioni personali, contattate <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> e provvederemo a eliminare i dati tempestivamente.</p>
+    <h2>Modifiche a questa Informativa</h2>
+    <p>Possiamo aggiornare questa Informativa sulla Privacy di tanto in tanto. Le modifiche sostanziali sono riflesse in questa pagina con una data "Ultimo aggiornamento" aggiornata e, ove richiesto dalla legge, potremmo anche notificarvele in-app.</p>
     <h2>Contatto</h2>
-    <p>Per domande, contattateci a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <p>Per domande sulla privacy o per esercitare uno qualsiasi dei diritti sopra descritti, scrivete a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <div class="tail-note">
+        <p>Domande sulla privacy o richieste sui dati? Scrivete a <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — rispondiamo entro 30 giorni.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="ja">
     <h1>プライバシーポリシー</h1>
-    <p class="updated">最終更新日：2026年3月28日</p>
-    <p>Splitea（「当社」または「本アプリ」）は、Raúl Moraが開発した割り勘アプリです。このプライバシーポリシーは、当社がお客様の情報をどのように収集、使用、保護するかを説明します。</p>
+    <p class="updated">最終更新日：2026年5月18日</p>
+    <p>Splitea（「当社」、「当社の」または「本アプリ」）は、割り勘アプリです。本プライバシーポリシーは、当社が収集する情報、その使用方法、共有先、保持期間、およびお客様がそれらに対して有する権利について説明します。</p>
+    <h2>データ管理者</h2>
+    <p>Spliteaに関連して処理される個人情報のデータ管理者は次のとおりです:</p>
+    <p>Raúl Mora（個人事業主）<br>[YOUR MAILING ADDRESS]<br>メール: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Spliteaは一人で運営しており、GDPR第37条に基づきデータ保護責任者を選任する義務はありません。データ保護に関するご質問は、上記のメールアドレスまでお問い合わせください。</p>
     <h2>収集する情報</h2>
-    <p><strong>カメラと写真。</strong>レシートをスキャンするためにカメラにアクセスし、レシート画像を選択するためにフォトライブラリにアクセスします。画像は処理のためにサーバーに送信され、解析完了後は保存されません。</p>
-    <p><strong>連絡先。</strong>割り勘する相手を選択するためにデバイスの連絡先にアクセスします。</p>
-    <p><strong>位置情報。</strong>正確な請求計算のために、おおよその位置情報をリクエストします。位置データは保存されません。</p>
-    <p><strong>ユーザープロフィール。</strong>お客様の情報はデバイスにローカルに保存され、iCloudを通じて同期される場合があります。</p>
+    <p><strong>プロフィール情報。</strong>Spliteaのプロフィールを作成すると、表示名、アバター、決済アプリのユーザー名（Venmo、Cash App、PayPal、Revolut、Google Pay、Monzo、ATH Móvil）、電話番号が当社のユーザーディレクトリ（「splitea-id」）に保存され、Spliteaを利用する連絡先が割り勘の際にお客様のプロフィールを確認できます。同じプロフィールはお使いのデバイスにも保存され、お客様のプライベートiCloudコンテナを介してデバイス間で同期されます。</p>
+    <p><strong>連絡先。</strong>連絡先アクセスを許可すると、Spliteaはデバイスのアドレス帳から名前、電話番号、写真を読み取り、割り勘の相手を選択できるようにします。名前と写真はデバイス内にとどまります。電話番号は当社のユーザーディレクトリに送信される前に<strong>ハッシュ化</strong>（一方向の暗号学的ハッシュ）され、お客様の連絡先のうちすでにSpliteaを利用している人をお知らせできるようにします — 生の番号を当社が見ることはなく、検索完了後にハッシュも保存しません。</p>
+    <p><strong>カメラと写真。</strong>Spliteaはレシートをスキャンするためにカメラを、レシート画像を読み込むために写真ライブラリを使用します。各レシート画像はAI解析のために当社サーバーへ送信され、項目と価格が抽出された直後に破棄されます。当社はレシート画像を保持しません。</p>
+    <p><strong>おおよその位置情報。</strong>位置情報アクセスを許可すると、Spliteaは各スキャンリクエストにおおよその位置情報を付加し、AIサービスが正しい現地の売上税率を適用できるようにします。位置情報はスキャンと同時にリアルタイム処理され、保存されません。</p>
+    <p><strong>スキャン使用状況。</strong>無料プランの上限を適用するため、AppleのiCloud Key-Value Storeを使用して請求期間ごとに行ったレシートスキャン数を記録します。このカウンターはお客様のApple ID経由でデバイス間で同期され、当社のサーバーが読み取ることはありません。</p>
+    <p><strong>サブスクリプションの状態。</strong>AppleのStoreKitが起動時にSplitea Proの権限をアプリに通知します。Apple ID、お支払い方法、請求情報は受領せず、有効なProサブスクリプションがあるかどうかを示すブール値のみを受け取ります。</p>
+    <h2>情報の利用方法</h2>
+    <p>当社は上記の情報を以下の目的で使用します:</p>
+    <ul>
+        <li>アプリの中核機能を提供するため（レシートのスキャン、割り勘、Spliteaを利用する連絡先の照合）。</li>
+        <li>割り勘の計算に現地の税率を適用するため。</li>
+        <li>無料プランの上限とSplitea Pro機能の権限を適用するため。</li>
+        <li>サービスのセキュリティと完全性を維持するため（App Attest、HTTPS、レート制限）。</li>
+        <li>お客様のサポート問い合わせに対応するため。</li>
+    </ul>
+    <h2>処理の法的根拠（GDPR）</h2>
+    <p>お客様が欧州経済領域、英国、またはスイスにいる場合、当社はGDPR第6条に基づき以下の法的根拠に依拠します:</p>
+    <ul>
+        <li><strong>契約の履行</strong> — お客様がお申し込みになった本アプリの中核機能（スキャン、割り勘、連絡先の照合、税の適用、権限の適用）を提供するため。この処理がなければサービスを提供できません。</li>
+        <li><strong>お客様の同意</strong> — OSレベルで付与する任意の権限（連絡先、カメラ、写真、位置情報）。デバイスの設定からいつでも撤回できます。</li>
+        <li><strong>当社の正当な利益</strong> — サービスを安全に維持し、不正利用を防止し、サポート要請に対応するため。これをお客様の権利と比較衡量し、処理が均衡的であると結論付けました。</li>
+    </ul>
     <h2>データの処理方法</h2>
-    <p>レシートをスキャンすると、画像はサーバーに送信され、テキスト抽出のためにサードパーティのAIサービスに転送されます。画像はリアルタイムで処理され、保存されません。</p>
+    <p>レシートをスキャンすると、画像は当社サーバー（Cloudflare Workersでホスト）に送信され、テキストの抽出と解析のためにサードパーティのAIサービスに転送されます。画像と抽出されたテキストはリクエストの間のみメモリに保持され、当社サーバーやAIサービスに永続化されることはありません。解析された項目リストはお客様のデバイスに返され、編集してローカルに保存できます。</p>
     <h2>サードパーティサービス</h2>
-    <ul><li><strong>Apple iCloud</strong> — プロフィールと保存されたレシートを同期。</li><li><strong>Cloudflare Workers</strong> — レシート画像を処理。</li><li><strong>Firebase Remote Config</strong> — アプリ設定を提供。</li><li><strong>Apple StoreKit</strong> — サブスクリプションと購入を管理。</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — プロフィール、保存済みレシート、スキャン使用カウンターをデバイス間で同期します。iCloudデータはお客様のプライベートコンテナに保管され、当社はアクセスできません。</li>
+        <li><strong>Cloudflare Workers</strong> — サーバーをホストし、レシートのスキャンをAIサービスにプロキシし、ユーザーディレクトリを保管します。<a href="https://www.cloudflare.com/privacypolicy/">Cloudflareのプライバシーポリシー</a>に従います。</li>
+        <li><strong>サードパーティAIプロバイダ</strong> — レシート画像から項目と価格を抽出します。プロバイダは各画像をステートレスな推論リクエストとして処理し、保持しません。</li>
+        <li><strong>Firebase Remote Config</strong> — アプリ設定を配信します。Firebaseに個人データは送信されません。<a href="https://firebase.google.com/support/privacy">Firebaseのプライバシーポリシー</a>に従います。</li>
+        <li><strong>Apple StoreKit</strong> — サブスクリプションと購入を処理します。Appleが全面的に管理し、当社は権限の状態のみを受け取ります。</li>
+    </ul>
+    <h2>国際的なデータ移転</h2>
+    <p>当社のサーバーはCloudflareのグローバルエッジネットワーク上で運用されており、AIプロバイダは米国に拠点を置いています。米国外からSpliteaを利用される場合、お客様のデータは母国と同等のデータ保護水準を提供しない可能性のある法域へ移転・処理されます。法令上必要な場合、当社は欧州委員会の標準契約条項、または当社のサブプロセッサーが提供する同等の移転保護措置に依拠します。該当する移転関連書類は<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>までご請求ください。</p>
     <h2>収集しないデータ</h2>
-    <ul><li>分析やトラッキングデータは収集しません。</li><li>広告やトラッキングは使用しません。</li><li>個人情報を第三者に販売、共有、貸し出しません。</li><li>レシート画像をサーバーに保存しません。</li></ul>
+    <ul>
+        <li>分析、テレメトリ、利用状況の追跡データは収集しません。</li>
+        <li>広告SDKや広告トラッキングSDKは使用しません。</li>
+        <li>個人情報を第三者にその独自のマーケティング目的で販売、貸与、共有しません。</li>
+        <li>解析後にレシート画像を保存しません。</li>
+        <li>連絡先検索完了後にハッシュ化された電話番号を保存しません。</li>
+    </ul>
     <h2>データの保存とセキュリティ</h2>
-    <p>データはデバイスにローカルに保存され、Appleのエンドツーエンド暗号化によりiCloudで同期されます。通信はHTTPSで暗号化されています。</p>
-    <h2>データの保持と削除</h2>
-    <p>すべてのユーザーデータはデバイスとiCloudアカウントに保存されます。いつでも削除できます。</p>
+    <p>レシート、連絡先、割り勘はお使いのデバイス上に残り、Appleが管理する暗号化を用いてAppleのiCloudで同期されます。当社のユーザーディレクトリ内のプロフィールデータは転送中（TLS）および保存時に暗号化されます。当社サーバーへのリクエストはAppleのApp Attestで認証され、正規のアプリインスタンスのみがサービスにアクセスできます。</p>
+    <h2>データの保持</h2>
+    <p>データの種類によって保持ルールが異なります:</p>
+    <ul>
+        <li><strong>プロフィール（名前、アバター、決済ハンドル、電話番号）</strong> — アカウントを削除するまでユーザーディレクトリに保持され、削除後30日以内に消去されます。</li>
+        <li><strong>レシート画像</strong> — 保持しません。解析後（数秒）に破棄されます。</li>
+        <li><strong>おおよその位置情報</strong> — 保持しません。スキャンと共に処理され破棄されます。</li>
+        <li><strong>ハッシュ化された電話番号</strong> — 連絡先検索完了後は保持しません。</li>
+        <li><strong>レシート、連絡先、割り勘</strong> — 削除されるまでデバイスとiCloudに保持されます。当社はこのデータを管理も保存もしません。</li>
+        <li><strong>スキャン使用カウンター</strong> — アプリまたはApple IDを削除するまでiCloudに保持されます。当社は管理も保存もしません。</li>
+        <li><strong>サポートの通信記録</strong> — 問い合わせ解決後最長2年間メールボックスに保持しますが、早期削除のご要望があれば対応します。</li>
+    </ul>
+    <h2>アカウントの削除</h2>
+    <p>アプリ内からいつでもSpliteaアカウントを削除できます: <strong>設定 → アカウント → アカウントを削除</strong>。削除により、お客様のプロフィール（名前、アバター、決済ハンドル、ハッシュ化された電話番号）は当社のユーザーディレクトリから直ちに削除されます。デバイスローカルやiCloudに保存されたレシート、連絡先、割り勘は自動的には削除されません — それらも削除するには、アカウントを削除する前にアプリ内で保存済みレシートを消去するか、アプリを削除してください。iCloudデータは<strong>設定 → [お客様の名前] → iCloud → iCloudを使用しているApp → Splitea</strong>から管理できます。</p>
+    <h2>お客様の権利</h2>
+    <p>お客様が欧州経済領域、英国、スイス、または同等のデータ保護法を有するその他の法域にいる場合、お客様は個人データに関して以下の権利を有します:</p>
+    <ul>
+        <li><strong>アクセス</strong> — 当社が保持するお客様の個人データの写しを請求する権利。</li>
+        <li><strong>訂正</strong> — 不正確または不完全なデータの訂正を求める権利（ほとんどの項目はアプリ内で直接更新できます）。</li>
+        <li><strong>消去</strong> — データの削除（「忘れられる権利」）。アプリ内でアカウントを削除することによってユーザーディレクトリに関するこの権利を行使できます。その他のカテゴリについてはご連絡ください。</li>
+        <li><strong>制限</strong> — 苦情の調査中にデータ処理を停止するよう求める権利。</li>
+        <li><strong>ポータビリティ</strong> — プロフィールデータを構造化された機械可読形式で受け取る権利。</li>
+        <li><strong>異議</strong> — 当社の正当な利益に基づく処理に異議を申し立てる権利。</li>
+        <li><strong>同意の撤回</strong> — 以前に付与した権限（連絡先、カメラ、写真、位置情報）をデバイス設定で取り消す権利。撤回前に行われた処理には影響しません。</li>
+        <li><strong>苦情の申立て</strong> — お住まいの地域のデータ保護監督機関への苦情申立て。</li>
+    </ul>
+    <p>これらの権利を行使するには<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>までメールでご連絡ください。30日以内に回答します。</p>
+    <h2>カリフォルニア州のプライバシー権（CCPA / CPRA）</h2>
+    <p>お客様がカリフォルニア州の居住者である場合、カリフォルニア州消費者プライバシー法およびカリフォルニア州プライバシー権法により、個人情報に関する特定の権利が認められています。</p>
+    <p><strong>当社が収集する個人情報のカテゴリ</strong>（Cal. Civ. Code §1798.140に基づく）:</p>
+    <ul>
+        <li>識別子 — 氏名、電話番号、決済アプリのハンドル。</li>
+        <li>商取引情報 — Splitea Proのサブスクリプション状態（Appleが収集し、アプリへ報告）。</li>
+        <li>地理位置情報 — スキャン時のおおよその位置情報、保持しません。</li>
+        <li>インターネット/ネットワークの活動 — サービス提供に必要な範囲に限る（App Attestトークン、リクエストのメタデータ）。</li>
+    </ul>
+    <p><strong>情報源</strong>: お客様および当該デバイスから直接。<strong>目的</strong>: 上記「情報の利用方法」の通り。<strong>受領者</strong>: 上記「サードパーティサービス」の通り。</p>
+    <p>当社はCCPAの定義に基づき、<strong>お客様の個人情報を販売または共有しません</strong>。過去12か月間に個人情報を販売または共有したことはありません。</p>
+    <p>カリフォルニア州における権利:</p>
+    <ul>
+        <li><strong>知る権利</strong> — 当社が保持するお客様の個人情報の具体的内容を請求する権利。</li>
+        <li><strong>削除</strong> — お客様の個人情報の削除を請求する権利（上記「アカウントの削除」を参照）。</li>
+        <li><strong>訂正</strong> — 不正確な個人情報の訂正を請求する権利。</li>
+        <li><strong>販売・共有のオプトアウト</strong> — 当社は販売も共有も行わないため適用されません。</li>
+        <li><strong>差別の禁止</strong> — これらの権利を行使したことを理由に、サービスを拒否したり、価格を変えたり、異なる水準のサービスを提供したりすることはありません。</li>
+    </ul>
+    <p>これらの権利を行使するには、アカウントに関連付けられたアドレスから、または身元確認に十分な情報を添えて<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>までメールでご連絡ください。45日以内に回答します。</p>
     <h2>子供のプライバシー</h2>
-    <p>Spliteaは13歳未満の子供を対象としていません。</p>
-    <h2>ポリシーの変更</h2>
-    <p>このプライバシーポリシーは随時更新される場合があります。</p>
+    <p>Spliteaは13歳未満（欧州経済領域では16歳未満）の子供を対象としていません。当社はこれらの年齢未満の方から故意に個人情報を収集することはありません。該当する最低年齢未満の子供が当社に個人情報を提供したことに気づかれた場合は、<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>までご連絡ください。速やかにデータを削除します。</p>
+    <h2>本ポリシーの変更</h2>
+    <p>本プライバシーポリシーは随時更新される場合があります。重要な変更は本ページに更新後の「最終更新日」と共に反映されます。また、法令で求められる場合にはアプリ内でも通知することがあります。</p>
     <h2>お問い合わせ</h2>
-    <p>ご質問は<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>までご連絡ください。</p>
+    <p>プライバシーに関するご質問、または上記の権利を行使される場合は<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>までご連絡ください。</p>
+    <div class="tail-note">
+        <p>プライバシーに関するご質問やデータ請求は<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>まで — 30日以内に回答します。</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="ko">
     <h1>개인정보 처리방침</h1>
-    <p class="updated">최종 업데이트: 2026년 3월 28일</p>
-    <p>Splitea("당사" 또는 "본 앱")는 Raúl Mora가 개발한 더치페이 앱입니다. 이 개인정보 처리방침은 당사가 귀하의 정보를 어떻게 수집, 사용 및 보호하는지 설명합니다.</p>
-    <h2>수집하는 정보</h2>
-    <p><strong>카메라 및 사진.</strong> 영수증을 스캔하기 위해 카메라에 접근하고, 영수증 이미지를 선택하기 위해 사진 라이브러리에 접근합니다. 이미지는 처리를 위해 서버로 전송되며 분석 완료 후 저장되지 않습니다.</p>
-    <p><strong>연락처.</strong> 비용을 나눌 사람을 선택할 수 있도록 기기의 연락처에 접근합니다.</p>
-    <p><strong>위치.</strong> 정확한 세금 계산을 위해 대략적인 위치를 요청합니다. 위치 데이터는 저장되지 않습니다.</p>
-    <p><strong>사용자 프로필.</strong> 귀하의 정보는 기기에 로컬로 저장되며 iCloud를 통해 동기화될 수 있습니다.</p>
+    <p class="updated">최종 업데이트: 2026년 5월 18일</p>
+    <p>Splitea("당사", "당사의" 또는 "본 앱")는 더치페이 앱입니다. 본 개인정보 처리방침은 당사가 어떤 정보를 수집하는지, 어떻게 사용하는지, 누구와 공유하는지, 얼마나 오래 보관하는지, 그리고 이에 대한 귀하의 권리를 설명합니다.</p>
+    <h2>데이터 관리자</h2>
+    <p>Splitea와 관련하여 처리되는 개인정보의 데이터 관리자는 다음과 같습니다:</p>
+    <p>Raúl Mora(개인 사업자)<br>[YOUR MAILING ADDRESS]<br>이메일: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea는 1인 운영이며 GDPR 제37조에 따라 데이터 보호 책임자를 지정할 의무가 없습니다. 데이터 보호 관련 문의는 위 이메일로 보내주세요.</p>
+    <h2>당사가 수집하는 정보</h2>
+    <p><strong>프로필 정보.</strong> Splitea 프로필을 만들면 표시 이름, 아바타, 결제 앱 사용자 이름(Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) 및 전화번호가 당사의 사용자 디렉터리("splitea-id")에 저장되어, Splitea를 사용하는 연락처가 귀하와 비용을 나눌 때 프로필을 볼 수 있도록 합니다. 동일한 프로필은 기기에도 보관되며 비공개 iCloud 컨테이너를 통해 기기 간에 동기화됩니다.</p>
+    <p><strong>연락처.</strong> 연락처 접근 권한을 허용하면, Splitea는 기기의 주소록에서 이름, 전화번호, 사진을 읽어 비용을 나눌 사람을 선택할 수 있도록 합니다. 이름과 사진은 기기에 머무릅니다. 전화번호는 당사의 사용자 디렉터리에 전송되기 전에 <strong>해시</strong>(단방향 암호학적 해시) 처리되어, 귀하의 연락처 중 이미 Splitea를 사용 중인 사람을 알려줍니다 — 원본 번호는 절대 보지 않으며 조회 후에는 해시도 저장하지 않습니다.</p>
+    <p><strong>카메라 및 사진.</strong> Splitea는 영수증을 스캔하기 위해 카메라를, 영수증 이미지를 불러오기 위해 사진 라이브러리를 사용합니다. 각 영수증 이미지는 AI 분석을 위해 당사 서버로 전송되며, 항목과 가격이 추출된 직후 즉시 폐기됩니다. 영수증 이미지는 보관하지 않습니다.</p>
+    <p><strong>대략적인 위치.</strong> 위치 접근 권한을 허용하면, Splitea는 AI 서비스가 올바른 현지 판매세율을 적용할 수 있도록 각 스캔 요청과 함께 대략적인 위치를 전송합니다. 위치 데이터는 스캔과 함께 실시간으로 처리되며 저장되지 않습니다.</p>
+    <p><strong>스캔 사용량.</strong> 무료 등급 한도를 적용하기 위해 Apple의 iCloud Key-Value Store를 사용해 청구 주기당 수행한 영수증 스캔 횟수를 추적합니다. 이 카운터는 Apple ID를 통해 기기 간에 동기화되며 당사 서버는 절대 읽지 않습니다.</p>
+    <p><strong>구독 상태.</strong> Apple의 StoreKit는 실행 시 Splitea Pro 권한을 앱에 보고합니다. 당사는 Apple ID, 결제 수단 또는 결제 세부 정보를 받지 않으며, 활성 Pro 구독이 있는지 여부를 나타내는 부울 값만 받습니다.</p>
+    <h2>당사가 정보를 사용하는 방법</h2>
+    <p>당사는 위 정보를 다음 목적으로 사용합니다:</p>
+    <ul>
+        <li>앱의 핵심 기능을 제공(영수증 스캔, 비용 나누기, Splitea를 사용하는 연락처 매칭).</li>
+        <li>분할 계산에 현지 세율을 적용.</li>
+        <li>무료 등급 한도와 Splitea Pro 기능 권한 적용.</li>
+        <li>서비스의 보안과 무결성을 유지(App Attest, HTTPS, 속도 제한).</li>
+        <li>지원 문의에 응답.</li>
+    </ul>
+    <h2>처리의 법적 근거(GDPR)</h2>
+    <p>유럽 경제 지역, 영국 또는 스위스에 있는 경우, 당사는 GDPR 제6조에 따라 다음 법적 근거에 의존합니다:</p>
+    <ul>
+        <li><strong>계약의 이행</strong> — 가입하신 핵심 기능(스캔, 나누기, 연락처 매칭, 세금 적용, 권한 적용)을 제공하기 위함입니다. 이 처리가 없으면 서비스를 제공할 수 없습니다.</li>
+        <li><strong>귀하의 동의</strong> — OS 수준에서 부여하는 선택적 권한(연락처, 카메라, 사진, 위치)에 대해 의존합니다. 기기 설정에서 언제든지 철회할 수 있습니다.</li>
+        <li><strong>당사의 정당한 이익</strong> — 서비스의 보안을 유지하고, 남용을 방지하며, 지원 요청에 응답하기 위함입니다. 귀하의 권리와 비교 형량한 결과 처리가 비례한다는 결론에 이르렀습니다.</li>
+    </ul>
     <h2>데이터 처리 방법</h2>
-    <p>영수증을 스캔하면 이미지가 서버로 전송되어 텍스트 추출을 위해 타사 AI 서비스로 전달됩니다. 이미지는 실시간으로 처리되며 저장되지 않습니다.</p>
+    <p>영수증을 스캔하면 이미지는 당사 서버(Cloudflare Workers에서 호스팅)로 전송되어, 텍스트 추출 및 분석을 위해 타사 AI 서비스로 전달됩니다. 이미지와 추출된 텍스트는 요청 동안만 메모리에 보관되며, 당사 서버나 AI 서비스에 저장되지 않습니다. 분석된 항목 목록은 기기로 돌아와 편집하고 로컬에 저장할 수 있습니다.</p>
     <h2>타사 서비스</h2>
-    <ul><li><strong>Apple iCloud</strong> — 프로필과 저장된 영수증을 동기화합니다.</li><li><strong>Cloudflare Workers</strong> — 영수증 이미지를 처리합니다.</li><li><strong>Firebase Remote Config</strong> — 앱 구성을 제공합니다.</li><li><strong>Apple StoreKit</strong> — 구독 및 구매를 관리합니다.</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — 프로필, 저장된 영수증, 스캔 사용 카운터를 기기 간에 동기화합니다. iCloud 데이터는 비공개 컨테이너에 있으며 당사는 접근할 수 없습니다.</li>
+        <li><strong>Cloudflare Workers</strong> — 서버를 호스팅하고, 영수증 스캔을 AI 서비스로 프록시하며, 사용자 디렉터리를 저장합니다. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보 처리방침</a>의 적용을 받습니다.</li>
+        <li><strong>타사 AI 제공자</strong> — 영수증 이미지에서 항목과 가격을 추출합니다. 제공자는 각 이미지를 상태 없는 추론 요청으로 처리하며 보관하지 않습니다.</li>
+        <li><strong>Firebase Remote Config</strong> — 앱 구성을 제공합니다. Firebase로 개인 데이터는 전송되지 않습니다. <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 처리방침</a>의 적용을 받습니다.</li>
+        <li><strong>Apple StoreKit</strong> — 구독과 구매를 처리합니다. 전부 Apple이 관리하며, 당사는 권한 상태만 받습니다.</li>
+    </ul>
+    <h2>국제 데이터 이전</h2>
+    <p>당사 서버는 Cloudflare의 글로벌 엣지 네트워크에서 운영되며 AI 제공자는 미국에 본사를 두고 있습니다. 미국 외 지역에서 Splitea를 사용하는 경우, 귀하의 데이터는 자국과 동일한 수준의 데이터 보호를 제공하지 않을 수 있는 관할지로 이전·처리됩니다. 법률에 따라 필요한 경우, 당사는 유럽 위원회의 표준 계약 조항(SCC) 또는 하위 처리자가 제공하는 동등한 이전 보호 조치에 의존합니다. 관련 이전 문서는 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>로 요청할 수 있습니다.</p>
     <h2>수집하지 않는 데이터</h2>
-    <ul><li>분석 또는 사용 추적 데이터를 수집하지 않습니다.</li><li>광고 또는 광고 추적을 사용하지 않습니다.</li><li>개인 정보를 제3자에게 판매, 공유 또는 대여하지 않습니다.</li><li>서버에 영수증 이미지를 저장하지 않습니다.</li></ul>
+    <ul>
+        <li>분석, 텔레메트리, 사용 추적 데이터를 수집하지 않습니다.</li>
+        <li>광고 또는 광고 추적 SDK를 사용하지 않습니다.</li>
+        <li>제3자의 자체 마케팅을 위해 귀하의 개인정보를 판매, 임대 또는 공유하지 않습니다.</li>
+        <li>분석 후 영수증 이미지를 저장하지 않습니다.</li>
+        <li>연락처 조회 완료 후 해시된 전화번호를 저장하지 않습니다.</li>
+    </ul>
     <h2>데이터 저장 및 보안</h2>
-    <p>데이터는 기기에 로컬로 저장되며 Apple의 종단간 암호화로 iCloud를 통해 동기화됩니다. 통신은 HTTPS로 암호화됩니다.</p>
-    <h2>데이터 보유 및 삭제</h2>
-    <p>모든 사용자 데이터는 기기와 iCloud 계정에 저장됩니다. 언제든지 삭제할 수 있습니다.</p>
-    <h2>아동 개인정보 보호</h2>
-    <p>Splitea는 13세 미만의 아동을 대상으로 하지 않습니다.</p>
-    <h2>방침 변경</h2>
-    <p>이 개인정보 처리방침은 수시로 업데이트될 수 있습니다.</p>
+    <p>영수증, 연락처, 분할은 기기에 남아 Apple이 관리하는 암호화를 사용하는 Apple iCloud를 통해 동기화됩니다. 사용자 디렉터리의 프로필 데이터는 전송 중(TLS) 및 저장 시 암호화됩니다. 당사 서버에 대한 요청은 Apple의 App Attest로 인증되어 합법적인 앱 인스턴스만이 서비스에 접근할 수 있습니다.</p>
+    <h2>데이터 보유</h2>
+    <p>데이터 클래스별로 보유 규칙이 다릅니다:</p>
+    <ul>
+        <li><strong>프로필(이름, 아바타, 결제 핸들, 전화번호)</strong> — 계정을 삭제할 때까지 사용자 디렉터리에 보관되며, 삭제 시 30일 이내에 제거됩니다.</li>
+        <li><strong>영수증 이미지</strong> — 보관하지 않습니다. 분석 후(수 초) 폐기됩니다.</li>
+        <li><strong>대략적인 위치</strong> — 보관하지 않습니다. 스캔과 함께 처리되어 폐기됩니다.</li>
+        <li><strong>해시된 전화번호</strong> — 연락처 조회 완료 후 보관하지 않습니다.</li>
+        <li><strong>영수증, 연락처, 분할</strong> — 삭제할 때까지 기기와 iCloud에 보관됩니다. 당사는 이 데이터를 제어하거나 저장하지 않습니다.</li>
+        <li><strong>스캔 사용 카운터</strong> — 앱이나 Apple ID를 삭제할 때까지 iCloud에 보관됩니다. 당사는 제어하거나 저장하지 않습니다.</li>
+        <li><strong>지원 통신 기록</strong> — 문의가 해결된 후 최대 2년간 이메일 받은편지함에 보관되며, 더 빠른 삭제를 요청하시면 이를 따릅니다.</li>
+    </ul>
+    <h2>계정 삭제</h2>
+    <p>앱 내에서 언제든지 Splitea 계정을 삭제할 수 있습니다: <strong>설정 → 계정 → 계정 삭제</strong>. 삭제 시 프로필(이름, 아바타, 결제 핸들, 해시된 전화번호)이 당사 사용자 디렉터리에서 즉시 제거됩니다. 기기 로컬이나 iCloud에 저장된 영수증, 연락처, 분할은 자동으로 제거되지 않습니다 — 함께 삭제하려면 계정을 삭제하기 전에 앱 내에서 저장된 영수증을 비우거나 앱을 삭제하세요. iCloud 데이터는 <strong>설정 → [사용자 이름] → iCloud → iCloud를 사용하는 앱 → Splitea</strong>에서 관리할 수 있습니다.</p>
+    <h2>귀하의 권리</h2>
+    <p>유럽 경제 지역, 영국, 스위스 또는 유사한 데이터 보호법이 있는 다른 관할지에 있는 경우, 귀하는 개인 데이터에 대해 다음과 같은 권리를 가집니다:</p>
+    <ul>
+        <li><strong>접근</strong> — 당사가 보유하고 있는 귀하의 개인 데이터 사본을 요청.</li>
+        <li><strong>정정</strong> — 부정확하거나 불완전한 데이터의 정정(대부분의 필드는 앱에서 직접 업데이트할 수 있습니다).</li>
+        <li><strong>삭제</strong> — 데이터 삭제("잊혀질 권리"). 앱 내에서 계정을 삭제하면 사용자 디렉터리에 대해 이 권리를 행사하게 됩니다. 다른 범주는 이메일로 문의해 주세요.</li>
+        <li><strong>처리 제한</strong> — 이의 신청이 조사되는 동안 데이터 처리를 중단하도록 요청.</li>
+        <li><strong>이동성</strong> — 프로필 데이터를 구조화된 기계 판독 가능 형식으로 수신.</li>
+        <li><strong>이의 제기</strong> — 당사의 정당한 이익에 기반한 처리에 이의 제기.</li>
+        <li><strong>동의 철회</strong> — 이전에 부여한 권한(연락처, 카메라, 사진, 위치)을 기기 설정에서 철회. 철회는 철회 전 수행된 처리에는 영향을 미치지 않습니다.</li>
+        <li><strong>이의 신청</strong> — 거주지의 데이터 보호 감독 기관에 이의 신청.</li>
+    </ul>
+    <p>이러한 권리를 행사하려면 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>으로 이메일을 보내주세요. 30일 이내에 답변드립니다.</p>
+    <h2>캘리포니아 개인정보 권리(CCPA / CPRA)</h2>
+    <p>캘리포니아 거주자인 경우, 캘리포니아 소비자 개인정보 보호법(California Consumer Privacy Act)과 캘리포니아 개인정보 권리법(California Privacy Rights Act)에 따라 개인정보에 대한 특정 권리가 있습니다.</p>
+    <p><strong>당사가 수집하는 개인정보 범주</strong>(Cal. Civ. Code §1798.140에 따름):</p>
+    <ul>
+        <li>식별자 — 이름, 전화번호, 결제 앱 핸들.</li>
+        <li>상업 정보 — Splitea Pro 구독 상태(Apple이 수집하여 앱에 보고).</li>
+        <li>지리적 위치 데이터 — 스캔 시점의 대략적인 위치, 보관하지 않음.</li>
+        <li>인터넷/네트워크 활동 — 서비스 제공에 필요한 범위로 제한(App Attest 토큰, 요청 메타데이터).</li>
+    </ul>
+    <p><strong>출처</strong>: 귀하 및 귀하의 기기에서 직접. <strong>목적</strong>: 위 "당사가 정보를 사용하는 방법"에 설명된 대로. <strong>수신자</strong>: 위 "타사 서비스"에 설명된 대로.</p>
+    <p>당사는 CCPA에서 정의하는 의미에서 <strong>귀하의 개인정보를 판매하거나 공유하지 않습니다</strong>. 지난 12개월 동안 개인정보를 판매하거나 공유한 적이 없습니다.</p>
+    <p>캘리포니아에서의 권리:</p>
+    <ul>
+        <li><strong>알 권리</strong> — 당사가 보유하고 있는 귀하의 개인정보의 구체적 내용을 요청.</li>
+        <li><strong>삭제</strong> — 귀하의 개인정보 삭제 요청(위 "계정 삭제" 참조).</li>
+        <li><strong>정정</strong> — 부정확한 개인정보의 정정 요청.</li>
+        <li><strong>판매·공유 옵트아웃</strong> — 당사는 판매하거나 공유하지 않으므로 해당되지 않습니다.</li>
+        <li><strong>비차별</strong> — 이러한 권리를 행사했다는 이유로 서비스를 거부하거나, 다른 가격을 청구하거나, 다른 수준의 서비스를 제공하지 않습니다.</li>
+    </ul>
+    <p>이러한 권리를 행사하려면 계정에 연결된 주소에서 또는 신원 확인에 충분한 정보를 포함하여 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>으로 이메일을 보내주세요. 45일 이내에 답변드립니다.</p>
+    <h2>아동의 개인정보</h2>
+    <p>Splitea는 13세 미만(유럽 경제 지역에서는 16세 미만)의 아동을 대상으로 하지 않습니다. 당사는 해당 연령 미만의 어떠한 자로부터도 고의로 개인정보를 수집하지 않습니다. 해당 최저 연령 미만의 아동이 당사에 개인정보를 제공했음을 알게 된 경우 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>으로 연락해 주시면 신속히 데이터를 삭제하겠습니다.</p>
+    <h2>본 방침의 변경</h2>
+    <p>본 개인정보 처리방침은 수시로 업데이트될 수 있습니다. 중요한 변경 사항은 본 페이지에 "최종 업데이트" 날짜와 함께 반영되며, 법률상 요구되는 경우 앱 내에서도 안내해 드릴 수 있습니다.</p>
     <h2>문의</h2>
-    <p>질문이 있으시면 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>으로 연락해 주세요.</p>
+    <p>개인정보 관련 질문이나 위에 설명된 권리 행사 시 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>으로 이메일을 보내주세요.</p>
+    <div class="tail-note">
+        <p>개인정보 관련 문의나 데이터 요청은 <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>으로 연락해 주세요 — 30일 이내에 답변드립니다.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="pt">
     <h1>Política de Privacidade</h1>
-    <p class="updated">Última atualização: 28 de março de 2026</p>
-    <p>Splitea ("nós" ou "o aplicativo") e um aplicativo de divisão de contas desenvolvido por Raúl Mora. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações.</p>
+    <p class="updated">Última atualização: 18 de maio de 2026</p>
+    <p>Splitea ("nós", "nosso" ou "o aplicativo") é um aplicativo de divisão de contas. Esta Política de Privacidade explica quais informações coletamos, como as usamos, com quem as compartilhamos, por quanto tempo as mantemos e os direitos que você tem sobre elas.</p>
+    <h2>Responsável pelo Tratamento</h2>
+    <p>O responsável pelo tratamento dos dados pessoais processados em relação ao Splitea é:</p>
+    <p>Raúl Mora (empresário individual)<br>[YOUR MAILING ADDRESS]<br>E-mail: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>O Splitea é uma operação individual e não é obrigado a designar um Encarregado de Proteção de Dados conforme o artigo 37 do RGPD. Para qualquer questão relacionada à proteção de dados, escreva para o e-mail acima.</p>
     <h2>Informações que Coletamos</h2>
-    <p><strong>Câmera e Fotos.</strong> Acessamos sua câmera para escanear recibos e sua biblioteca de fotos para selecionar imagens de recibos. As imagens são enviadas ao nosso servidor para processamento e não são armazenadas após a análise.</p>
-    <p><strong>Contatos.</strong> Acessamos os contatos do seu dispositivo para que você possa selecionar pessoas para dividir contas.</p>
-    <p><strong>Localização.</strong> Solicitamos localização aproximada para determinar as taxas de impostos locais. Os dados de localização não são armazenados.</p>
-    <p><strong>Perfil do Usuário.</strong> Suas informações são armazenadas localmente no seu dispositivo e podem ser sincronizadas via iCloud.</p>
+    <p><strong>Informações de perfil.</strong> Quando você cria um perfil no Splitea, seu nome de exibição, avatar, nomes de usuário de aplicativos de pagamento (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) e número de telefone são armazenados em nosso diretório de usuários ("splitea-id") para que contatos que usem o Splitea possam ver seu perfil ao dividir uma conta com você. O mesmo perfil também é mantido no seu dispositivo e sincronizado entre seus dispositivos por meio do seu contêiner privado do iCloud.</p>
+    <p><strong>Contatos.</strong> Se você conceder acesso a Contatos, o Splitea lê nomes, números de telefone e fotos do catálogo de endereços do seu dispositivo para que você possa escolher pessoas com quem dividir contas. Nomes e fotos permanecem no seu dispositivo. Os números de telefone são <strong>submetidos a hash</strong> (hash criptográfico unidirecional) antes de serem enviados ao nosso diretório de usuários para que possamos lhe informar quais dos seus contatos já usam o Splitea — nunca vemos os números brutos e não armazenamos os hashes após a consulta.</p>
+    <p><strong>Câmera e fotos.</strong> O Splitea usa sua câmera para escanear recibos e sua biblioteca de fotos para importar imagens de recibos. Cada imagem de recibo é enviada ao nosso servidor para análise por IA e descartada imediatamente após a extração dos itens e preços. Não retemos imagens de recibos.</p>
+    <p><strong>Localização aproximada.</strong> Se você conceder acesso à localização, o Splitea envia sua localização aproximada em cada solicitação de leitura para que o serviço de IA possa aplicar a alíquota local correta de imposto. Os dados de localização são processados em tempo real com a leitura e não são armazenados.</p>
+    <p><strong>Uso de escaneamentos.</strong> Acompanhamos o número de escaneamentos de recibos que você realiza por período de cobrança usando o iCloud Key-Value Store da Apple para aplicar o limite do nível gratuito. Esse contador sincroniza entre seus dispositivos via seu Apple ID e nunca é lido por nossos servidores.</p>
+    <p><strong>Status da assinatura.</strong> O StoreKit da Apple informa ao aplicativo seu direito ao Splitea Pro na inicialização. Não recebemos seu Apple ID, método de pagamento ou detalhes de cobrança — apenas um booleano indicando se você possui uma assinatura Pro ativa.</p>
+    <h2>Como Usamos Suas Informações</h2>
+    <p>Usamos as informações acima para:</p>
+    <ul>
+        <li>Fornecer as funcionalidades principais do aplicativo (escanear recibos, dividir contas, identificar contatos que usam o Splitea).</li>
+        <li>Aplicar alíquotas locais de imposto aos seus cálculos de divisão.</li>
+        <li>Aplicar os limites do nível gratuito e o direito aos recursos do Splitea Pro.</li>
+        <li>Manter a segurança e a integridade do serviço (App Attest, HTTPS, limitação de taxa).</li>
+        <li>Responder às suas solicitações de suporte.</li>
+    </ul>
+    <h2>Base Legal para o Tratamento (RGPD)</h2>
+    <p>Se você estiver no Espaço Econômico Europeu, no Reino Unido ou na Suíça, contamos com as seguintes bases legais conforme o artigo 6 do RGPD:</p>
+    <ul>
+        <li><strong>Execução de um contrato</strong> — para fornecer a funcionalidade principal do aplicativo a que você aderiu (escanear, dividir, identificar contatos, aplicar imposto, aplicar direitos). Sem esse tratamento não podemos prestar o serviço.</li>
+        <li><strong>Seu consentimento</strong> — para permissões opcionais concedidas em nível de sistema operacional (Contatos, Câmera, Fotos, Localização). Você pode revogá-las a qualquer momento nos Ajustes do dispositivo.</li>
+        <li><strong>Nosso legítimo interesse</strong> — para manter o serviço seguro, prevenir abusos e responder a solicitações de suporte. Ponderamos esse interesse em relação aos seus direitos e concluímos que o tratamento é proporcional.</li>
+    </ul>
     <h2>Como Processamos os Dados</h2>
-    <p>Quando você escaneia um recibo, a imagem é enviada ao nosso servidor que a encaminha para um serviço de IA de terceiros para extração de texto. A imagem é processada em tempo real e não é armazenada.</p>
+    <p>Quando você escaneia um recibo, a imagem é enviada ao nosso servidor (hospedado em Cloudflare Workers), que a encaminha para um serviço de IA de terceiros para extração e análise de texto. A imagem e o texto extraído ficam em memória apenas durante a duração da solicitação e não são persistidos em nossos servidores nem pelo serviço de IA. A lista de itens analisada retorna ao seu dispositivo, onde você pode editar e salvar localmente.</p>
     <h2>Serviços de Terceiros</h2>
-    <ul><li><strong>Apple iCloud</strong> — sincroniza seu perfil e recibos salvos.</li><li><strong>Cloudflare Workers</strong> — processa imagens de recibos.</li><li><strong>Firebase Remote Config</strong> — fornece configuração do aplicativo.</li><li><strong>Apple StoreKit</strong> — gerencia assinaturas e compras.</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — sincroniza seu perfil, recibos salvos e contador de escaneamentos entre seus dispositivos. Os dados do iCloud ficam no seu contêiner privado; não temos acesso a eles.</li>
+        <li><strong>Cloudflare Workers</strong> — hospeda nosso servidor, encaminha os escaneamentos para o serviço de IA e armazena o diretório de usuários. Sujeito à <a href="https://www.cloudflare.com/privacypolicy/">Política de Privacidade da Cloudflare</a>.</li>
+        <li><strong>Provedor de IA de terceiros</strong> — extrai itens e preços das imagens de recibo. O provedor processa cada imagem como uma solicitação de inferência sem estado e não a retém.</li>
+        <li><strong>Firebase Remote Config</strong> — entrega a configuração do aplicativo. Nenhum dado pessoal é enviado para o Firebase. Sujeito à <a href="https://firebase.google.com/support/privacy">Política de Privacidade do Firebase</a>.</li>
+        <li><strong>Apple StoreKit</strong> — gerencia assinaturas e compras. Inteiramente gerenciado pela Apple; recebemos apenas o status do direito.</li>
+    </ul>
+    <h2>Transferências Internacionais de Dados</h2>
+    <p>Nosso servidor opera na rede global de borda da Cloudflare e nosso provedor de IA está sediado nos Estados Unidos. Se você usar o Splitea fora dos EUA, seus dados são transferidos e processados em jurisdições que podem não oferecer o mesmo nível de proteção de dados do seu país. Quando exigido por lei, contamos com as Cláusulas Contratuais Padrão da Comissão Europeia ou com salvaguardas de transferência equivalentes oferecidas pelos nossos suboperadores. Você pode solicitar a documentação de transferência aplicável escrevendo para <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
     <h2>Dados que Não Coletamos</h2>
-    <ul><li>Não coletamos dados analíticos ou de rastreamento.</li><li>Não usamos publicidade.</li><li>Não vendemos suas informações pessoais a terceiros.</li><li>Não armazenamos imagens de recibos em nossos servidores.</li></ul>
+    <ul>
+        <li>Não coletamos analíticos, telemetria ou rastreamento de uso.</li>
+        <li>Não usamos SDKs de publicidade ou de rastreamento de anúncios.</li>
+        <li>Não vendemos, alugamos nem compartilhamos suas informações pessoais com terceiros para o marketing deles.</li>
+        <li>Não armazenamos imagens de recibos após a análise.</li>
+        <li>Não armazenamos números de telefone com hash após a conclusão da consulta de contatos.</li>
+    </ul>
     <h2>Armazenamento e Segurança</h2>
-    <p>Seus dados são armazenados localmente e sincronizados via iCloud da Apple com criptografia de ponta a ponta. A comunicação é criptografada via HTTPS.</p>
-    <h2>Retenção e Exclusão de Dados</h2>
-    <p>Todos os dados são armazenados no seu dispositivo e na sua conta iCloud. Você pode exclui-los a qualquer momento.</p>
+    <p>Recibos, contatos e divisões permanecem no seu dispositivo e sincronizam pelo iCloud da Apple usando criptografia gerenciada pela Apple. Os dados de perfil em nosso diretório de usuários são criptografados em trânsito (TLS) e em repouso. As solicitações ao nosso servidor são autenticadas pelo App Attest da Apple, de modo que somente instâncias legítimas do aplicativo possam acessar o serviço.</p>
+    <h2>Retenção de Dados</h2>
+    <p>Diferentes categorias de dados têm regras de retenção distintas:</p>
+    <ul>
+        <li><strong>Perfil (nome, avatar, identificadores de pagamento, número de telefone)</strong> — retido no diretório de usuários até que você exclua a conta, momento em que é removido em até 30 dias.</li>
+        <li><strong>Imagens de recibos</strong> — não retidas; descartadas após a análise (segundos).</li>
+        <li><strong>Localização aproximada</strong> — não retida; processada com a leitura e descartada.</li>
+        <li><strong>Números de telefone com hash</strong> — não retidos após a conclusão da consulta de contatos.</li>
+        <li><strong>Recibos, contatos, divisões</strong> — retidos no seu dispositivo e no seu iCloud até você excluí-los. Não controlamos nem armazenamos esses dados.</li>
+        <li><strong>Contador de uso de escaneamentos</strong> — retido no seu iCloud até você excluir o aplicativo ou o seu Apple ID; não controlamos nem armazenamos.</li>
+        <li><strong>Correspondência de suporte</strong> — retida em nossa caixa de e-mail por até 2 anos após a resolução da solicitação, salvo se você pedir exclusão antes.</li>
+    </ul>
+    <h2>Exclusão da Conta</h2>
+    <p>Você pode excluir sua conta Splitea a qualquer momento dentro do aplicativo: <strong>Ajustes → Conta → Apagar conta</strong>. A exclusão remove imediatamente seu perfil (nome, avatar, identificadores de pagamento, telefone com hash) do nosso diretório de usuários. Recibos, contatos e divisões armazenados localmente no seu dispositivo ou no seu iCloud não são removidos automaticamente — para apagá-los também, limpe os recibos salvos dentro do aplicativo ou apague o aplicativo antes de apagar a conta. Os dados do iCloud podem ser gerenciados em <strong>Ajustes → [seu nome] → iCloud → Apps que Usam o iCloud → Splitea</strong>.</p>
+    <h2>Seus Direitos</h2>
+    <p>Se você estiver no Espaço Econômico Europeu, no Reino Unido, na Suíça ou em outra jurisdição com lei de proteção de dados comparável, você tem os seguintes direitos sobre seus dados pessoais:</p>
+    <ul>
+        <li><strong>Acesso</strong> — solicitar uma cópia dos dados pessoais que mantemos sobre você.</li>
+        <li><strong>Retificação</strong> — corrigir dados imprecisos ou incompletos (você pode atualizar a maioria dos campos diretamente no aplicativo).</li>
+        <li><strong>Apagamento</strong> — apagar seus dados ("direito ao esquecimento"). Apagar sua conta no aplicativo exerce esse direito para o diretório de usuários; para outras categorias, escreva-nos.</li>
+        <li><strong>Limitação</strong> — pedir-nos que interrompamos o tratamento dos seus dados enquanto uma reclamação é investigada.</li>
+        <li><strong>Portabilidade</strong> — receber seus dados de perfil em um formato estruturado e legível por máquina.</li>
+        <li><strong>Oposição</strong> — opor-se ao tratamento baseado em nossos interesses legítimos.</li>
+        <li><strong>Retirada do consentimento</strong> — revogar qualquer permissão concedida anteriormente (Contatos, Câmera, Fotos, Localização) nos Ajustes do dispositivo. A retirada não afeta o tratamento realizado antes da retirada.</li>
+        <li><strong>Apresentar reclamação</strong> — perante a autoridade local de proteção de dados.</li>
+    </ul>
+    <p>Para exercer qualquer um desses direitos, escreva para <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>. Respondemos em até 30 dias.</p>
+    <h2>Direitos de Privacidade da Califórnia (CCPA / CPRA)</h2>
+    <p>Se você é residente da Califórnia, o California Consumer Privacy Act e o California Privacy Rights Act conferem a você direitos específicos sobre suas informações pessoais.</p>
+    <p><strong>Categorias de informações pessoais que coletamos</strong> (conforme Cal. Civ. Code §1798.140):</p>
+    <ul>
+        <li>Identificadores — nome, número de telefone, identificadores de aplicativos de pagamento.</li>
+        <li>Informações comerciais — status de assinatura do Splitea Pro (coletado pela Apple, reportado ao aplicativo).</li>
+        <li>Dados de geolocalização — localização aproximada no momento de um escaneamento, não retida.</li>
+        <li>Atividade de internet/rede — limitada ao necessário para prestar o serviço (tokens do App Attest, metadados de solicitação).</li>
+    </ul>
+    <p><strong>Fontes</strong>: diretamente de você e do seu dispositivo. <strong>Finalidade</strong>: conforme descrito em "Como Usamos Suas Informações" acima. <strong>Destinatários</strong>: conforme descrito em "Serviços de Terceiros" acima.</p>
+    <p><strong>Não vendemos nem compartilhamos suas informações pessoais</strong> conforme definido pelo CCPA. Não vendemos nem compartilhamos informações pessoais nos últimos 12 meses.</p>
+    <p>Seus direitos na Califórnia:</p>
+    <ul>
+        <li><strong>Saber</strong> — solicitar os elementos específicos de informações pessoais que mantemos sobre você.</li>
+        <li><strong>Apagar</strong> — solicitar a exclusão de suas informações pessoais (ver "Exclusão da Conta").</li>
+        <li><strong>Corrigir</strong> — solicitar a correção de informações pessoais imprecisas.</li>
+        <li><strong>Recusar venda ou compartilhamento</strong> — não aplicável porque não vendemos nem compartilhamos.</li>
+        <li><strong>Não discriminação</strong> — não negaremos o serviço, cobraremos preços diferentes nem forneceremos um nível de serviço diferente por você ter exercido qualquer um desses direitos.</li>
+    </ul>
+    <p>Para exercer esses direitos, escreva para <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> a partir do endereço associado à sua conta ou com informações suficientes para verificarmos sua identidade. Respondemos em até 45 dias.</p>
     <h2>Privacidade de Crianças</h2>
-    <p>Splitea não é direcionado a crianças menores de 13 años.</p>
+    <p>O Splitea não é direcionado a crianças menores de 13 anos (16 anos no Espaço Econômico Europeu). Não coletamos intencionalmente informações pessoais de pessoas abaixo dessas idades. Se você souber que uma criança abaixo do mínimo aplicável nos forneceu informações pessoais, entre em contato com <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> e excluiremos os dados prontamente.</p>
     <h2>Alterações nesta Política</h2>
-    <p>Podemos atualizar esta Política de Privacidade de tempos em tempos.</p>
+    <p>Podemos atualizar esta Política de Privacidade de tempos em tempos. Alterações relevantes são refletidas nesta página com uma data de "Última atualização" atualizada e, quando exigido por lei, também podemos notificá-lo no aplicativo.</p>
     <h2>Contato</h2>
-    <p>Para perguntas, entre em contato em <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <p>Para questões de privacidade ou para exercer qualquer um dos direitos descritos acima, escreva para <a href="mailto:privacy@splitea.app">privacy@splitea.app</a>.</p>
+    <div class="tail-note">
+        <p>Dúvidas sobre privacidade ou solicitações de dados? Escreva para <a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — respondemos em até 30 dias.</p>
+    </div>
 </div>
 
 <div class="legal-content" data-lang="zh">
     <h1>隐私政策</h1>
-    <p class="updated">最后更新：2026年3月28日</p>
-    <p>Splitea（"我们"或"本应用"）是由Raúl Mora开发的分账应用。本隐私政策说明我们如何收集、使用和保护您的信息。</p>
+    <p class="updated">最后更新：2026年5月18日</p>
+    <p>Splitea（"我们"、"我们的"或"本应用"）是一款分账应用。本隐私政策说明我们收集哪些信息、如何使用、与谁共享、保留多久，以及您对这些信息所享有的权利。</p>
+    <h2>数据控制者</h2>
+    <p>与Splitea相关的个人信息处理的数据控制者为:</p>
+    <p>Raúl Mora（个体经营者）<br>[YOUR MAILING ADDRESS]<br>电子邮件: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea为一人运营，按GDPR第37条无须指定数据保护官。任何数据保护问题请发送至上述邮箱。</p>
     <h2>我们收集的信息</h2>
-    <p><strong>相机和照片。</strong>我们访问您的相机来扫描收据，访问您的照片库来选择收据图片。图片被发送到我们的服务器进行处理，解析完成后不会存储。</p>
-    <p><strong>通讯录。</strong>我们访问您设备的通讯录，以便您选择分账对象。</p>
-    <p><strong>位置。</strong>我们请求大致位置以确定当地税率。位置数据不会被存储。</p>
-    <p><strong>用户资料。</strong>您的信息存储在设备本地，可能通过iCloud同步。</p>
-    <h2>数据处理方式</h2>
-    <p>当您扫描收据时，图片被发送到我们的服务器，再转发给第三方AI服务进行文字提取。图片实时处理，不会存储。</p>
+    <p><strong>个人资料信息。</strong>当您创建Splitea个人资料时，您的显示名称、头像、支付应用用户名（Venmo、Cash App、PayPal、Revolut、Google Pay、Monzo、ATH Móvil）和电话号码会存储在我们的用户目录（"splitea-id"）中，以便使用Splitea的联系人在与您分账时能够看到您的资料。同样的资料也会保留在您的设备上，并通过您的私有iCloud容器在您的设备之间同步。</p>
+    <p><strong>通讯录。</strong>如果您授予通讯录权限，Splitea会从您设备的通讯录中读取姓名、电话号码和照片，以便您选择分账对象。姓名和照片保留在您的设备上。电话号码在发送到我们的用户目录之前会被<strong>哈希处理</strong>（单向加密哈希），以便我们告知您哪些联系人已经在使用Splitea — 我们绝不会看到原始号码，并且在查询完成后也不会保存哈希值。</p>
+    <p><strong>相机和照片。</strong>Splitea使用您的相机扫描收据，并使用您的照片图库导入收据图像。每张收据图像都会发送到我们的服务器进行AI解析，在提取商品和价格后立即丢弃。我们不保留收据图像。</p>
+    <p><strong>大致位置。</strong>如果您授予位置权限，Splitea会在每次扫描请求中发送您的大致位置，以便AI服务能够应用正确的当地销售税率。位置数据与扫描一同实时处理，不会被保存。</p>
+    <p><strong>扫描使用情况。</strong>我们使用Apple的iCloud键值存储来跟踪您每个计费周期执行的收据扫描次数，以应用免费层限制。此计数器通过您的Apple ID在您的设备之间同步，我们的服务器永远不会读取它。</p>
+    <p><strong>订阅状态。</strong>Apple的StoreKit在启动时向应用报告您的Splitea Pro权益。我们不会收到您的Apple ID、付款方式或账单详情 — 只会收到一个表示您是否拥有有效Pro订阅的布尔值。</p>
+    <h2>我们如何使用您的信息</h2>
+    <p>我们使用上述信息以:</p>
+    <ul>
+        <li>提供应用的核心功能（扫描收据、分账、匹配使用Splitea的联系人）。</li>
+        <li>对您的分账计算应用当地税率。</li>
+        <li>实施免费层限制和Splitea Pro功能的权益。</li>
+        <li>维护服务的安全性和完整性（App Attest、HTTPS、速率限制）。</li>
+        <li>响应您的支持咨询。</li>
+    </ul>
+    <h2>处理的法律依据（GDPR）</h2>
+    <p>如果您位于欧洲经济区、英国或瑞士，我们依据GDPR第6条所规定的下列法律依据进行处理:</p>
+    <ul>
+        <li><strong>履行合同</strong> — 为您提供您注册时所需的核心应用功能（扫描、分账、联系人匹配、应用税率、实施权益）。没有这些处理我们无法提供服务。</li>
+        <li><strong>您的同意</strong> — 用于您在操作系统层级授予的可选权限（通讯录、相机、照片、位置）。您可以随时在设备的"设置"中撤销。</li>
+        <li><strong>我们的合法利益</strong> — 用于保障服务安全、防止滥用并响应支持请求。我们已将这一利益与您的权利相权衡，认为该处理是适当的。</li>
+    </ul>
+    <h2>我们如何处理数据</h2>
+    <p>当您扫描收据时，图像将发送到我们的服务器（托管在Cloudflare Workers上），由服务器转发给第三方AI服务进行文字提取和解析。图像和提取的文字仅在请求期间保留在内存中，不会在我们的服务器或AI服务上持久化。解析得到的商品列表返回到您的设备，您可以在本地编辑并保存。</p>
     <h2>第三方服务</h2>
-    <ul><li><strong>Apple iCloud</strong> — 同步您的资料和保存的收据。</li><li><strong>Cloudflare Workers</strong> — 处理收据图片。</li><li><strong>Firebase Remote Config</strong> — 提供应用配置。</li><li><strong>Apple StoreKit</strong> — 管理订阅和购买。</li></ul>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — 在您的设备之间同步您的资料、保存的收据和扫描使用计数。iCloud数据位于您的私有容器中，我们无法访问。</li>
+        <li><strong>Cloudflare Workers</strong> — 托管我们的服务器，将收据扫描代理到AI服务，并存储用户目录。受<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare隐私政策</a>约束。</li>
+        <li><strong>第三方AI提供商</strong> — 从收据图像中提取商品和价格。提供商以无状态推理请求的形式处理每张图像，并且不保留它。</li>
+        <li><strong>Firebase Remote Config</strong> — 提供应用配置。不会向Firebase发送任何个人数据。受<a href="https://firebase.google.com/support/privacy">Firebase隐私政策</a>约束。</li>
+        <li><strong>Apple StoreKit</strong> — 处理订阅和购买。完全由Apple管理，我们只接收权益状态。</li>
+    </ul>
+    <h2>跨境数据传输</h2>
+    <p>我们的服务器运行在Cloudflare的全球边缘网络上，AI提供商位于美国。如果您在美国境外使用Splitea，您的数据将被传输到并在可能未提供与您所在国/地区同等数据保护水平的司法管辖区进行处理。如法律要求，我们将依赖欧盟委员会的标准合同条款，或我们子处理者提供的等效传输保护措施。如需相关传输文件，请发送邮件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。</p>
     <h2>我们不收集的数据</h2>
-    <ul><li>我们不收集分析或使用跟踪数据。</li><li>我们不使用广告或广告跟踪。</li><li>我们不向第三方出售、分享或出租您的个人信息。</li><li>我们不在服务器上存储收据图片。</li></ul>
-    <h2>数据存储和安全</h2>
-    <p>您的数据存储在设备本地，通过Apple的端到端加密iCloud同步。通信通过HTTPS加密。</p>
-    <h2>数据保留和删除</h2>
-    <p>所有用户数据存储在您的设备和iCloud账户中。您可以随时删除。</p>
+    <ul>
+        <li>我们不收集分析、遥测或使用跟踪数据。</li>
+        <li>我们不使用广告或广告跟踪SDK。</li>
+        <li>我们不会向第三方出售、出租或共享您的个人信息用于其自身的营销。</li>
+        <li>我们不在解析后保留收据图像。</li>
+        <li>我们不在联系人查询完成后保留哈希后的电话号码。</li>
+    </ul>
+    <h2>数据存储与安全</h2>
+    <p>收据、联系人和分账信息保留在您的设备上，并通过Apple管理的加密在Apple的iCloud中同步。我们用户目录中的资料数据在传输中（TLS）和存储中均加密。对我们服务器的请求使用Apple的App Attest进行身份验证，以便仅合法的应用实例可访问服务。</p>
+    <h2>数据保留</h2>
+    <p>不同类别的数据具有不同的保留规则:</p>
+    <ul>
+        <li><strong>个人资料（姓名、头像、支付账号、电话号码）</strong> — 在用户目录中保留，直到您删除账户；此时将在30天内移除。</li>
+        <li><strong>收据图像</strong> — 不保留；解析后（数秒内）即丢弃。</li>
+        <li><strong>大致位置</strong> — 不保留；随扫描一同处理后丢弃。</li>
+        <li><strong>哈希后的电话号码</strong> — 联系人查询完成后不保留。</li>
+        <li><strong>收据、联系人、分账</strong> — 在您的设备和iCloud中保留，直到您删除。我们不控制或存储这些数据。</li>
+        <li><strong>扫描使用计数</strong> — 在您的iCloud中保留，直到您删除应用或Apple ID；我们不控制或存储。</li>
+        <li><strong>支持通信记录</strong> — 在咨询结束后最多保留在我们邮箱中2年，除非您要求提前删除。</li>
+    </ul>
+    <h2>账户删除</h2>
+    <p>您可以随时在应用内删除Splitea账户: <strong>设置 → 账户 → 删除账户</strong>。删除后会立即从我们的用户目录中移除您的资料（姓名、头像、支付账号、哈希电话号码）。本地存储在您设备上或iCloud中的收据、联系人和分账不会自动移除 — 要一并删除，请在删除账户前在应用内清空已保存的收据，或先删除应用。iCloud数据可在<strong>设置 → [您的姓名] → iCloud → 使用iCloud的应用 → Splitea</strong>中管理。</p>
+    <h2>您的权利</h2>
+    <p>如果您位于欧洲经济区、英国、瑞士或具有可比数据保护法的其他司法管辖区，您对自己的个人数据享有以下权利:</p>
+    <ul>
+        <li><strong>访问</strong> — 请求获取我们保存的关于您的个人数据副本。</li>
+        <li><strong>更正</strong> — 更正不准确或不完整的数据（您可以直接在应用中更新大多数字段）。</li>
+        <li><strong>删除</strong> — 删除您的数据（"被遗忘权"）。在应用内删除账户即对用户目录行使此权利；其他类别请通过邮件联系我们。</li>
+        <li><strong>限制</strong> — 要求我们在调查投诉期间停止处理您的数据。</li>
+        <li><strong>可携权</strong> — 以结构化、机器可读的格式接收您的资料数据。</li>
+        <li><strong>反对</strong> — 反对基于我们合法利益的处理。</li>
+        <li><strong>撤回同意</strong> — 在设备的"设置"中撤回先前授予的任何权限（通讯录、相机、照片、位置）。撤回不影响撤回前已进行的处理。</li>
+        <li><strong>提起申诉</strong> — 向您当地的数据保护监管机构提起申诉。</li>
+    </ul>
+    <p>如需行使上述任何权利，请发送邮件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。我们会在30天内回复。</p>
+    <h2>加州隐私权（CCPA / CPRA）</h2>
+    <p>如果您是加州居民，《加州消费者隐私法》和《加州隐私权法》赋予您对个人信息的特定权利。</p>
+    <p><strong>我们收集的个人信息类别</strong>（依《加州民法典》§1798.140）:</p>
+    <ul>
+        <li>标识符 — 姓名、电话号码、支付应用账号。</li>
+        <li>商业信息 — Splitea Pro订阅状态（由Apple收集并报告给应用）。</li>
+        <li>地理位置数据 — 扫描时的大致位置，不保留。</li>
+        <li>互联网/网络活动 — 仅限于提供服务所必需的内容（App Attest令牌、请求元数据）。</li>
+    </ul>
+    <p><strong>来源</strong>: 直接来自您和您的设备。<strong>目的</strong>: 见上文"我们如何使用您的信息"。<strong>接收方</strong>: 见上文"第三方服务"。</p>
+    <p>按照CCPA的定义，<strong>我们不出售也不共享您的个人信息</strong>。在过去12个月内我们没有出售或共享过个人信息。</p>
+    <p>您在加州的权利:</p>
+    <ul>
+        <li><strong>知情权</strong> — 请求我们保存的关于您的具体个人信息。</li>
+        <li><strong>删除</strong> — 请求删除您的个人信息（见上文"账户删除"）。</li>
+        <li><strong>更正</strong> — 请求更正不准确的个人信息。</li>
+        <li><strong>选择不参与销售或共享</strong> — 不适用，因为我们不销售也不共享。</li>
+        <li><strong>不受歧视</strong> — 我们不会因为您行使任何上述权利而拒绝服务、收取不同价格或提供不同水平的服务。</li>
+    </ul>
+    <p>如需行使这些权利，请从与您账户关联的邮箱发送邮件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>，或提供足以验证您身份的信息。我们会在45天内回复。</p>
     <h2>儿童隐私</h2>
-    <p>Splitea不面向13岁以下的儿童。</p>
-    <h2>政策变更</h2>
-    <p>我们可能会不时更新本隐私政策。</p>
+    <p>Splitea不面向13岁以下儿童（欧洲经济区为16岁以下）。我们不会故意收集低于上述年龄者的个人信息。如果您发现适用最低年龄以下的儿童向我们提供了个人信息，请联系<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>，我们将尽快删除相关数据。</p>
+    <h2>本政策的变更</h2>
+    <p>我们可能会不时更新本隐私政策。重大变更将通过更新本页面上的"最后更新"日期予以反映；在法律要求的情况下，我们也可能在应用内通知您。</p>
     <h2>联系方式</h2>
-    <p>如有疑问，请联系<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。</p>
+    <p>如有隐私问题或行使上述任一权利，请发送邮件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。</p>
+    <div class="tail-note">
+        <p>隐私问题或数据请求？请发送邮件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — 我们会在30天内回复。</p>
+    </div>
+</div>
+
+<div class="legal-content" data-lang="zh-Hant">
+    <h1>隱私政策</h1>
+    <p class="updated">最後更新：2026年5月18日</p>
+    <p>Splitea（「我們」、「我們的」或「本應用」）是一款分帳應用。本隱私政策說明我們收集哪些資訊、如何使用、與誰共用、保留多久，以及您對這些資訊所享有的權利。</p>
+    <h2>資料控管者</h2>
+    <p>與Splitea相關的個人資料處理的資料控管者為:</p>
+    <p>Raúl Mora（個人事業主）<br>[YOUR MAILING ADDRESS]<br>電子郵件: <a href="mailto:privacy@splitea.app">privacy@splitea.app</a></p>
+    <p>Splitea為一人經營，依GDPR第37條無須指定資料保護長。任何資料保護問題請寄送至上述信箱。</p>
+    <h2>我們收集的資訊</h2>
+    <p><strong>個人資料資訊。</strong>當您建立Splitea個人資料時，您的顯示名稱、頭像、付款應用使用者名稱（Venmo、Cash App、PayPal、Revolut、Google Pay、Monzo、ATH Móvil）和電話號碼會儲存在我們的使用者目錄（「splitea-id」）中，以便使用Splitea的聯絡人在與您分帳時能夠看到您的個人資料。同樣的個人資料也會保留在您的裝置上，並透過您的私人iCloud容器在您的裝置之間同步。</p>
+    <p><strong>聯絡人。</strong>如果您授予聯絡人權限，Splitea會從您裝置的通訊錄中讀取姓名、電話號碼和照片，以便您選擇分帳對象。姓名和照片保留在您的裝置上。電話號碼在傳送到我們的使用者目錄之前會被<strong>雜湊處理</strong>（單向加密雜湊），以便我們告知您哪些聯絡人已經在使用Splitea — 我們絕不會看到原始號碼，並且在查詢完成後也不會儲存雜湊值。</p>
+    <p><strong>相機和照片。</strong>Splitea使用您的相機掃描收據，並使用您的照片圖庫匯入收據影像。每張收據影像都會傳送到我們的伺服器進行AI解析，在提取項目和價格後立即捨棄。我們不保留收據影像。</p>
+    <p><strong>大致位置。</strong>如果您授予位置權限，Splitea會在每次掃描請求中傳送您的大致位置，以便AI服務能夠套用正確的當地銷售稅率。位置資料會與掃描一同即時處理，不會被儲存。</p>
+    <p><strong>掃描使用情況。</strong>我們使用Apple的iCloud鍵值儲存來追蹤您每個計費週期執行的收據掃描次數，以套用免費層限制。此計數器透過您的Apple ID在您的裝置之間同步，我們的伺服器永遠不會讀取它。</p>
+    <p><strong>訂閱狀態。</strong>Apple的StoreKit在啟動時向應用回報您的Splitea Pro權益。我們不會收到您的Apple ID、付款方式或帳單明細 — 只會收到一個表示您是否擁有有效Pro訂閱的布林值。</p>
+    <h2>我們如何使用您的資訊</h2>
+    <p>我們使用上述資訊以:</p>
+    <ul>
+        <li>提供應用的核心功能（掃描收據、分帳、比對使用Splitea的聯絡人）。</li>
+        <li>對您的分帳計算套用當地稅率。</li>
+        <li>實施免費層限制和Splitea Pro功能的權益。</li>
+        <li>維護服務的安全性和完整性（App Attest、HTTPS、速率限制）。</li>
+        <li>回應您的支援諮詢。</li>
+    </ul>
+    <h2>處理的法律依據（GDPR）</h2>
+    <p>如果您位於歐洲經濟區、英國或瑞士，我們依據GDPR第6條所規定的下列法律依據進行處理:</p>
+    <ul>
+        <li><strong>履行合約</strong> — 為您提供您註冊時所需的核心應用功能（掃描、分帳、聯絡人比對、套用稅率、實施權益）。沒有這些處理我們無法提供服務。</li>
+        <li><strong>您的同意</strong> — 用於您在作業系統層級授予的可選權限（聯絡人、相機、照片、位置）。您可以隨時在裝置的「設定」中撤回。</li>
+        <li><strong>我們的正當利益</strong> — 用於保障服務安全、防止濫用並回應支援請求。我們已將此利益與您的權利相權衡，認為該處理是適當的。</li>
+    </ul>
+    <h2>我們如何處理資料</h2>
+    <p>當您掃描收據時，影像將傳送到我們的伺服器（託管於Cloudflare Workers），由伺服器轉發給第三方AI服務進行文字擷取和解析。影像和擷取的文字僅在請求期間保留於記憶體中，不會在我們的伺服器或AI服務上持久化。解析得到的項目清單會回傳到您的裝置，您可以在本地編輯並儲存。</p>
+    <h2>第三方服務</h2>
+    <ul>
+        <li><strong>Apple iCloud / CloudKit</strong> — 在您的裝置之間同步您的個人資料、儲存的收據和掃描使用計數。iCloud資料位於您的私人容器中，我們無法存取。</li>
+        <li><strong>Cloudflare Workers</strong> — 託管我們的伺服器，將收據掃描代理到AI服務，並儲存使用者目錄。受<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare隱私政策</a>約束。</li>
+        <li><strong>第三方AI提供者</strong> — 從收據影像中擷取項目和價格。提供者以無狀態推論請求的形式處理每張影像，並且不保留它。</li>
+        <li><strong>Firebase Remote Config</strong> — 提供應用設定。不會向Firebase傳送任何個人資料。受<a href="https://firebase.google.com/support/privacy">Firebase隱私政策</a>約束。</li>
+        <li><strong>Apple StoreKit</strong> — 處理訂閱和購買。完全由Apple管理，我們只接收權益狀態。</li>
+    </ul>
+    <h2>跨境資料傳輸</h2>
+    <p>我們的伺服器運行在Cloudflare的全球邊緣網路上，AI提供者位於美國。如果您在美國境外使用Splitea，您的資料將被傳輸到並在可能未提供與您所在國家/地區同等資料保護水準的司法管轄區進行處理。如法律要求，我們將依賴歐盟委員會的標準契約條款，或我們的次處理者提供的等效傳輸保護措施。如需相關傳輸文件，請寄送郵件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。</p>
+    <h2>我們不收集的資料</h2>
+    <ul>
+        <li>我們不收集分析、遙測或使用追蹤資料。</li>
+        <li>我們不使用廣告或廣告追蹤SDK。</li>
+        <li>我們不會向第三方出售、出租或共用您的個人資訊以供其自身行銷之用。</li>
+        <li>我們不在解析後保留收據影像。</li>
+        <li>我們不在聯絡人查詢完成後保留雜湊後的電話號碼。</li>
+    </ul>
+    <h2>資料儲存與安全</h2>
+    <p>收據、聯絡人和分帳資訊保留在您的裝置上，並透過Apple管理的加密在Apple的iCloud中同步。我們使用者目錄中的個人資料在傳輸中（TLS）和儲存中均加密。對我們伺服器的請求使用Apple的App Attest進行身分驗證，以便僅合法的應用實體可以存取服務。</p>
+    <h2>資料保留</h2>
+    <p>不同類別的資料具有不同的保留規則:</p>
+    <ul>
+        <li><strong>個人資料（姓名、頭像、付款帳號、電話號碼）</strong> — 在使用者目錄中保留，直到您刪除帳戶；屆時將在30天內移除。</li>
+        <li><strong>收據影像</strong> — 不保留；解析後（數秒內）即捨棄。</li>
+        <li><strong>大致位置</strong> — 不保留；隨掃描一同處理後捨棄。</li>
+        <li><strong>雜湊後的電話號碼</strong> — 聯絡人查詢完成後不保留。</li>
+        <li><strong>收據、聯絡人、分帳</strong> — 在您的裝置和iCloud中保留，直到您刪除。我們不控管或儲存這些資料。</li>
+        <li><strong>掃描使用計數</strong> — 在您的iCloud中保留，直到您刪除應用或Apple ID；我們不控管或儲存。</li>
+        <li><strong>支援通訊紀錄</strong> — 在諮詢結束後最多保留於我們信箱中2年，除非您要求提前刪除。</li>
+    </ul>
+    <h2>帳戶刪除</h2>
+    <p>您可以隨時在應用內刪除Splitea帳戶: <strong>設定 → 帳戶 → 刪除帳戶</strong>。刪除後會立即從我們的使用者目錄中移除您的個人資料（姓名、頭像、付款帳號、雜湊電話號碼）。本機儲存在您裝置上或iCloud中的收據、聯絡人和分帳不會自動移除 — 要一併刪除，請在刪除帳戶前在應用內清空已儲存的收據，或先刪除應用。iCloud資料可在<strong>設定 → [您的姓名] → iCloud → 使用iCloud的App → Splitea</strong>中管理。</p>
+    <h2>您的權利</h2>
+    <p>如果您位於歐洲經濟區、英國、瑞士或具有可比資料保護法的其他司法管轄區，您對自己的個人資料享有以下權利:</p>
+    <ul>
+        <li><strong>存取</strong> — 請求取得我們保存的關於您的個人資料副本。</li>
+        <li><strong>更正</strong> — 更正不準確或不完整的資料（您可以直接在應用中更新大多數欄位）。</li>
+        <li><strong>刪除</strong> — 刪除您的資料（「被遺忘權」）。在應用內刪除帳戶即對使用者目錄行使此權利；其他類別請透過郵件聯絡我們。</li>
+        <li><strong>限制</strong> — 要求我們在調查申訴期間停止處理您的資料。</li>
+        <li><strong>可攜權</strong> — 以結構化、機器可讀的格式接收您的個人資料。</li>
+        <li><strong>反對</strong> — 反對基於我們正當利益的處理。</li>
+        <li><strong>撤回同意</strong> — 在裝置的「設定」中撤回先前授予的任何權限（聯絡人、相機、照片、位置）。撤回不影響撤回前已進行的處理。</li>
+        <li><strong>提起申訴</strong> — 向您當地的資料保護監管機關提起申訴。</li>
+    </ul>
+    <p>如需行使上述任何權利，請寄送郵件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。我們會在30天內回覆。</p>
+    <h2>加州隱私權（CCPA / CPRA）</h2>
+    <p>如果您是加州居民，《加州消費者隱私法》和《加州隱私權法》賦予您對個人資訊的特定權利。</p>
+    <p><strong>我們收集的個人資訊類別</strong>（依《加州民法典》§1798.140）:</p>
+    <ul>
+        <li>識別符 — 姓名、電話號碼、付款應用帳號。</li>
+        <li>商業資訊 — Splitea Pro訂閱狀態（由Apple收集並回報給應用）。</li>
+        <li>地理位置資料 — 掃描時的大致位置，不保留。</li>
+        <li>網際網路/網路活動 — 僅限於提供服務所必需的內容（App Attest權杖、請求中繼資料）。</li>
+    </ul>
+    <p><strong>來源</strong>: 直接來自您和您的裝置。<strong>目的</strong>: 見上文「我們如何使用您的資訊」。<strong>接收方</strong>: 見上文「第三方服務」。</p>
+    <p>按照CCPA的定義，<strong>我們不出售也不共用您的個人資訊</strong>。在過去12個月內我們沒有出售或共用過個人資訊。</p>
+    <p>您在加州的權利:</p>
+    <ul>
+        <li><strong>知情權</strong> — 請求我們保存的關於您的具體個人資訊。</li>
+        <li><strong>刪除</strong> — 請求刪除您的個人資訊（見上文「帳戶刪除」）。</li>
+        <li><strong>更正</strong> — 請求更正不準確的個人資訊。</li>
+        <li><strong>選擇不參與銷售或共用</strong> — 不適用，因為我們不銷售也不共用。</li>
+        <li><strong>不受歧視</strong> — 我們不會因為您行使任何上述權利而拒絕服務、收取不同價格或提供不同水準的服務。</li>
+    </ul>
+    <p>如需行使這些權利，請從與您帳戶關聯的信箱寄送郵件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>，或提供足以驗證您身分的資訊。我們會在45天內回覆。</p>
+    <h2>兒童隱私</h2>
+    <p>Splitea不面向13歲以下兒童（歐洲經濟區為16歲以下）。我們不會故意收集低於上述年齡者的個人資訊。如果您發現適用最低年齡以下的兒童向我們提供了個人資訊，請聯絡<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>，我們將儘快刪除相關資料。</p>
+    <h2>本政策的變更</h2>
+    <p>我們可能會不時更新本隱私政策。重大變更將透過更新本頁面上的「最後更新」日期予以反映；在法律要求的情況下，我們也可能在應用內通知您。</p>
+    <h2>聯絡方式</h2>
+    <p>如有隱私問題或行使上述任一權利，請寄送郵件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a>。</p>
+    <div class="tail-note">
+        <p>隱私問題或資料請求？請寄送郵件至<a href="mailto:privacy@splitea.app">privacy@splitea.app</a> — 我們會在30天內回覆。</p>
+    </div>
 </div>
 </div>
 
@@ -294,8 +1139,14 @@
 
 <script>
     const params = new URLSearchParams(window.location.search);
-    let lang = params.get('lang') || navigator.language.slice(0, 2) || 'en';
-    const supported = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh'];
+    let raw = params.get('lang') || navigator.language || 'en';
+    let lang;
+    if (raw.toLowerCase().startsWith('zh')) {
+        lang = /Hant|TW|HK|MO/i.test(raw) ? 'zh-Hant' : 'zh';
+    } else {
+        lang = raw.slice(0, 2);
+    }
+    const supported = ['en', 'es', 'de', 'fr', 'it', 'ja', 'ko', 'pt', 'zh', 'zh-Hant'];
     const active = supported.includes(lang) ? lang : 'en';
     document.querySelectorAll('[data-lang]').forEach(el => {
         el.classList.toggle('active', el.dataset.lang === active);
