@@ -1,0 +1,63 @@
+# Cloudflare Workers + Static Assets config for Splitea's legal
+# pages (Privacy Policy, Terms of Service, Support / FAQ). Three
+# server-rendered HTML files plus their shared stylesheet and
+# wordmark SVG, served at:
+#
+#   https://splitea.app/legal/privacy
+#   https://splitea.app/legal/terms
+#   https://splitea.app/legal/support
+#
+# Mounted as a separate worker (not folded into splitea-shares or
+# splitea-web) so:
+#   - The bundle stays static — no JS execution server-side, no
+#     cold-start tax. Cloudflare serves the files directly from
+#     its edge cache.
+#   - Updates ship independently of the SPA or share-link worker.
+#     Editing a typo in the Privacy Policy doesn't require redeploying
+#     splitea-web's 100 KB JS bundle.
+#   - Apple's review process reaches a fast, JS-free page even if the
+#     reviewer's browser blocks scripts.
+#
+# Pairs with the existing splitea-shares and splitea-web workers:
+#   - splitea-shares owns: /r/<id>, /p/*, /live/*, /.well-known/*, favicons
+#   - splitea-legal  owns: /legal/*
+#   - splitea-web    owns: everything else under splitea.app
+#
+# Cloudflare's route-precedence model means specific routes win
+# over splitea-web's `splitea.app/*` wildcard.
+#
+# Deploy: `npx wrangler deploy`
+
+name = "splitea-legal"
+compatibility_date = "2025-04-01"
+
+# Don't expose the auto-generated `*.workers.dev` URL — splitea.app
+# is the only public surface we want, and a workers.dev mirror would
+# confuse search-indexers that bots like Apple's marketing-URL
+# crawler might encounter.
+workers_dev = false
+preview_urls = false
+
+# Custom-domain routing. Both prod and dev hostnames so the in-app
+# About screen can link to `dev.splitea.app/legal/*` from
+# pre-release builds without falling through to splitea-web's
+# 404 / SPA-fallback page.
+routes = [
+  { pattern = "splitea.app/legal/*",     zone_name = "splitea.app" },
+  { pattern = "dev.splitea.app/legal/*", zone_name = "splitea.app" },
+]
+
+# Static-assets-only worker (no `main`, no Worker code). The `dist/`
+# directory mirrors the URL path layout — `dist/legal/privacy.html`
+# is served at `/legal/privacy` (Cloudflare's automatic `.html`
+# extension stripping kicks in). Keeping the URL-mirrored hierarchy
+# in `dist/` instead of at the repo root means `wrangler.toml`,
+# `package.json`, and any future tooling files never accidentally
+# leak as public assets.
+[assets]
+directory = "./dist"
+# `none` means a request for an unknown path returns a plain 404.
+# We don't have client-side routing here — each URL maps to a real
+# file, and a typo (e.g. `/legal/privacypolicy`) should surface as
+# a 404 instead of silently serving the wrong page.
+not_found_handling = "none"
