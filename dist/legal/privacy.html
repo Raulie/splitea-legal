@@ -41,6 +41,8 @@
     <p>Splitea is a one-person operation and is not required to designate a Data Protection Officer under GDPR Article 37. For any data-protection question, write to the email above.</p>
     <h2>Information We Collect</h2>
     <p><strong>Profile information.</strong> When you create a Splitea profile, your display name, avatar, payment-app usernames (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil), and phone number are stored in our user directory ("splitea-id") so contacts who use Splitea can see your profile when splitting a bill with you. The same profile is also kept on your device and synced across your devices via your private iCloud container.</p>
+    <p><strong>Email address.</strong> When you sign in with Apple, we receive the email address associated with your Apple Account and store it encrypted in our user directory. We use it only to contact you about your account. Apple's Hide My Email lets you share a private relay address instead, which works normally with Splitea.</p>
+    <p><strong>Push notifications.</strong> If you allow notifications, your device registers a notification token with our servers so we can tell you when someone shares a split with you. The token identifies a device, not you personally, and is removed when you sign out or turn notifications off.</p>
     <p><strong>Profile photo screening.</strong> When you set a profile photo, the image is checked by an automated content-moderation system (Cloudflare Workers AI) before it is saved, to detect objectionable content. Photos that fail this check are rejected and not stored.</p>
     <p><strong>Shared bills.</strong> When you share a bill or start a live collaboration, a snapshot of that receipt (its items, amounts, the split, and participants' names, avatars, and payment usernames) is sent to our share relay ("splitea-shares", hosted on Cloudflare) so the people you invite can view and edit it, including from a web browser without the app. Creating a share requires signing in with Apple (or Google on the web) to verify your identity. The snapshot is stored only for the 7-day share session and is deleted automatically when it expires.</p>
     <p><strong>Usage analytics.</strong> To understand where Splitea is used, we record the approximate country of each scan, derived from your network connection at our edge provider (Cloudflare). We store only the 2-letter country code with the scan record, never your IP address or any finer location. We also store your App Store country (your Apple ID region) for the same purpose.</p>
@@ -91,6 +93,8 @@
     <p>Different data classes have different retention rules:</p>
     <ul>
         <li><strong>Profile (name, avatar, payment handles, phone number)</strong> — retained in the user directory until you delete your account, at which point it is removed within 30 days.</li>
+      <li>Email address — retained with your profile until you delete your account, then removed within 30 days.</li>
+      <li>Notification token — retained until you sign out, disable notifications, or delete your account.</li>
         <li><strong>Receipt images</strong> — not retained; discarded after parsing (seconds).</li>
         <li><strong>Approximate location</strong> — not retained; processed with the scan and discarded.</li>
         <li><strong>Hashed phone numbers</strong> — not retained after the contact-lookup completes.</li>
@@ -117,7 +121,7 @@
     <p>If you are a California resident, the California Consumer Privacy Act and California Privacy Rights Act give you specific rights over your personal information.</p>
     <p><strong>Categories of personal information we collect</strong> (per Cal. Civ. Code §1798.140):</p>
     <ul>
-        <li>Identifiers — name, phone number, payment-app handles.</li>
+        <li>Identifiers — name, email address, phone number, payment-app handles, device notification token.</li>
         <li>Commercial information — Splitea Pro subscription status (collected by Apple, reported to the app).</li>
         <li>Geolocation data — approximate location at the time of a scan, not retained.</li>
         <li>Internet/network activity — limited to what's necessary to deliver the service (App Attest tokens, request metadata).</li>
@@ -154,6 +158,8 @@
     <p>Splitea es una operación unipersonal y no está obligada a designar un Delegado de Protección de Datos conforme al artículo 37 del RGPD. Para cualquier consulta sobre protección de datos, escribe al correo anterior.</p>
     <h2>Información que Recopilamos</h2>
     <p><strong>Información de perfil.</strong> Cuando creas un perfil de Splitea, tu nombre visible, avatar, nombres de usuario de aplicaciones de pago (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) y número de teléfono se almacenan en nuestro directorio de usuarios ("splitea-id") para que los contactos que utilizan Splitea puedan ver tu perfil cuando dividan una cuenta contigo. El mismo perfil también se conserva en tu dispositivo y se sincroniza entre tus dispositivos mediante tu contenedor privado de iCloud.</p>
+    <p><strong>Dirección de correo electrónico.</strong> Cuando inicias sesión con Apple, recibimos la dirección de correo asociada a tu cuenta de Apple y la guardamos cifrada en nuestro directorio de usuarios. Solo la usamos para contactarte sobre tu cuenta. Ocultar mi correo de Apple te permite compartir una dirección privada en su lugar, y funciona con normalidad en Splitea.</p>
+    <p><strong>Notificaciones push.</strong> Si permites las notificaciones, tu dispositivo registra un token de notificación en nuestros servidores para avisarte cuando alguien comparte una cuenta contigo. El token identifica un dispositivo, no a ti, y se elimina cuando cierras sesión o desactivas las notificaciones.</p>
     <p><strong>Análisis de la foto de perfil.</strong> Cuando estableces una foto de perfil, la imagen se analiza mediante un sistema automático de moderación de contenido (Cloudflare Workers AI) antes de guardarse, para detectar contenido objetable. Las fotos que no superan esta comprobación se rechazan y no se almacenan.</p>
     <p><strong>Cuentas compartidas.</strong> Cuando compartes una cuenta o inicias una colaboración en vivo, se envía una instantánea de ese recibo (sus artículos, importes, el reparto y los nombres, avatares e identificadores de pago de los participantes) a nuestro relé de compartición ("splitea-shares", alojado en Cloudflare) para que las personas que invites puedan verla y editarla, incluso desde un navegador web sin la app. Para crear una compartición debes iniciar sesión con Apple (o con Google en la web) para verificar tu identidad. La instantánea se almacena solo durante la sesión de 7 días y se elimina automáticamente al caducar.</p>
     <p><strong>Analítica de uso.</strong> Para saber dónde se usa Splitea, registramos el país aproximado de cada escaneo, derivado de tu conexión de red en nuestro proveedor de borde (Cloudflare). Solo almacenamos el código de país de 2 letras junto al registro del escaneo, nunca tu dirección IP ni ninguna ubicación más precisa. También almacenamos tu país de la App Store (la región de tu Apple ID) con el mismo fin.</p>
@@ -204,6 +210,8 @@
     <p>Las distintas categorías de datos tienen reglas de conservación diferentes:</p>
     <ul>
         <li><strong>Perfil (nombre, avatar, identificadores de pago, número de teléfono)</strong> — se conserva en el directorio de usuarios hasta que elimines tu cuenta, momento en que se retira en un plazo de 30 días.</li>
+      <li>Dirección de correo electrónico — se conserva con tu perfil hasta que elimines tu cuenta y se borra en un plazo de 30 días.</li>
+      <li>Token de notificación — se conserva hasta que cierres sesión, desactives las notificaciones o elimines tu cuenta.</li>
         <li><strong>Imágenes de recibos</strong> — no se conservan; se descartan tras el análisis (segundos).</li>
         <li><strong>Ubicación aproximada</strong> — no se conserva; se procesa con el escaneo y se descarta.</li>
         <li><strong>Números de teléfono cifrados</strong> — no se conservan tras completar la consulta de contactos.</li>
@@ -230,7 +238,7 @@
     <p>Si eres residente de California, la California Consumer Privacy Act y la California Privacy Rights Act te otorgan derechos específicos sobre tu información personal.</p>
     <p><strong>Categorías de información personal que recopilamos</strong> (conforme al Cal. Civ. Code §1798.140):</p>
     <ul>
-        <li>Identificadores — nombre, número de teléfono, identificadores de aplicaciones de pago.</li>
+        <li>Identificadores — nombre, dirección de correo electrónico, número de teléfono, identificadores de aplicaciones de pago, token de notificación del dispositivo.</li>
         <li>Información comercial — estado de la suscripción a Splitea Pro (recogido por Apple, comunicado a la aplicación).</li>
         <li>Datos de geolocalización — ubicación aproximada en el momento de un escaneo, no se conserva.</li>
         <li>Actividad de internet/red — limitada a lo necesario para prestar el servicio (tokens de App Attest, metadatos de solicitud).</li>
@@ -267,6 +275,8 @@
     <p>Splitea ist ein Ein-Personen-Betrieb und ist nicht verpflichtet, einen Datenschutzbeauftragten nach Art. 37 DSGVO zu benennen. Bei Datenschutzfragen wenden Sie sich an die oben genannte E-Mail-Adresse.</p>
     <h2>Informationen, die wir erfassen</h2>
     <p><strong>Profilinformationen.</strong> Wenn Sie ein Splitea-Profil erstellen, werden Ihr Anzeigename, Ihr Avatar, Ihre Benutzernamen für Zahlungs-Apps (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) und Ihre Telefonnummer in unserem Nutzerverzeichnis („splitea-id") gespeichert, damit Kontakte, die Splitea verwenden, Ihr Profil sehen können, wenn sie eine Rechnung mit Ihnen aufteilen. Dasselbe Profil wird zudem auf Ihrem Gerät gespeichert und über Ihren privaten iCloud-Container zwischen Ihren Geräten synchronisiert.</p>
+    <p><strong>E-Mail-Adresse.</strong> Wenn du dich mit Apple anmeldest, erhalten wir die E-Mail-Adresse deines Apple-Accounts und speichern sie verschlüsselt in unserem Nutzerverzeichnis. Wir verwenden sie ausschließlich, um dich zu deinem Konto zu kontaktieren. Mit „E-Mail-Adresse verbergen“ von Apple kannst du stattdessen eine private Weiterleitungsadresse angeben; das funktioniert mit Splitea ganz normal.</p>
+    <p><strong>Push-Mitteilungen.</strong> Wenn du Mitteilungen erlaubst, registriert dein Gerät ein Mitteilungs-Token auf unseren Servern, damit wir dir Bescheid geben können, wenn jemand eine Rechnung mit dir teilt. Das Token identifiziert ein Gerät, nicht dich persönlich, und wird entfernt, sobald du dich abmeldest oder Mitteilungen ausschaltest.</p>
     <p><strong>Überprüfung des Profilfotos.</strong> Wenn Sie ein Profilfoto festlegen, wird das Bild vor dem Speichern von einem automatisierten System zur Inhaltsmoderation (Cloudflare Workers AI) überprüft, um anstößige Inhalte zu erkennen. Fotos, die diese Prüfung nicht bestehen, werden abgelehnt und nicht gespeichert.</p>
     <p><strong>Geteilte Rechnungen.</strong> Wenn Sie eine Rechnung teilen oder eine Live-Zusammenarbeit starten, wird eine Momentaufnahme dieses Belegs (Artikel, Beträge, die Aufteilung sowie Namen, Avatare und Zahlungs-Handles der Teilnehmer) an unser Freigabe-Relay ("splitea-shares", gehostet bei Cloudflare) gesendet, damit die von Ihnen eingeladenen Personen sie ansehen und bearbeiten können, auch in einem Webbrowser ohne App. Zum Erstellen einer Freigabe müssen Sie sich mit Apple (oder mit Google im Web) anmelden, um Ihre Identität zu bestätigen. Die Momentaufnahme wird nur für die 7-tägige Freigabesitzung gespeichert und nach Ablauf automatisch gelöscht.</p>
     <p><strong>Nutzungsanalyse.</strong> Um zu verstehen, wo Splitea genutzt wird, erfassen wir das ungefähre Land jedes Scans, abgeleitet aus Ihrer Netzwerkverbindung bei unserem Edge-Anbieter (Cloudflare). Wir speichern nur den zweistelligen Ländercode beim Scan-Datensatz, niemals Ihre IP-Adresse oder einen genaueren Standort. Außerdem speichern wir Ihr App-Store-Land (die Region Ihrer Apple-ID) zum selben Zweck.</p>
@@ -317,6 +327,8 @@
     <p>Für unterschiedliche Datenkategorien gelten unterschiedliche Aufbewahrungsregeln:</p>
     <ul>
         <li><strong>Profil (Name, Avatar, Zahlungs-Handles, Telefonnummer)</strong> — wird im Nutzerverzeichnis aufbewahrt, bis Sie Ihr Konto löschen; ab diesem Zeitpunkt erfolgt die Entfernung innerhalb von 30 Tagen.</li>
+      <li>E-Mail-Adresse — wird mit deinem Profil gespeichert, bis du dein Konto löschst, und dann innerhalb von 30 Tagen entfernt.</li>
+      <li>Mitteilungs-Token — wird gespeichert, bis du dich abmeldest, Mitteilungen deaktivierst oder dein Konto löschst.</li>
         <li><strong>Belegbilder</strong> — nicht aufbewahrt; nach der Analyse verworfen (Sekunden).</li>
         <li><strong>Ungefährer Standort</strong> — nicht aufbewahrt; mit dem Scan verarbeitet und verworfen.</li>
         <li><strong>Gehashte Telefonnummern</strong> — nach Abschluss der Kontaktabfrage nicht aufbewahrt.</li>
@@ -380,6 +392,8 @@
     <p>Splitea est une activité individuelle et n'est pas tenue de désigner un Délégué à la Protection des Données au titre de l'article 37 du RGPD. Pour toute question relative à la protection des données, écrivez à l'adresse e-mail ci-dessus.</p>
     <h2>Informations que nous collectons</h2>
     <p><strong>Informations de profil.</strong> Lorsque vous créez un profil Splitea, votre nom d'affichage, votre avatar, vos identifiants d'applications de paiement (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) et votre numéro de téléphone sont stockés dans notre annuaire d'utilisateurs (« splitea-id ») afin que les contacts qui utilisent Splitea puissent voir votre profil lorsqu'ils partagent une facture avec vous. Le même profil est également conservé sur votre appareil et synchronisé entre vos appareils via votre conteneur iCloud privé.</p>
+    <p><strong>Adresse e-mail.</strong> Lorsque vous vous connectez avec Apple, nous recevons l'adresse e-mail associée à votre compte Apple et la conservons chiffrée dans notre annuaire d'utilisateurs. Nous l'utilisons uniquement pour vous contacter au sujet de votre compte. L'option « Masquer mon adresse e-mail » d'Apple vous permet de fournir une adresse relais privée, qui fonctionne normalement avec Splitea.</p>
+    <p><strong>Notifications push.</strong> Si vous autorisez les notifications, votre appareil enregistre un jeton de notification sur nos serveurs afin que nous puissions vous prévenir lorsque quelqu'un partage une addition avec vous. Ce jeton identifie un appareil, pas vous personnellement, et il est supprimé lorsque vous vous déconnectez ou désactivez les notifications.</p>
     <p><strong>Vérification de la photo de profil.</strong> Lorsque vous définissez une photo de profil, l'image est vérifiée par un système automatisé de modération de contenu (Cloudflare Workers AI) avant d'être enregistrée, afin de détecter tout contenu répréhensible. Les photos qui échouent à cette vérification sont rejetées et ne sont pas conservées.</p>
     <p><strong>Notes partagées.</strong> Lorsque vous partagez une note ou démarrez une collaboration en direct, un instantané de ce reçu (ses articles, montants, le partage ainsi que les noms, avatars et identifiants de paiement des participants) est envoyé à notre relais de partage (« splitea-shares », hébergé chez Cloudflare) afin que les personnes invitées puissent le consulter et le modifier, y compris depuis un navigateur web sans l'application. La création d'un partage nécessite une connexion avec Apple (ou Google sur le web) pour vérifier votre identité. L'instantané n'est conservé que pendant la session de partage de 7 jours et est supprimé automatiquement à son expiration.</p>
     <p><strong>Analyse d'utilisation.</strong> Pour comprendre où Splitea est utilisé, nous enregistrons le pays approximatif de chaque scan, déduit de votre connexion réseau chez notre fournisseur edge (Cloudflare). Nous ne stockons que le code pays à deux lettres avec l'enregistrement du scan, jamais votre adresse IP ni une localisation plus précise. Nous stockons également votre pays de l'App Store (la région de votre identifiant Apple) à la même fin.</p>
@@ -430,6 +444,8 @@
     <p>Différentes catégories de données ont des règles de conservation différentes :</p>
     <ul>
         <li><strong>Profil (nom, avatar, identifiants de paiement, numéro de téléphone)</strong> — conservé dans l'annuaire d'utilisateurs jusqu'à la suppression de votre compte, après quoi il est retiré dans un délai de 30 jours.</li>
+      <li>Adresse e-mail — conservée avec votre profil jusqu'à la suppression de votre compte, puis supprimée sous 30 jours.</li>
+      <li>Jeton de notification — conservé jusqu'à votre déconnexion, la désactivation des notifications ou la suppression de votre compte.</li>
         <li><strong>Images de reçus</strong> — non conservées ; supprimées après analyse (quelques secondes).</li>
         <li><strong>Localisation approximative</strong> — non conservée ; traitée avec le scan puis supprimée.</li>
         <li><strong>Numéros de téléphone hachés</strong> — non conservés après la recherche de contacts.</li>
@@ -456,7 +472,7 @@
     <p>Si vous êtes résident de Californie, le California Consumer Privacy Act et le California Privacy Rights Act vous accordent des droits spécifiques sur vos informations personnelles.</p>
     <p><strong>Catégories d'informations personnelles que nous collectons</strong> (selon Cal. Civ. Code §1798.140) :</p>
     <ul>
-        <li>Identifiants — nom, numéro de téléphone, identifiants d'applications de paiement.</li>
+        <li>Identifiants — nom, adresse e-mail, numéro de téléphone, identifiants d'applications de paiement, jeton de notification de l'appareil.</li>
         <li>Informations commerciales — statut d'abonnement Splitea Pro (collecté par Apple, transmis à l'application).</li>
         <li>Données de géolocalisation — localisation approximative au moment d'un scan, non conservée.</li>
         <li>Activité Internet/réseau — limitée à ce qui est nécessaire pour fournir le service (jetons App Attest, métadonnées de requête).</li>
@@ -493,6 +509,8 @@
     <p>Splitea è un'attività individuale e non è tenuta a designare un Responsabile della Protezione dei Dati ai sensi dell'articolo 37 del GDPR. Per qualsiasi domanda sulla protezione dei dati, scrivete all'indirizzo e-mail sopra indicato.</p>
     <h2>Informazioni che Raccogliamo</h2>
     <p><strong>Informazioni di profilo.</strong> Quando create un profilo Splitea, il vostro nome visualizzato, l'avatar, i nomi utente delle app di pagamento (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) e il numero di telefono vengono memorizzati nella nostra directory utenti ("splitea-id"), in modo che i contatti che usano Splitea possano vedere il vostro profilo quando dividono un conto con voi. Lo stesso profilo è anche conservato sul dispositivo e sincronizzato tra i vostri dispositivi tramite il contenitore iCloud privato.</p>
+    <p><strong>Indirizzo e-mail.</strong> Quando accedi con Apple riceviamo l'indirizzo e-mail associato al tuo account Apple e lo conserviamo cifrato nella nostra directory utenti. Lo usiamo solo per contattarti riguardo al tuo account. La funzione «Nascondi la mia e-mail» di Apple ti permette di fornire un indirizzo privato, che funziona normalmente con Splitea.</p>
+    <p><strong>Notifiche push.</strong> Se consenti le notifiche, il tuo dispositivo registra un token di notifica sui nostri server così possiamo avvisarti quando qualcuno condivide un conto con te. Il token identifica un dispositivo, non te personalmente, e viene rimosso quando esci dall'account o disattivi le notifiche.</p>
     <p><strong>Verifica della foto del profilo.</strong> Quando impostate una foto del profilo, l'immagine viene verificata da un sistema automatico di moderazione dei contenuti (Cloudflare Workers AI) prima di essere salvata, per rilevare contenuti discutibili. Le foto che non superano questo controllo vengono rifiutate e non vengono memorizzate.</p>
     <p><strong>Conti condivisi.</strong> Quando condividi un conto o avvii una collaborazione dal vivo, un'istantanea di quello scontrino (le voci, gli importi, la suddivisione e i nomi, gli avatar e gli identificativi di pagamento dei partecipanti) viene inviata al nostro relay di condivisione ("splitea-shares", ospitato su Cloudflare) affinché le persone che inviti possano visualizzarlo e modificarlo, anche da un browser web senza l'app. Per creare una condivisione devi accedere con Apple (o con Google sul web) per verificare la tua identità. L'istantanea viene conservata solo per la sessione di condivisione di 7 giorni e viene eliminata automaticamente alla scadenza.</p>
     <p><strong>Analisi d'uso.</strong> Per capire dove viene usato Splitea, registriamo il paese approssimativo di ogni scansione, ricavato dalla tua connessione di rete presso il nostro fornitore edge (Cloudflare). Memorizziamo solo il codice paese di 2 lettere insieme al record della scansione, mai il tuo indirizzo IP né una posizione più precisa. Memorizziamo anche il tuo paese dell'App Store (la regione del tuo ID Apple) per lo stesso scopo.</p>
@@ -543,6 +561,8 @@
     <p>Le diverse categorie di dati hanno regole di conservazione diverse:</p>
     <ul>
         <li><strong>Profilo (nome, avatar, identificatori di pagamento, numero di telefono)</strong> — conservato nella directory utenti fino all'eliminazione dell'account, dopodiché viene rimosso entro 30 giorni.</li>
+      <li>Indirizzo e-mail — conservato con il tuo profilo fino all'eliminazione dell'account, poi rimosso entro 30 giorni.</li>
+      <li>Token di notifica — conservato finché non esci dall'account, disattivi le notifiche o elimini l'account.</li>
         <li><strong>Immagini di scontrini</strong> — non conservate; scartate dopo l'analisi (secondi).</li>
         <li><strong>Posizione approssimativa</strong> — non conservata; elaborata con la scansione e scartata.</li>
         <li><strong>Numeri di telefono sottoposti a hash</strong> — non conservati dopo il completamento della consultazione dei contatti.</li>
@@ -569,7 +589,7 @@
     <p>Se siete residenti in California, il California Consumer Privacy Act e il California Privacy Rights Act vi conferiscono diritti specifici sulle vostre informazioni personali.</p>
     <p><strong>Categorie di informazioni personali che raccogliamo</strong> (ai sensi del Cal. Civ. Code §1798.140):</p>
     <ul>
-        <li>Identificatori — nome, numero di telefono, identificatori delle app di pagamento.</li>
+        <li>Identificatori — nome, indirizzo e-mail, numero di telefono, identificatori delle app di pagamento, token di notifica del dispositivo.</li>
         <li>Informazioni commerciali — stato dell'abbonamento Splitea Pro (raccolto da Apple, comunicato all'app).</li>
         <li>Dati di geolocalizzazione — posizione approssimativa al momento di una scansione, non conservata.</li>
         <li>Attività Internet/di rete — limitata a quanto necessario per erogare il servizio (token App Attest, metadati di richiesta).</li>
@@ -606,6 +626,8 @@
     <p>Spliteaは一人で運営しており、GDPR第37条に基づきデータ保護責任者を選任する義務はありません。データ保護に関するご質問は、上記のメールアドレスまでお問い合わせください。</p>
     <h2>収集する情報</h2>
     <p><strong>プロフィール情報。</strong>Spliteaのプロフィールを作成すると、表示名、アバター、決済アプリのユーザー名（Venmo、Cash App、PayPal、Revolut、Google Pay、Monzo、ATH Móvil）、電話番号が当社のユーザーディレクトリ（「splitea-id」）に保存され、Spliteaを利用する連絡先が割り勘の際にお客様のプロフィールを確認できます。同じプロフィールはお使いのデバイスにも保存され、お客様のプライベートiCloudコンテナを介してデバイス間で同期されます。</p>
+    <p><strong>メールアドレス。</strong>Apple でサインインすると、お使いの Apple アカウントに関連付けられたメールアドレスを受け取り、暗号化してユーザーディレクトリに保存します。アカウントに関するご連絡にのみ使用します。Apple の「メールを非公開」を使えば、非公開の転送用アドレスを共有でき、Splitea でも問題なく利用できます。</p>
+    <p><strong>プッシュ通知。</strong>通知を許可すると、お使いのデバイスが通知トークンを当社サーバーに登録し、誰かが割り勘を共有したときにお知らせできるようになります。このトークンはデバイスを識別するもので、個人を特定するものではありません。サインアウトするか通知をオフにすると削除されます。</p>
     <p><strong>プロフィール写真の審査。</strong> プロフィール写真を設定すると、保存される前に、不適切なコンテンツを検出するため、自動コンテンツモデレーションシステム（Cloudflare Workers AI）によって画像がチェックされます。このチェックに通らなかった写真は拒否され、保存されません。</p>
     <p><strong>共有した会計。</strong> 会計を共有したり、ライブ共同編集を開始したりすると、そのレシートのスナップショット（品目、金額、割り勘の内訳、参加者の名前・アバター・支払いユーザー名）が当社の共有リレー（「splitea-shares」、Cloudflare上でホスト）に送信され、招待した相手がアプリなしのWebブラウザからでも閲覧・編集できるようになります。共有の作成には、本人確認のためApple（Webの場合はGoogle）でのサインインが必要です。スナップショットは7日間の共有セッションの間のみ保存され、期限が切れると自動的に削除されます。</p>
     <p><strong>利用状況の分析。</strong> Spliteaがどこで使われているかを把握するため、各スキャンのおおよその国を、当社のエッジプロバイダ（Cloudflare）でのネットワーク接続から推定して記録します。スキャン記録には2文字の国コードのみを保存し、IPアドレスやより詳細な位置情報は一切保存しません。 また、同じ目的で、お客様のApp Storeの国（Apple IDの地域）も保存します。</p>
@@ -682,7 +704,7 @@
     <p>お客様がカリフォルニア州の居住者である場合、カリフォルニア州消費者プライバシー法およびカリフォルニア州プライバシー権法により、個人情報に関する特定の権利が認められています。</p>
     <p><strong>当社が収集する個人情報のカテゴリ</strong>（Cal. Civ. Code §1798.140に基づく）:</p>
     <ul>
-        <li>識別子 — 氏名、電話番号、決済アプリのハンドル。</li>
+        <li>識別子 — 氏名、メールアドレス、電話番号、決済アプリのハンドル、デバイスの通知トークン。</li>
         <li>商取引情報 — Splitea Proのサブスクリプション状態（Appleが収集し、アプリへ報告）。</li>
         <li>地理位置情報 — スキャン時のおおよその位置情報、保持しません。</li>
         <li>インターネット/ネットワークの活動 — サービス提供に必要な範囲に限る（App Attestトークン、リクエストのメタデータ）。</li>
@@ -719,6 +741,8 @@
     <p>Splitea는 1인 운영이며 GDPR 제37조에 따라 데이터 보호 책임자를 지정할 의무가 없습니다. 데이터 보호 관련 문의는 위 이메일로 보내주세요.</p>
     <h2>당사가 수집하는 정보</h2>
     <p><strong>프로필 정보.</strong> Splitea 프로필을 만들면 표시 이름, 아바타, 결제 앱 사용자 이름(Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) 및 전화번호가 당사의 사용자 디렉터리("splitea-id")에 저장되어, Splitea를 사용하는 연락처가 귀하와 비용을 나눌 때 프로필을 볼 수 있도록 합니다. 동일한 프로필은 기기에도 보관되며 비공개 iCloud 컨테이너를 통해 기기 간에 동기화됩니다.</p>
+    <p><strong>이메일 주소.</strong> Apple로 로그인하면 Apple 계정에 연결된 이메일 주소를 받아 사용자 디렉터리에 암호화하여 저장합니다. 계정 관련 안내에만 사용합니다. Apple의 '나의 이메일 가리기'를 사용하면 비공개 중계 주소를 대신 공유할 수 있으며, Splitea에서도 정상적으로 작동합니다.</p>
+    <p><strong>푸시 알림.</strong> 알림을 허용하면 기기가 알림 토큰을 저희 서버에 등록하여 누군가 정산을 공유했을 때 알려 드릴 수 있습니다. 이 토큰은 개인이 아니라 기기를 식별하며, 로그아웃하거나 알림을 끄면 삭제됩니다.</p>
     <p><strong>프로필 사진 검사.</strong> 프로필 사진을 설정하면 저장되기 전에 부적절한 콘텐츠를 감지하기 위해 자동 콘텐츠 검열 시스템(Cloudflare Workers AI)이 이미지를 확인합니다. 이 검사를 통과하지 못한 사진은 거부되며 저장되지 않습니다.</p>
     <p><strong>공유한 내역.</strong> 내역을 공유하거나 실시간 공동 작업을 시작하면 해당 영수증의 스냅샷(항목, 금액, 분할 내역, 참가자의 이름·아바타·결제 사용자명)이 당사의 공유 릴레이("splitea-shares", Cloudflare에서 호스팅)로 전송되어, 초대한 사람들이 앱 없이 웹 브라우저에서도 보고 편집할 수 있습니다. 공유를 만들려면 본인 확인을 위해 Apple(웹에서는 Google)로 로그인해야 합니다. 스냅샷은 7일 공유 세션 동안만 저장되며 만료되면 자동으로 삭제됩니다.</p>
     <p><strong>사용 분석.</strong> Splitea가 어디에서 사용되는지 파악하기 위해, 각 스캔의 대략적인 국가를 당사 엣지 제공업체(Cloudflare)의 네트워크 연결로부터 추정하여 기록합니다. 스캔 기록에는 2자리 국가 코드만 저장하며, IP 주소나 더 정밀한 위치는 저장하지 않습니다. 또한 같은 목적으로 사용자의 App Store 국가(Apple ID 지역)도 저장합니다.</p>
@@ -795,7 +819,7 @@
     <p>캘리포니아 거주자인 경우, 캘리포니아 소비자 개인정보 보호법(California Consumer Privacy Act)과 캘리포니아 개인정보 권리법(California Privacy Rights Act)에 따라 개인정보에 대한 특정 권리가 있습니다.</p>
     <p><strong>당사가 수집하는 개인정보 범주</strong>(Cal. Civ. Code §1798.140에 따름):</p>
     <ul>
-        <li>식별자 — 이름, 전화번호, 결제 앱 핸들.</li>
+        <li>식별자 — 이름, 이메일 주소, 전화번호, 결제 앱 핸들, 기기 알림 토큰.</li>
         <li>상업 정보 — Splitea Pro 구독 상태(Apple이 수집하여 앱에 보고).</li>
         <li>지리적 위치 데이터 — 스캔 시점의 대략적인 위치, 보관하지 않음.</li>
         <li>인터넷/네트워크 활동 — 서비스 제공에 필요한 범위로 제한(App Attest 토큰, 요청 메타데이터).</li>
@@ -832,6 +856,8 @@
     <p>O Splitea é uma operação individual e não é obrigado a designar um Encarregado de Proteção de Dados conforme o artigo 37 do RGPD. Para qualquer questão relacionada à proteção de dados, escreva para o e-mail acima.</p>
     <h2>Informações que Coletamos</h2>
     <p><strong>Informações de perfil.</strong> Quando você cria um perfil no Splitea, seu nome de exibição, avatar, nomes de usuário de aplicativos de pagamento (Venmo, Cash App, PayPal, Revolut, Google Pay, Monzo, ATH Móvil) e número de telefone são armazenados em nosso diretório de usuários ("splitea-id") para que contatos que usem o Splitea possam ver seu perfil ao dividir uma conta com você. O mesmo perfil também é mantido no seu dispositivo e sincronizado entre seus dispositivos por meio do seu contêiner privado do iCloud.</p>
+    <p><strong>Endereço de e-mail.</strong> Quando você entra com a Apple, recebemos o endereço de e-mail associado à sua conta Apple e o guardamos criptografado no nosso diretório de usuários. Usamos apenas para falar com você sobre a sua conta. O recurso Ocultar Meu E-mail da Apple permite compartilhar um endereço privado, que funciona normalmente com o Splitea.</p>
+    <p><strong>Notificações push.</strong> Se você permitir notificações, seu dispositivo registra um token de notificação nos nossos servidores para que possamos avisar quando alguém compartilhar uma conta com você. O token identifica um dispositivo, não você, e é removido quando você sai da conta ou desativa as notificações.</p>
     <p><strong>Triagem da foto de perfil.</strong> Quando você define uma foto de perfil, a imagem é verificada por um sistema automatizado de moderação de conteúdo (Cloudflare Workers AI) antes de ser salva, para detectar conteúdo questionável. Fotos que não passam nessa verificação são rejeitadas e não são armazenadas.</p>
     <p><strong>Contas partilhadas.</strong> Quando partilha uma conta ou inicia uma colaboração ao vivo, é enviado um instantâneo desse recibo (os artigos, valores, a divisão e os nomes, avatares e identificadores de pagamento dos participantes) para o nosso relé de partilha ("splitea-shares", alojado na Cloudflare) para que as pessoas que convidar possam vê-lo e editá-lo, incluindo a partir de um navegador web sem a app. A criação de uma partilha exige iniciar sessão com a Apple (ou com a Google na web) para verificar a sua identidade. O instantâneo é guardado apenas durante a sessão de partilha de 7 dias e é eliminado automaticamente quando expira.</p>
     <p><strong>Análise de utilização.</strong> Para perceber onde o Splitea é usado, registamos o país aproximado de cada digitalização, derivado da sua ligação de rede no nosso fornecedor edge (Cloudflare). Guardamos apenas o código de país de 2 letras junto ao registo da digitalização, nunca o seu endereço IP nem qualquer localização mais precisa. Também guardamos o seu país da App Store (a região do seu ID Apple) para o mesmo fim.</p>
@@ -908,7 +934,7 @@
     <p>Se você é residente da Califórnia, o California Consumer Privacy Act e o California Privacy Rights Act conferem a você direitos específicos sobre suas informações pessoais.</p>
     <p><strong>Categorias de informações pessoais que coletamos</strong> (conforme Cal. Civ. Code §1798.140):</p>
     <ul>
-        <li>Identificadores — nome, número de telefone, identificadores de aplicativos de pagamento.</li>
+        <li>Identificadores — nome, endereço de e-mail, número de telefone, identificadores de aplicativos de pagamento, token de notificação do dispositivo.</li>
         <li>Informações comerciais — status de assinatura do Splitea Pro (coletado pela Apple, reportado ao aplicativo).</li>
         <li>Dados de geolocalização — localização aproximada no momento de um escaneamento, não retida.</li>
         <li>Atividade de internet/rede — limitada ao necessário para prestar o serviço (tokens do App Attest, metadados de solicitação).</li>
@@ -945,6 +971,8 @@
     <p>Splitea为一人运营，按GDPR第37条无须指定数据保护官。任何数据保护问题请发送至上述邮箱。</p>
     <h2>我们收集的信息</h2>
     <p><strong>个人资料信息。</strong>当您创建Splitea个人资料时，您的显示名称、头像、支付应用用户名（Venmo、Cash App、PayPal、Revolut、Google Pay、Monzo、ATH Móvil）和电话号码会存储在我们的用户目录（"splitea-id"）中，以便使用Splitea的联系人在与您分账时能够看到您的资料。同样的资料也会保留在您的设备上，并通过您的私有iCloud容器在您的设备之间同步。</p>
+    <p><strong>电子邮件地址。</strong>当你通过 Apple 登录时，我们会收到与你的 Apple 账户关联的电子邮件地址，并加密存储在用户目录中。我们仅用它就你的账户与你联系。Apple 的“隐藏我的邮件地址”允许你改为提供一个私密转发地址，在 Splitea 中同样正常可用。</p>
+    <p><strong>推送通知。</strong>如果你允许通知，你的设备会向我们的服务器注册一个通知令牌，以便有人与你分享账单时通知你。该令牌标识的是设备而非你本人，在你退出登录或关闭通知时会被删除。</p>
     <p><strong>个人头像审核。</strong> 当您设置个人头像时，图片在保存前会经过自动内容审核系统（Cloudflare Workers AI）的检查，以检测不当内容。未通过检查的照片将被拒绝，且不会被存储。</p>
     <p><strong>共享的账单。</strong> 当您共享账单或发起实时协作时，该收据的快照（其项目、金额、分账明细，以及参与者的姓名、头像和支付用户名）会被发送到我们的共享中继（“splitea-shares”，托管于 Cloudflare），以便您邀请的人即使没有 App 也能在网页浏览器中查看和编辑。创建共享需要使用 Apple（在网页端为 Google）登录以验证您的身份。快照仅在 7 天的共享会话期间存储，到期后会自动删除。</p>
     <p><strong>使用情况分析。</strong> 为了了解 Splitea 的使用地区，我们会记录每次扫描的大致国家/地区，该信息根据您在我们边缘服务商（Cloudflare）的网络连接推断得出。我们仅在扫描记录中保存两位国家/地区代码，绝不存储您的 IP 地址或任何更精确的位置。 我们也会出于相同目的存储您的 App Store 国家/地区（您的 Apple ID 区域）。</p>
@@ -1058,6 +1086,8 @@
     <p>Splitea為一人經營，依GDPR第37條無須指定資料保護長。任何資料保護問題請寄送至上述信箱。</p>
     <h2>我們收集的資訊</h2>
     <p><strong>個人資料資訊。</strong>當您建立Splitea個人資料時，您的顯示名稱、頭像、付款應用使用者名稱（Venmo、Cash App、PayPal、Revolut、Google Pay、Monzo、ATH Móvil）和電話號碼會儲存在我們的使用者目錄（「splitea-id」）中，以便使用Splitea的聯絡人在與您分帳時能夠看到您的個人資料。同樣的個人資料也會保留在您的裝置上，並透過您的私人iCloud容器在您的裝置之間同步。</p>
+    <p><strong>電子郵件地址。</strong>當你透過 Apple 登入時，我們會收到與你的 Apple 帳戶關聯的電子郵件地址，並加密儲存在使用者目錄中。我們僅用它就你的帳戶與你聯絡。Apple 的「隱藏我的電子郵件」可讓你改為提供私人轉寄地址，在 Splitea 中同樣正常運作。</p>
+    <p><strong>推播通知。</strong>如果你允許通知，你的裝置會向我們的伺服器註冊一個通知權杖，以便有人與你分享帳單時通知你。該權杖識別的是裝置而非你本人，在你登出或關閉通知時會被移除。</p>
     <p><strong>個人頭像審查。</strong> 當您設定個人頭像時，圖片在儲存前會經過自動內容審查系統（Cloudflare Workers AI）的檢查，以偵測不當內容。未通過檢查的相片將被拒絕，且不會被儲存。</p>
     <p><strong>共享的帳單。</strong> 當您共享帳單或啟動即時協作時，該收據的快照（其項目、金額、分帳明細，以及參與者的姓名、頭像和付款使用者名稱）會傳送到我們的共享中繼（「splitea-shares」，託管於 Cloudflare），讓您邀請的人即使沒有 App 也能在網頁瀏覽器中檢視和編輯。建立共享需要使用 Apple（在網頁端為 Google）登入以驗證您的身分。快照僅在 7 天的共享工作階段期間儲存，到期後會自動刪除。</p>
     <p><strong>使用情況分析。</strong> 為了了解 Splitea 的使用地區，我們會記錄每次掃描的大致國家/地區，該資訊根據您在我們邊緣服務商（Cloudflare）的網路連線推斷得出。我們僅在掃描記錄中保存兩位國家/地區代碼，絕不儲存您的 IP 位址或任何更精確的位置。 我們也會基於相同目的儲存您的 App Store 國家/地區（您的 Apple ID 區域）。</p>
