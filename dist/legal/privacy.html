@@ -41,7 +41,7 @@
         <li>Scanning doesn't happen on your phone. Each receipt photo goes to our server and to an AI model (currently Google Gemini) to read the items. We don't keep the photo.</li>
         <li>Your name, profile photo, phone number and payment usernames are kept in our directory so people who have your number can find you on Splitea.</li>
         <li>When you share a split, a copy goes to our share server and anyone with the link can open it. It's deleted 30 days after you share it.</li>
-        <li>No ads, no tracking and no analytics or advertising SDKs. We never sell your data.</li>
+        <li>No ads and no tracking. The app has no analytics or advertising SDKs, and our web pages only count visits with Cloudflare Web Analytics, which uses no cookies. We never sell your data.</li>
         <li>You can delete your account in the app at any time.</li>
     </ul>
     <h2>Who Is Responsible</h2>
@@ -89,7 +89,7 @@
     <p>The link stops working and the share server deletes the split 30 days after it was shared. You can end it sooner with Stop Sharing, or by deleting the receipt. After deletion, Cloudflare's point-in-time recovery keeps a restorable copy for up to 30 more days, which we use only to recover a split deleted by mistake. Preview images of a split that messaging apps or browsers already downloaded may stay in their caches after the split is deleted.</p>
     <p>If someone on the split uses Splitea, we send them a notification through Apple's push service that shows your first name and the store name.</p>
     <h2>Splitea on the Web</h2>
-    <p>People you share with can open the split at splitea.app without the app or an account. The page creates a random, anonymous ID in the browser's local storage so it can show who is editing and remember which person on the split you are. If you mark yourself as paid, that's saved with the split. Our web pages use no cookies, analytics or ads.</p>
+    <p>People you share with can open the split at splitea.app without the app or an account. The page creates a random, anonymous ID in the browser's local storage so it can show who is editing and remember which person on the split you are. If you mark yourself as paid, that's saved with the split. Our web pages use no cookies or ads. To count visits and measure page speed, they use Cloudflare Web Analytics, which doesn't use cookies or follow you across other sites.</p>
     <p><strong>Pay links.</strong> Splitea's pay links open a payment app (such as Venmo, PayPal or ATH Móvil) with the payee's username, the amount and a short note filled in. Our server passes these details along without storing them. Once you're in the payment app, its own privacy policy applies.</p>
     <h2>Finding Friends Who Use Splitea</h2>
     <p>If you allow Contacts access, the app reads names, phone numbers and photos from your address book so you can add people to a split. To show which of them use Splitea, the app sends the phone numbers of the people you add to our directory, in standard international format. Our server turns each number into a keyed hash with a secret key, compares it with the hashes of Splitea users and returns the matching profiles. The numbers you send are not stored or logged. The app never uploads your whole address book, and contact names and photos are not sent for this lookup.</p>
@@ -112,11 +112,10 @@
     <h2>Who Else Handles Your Data</h2>
     <ul>
         <li><strong>Apple</strong>: Sign in with Apple, iCloud, the App Store, App Attest, push notifications and maps. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
-        <li><strong>Cloudflare</strong>: hosts all of Splitea's servers and storage, and screens profile photos with Workers AI. Cloudflare keeps our server logs for up to 7 days so we can fix problems. They can include request details and, when a scan fails in an unusual way, the AI model's reading of the receipt. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
+        <li><strong>Cloudflare</strong>: hosts all of Splitea's servers and storage, screens profile photos with Workers AI, and counts visits to splitea.app with Web Analytics. Cloudflare keeps our server logs for up to 7 days so we can fix problems. They can include request details and, when a scan fails in an unusual way, the AI model's reading of the receipt. See <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's Privacy Policy</a>.</li>
         <li><strong>Google</strong>: the Gemini API reads receipt photos and receives the approximate location sent with a scan. Google processes these requests under its paid Gemini API terms, which don't allow Google to use them to improve its products, and keeps them only for a limited time to detect abuse. See the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>.</li>
-        <li><strong>Telegram</strong>: we receive private Telegram alerts when someone signs up, subscribes or scans a receipt, so we can spot problems quickly. Alerts include your name, country and account ID, and for scans the store name, number of items, total, whether you're subscribed and the app version. They never include the photo, the items, your email or your phone number. See <a href="https://telegram.org/privacy">Telegram's Privacy Policy</a>.</li>
+        <li><strong>Telegram</strong>: we receive private Telegram alerts when someone signs up, subscribes or scans a receipt, so we can spot problems quickly. They include basic account and scan details. They never include the photo, the items, your email or your phone number. See <a href="https://telegram.org/privacy">Telegram's Privacy Policy</a>.</li>
         <li><strong>Payment apps</strong>: when you tap a pay link, the payment app you open receives the payee's username and the amount.</li>
-        <li><strong>Font host</strong>: Splitea's home page (not the split pages) loads its font from rsms.me, which receives your IP address the way any website you visit does.</li>
     </ul>
     <p>Only Raúl can access Splitea's servers and admin tools, which are protected by Cloudflare Access. He looks at account and share data only to run the service, answer support requests and handle abuse.</p>
     <h2>Where Your Data Is Processed</h2>
@@ -154,7 +153,7 @@
     <ul>
         <li><strong>Contract</strong>: to provide what you use Splitea for, including your account and profile, scanning, sharing, finding friends, notifications and your subscription.</li>
         <li><strong>Consent</strong>: for the permissions you grant in iOS (camera, photos, contacts, location and notifications) and for receipts you choose to report. You can withdraw consent at any time in iOS Settings.</li>
-        <li><strong>Legitimate interests</strong>: to keep Splitea secure and working (App Attest, server logs, backups and alerts), to prevent abuse (photo moderation and reports) and to understand how Splitea is used (scan records). We have weighed these against your rights and consider them proportionate.</li>
+        <li><strong>Legitimate interests</strong>: to keep Splitea secure and working (App Attest, server logs, backups and alerts), to prevent abuse (photo moderation and reports) and to understand how Splitea is used (scan records and website visit counts). We have weighed these against your rights and consider them proportionate.</li>
     </ul>
     <h2>Your Rights</h2>
     <p>If you're in the European Economic Area, the United Kingdom, Switzerland or another place with similar data-protection law, you have the right to:</p>
@@ -176,7 +175,7 @@
         <li>Identifiers: name, email address, phone number, account ID, payment usernames, push token and App Attest key.</li>
         <li>Commercial information: your subscription status and Apple's transaction details.</li>
         <li>Geolocation: approximate location sent with a scan (not stored, except with receipts you report).</li>
-        <li>Internet or other electronic activity: scan records and server logs.</li>
+        <li>Internet or other electronic activity: scan records, server logs and website visit statistics.</li>
         <li>Visual information: receipt photos and profile photos.</li>
         <li>Information about other people: the names and phone numbers of people you add to a split you share.</li>
     </ul>
@@ -212,7 +211,7 @@
         <li>El escaneo no se hace en tu teléfono. Cada foto de recibo va a nuestro servidor y a un modelo de IA (actualmente Google Gemini) para leer los artículos. No guardamos la foto.</li>
         <li>Tu nombre, tu foto de perfil, tu número de teléfono y tus nombres de usuario de pago se guardan en nuestro directorio para que las personas que tienen tu número puedan encontrarte en Splitea.</li>
         <li>Cuando compartes una división, se envía una copia a nuestro servidor de compartición y cualquiera con el enlace puede abrirla. Se elimina 30 días después de que la compartes.</li>
-        <li>Sin anuncios, sin rastreo y sin SDK de analítica ni de publicidad. Nunca vendemos tus datos.</li>
+        <li>Sin anuncios y sin rastreo. La app no tiene SDK de analítica ni de publicidad, y nuestras páginas web solo cuentan las visitas con Cloudflare Web Analytics, que no usa cookies. Nunca vendemos tus datos.</li>
         <li>Puedes eliminar tu cuenta en la app en cualquier momento.</li>
     </ul>
     <h2>Quién es el responsable</h2>
@@ -260,7 +259,7 @@
     <p>El enlace deja de funcionar y el servidor de compartición elimina la división 30 días después de que se compartió. Puedes terminarla antes con Dejar de compartir o eliminando el recibo. Tras la eliminación, la recuperación a un momento dado de Cloudflare conserva una copia restaurable hasta 30 días más, que usamos solo para recuperar una división eliminada por error. Las imágenes de vista previa de una división que las apps de mensajería o los navegadores ya hayan descargado pueden quedar en sus cachés después de que se elimine la división.</p>
     <p>Si alguien de la división usa Splitea, le enviamos una notificación a través del servicio push de Apple que muestra tu nombre de pila y el nombre del establecimiento.</p>
     <h2>Splitea en la web</h2>
-    <p>Las personas con quienes compartes pueden abrir la división en splitea.app sin la app ni una cuenta. La página crea un ID aleatorio y anónimo en el almacenamiento local del navegador para poder mostrar quién está editando y recordar qué persona de la división eres. Si marcas que ya pagaste, eso se guarda con la división. Nuestras páginas web no usan cookies, analítica ni anuncios.</p>
+    <p>Las personas con quienes compartes pueden abrir la división en splitea.app sin la app ni una cuenta. La página crea un ID aleatorio y anónimo en el almacenamiento local del navegador para poder mostrar quién está editando y recordar qué persona de la división eres. Si marcas que ya pagaste, eso se guarda con la división. Nuestras páginas web no usan cookies ni anuncios. Para contar las visitas y medir la velocidad de las páginas, usan Cloudflare Web Analytics, que no usa cookies ni te sigue por otros sitios web.</p>
     <p><strong>Enlaces de pago.</strong> Los enlaces de pago de Splitea abren una app de pagos (como Venmo, PayPal o ATH Móvil) con el nombre de usuario del destinatario del pago, el importe y una nota breve ya completados. Nuestro servidor transmite estos datos sin guardarlos. Una vez que estás en la app de pagos, se aplica su propia política de privacidad.</p>
     <h2>Encontrar amigos que usan Splitea</h2>
     <p>Si permites el acceso a Contactos, la app lee nombres, números de teléfono y fotos de tu agenda para que puedas agregar personas a una división. Para mostrar cuáles de ellas usan Splitea, la app envía a nuestro directorio los números de teléfono de las personas que agregas, en formato internacional estándar. Nuestro servidor convierte cada número en un hash con clave usando una clave secreta, lo compara con los hashes de los usuarios de Splitea y devuelve los perfiles que coinciden. Los números que envías no se guardan ni se registran. La app nunca sube tu agenda completa, y los nombres y las fotos de los contactos no se envían para esta búsqueda.</p>
@@ -283,11 +282,10 @@
     <h2>Quién más trata tus datos</h2>
     <ul>
         <li><strong>Apple</strong>: Iniciar sesión con Apple, iCloud, el App Store, App Attest, las notificaciones push y los mapas. Consulta la <a href="https://www.apple.com/legal/privacy/">Política de privacidad de Apple</a>.</li>
-        <li><strong>Cloudflare</strong>: aloja todos los servidores y el almacenamiento de Splitea, y revisa las fotos de perfil con Workers AI. Cloudflare conserva los registros de nuestros servidores hasta 7 días para que podamos solucionar problemas. Pueden incluir detalles de las solicitudes y, cuando un escaneo falla de forma inusual, la lectura del recibo que hizo el modelo de IA. Consulta la <a href="https://www.cloudflare.com/privacypolicy/">Política de privacidad de Cloudflare</a>.</li>
+        <li><strong>Cloudflare</strong>: aloja todos los servidores y el almacenamiento de Splitea, revisa las fotos de perfil con Workers AI y cuenta las visitas a splitea.app con Web Analytics. Cloudflare conserva los registros de nuestros servidores hasta 7 días para que podamos solucionar problemas. Pueden incluir detalles de las solicitudes y, cuando un escaneo falla de forma inusual, la lectura del recibo que hizo el modelo de IA. Consulta la <a href="https://www.cloudflare.com/privacypolicy/">Política de privacidad de Cloudflare</a>.</li>
         <li><strong>Google</strong>: la Gemini API lee las fotos de recibos y recibe la ubicación aproximada enviada con un escaneo. Google procesa estas solicitudes según las condiciones de la versión de pago de la Gemini API, que no le permiten usarlas para mejorar sus productos, y solo las conserva durante un tiempo limitado para detectar abusos. Consulta las <a href="https://ai.google.dev/gemini-api/terms">Condiciones de la Gemini API</a>.</li>
-        <li><strong>Telegram</strong>: recibimos alertas privadas de Telegram cuando alguien se registra, se suscribe o escanea un recibo, para detectar problemas rápidamente. Las alertas incluyen tu nombre, tu país y tu ID de cuenta y, en los escaneos, el nombre del establecimiento, el número de artículos, el total, si tienes una suscripción y la versión de la app. Nunca incluyen la foto, los artículos, tu correo electrónico ni tu número de teléfono. Consulta la <a href="https://telegram.org/privacy">Política de privacidad de Telegram</a>.</li>
+        <li><strong>Telegram</strong>: recibimos alertas privadas de Telegram cuando alguien se registra, se suscribe o escanea un recibo, para detectar problemas rápidamente. Incluyen datos básicos de la cuenta y del escaneo. Nunca incluyen la foto, los artículos, tu correo electrónico ni tu número de teléfono. Consulta la <a href="https://telegram.org/privacy">Política de privacidad de Telegram</a>.</li>
         <li><strong>Apps de pago</strong>: cuando tocas un enlace de pago, la app de pagos que abres recibe el nombre de usuario del destinatario del pago y el importe.</li>
-        <li><strong>Proveedor de fuentes</strong>: la página de inicio de Splitea (no las páginas de las divisiones) carga su fuente desde rsms.me, que recibe tu dirección IP como cualquier sitio web que visitas.</li>
     </ul>
     <p>Solo Raúl puede acceder a los servidores y las herramientas de administración de Splitea, que están protegidos con Cloudflare Access. Él solo consulta los datos de cuentas y de divisiones compartidas para operar el servicio, responder solicitudes de soporte y gestionar abusos.</p>
     <h2>Dónde se tratan tus datos</h2>
@@ -325,7 +323,7 @@
     <ul>
         <li><strong>Contrato</strong>: para ofrecerte aquello para lo que usas Splitea, incluidos tu cuenta y tu perfil, el escaneo, el uso compartido, la búsqueda de amigos, las notificaciones y tu suscripción.</li>
         <li><strong>Consentimiento</strong>: para los permisos que concedes en iOS (cámara, fotos, contactos, ubicación y notificaciones) y para los recibos que decides reportar. Puedes retirar el consentimiento en cualquier momento en Ajustes de iOS.</li>
-        <li><strong>Intereses legítimos</strong>: para mantener Splitea segura y en funcionamiento (App Attest, registros del servidor, copias de seguridad y alertas), para prevenir abusos (moderación de fotos y reportes) y para entender cómo se usa Splitea (registros de escaneo). Hemos ponderado estos intereses frente a tus derechos y los consideramos proporcionados.</li>
+        <li><strong>Intereses legítimos</strong>: para mantener Splitea segura y en funcionamiento (App Attest, registros del servidor, copias de seguridad y alertas), para prevenir abusos (moderación de fotos y reportes) y para entender cómo se usa Splitea (registros de escaneo y recuentos de visitas al sitio web). Hemos ponderado estos intereses frente a tus derechos y los consideramos proporcionados.</li>
     </ul>
     <h2>Tus derechos</h2>
     <p>Si estás en el Espacio Económico Europeo, el Reino Unido, Suiza u otro lugar con una ley de protección de datos similar, tienes derecho a:</p>
@@ -347,7 +345,7 @@
         <li>Identificadores: nombre, dirección de correo electrónico, número de teléfono, ID de cuenta, nombres de usuario de pago, token push y clave de App Attest.</li>
         <li>Información comercial: el estado de tu suscripción y los detalles de transacción de Apple.</li>
         <li>Geolocalización: la ubicación aproximada enviada con un escaneo (no se guarda, salvo con los recibos que reportas).</li>
-        <li>Actividad en internet u otra actividad electrónica: registros de escaneo y registros del servidor.</li>
+        <li>Actividad en internet u otra actividad electrónica: registros de escaneo, registros del servidor y estadísticas de visitas al sitio web.</li>
         <li>Información visual: fotos de recibos y fotos de perfil.</li>
         <li>Información sobre otras personas: los nombres y números de teléfono de las personas que agregas a una división que compartes.</li>
     </ul>
@@ -383,7 +381,7 @@
         <li>Das Scannen passiert nicht auf deinem iPhone. Jedes Belegfoto geht an unseren Server und an ein KI-Modell (derzeit Google Gemini), das die Posten ausliest. Wir behalten das Foto nicht.</li>
         <li>Dein Name, dein Profilfoto, deine Telefonnummer und deine Zahlungs-Benutzernamen werden in unserem Verzeichnis gespeichert, damit Personen, die deine Nummer haben, dich auf Splitea finden können.</li>
         <li>Wenn du einen Split teilst, geht eine Kopie an unseren Freigabeserver, und jeder mit dem Link kann den Split öffnen. Gelöscht wird er 30 Tage nach dem Teilen.</li>
-        <li>Keine Werbung, kein Tracking und keine Analyse- oder Werbe-SDKs. Wir verkaufen deine Daten nie.</li>
+        <li>Keine Werbung und kein Tracking. Die App enthält keine Analyse- oder Werbe-SDKs, und unsere Webseiten zählen Besuche nur mit Cloudflare Web Analytics, einem Dienst, der keine Cookies verwendet. Wir verkaufen deine Daten nie.</li>
         <li>Du kannst dein Konto jederzeit in der App löschen.</li>
     </ul>
     <h2>Wer verantwortlich ist</h2>
@@ -431,7 +429,7 @@
     <p>30 Tage nach dem Teilen funktioniert der Link nicht mehr, und der Freigabeserver löscht den Split. Du kannst das Teilen schon früher beenden, mit „Teilen beenden“ oder indem du den Beleg löschst. Nach dem Löschen bewahrt die zeitpunktgenaue Wiederherstellung von Cloudflare noch bis zu 30 weitere Tage eine wiederherstellbare Kopie auf, die wir nur nutzen, um einen versehentlich gelöschten Split wiederherzustellen. Vorschaubilder eines Splits, die Messaging-Apps oder Browser bereits heruntergeladen haben, können nach dem Löschen des Splits in deren Cache bleiben.</p>
     <p>Wenn jemand im Split Splitea nutzt, senden wir dieser Person über den Push-Dienst von Apple eine Mitteilung, die deinen Vornamen und den Namen des Geschäfts zeigt.</p>
     <h2>Splitea im Web</h2>
-    <p>Personen, mit denen du teilst, können den Split auf splitea.app ohne App und ohne Konto öffnen. Die Seite erstellt im lokalen Speicher des Browsers eine zufällige, anonyme ID, damit sie anzeigen kann, wer gerade bearbeitet, und sich merken kann, welche Person im Split du bist. Wenn du dich als bezahlt markierst, wird das mit dem Split gespeichert. Unsere Webseiten verwenden keine Cookies, keine Analysedienste und keine Werbung.</p>
+    <p>Personen, mit denen du teilst, können den Split auf splitea.app ohne App und ohne Konto öffnen. Die Seite erstellt im lokalen Speicher des Browsers eine zufällige, anonyme ID, damit sie anzeigen kann, wer gerade bearbeitet, und sich merken kann, welche Person im Split du bist. Wenn du dich als bezahlt markierst, wird das mit dem Split gespeichert. Unsere Webseiten verwenden keine Cookies und keine Werbung. Um Besuche zu zählen und die Ladegeschwindigkeit der Seiten zu messen, nutzen sie Cloudflare Web Analytics, einen Dienst, der keine Cookies verwendet und dich nicht über andere Websites hinweg verfolgt.</p>
     <p><strong>Bezahllinks.</strong> Die Bezahllinks von Splitea öffnen eine Zahlungs-App (etwa Venmo, PayPal oder ATH Móvil), in der der Benutzername des Zahlungsempfängers, der Betrag und eine kurze Notiz bereits ausgefüllt sind. Unser Server leitet diese Angaben weiter, ohne sie zu speichern. Sobald du in der Zahlungs-App bist, gilt deren eigene Datenschutzrichtlinie.</p>
     <h2>Freunde finden, die Splitea nutzen</h2>
     <p>Wenn du den Zugriff auf Kontakte erlaubst, liest die App Namen, Telefonnummern und Fotos aus deinem Adressbuch, damit du Personen zu einem Split hinzufügen kannst. Um anzuzeigen, wer von ihnen Splitea nutzt, sendet die App die Telefonnummern der Personen, die du hinzufügst, im internationalen Standardformat an unser Verzeichnis. Unser Server wandelt jede Nummer mit einem geheimen Schlüssel in einen schlüsselbasierten Hashwert um, vergleicht ihn mit den Hashwerten der Splitea-Nutzer und gibt die passenden Profile zurück. Die Nummern, die du sendest, werden weder gespeichert noch protokolliert. Die App lädt nie dein gesamtes Adressbuch hoch, und Kontaktnamen und -fotos werden für diesen Abgleich nicht gesendet.</p>
@@ -454,11 +452,10 @@
     <h2>Wer deine Daten außerdem verarbeitet</h2>
     <ul>
         <li><strong>Apple</strong>: „Mit Apple anmelden“, iCloud, der App Store, App Attest, Push-Mitteilungen und Karten. Siehe die <a href="https://www.apple.com/legal/privacy/">Datenschutzrichtlinie von Apple</a>.</li>
-        <li><strong>Cloudflare</strong>: hostet alle Server und Speicher von Splitea und prüft Profilfotos mit Workers AI. Cloudflare bewahrt unsere Server-Logs bis zu 7 Tage auf, damit wir Probleme beheben können. Diese können Details zu Anfragen enthalten und, wenn ein Scan auf ungewöhnliche Weise fehlschlägt, das, was das KI-Modell aus dem Beleg ausgelesen hat. Siehe die <a href="https://www.cloudflare.com/privacypolicy/">Datenschutzrichtlinie von Cloudflare</a>.</li>
+        <li><strong>Cloudflare</strong>: hostet alle Server und Speicher von Splitea, prüft Profilfotos mit Workers AI und zählt Besuche auf splitea.app mit Web Analytics. Cloudflare bewahrt unsere Server-Logs bis zu 7 Tage auf, damit wir Probleme beheben können. Diese können Details zu Anfragen enthalten und, wenn ein Scan auf ungewöhnliche Weise fehlschlägt, das, was das KI-Modell aus dem Beleg ausgelesen hat. Siehe die <a href="https://www.cloudflare.com/privacypolicy/">Datenschutzrichtlinie von Cloudflare</a>.</li>
         <li><strong>Google</strong>: Die Gemini API liest Belegfotos aus und erhält den ungefähren Standort, der mit einem Scan gesendet wird. Google verarbeitet diese Anfragen nach seinen Bedingungen für die kostenpflichtige Gemini API, die Google nicht erlauben, sie zur Verbesserung seiner Produkte zu nutzen, und speichert sie nur für begrenzte Zeit, um Missbrauch zu erkennen. Siehe die <a href="https://ai.google.dev/gemini-api/terms">Nutzungsbedingungen der Gemini API</a>.</li>
-        <li><strong>Telegram</strong>: Wir erhalten private Telegram-Benachrichtigungen, wenn sich jemand registriert, ein Abonnement abschließt oder einen Beleg scannt, damit wir Probleme schnell erkennen. Die Benachrichtigungen enthalten deinen Namen, dein Land und deine Konto-ID, bei Scans außerdem den Namen des Geschäfts, die Anzahl der Posten, die Summe, ob du ein Abonnement hast, und die App-Version. Das Foto, die Posten, deine E-Mail-Adresse und deine Telefonnummer sind darin nie enthalten. Siehe die <a href="https://telegram.org/privacy">Datenschutzrichtlinie von Telegram</a>.</li>
+        <li><strong>Telegram</strong>: Wir erhalten private Telegram-Benachrichtigungen, wenn sich jemand registriert, ein Abonnement abschließt oder einen Beleg scannt, damit wir Probleme schnell erkennen. Sie enthalten grundlegende Angaben zum Konto und zum Scan. Das Foto, die Posten, deine E-Mail-Adresse und deine Telefonnummer sind darin nie enthalten. Siehe die <a href="https://telegram.org/privacy">Datenschutzrichtlinie von Telegram</a>.</li>
         <li><strong>Zahlungs-Apps</strong>: Wenn du auf einen Bezahllink tippst, erhält die Zahlungs-App, die du öffnest, den Benutzernamen des Zahlungsempfängers und den Betrag.</li>
-        <li><strong>Schriftanbieter</strong>: Die Startseite von Splitea (nicht die Split-Seiten) lädt ihre Schrift von rsms.me, das dabei deine IP-Adresse erhält, so wie jede Website, die du besuchst.</li>
     </ul>
     <p>Nur Raúl hat Zugriff auf die Server und Admin-Tools von Splitea, die durch Cloudflare Access geschützt sind. Er sieht sich Konto- und Freigabedaten nur an, um den Dienst zu betreiben, Support-Anfragen zu beantworten und gegen Missbrauch vorzugehen.</p>
     <h2>Wo deine Daten verarbeitet werden</h2>
@@ -496,7 +493,7 @@
     <ul>
         <li><strong>Vertragserfüllung</strong>: um bereitzustellen, wofür du Splitea nutzt, darunter dein Konto und Profil, das Scannen, das Teilen, das Finden von Freunden, Mitteilungen und dein Abonnement.</li>
         <li><strong>Einwilligung</strong>: für die Berechtigungen, die du in iOS erteilst (Kamera, Fotos, Kontakte, Standort und Mitteilungen), und für Belege, die du selbst meldest. Du kannst deine Einwilligung jederzeit in den iOS-Einstellungen widerrufen.</li>
-        <li><strong>Berechtigte Interessen</strong>: um Splitea sicher und funktionsfähig zu halten (App Attest, Server-Logs, Backups und Telegram-Benachrichtigungen), um Missbrauch zu verhindern (Fotomoderation und Meldungen) und um zu verstehen, wie Splitea genutzt wird (Scan-Einträge). Wir haben diese Interessen gegen deine Rechte abgewogen und halten sie für verhältnismäßig.</li>
+        <li><strong>Berechtigte Interessen</strong>: um Splitea sicher und funktionsfähig zu halten (App Attest, Server-Logs, Backups und Telegram-Benachrichtigungen), um Missbrauch zu verhindern (Fotomoderation und Meldungen) und um zu verstehen, wie Splitea genutzt wird (Scan-Einträge und Besuchszahlen der Website). Wir haben diese Interessen gegen deine Rechte abgewogen und halten sie für verhältnismäßig.</li>
     </ul>
     <h2>Deine Rechte</h2>
     <p>Wenn du dich im Europäischen Wirtschaftsraum, im Vereinigten Königreich, in der Schweiz oder an einem anderen Ort mit vergleichbarem Datenschutzrecht befindest, hast du folgende Rechte:</p>
@@ -518,7 +515,7 @@
         <li>Identifikatoren: Name, E-Mail-Adresse, Telefonnummer, Konto-ID, Zahlungs-Benutzernamen, Push-Token und App-Attest-Schlüssel.</li>
         <li>Geschäftsinformationen: dein Abonnementstatus und die Transaktionsdetails von Apple.</li>
         <li>Geolokalisierungsdaten: der ungefähre Standort, der mit einem Scan gesendet wird (nicht gespeichert, außer bei Belegen, die du meldest).</li>
-        <li>Internet- oder sonstige elektronische Aktivität: Scan-Einträge und Server-Logs.</li>
+        <li>Internet- oder sonstige elektronische Aktivität: Scan-Einträge, Server-Logs und Besuchsstatistiken der Website.</li>
         <li>Visuelle Informationen: Belegfotos und Profilfotos.</li>
         <li>Informationen über andere Personen: die Namen und Telefonnummern der Personen, die du zu einem Split hinzufügst, den du teilst.</li>
     </ul>
@@ -554,7 +551,7 @@
         <li>Le scan ne se fait pas sur votre téléphone. Chaque photo de reçu est envoyée à notre serveur et à un modèle d'IA (actuellement Google Gemini) qui en lit les articles. Nous ne conservons pas la photo.</li>
         <li>Votre nom, votre photo de profil, votre numéro de téléphone et vos noms d'utilisateur de paiement sont conservés dans notre annuaire afin que les personnes qui ont votre numéro puissent vous trouver sur Splitea.</li>
         <li>Lorsque vous partagez une addition, une copie est envoyée à notre serveur de partage et toute personne disposant du lien peut l'ouvrir. Elle est supprimée 30 jours après le partage.</li>
-        <li>Pas de publicité, pas de pistage et aucun SDK d'analyse ou de publicité. Nous ne vendons jamais vos données.</li>
+        <li>Pas de publicité et pas de pistage. L'application n'intègre aucun SDK d'analyse ou de publicité, et nos pages web se contentent de compter les visites avec Cloudflare Web Analytics, qui n'utilise aucun cookie. Nous ne vendons jamais vos données.</li>
         <li>Vous pouvez supprimer votre compte dans l'application à tout moment.</li>
     </ul>
     <h2>Qui est responsable</h2>
@@ -602,7 +599,7 @@
     <p>Le lien cesse de fonctionner et le serveur de partage supprime l'addition 30 jours après son partage. Vous pouvez y mettre fin plus tôt avec « Arrêter le partage », ou en supprimant le reçu. Après la suppression, la restauration à un instant donné de Cloudflare conserve une copie restaurable pendant 30 jours de plus au maximum, que nous utilisons uniquement pour récupérer une addition supprimée par erreur. Les images d'aperçu d'une addition déjà téléchargées par des applications de messagerie ou des navigateurs peuvent rester dans leur cache après la suppression de l'addition.</p>
     <p>Si une personne de l'addition utilise Splitea, nous lui envoyons, via le service de notifications push d'Apple, une notification qui affiche votre prénom et le nom du commerce.</p>
     <h2>Splitea sur le web</h2>
-    <p>Les personnes avec qui vous partagez peuvent ouvrir l'addition sur splitea.app sans l'application ni compte. La page crée un identifiant aléatoire et anonyme dans le stockage local du navigateur, afin de pouvoir montrer qui modifie l'addition et de se souvenir de la personne de l'addition que vous êtes. Si vous indiquez que vous avez payé, cette information est enregistrée avec l'addition. Nos pages web n'utilisent ni cookies, ni outils d'analyse, ni publicité.</p>
+    <p>Les personnes avec qui vous partagez peuvent ouvrir l'addition sur splitea.app sans l'application ni compte. La page crée un identifiant aléatoire et anonyme dans le stockage local du navigateur, afin de pouvoir montrer qui modifie l'addition et de se souvenir de la personne de l'addition que vous êtes. Si vous indiquez que vous avez payé, cette information est enregistrée avec l'addition. Nos pages web n'utilisent ni cookies ni publicité. Pour compter les visites et mesurer la vitesse de chargement des pages, elles font appel à Cloudflare Web Analytics, qui n'utilise pas de cookies et ne vous suit pas sur d'autres sites.</p>
     <p><strong>Liens de paiement.</strong> Les liens de paiement de Splitea ouvrent une application de paiement (comme Venmo, PayPal ou ATH Móvil) avec le nom d'utilisateur du bénéficiaire, le montant et une courte note déjà remplis. Notre serveur transmet ces informations sans les stocker. Une fois dans l'application de paiement, c'est sa propre politique de confidentialité qui s'applique.</p>
     <h2>Trouver des amis qui utilisent Splitea</h2>
     <p>Si vous autorisez l'accès aux Contacts, l'application lit les noms, numéros de téléphone et photos de votre carnet d'adresses pour que vous puissiez ajouter des personnes à une addition. Pour indiquer lesquelles utilisent Splitea, l'application envoie à notre annuaire les numéros de téléphone des personnes que vous ajoutez, au format international standard. Notre serveur transforme chaque numéro en hachage à clé avec une clé secrète, le compare aux hachages des utilisateurs de Splitea et renvoie les profils correspondants. Les numéros que vous envoyez ne sont ni stockés ni journalisés. L'application n'envoie jamais l'intégralité de votre carnet d'adresses, et les noms et photos des contacts ne sont pas envoyés pour cette recherche.</p>
@@ -625,11 +622,10 @@
     <h2>Qui d'autre traite vos données</h2>
     <ul>
         <li><strong>Apple</strong> : « Se connecter avec Apple », iCloud, l'App Store, App Attest, les notifications push et Plans. Voir la <a href="https://www.apple.com/legal/privacy/">Politique de confidentialité d'Apple</a>.</li>
-        <li><strong>Cloudflare</strong> : héberge tous les serveurs et le stockage de Splitea, et contrôle les photos de profil avec Workers AI. Cloudflare conserve nos journaux de serveur jusqu'à 7 jours pour que nous puissions corriger les problèmes. Ils peuvent contenir des détails sur les requêtes et, lorsqu'un scan échoue de manière inhabituelle, la lecture du reçu par le modèle d'IA. Voir la <a href="https://www.cloudflare.com/privacypolicy/">Politique de confidentialité de Cloudflare</a>.</li>
+        <li><strong>Cloudflare</strong> : héberge tous les serveurs et le stockage de Splitea, contrôle les photos de profil avec Workers AI et compte les visites sur splitea.app avec Web Analytics. Cloudflare conserve nos journaux de serveur jusqu'à 7 jours pour que nous puissions corriger les problèmes. Ils peuvent contenir des détails sur les requêtes et, lorsqu'un scan échoue de manière inhabituelle, la lecture du reçu par le modèle d'IA. Voir la <a href="https://www.cloudflare.com/privacypolicy/">Politique de confidentialité de Cloudflare</a>.</li>
         <li><strong>Google</strong> : la Gemini API lit les photos de reçus et reçoit la position approximative envoyée avec un scan. Google traite ces requêtes selon ses conditions applicables à la Gemini API payante, qui n'autorisent pas Google à les utiliser pour améliorer ses produits, et ne les conserve que pendant une durée limitée pour détecter les abus. Voir les <a href="https://ai.google.dev/gemini-api/terms">Conditions d'utilisation de la Gemini API</a>.</li>
-        <li><strong>Telegram</strong> : nous recevons des alertes Telegram privées lorsque quelqu'un s'inscrit, s'abonne ou scanne un reçu, afin de repérer rapidement les problèmes. Les alertes comprennent votre nom, votre pays et votre identifiant de compte, et pour les scans, le nom du commerce, le nombre d'articles, le total, si vous avez un abonnement et la version de l'application. Elles ne comprennent jamais la photo, les articles, votre adresse e-mail ni votre numéro de téléphone. Voir la <a href="https://telegram.org/privacy">Politique de confidentialité de Telegram</a>.</li>
+        <li><strong>Telegram</strong> : nous recevons des alertes Telegram privées lorsque quelqu'un s'inscrit, s'abonne ou scanne un reçu, afin de repérer rapidement les problèmes. Elles comprennent des informations de base sur le compte et le scan. Elles ne comprennent jamais la photo, les articles, votre adresse e-mail ni votre numéro de téléphone. Voir la <a href="https://telegram.org/privacy">Politique de confidentialité de Telegram</a>.</li>
         <li><strong>Applications de paiement</strong> : lorsque vous touchez un lien de paiement, l'application de paiement que vous ouvrez reçoit le nom d'utilisateur du bénéficiaire et le montant.</li>
-        <li><strong>Hébergeur de police</strong> : la page d'accueil de Splitea (pas les pages des additions) charge sa police depuis rsms.me, qui reçoit votre adresse IP comme n'importe quel site web que vous visitez.</li>
     </ul>
     <p>Seul Raúl peut accéder aux serveurs et aux outils d'administration de Splitea, qui sont protégés par Cloudflare Access. Il ne consulte les données de compte et de partage que pour faire fonctionner le service, répondre aux demandes d'assistance et traiter les abus.</p>
     <h2>Où vos données sont traitées</h2>
@@ -667,7 +663,7 @@
     <ul>
         <li><strong>Exécution d'un contrat</strong> : pour fournir ce pour quoi vous utilisez Splitea, notamment votre compte et votre profil, le scan, le partage, la recherche d'amis, les notifications et votre abonnement.</li>
         <li><strong>Consentement</strong> : pour les autorisations que vous accordez dans iOS (appareil photo, photos, contacts, localisation et notifications) et pour les reçus que vous choisissez de signaler. Vous pouvez retirer votre consentement à tout moment dans les Réglages d'iOS.</li>
-        <li><strong>Intérêts légitimes</strong> : pour assurer la sécurité et le bon fonctionnement de Splitea (App Attest, journaux de serveur, sauvegardes et alertes), pour prévenir les abus (modération des photos et signalements) et pour comprendre comment Splitea est utilisé (enregistrements de scan). Nous avons mis en balance ces intérêts avec vos droits et les jugeons proportionnés.</li>
+        <li><strong>Intérêts légitimes</strong> : pour assurer la sécurité et le bon fonctionnement de Splitea (App Attest, journaux de serveur, sauvegardes et alertes), pour prévenir les abus (modération des photos et signalements) et pour comprendre comment Splitea est utilisé (enregistrements de scan et décompte des visites du site web). Nous avons mis en balance ces intérêts avec vos droits et les jugeons proportionnés.</li>
     </ul>
     <h2>Vos droits</h2>
     <p>Si vous êtes dans l'Espace économique européen, au Royaume-Uni, en Suisse ou dans un autre pays doté d'une législation comparable sur la protection des données, vous disposez des droits suivants :</p>
@@ -689,7 +685,7 @@
         <li>Identifiants : nom, adresse e-mail, numéro de téléphone, identifiant de compte, noms d'utilisateur de paiement, jeton push et clé App Attest.</li>
         <li>Informations commerciales : votre statut d'abonnement et les détails de transaction d'Apple.</li>
         <li>Géolocalisation : position approximative envoyée avec un scan (non stockée, sauf avec les reçus que vous signalez).</li>
-        <li>Activité Internet ou autre activité électronique : enregistrements de scan et journaux de serveur.</li>
+        <li>Activité Internet ou autre activité électronique : enregistrements de scan, journaux de serveur et statistiques de visites du site web.</li>
         <li>Informations visuelles : photos de reçus et photos de profil.</li>
         <li>Informations sur d'autres personnes : les noms et numéros de téléphone des personnes que vous ajoutez à une addition que vous partagez.</li>
     </ul>
@@ -725,7 +721,7 @@
         <li>La scansione non avviene sul tuo telefono. Ogni foto di scontrino va al nostro server e a un modello di IA (attualmente Google Gemini) per leggere gli articoli. Non conserviamo la foto.</li>
         <li>Il tuo nome, la foto del profilo, il numero di telefono e i nomi utente di pagamento sono conservati nella nostra directory, così chi ha il tuo numero può trovarti su Splitea.</li>
         <li>Quando condividi una divisione, una copia va al nostro server di condivisione e chiunque abbia il link può aprirla. Viene eliminata 30 giorni dopo la condivisione.</li>
-        <li>Niente pubblicità, niente tracciamento e nessun SDK di analisi o pubblicità. Non vendiamo mai i tuoi dati.</li>
+        <li>Niente pubblicità e niente tracciamento. L'app non ha SDK di analisi o pubblicità, e le nostre pagine web contano solo le visite con Cloudflare Web Analytics, che non usa cookie. Non vendiamo mai i tuoi dati.</li>
         <li>Puoi eliminare il tuo account nell'app in qualsiasi momento.</li>
     </ul>
     <h2>Chi è il titolare</h2>
@@ -773,7 +769,7 @@
     <p>Il link smette di funzionare e il server di condivisione elimina la divisione 30 giorni dopo la condivisione. Puoi terminarla prima con Interrompi condivisione o eliminando lo scontrino. Dopo l'eliminazione, il ripristino a un punto nel tempo di Cloudflare conserva una copia ripristinabile per altri 30 giorni al massimo, che usiamo solo per recuperare una divisione eliminata per errore. Le immagini di anteprima di una divisione già scaricate da app di messaggistica o browser possono restare nelle loro cache anche dopo l'eliminazione della divisione.</p>
     <p>Se qualcuno nella divisione usa Splitea, gli inviamo una notifica tramite il servizio push di Apple che mostra il tuo nome e il nome del negozio.</p>
     <h2>Splitea sul web</h2>
-    <p>Le persone con cui condividi possono aprire la divisione su splitea.app senza l'app né un account. La pagina crea un ID casuale e anonimo nell'archiviazione locale del browser, così può mostrare chi sta modificando e ricordare quale persona della divisione sei. Se segni di aver pagato, l'informazione viene salvata con la divisione. Le nostre pagine web non usano cookie, analisi né pubblicità.</p>
+    <p>Le persone con cui condividi possono aprire la divisione su splitea.app senza l'app né un account. La pagina crea un ID casuale e anonimo nell'archiviazione locale del browser, così può mostrare chi sta modificando e ricordare quale persona della divisione sei. Se segni di aver pagato, l'informazione viene salvata con la divisione. Le nostre pagine web non usano cookie né pubblicità. Per contare le visite e misurare la velocità delle pagine, usano Cloudflare Web Analytics, che non usa cookie e non ti segue su altri siti.</p>
     <p><strong>Link di pagamento.</strong> I link di pagamento di Splitea aprono un'app di pagamento (come Venmo, PayPal o ATH Móvil) con il nome utente del beneficiario, l'importo e una breve nota già compilati. Il nostro server trasmette questi dati senza conservarli. Una volta nell'app di pagamento, si applica la sua informativa sulla privacy.</p>
     <h2>Trovare gli amici che usano Splitea</h2>
     <p>Se consenti l'accesso ai Contatti, l'app legge nomi, numeri di telefono e foto dalla tua rubrica così puoi aggiungere persone a una divisione. Per mostrarti quali di loro usano Splitea, l'app invia alla nostra directory i numeri di telefono delle persone che aggiungi, nel formato internazionale standard. Il nostro server trasforma ogni numero in un hash con chiave usando una chiave segreta, lo confronta con gli hash degli utenti Splitea e restituisce i profili corrispondenti. I numeri che invii non vengono conservati né registrati. L'app non carica mai l'intera rubrica, e i nomi e le foto dei contatti non vengono inviati per questa ricerca.</p>
@@ -796,11 +792,10 @@
     <h2>Chi altro tratta i tuoi dati</h2>
     <ul>
         <li><strong>Apple</strong>: Accedi con Apple, iCloud, l'App Store, App Attest, le notifiche push e le mappe. Consulta l'<a href="https://www.apple.com/legal/privacy/">Informativa sulla privacy di Apple</a>.</li>
-        <li><strong>Cloudflare</strong>: ospita tutti i server e l'archiviazione di Splitea, e controlla le foto del profilo con Workers AI. Cloudflare conserva i log dei nostri server fino a 7 giorni così possiamo risolvere i problemi. Possono includere dettagli delle richieste e, quando una scansione non riesce in modo insolito, la lettura dello scontrino fatta dal modello di IA. Consulta l'<a href="https://www.cloudflare.com/privacypolicy/">Informativa sulla privacy di Cloudflare</a>.</li>
+        <li><strong>Cloudflare</strong>: ospita tutti i server e l'archiviazione di Splitea, controlla le foto del profilo con Workers AI e conta le visite a splitea.app con Web Analytics. Cloudflare conserva i log dei nostri server fino a 7 giorni così possiamo risolvere i problemi. Possono includere dettagli delle richieste e, quando una scansione non riesce in modo insolito, la lettura dello scontrino fatta dal modello di IA. Consulta l'<a href="https://www.cloudflare.com/privacypolicy/">Informativa sulla privacy di Cloudflare</a>.</li>
         <li><strong>Google</strong>: la Gemini API legge le foto degli scontrini e riceve la posizione approssimativa inviata con una scansione. Google elabora queste richieste in base ai termini della versione a pagamento della Gemini API, che non consentono a Google di usarle per migliorare i propri prodotti, e le conserva solo per un periodo limitato per rilevare abusi. Consulta i <a href="https://ai.google.dev/gemini-api/terms">Termini della Gemini API</a>.</li>
-        <li><strong>Telegram</strong>: riceviamo avvisi privati su Telegram quando qualcuno si registra, si abbona o scansiona uno scontrino, così possiamo individuare rapidamente i problemi. Gli avvisi includono il tuo nome, il paese e l'ID account e, per le scansioni, il nome del negozio, il numero di articoli, il totale, se hai un abbonamento e la versione dell'app. Non includono mai la foto, gli articoli, la tua email o il tuo numero di telefono. Consulta l'<a href="https://telegram.org/privacy">Informativa sulla privacy di Telegram</a>.</li>
+        <li><strong>Telegram</strong>: riceviamo avvisi privati su Telegram quando qualcuno si registra, si abbona o scansiona uno scontrino, così possiamo individuare rapidamente i problemi. Includono dati di base sull'account e sulla scansione. Non includono mai la foto, gli articoli, la tua email o il tuo numero di telefono. Consulta l'<a href="https://telegram.org/privacy">Informativa sulla privacy di Telegram</a>.</li>
         <li><strong>App di pagamento</strong>: quando tocchi un link di pagamento, l'app di pagamento che apri riceve il nome utente del beneficiario e l'importo.</li>
-        <li><strong>Host dei font</strong>: la home page di Splitea (non le pagine delle divisioni) carica il suo font da rsms.me, che riceve il tuo indirizzo IP come qualsiasi sito web che visiti.</li>
     </ul>
     <p>Solo Raúl può accedere ai server e agli strumenti di amministrazione di Splitea, protetti da Cloudflare Access. Consulta i dati degli account e delle condivisioni solo per gestire il servizio, rispondere alle richieste di assistenza e gestire gli abusi.</p>
     <h2>Dove vengono trattati i tuoi dati</h2>
@@ -838,7 +833,7 @@
     <ul>
         <li><strong>Contratto</strong>: per fornirti ciò per cui usi Splitea, inclusi account e profilo, scansione, condivisione, ricerca degli amici, notifiche e abbonamento.</li>
         <li><strong>Consenso</strong>: per i permessi che concedi in iOS (fotocamera, foto, contatti, posizione e notifiche) e per gli scontrini che scegli di segnalare. Puoi revocare il consenso in qualsiasi momento nelle Impostazioni di iOS.</li>
-        <li><strong>Legittimi interessi</strong>: per mantenere Splitea sicura e funzionante (App Attest, log dei server, backup e avvisi), per prevenire abusi (moderazione delle foto e segnalazioni) e per capire come viene usata Splitea (registri delle scansioni). Abbiamo bilanciato questi interessi con i tuoi diritti e li riteniamo proporzionati.</li>
+        <li><strong>Legittimi interessi</strong>: per mantenere Splitea sicura e funzionante (App Attest, log dei server, backup e avvisi), per prevenire abusi (moderazione delle foto e segnalazioni) e per capire come viene usata Splitea (registri delle scansioni e conteggi delle visite al sito web). Abbiamo bilanciato questi interessi con i tuoi diritti e li riteniamo proporzionati.</li>
     </ul>
     <h2>I tuoi diritti</h2>
     <p>Se ti trovi nello Spazio Economico Europeo, nel Regno Unito, in Svizzera o in un altro luogo con una normativa sulla protezione dei dati simile, hai diritto a:</p>
@@ -860,7 +855,7 @@
         <li>Identificatori: nome, indirizzo email, numero di telefono, ID account, nomi utente di pagamento, token push e chiave App Attest.</li>
         <li>Informazioni commerciali: lo stato del tuo abbonamento e i dettagli della transazione di Apple.</li>
         <li>Geolocalizzazione: posizione approssimativa inviata con una scansione (non conservata, tranne che con gli scontrini che segnali).</li>
-        <li>Attività su Internet o altre attività elettroniche: registri delle scansioni e log dei server.</li>
+        <li>Attività su Internet o altre attività elettroniche: registri delle scansioni, log dei server e statistiche sulle visite al sito web.</li>
         <li>Informazioni visive: foto degli scontrini e foto del profilo.</li>
         <li>Informazioni su altre persone: i nomi e i numeri di telefono delle persone che aggiungi a una divisione che condividi.</li>
     </ul>
@@ -896,7 +891,7 @@
         <li>スキャンはお使いのスマートフォン上では行われません。品目を読み取るため、レシートの写真は1枚ごとに当方のサーバーとAIモデル（現在はGoogle Gemini）に送信されます。写真は保存しません。</li>
         <li>お客様の名前、プロフィール写真、電話番号、決済アプリのユーザー名は当方のディレクトリに保存され、お客様の電話番号を知っている人がSpliteaでお客様を見つけられるようになります。</li>
         <li>割り勘を共有すると、そのコピーが当方の共有サーバーに送られ、リンクを知っている人なら誰でも開くことができます。コピーは共有から30日後に削除されます。</li>
-        <li>広告もトラッキングもなく、分析SDKや広告SDKも使用していません。お客様のデータを販売することは決してありません。</li>
+        <li>広告もトラッキングもありません。アプリでは分析SDKや広告SDKを使用しておらず、当方のウェブページでは、Cookieを使用しないCloudflare Web Analyticsで訪問数を数えているだけです。お客様のデータを販売することは決してありません。</li>
         <li>アプリからいつでもアカウントを削除できます。</li>
     </ul>
     <h2>責任者</h2>
@@ -944,7 +939,7 @@
     <p>共有から30日後にリンクは使えなくなり、共有サーバーは割り勘を削除します。「共有を停止」を使うか、レシートを削除すれば、それより早く終了できます。削除後も、Cloudflareのポイントインタイムリカバリにより、復元可能なコピーがさらに最長30日間保持されます。当方はこれを、誤って削除された割り勘を復元するためだけに使用します。メッセージアプリやブラウザがすでにダウンロードした割り勘のプレビュー画像は、割り勘の削除後もそれらのキャッシュに残る場合があります。</p>
     <p>割り勘のメンバーがSpliteaを使っている場合、当方はAppleのプッシュサービスを通じて、お客様のファーストネームと店名を表示する通知をその人に送ります。</p>
     <h2>ウェブ版Splitea</h2>
-    <p>お客様が共有した相手は、アプリやアカウントがなくてもsplitea.appで割り勘を開くことができます。このページは、誰が編集しているかを表示し、お客様が割り勘のどのメンバーなのかを記憶するために、ブラウザのローカルストレージにランダムな匿名IDを作成します。自分を支払い済みにすると、その情報は割り勘とともに保存されます。当方のウェブページでは、Cookie、分析、広告は一切使用していません。</p>
+    <p>お客様が共有した相手は、アプリやアカウントがなくてもsplitea.appで割り勘を開くことができます。このページは、誰が編集しているかを表示し、お客様が割り勘のどのメンバーなのかを記憶するために、ブラウザのローカルストレージにランダムな匿名IDを作成します。自分を支払い済みにすると、その情報は割り勘とともに保存されます。当方のウェブページでは、Cookieや広告は一切使用していません。訪問数を数え、ページの表示速度を測定するため、Cloudflare Web Analyticsを使用しています。このサービスはCookieを使用せず、他のウェブサイトをまたいでお客様を追跡することもありません。</p>
     <p><strong>支払いリンク。</strong>Spliteaの支払いリンクは、受取人のユーザー名、金額、短いメモが入力された状態で決済アプリ（Venmo、PayPal、ATH Móvilなど）を開きます。当方のサーバーはこれらの情報を保存せずに受け渡します。決済アプリに移動した後は、そのアプリのプライバシーポリシーが適用されます。</p>
     <h2>Spliteaを使っている友達を探す</h2>
     <p>連絡先へのアクセスを許可すると、アプリは割り勘に人を追加できるよう、アドレス帳から名前、電話番号、写真を読み取ります。そのうち誰がSpliteaを使っているかを表示するため、アプリはお客様が追加した人の電話番号を、標準的な国際形式で当方のディレクトリに送信します。当方のサーバーは秘密鍵を使って各番号を鍵付きハッシュに変換し、Spliteaユーザーのハッシュと照合して、一致したプロフィールを返します。送信された番号は保存もログ記録もされません。アプリがアドレス帳全体をアップロードすることはなく、この照合のために連絡先の名前や写真が送信されることもありません。</p>
@@ -967,11 +962,10 @@
     <h2>データを取り扱うその他の事業者</h2>
     <ul>
         <li><strong>Apple</strong>：Appleでサインイン、iCloud、App Store、App Attest、プッシュ通知、マップ。<a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>をご覧ください。</li>
-        <li><strong>Cloudflare</strong>：Spliteaのすべてのサーバーとストレージをホストし、Workers AIでプロフィール写真を審査します。Cloudflareは、当方が問題を修正できるよう、当方のサーバーログを最長7日間保持します。ログには、リクエストの詳細や、スキャンが通常とは異なる形で失敗した場合にはAIモデルによるレシートの読み取り結果が含まれることがあります。<a href="https://www.cloudflare.com/privacypolicy/">Cloudflareのプライバシーポリシー</a>をご覧ください。</li>
+        <li><strong>Cloudflare</strong>：Spliteaのすべてのサーバーとストレージをホストし、Workers AIでプロフィール写真を審査し、Web Analyticsでsplitea.appへの訪問数を数えます。Cloudflareは、当方が問題を修正できるよう、当方のサーバーログを最長7日間保持します。ログには、リクエストの詳細や、スキャンが通常とは異なる形で失敗した場合にはAIモデルによるレシートの読み取り結果が含まれることがあります。<a href="https://www.cloudflare.com/privacypolicy/">Cloudflareのプライバシーポリシー</a>をご覧ください。</li>
         <li><strong>Google</strong>：Gemini APIがレシートの写真を読み取り、スキャン時に送信されたおおよその位置情報を受け取ります。Googleはこれらのリクエストを有料のGemini APIの規約に基づいて処理します。この規約では、Googleがこれらのリクエストを自社製品の改善に使うことは認められておらず、Googleは不正利用を検出するために限られた期間だけ保持します。<a href="https://ai.google.dev/gemini-api/terms">Gemini APIの利用規約</a>をご覧ください。</li>
-        <li><strong>Telegram</strong>：問題にすばやく気づけるよう、誰かが新規登録、サブスクリプション登録、レシートのスキャンを行ったときに、当方は非公開のTelegramアラートを受け取ります。アラートには、お客様の名前、国、アカウントIDが含まれ、スキャンの場合は店名、品目数、合計金額、サブスクリプション登録の有無、アプリのバージョンも含まれます。写真、品目、メールアドレス、電話番号が含まれることはありません。<a href="https://telegram.org/privacy">Telegramのプライバシーポリシー</a>をご覧ください。</li>
+        <li><strong>Telegram</strong>：問題にすばやく気づけるよう、誰かが新規登録、サブスクリプション登録、レシートのスキャンを行ったときに、当方は非公開のTelegramアラートを受け取ります。アラートには、アカウントとスキャンに関する基本的な情報が含まれます。写真、品目、メールアドレス、電話番号が含まれることはありません。<a href="https://telegram.org/privacy">Telegramのプライバシーポリシー</a>をご覧ください。</li>
         <li><strong>決済アプリ</strong>：支払いリンクをタップすると、開いた決済アプリが受取人のユーザー名と金額を受け取ります。</li>
-        <li><strong>フォントのホスト</strong>：Spliteaのホームページ（割り勘のページではありません）はrsms.meからフォントを読み込みます。rsms.meは、お客様が訪れる他のウェブサイトと同じように、お客様のIPアドレスを受け取ります。</li>
     </ul>
     <p>Spliteaのサーバーと管理ツールにアクセスできるのはRaúlだけで、これらはCloudflare Accessで保護されています。Raúlがアカウントや共有のデータを見るのは、サービスの運営、サポートへの対応、不正利用への対処のためだけです。</p>
     <h2>データが処理される場所</h2>
@@ -1009,7 +1003,7 @@
     <ul>
         <li><strong>契約の履行</strong>：アカウントとプロフィール、スキャン、共有、友達探し、通知、サブスクリプションなど、お客様がSpliteaを使う目的となる機能を提供するため。</li>
         <li><strong>同意</strong>：お客様がiOSで許可する権限（カメラ、写真、連絡先、位置情報、通知）と、お客様が報告を選んだレシートについて。同意はiOSの設定でいつでも撤回できます。</li>
-        <li><strong>正当な利益</strong>：Spliteaの安全と正常な動作を維持するため（App Attest、サーバーログ、バックアップ、アラート）、不正利用を防ぐため（写真のモデレーションと報告）、Spliteaの利用状況を把握するため（スキャン記録）。当方はこれらをお客様の権利と比較衡量し、均衡がとれていると判断しています。</li>
+        <li><strong>正当な利益</strong>：Spliteaの安全と正常な動作を維持するため（App Attest、サーバーログ、バックアップ、アラート）、不正利用を防ぐため（写真のモデレーションと報告）、Spliteaの利用状況を把握するため（スキャン記録とウェブサイトの訪問数）。当方はこれらをお客様の権利と比較衡量し、均衡がとれていると判断しています。</li>
     </ul>
     <h2>お客様の権利</h2>
     <p>欧州経済領域、英国、スイス、または同様のデータ保護法がある他の地域にいる場合、お客様には次の権利があります：</p>
@@ -1031,7 +1025,7 @@
         <li>識別子：名前、メールアドレス、電話番号、アカウントID、決済アプリのユーザー名、プッシュトークン、App Attestキー。</li>
         <li>商取引情報：サブスクリプションの状態とAppleの取引の詳細。</li>
         <li>地理位置情報：スキャン時に送信されるおおよその位置情報（お客様が報告したレシートを除き、保存しません）。</li>
-        <li>インターネットまたはその他の電子的な活動：スキャン記録とサーバーログ。</li>
+        <li>インターネットまたはその他の電子的な活動：スキャン記録、サーバーログ、ウェブサイトの訪問統計。</li>
         <li>視覚情報：レシートの写真とプロフィール写真。</li>
         <li>他の人に関する情報：お客様が共有する割り勘に追加した人の名前と電話番号。</li>
     </ul>
@@ -1067,7 +1061,7 @@
         <li>스캔은 휴대폰에서 이루어지지 않습니다. 항목을 읽기 위해 각 영수증 사진이 저희 서버와 AI 모델(현재 Google Gemini)로 전송됩니다. 사진은 보관하지 않습니다.</li>
         <li>귀하의 이름, 프로필 사진, 전화번호, 결제 앱 사용자 이름은 저희 디렉터리에 보관되어, 귀하의 번호를 알고 있는 사람이 Splitea에서 귀하를 찾을 수 있습니다.</li>
         <li>정산을 공유하면 사본이 저희 공유 서버로 전송되며, 링크가 있는 사람은 누구나 열 수 있습니다. 사본은 공유 후 30일이 지나면 삭제됩니다.</li>
-        <li>광고, 추적, 분석 SDK나 광고 SDK가 없습니다. 저희는 귀하의 데이터를 절대 판매하지 않습니다.</li>
+        <li>광고와 추적이 없습니다. 앱에는 분석 SDK나 광고 SDK가 없으며, 저희 웹 페이지는 쿠키를 사용하지 않는 Cloudflare Web Analytics로 방문 수만 집계합니다. 저희는 귀하의 데이터를 절대 판매하지 않습니다.</li>
         <li>앱에서 언제든지 계정을 삭제할 수 있습니다.</li>
     </ul>
     <h2>책임자</h2>
@@ -1115,7 +1109,7 @@
     <p>공유 후 30일이 지나면 링크가 더 이상 작동하지 않으며 공유 서버가 정산을 삭제합니다. ‘공유 중지’를 사용하거나 영수증을 삭제하면 더 일찍 종료할 수 있습니다. 삭제 후에도 Cloudflare의 특정 시점 복구 기능이 복원 가능한 사본을 최대 30일 동안 추가로 보관하며, 저희는 이를 실수로 삭제된 정산을 복구하는 용도로만 사용합니다. 메시지 앱이나 브라우저가 이미 내려받은 정산 미리보기 이미지는 정산이 삭제된 후에도 해당 캐시에 남아 있을 수 있습니다.</p>
     <p>정산에 포함된 사람이 Splitea를 사용하는 경우, 저희는 Apple의 푸시 서비스를 통해 귀하의 이름(성 제외)과 매장 이름이 표시되는 알림을 그 사람에게 보냅니다.</p>
     <h2>웹용 Splitea</h2>
-    <p>귀하가 공유한 사람들은 앱이나 계정 없이도 splitea.app에서 정산을 열 수 있습니다. 이 페이지는 누가 편집 중인지 보여 주고 귀하가 정산의 어느 사람인지 기억하기 위해 브라우저의 로컬 저장소에 무작위 익명 ID를 만듭니다. 자신을 결제 완료로 표시하면 그 내용이 정산과 함께 저장됩니다. 저희 웹 페이지는 쿠키, 분석, 광고를 사용하지 않습니다.</p>
+    <p>귀하가 공유한 사람들은 앱이나 계정 없이도 splitea.app에서 정산을 열 수 있습니다. 이 페이지는 누가 편집 중인지 보여 주고 귀하가 정산의 어느 사람인지 기억하기 위해 브라우저의 로컬 저장소에 무작위 익명 ID를 만듭니다. 자신을 결제 완료로 표시하면 그 내용이 정산과 함께 저장됩니다. 저희 웹 페이지는 쿠키나 광고를 사용하지 않습니다. 방문 수를 집계하고 페이지 속도를 측정하기 위해 Cloudflare Web Analytics를 사용하며, 이는 쿠키를 사용하지 않고 다른 사이트에 걸쳐 귀하를 추적하지도 않습니다.</p>
     <p><strong>결제 링크.</strong> Splitea의 결제 링크는 받는 사람의 사용자 이름, 금액, 짧은 메모가 입력된 상태로 결제 앱(Venmo, PayPal, ATH Móvil 등)을 엽니다. 저희 서버는 이 정보를 저장하지 않고 전달만 합니다. 결제 앱으로 이동한 후에는 해당 앱의 개인정보 처리방침이 적용됩니다.</p>
     <h2>Splitea를 사용하는 친구 찾기</h2>
     <p>연락처 접근을 허용하면 앱은 정산에 사람을 추가할 수 있도록 주소록에서 이름, 전화번호, 사진을 읽습니다. 이 중 누가 Splitea를 사용하는지 보여 주기 위해 앱은 귀하가 추가한 사람의 전화번호를 표준 국제 형식으로 저희 디렉터리에 보냅니다. 저희 서버는 비밀 키로 각 번호를 키 기반 해시로 변환하고, Splitea 사용자의 해시와 비교하여 일치하는 프로필을 돌려줍니다. 귀하가 보낸 번호는 저장되거나 로그에 기록되지 않습니다. 앱은 주소록 전체를 업로드하지 않으며, 이 조회를 위해 연락처의 이름과 사진이 전송되지도 않습니다.</p>
@@ -1138,11 +1132,10 @@
     <h2>귀하의 데이터를 처리하는 다른 업체</h2>
     <ul>
         <li><strong>Apple</strong>: Apple로 로그인, iCloud, App Store, App Attest, 푸시 알림, 지도. <a href="https://www.apple.com/legal/privacy/">Apple 개인정보 처리방침</a>을 참조하세요.</li>
-        <li><strong>Cloudflare</strong>: Splitea의 모든 서버와 저장소를 호스팅하고 Workers AI로 프로필 사진을 검사합니다. Cloudflare는 저희가 문제를 해결할 수 있도록 저희 서버 로그를 최대 7일 동안 보관합니다. 로그에는 요청 세부 정보와, 스캔이 비정상적인 방식으로 실패한 경우 AI 모델이 영수증을 읽은 결과가 포함될 수 있습니다. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보 처리방침</a>을 참조하세요.</li>
+        <li><strong>Cloudflare</strong>: Splitea의 모든 서버와 저장소를 호스팅하고, Workers AI로 프로필 사진을 검사하며, Web Analytics로 splitea.app 방문 수를 집계합니다. Cloudflare는 저희가 문제를 해결할 수 있도록 저희 서버 로그를 최대 7일 동안 보관합니다. 로그에는 요청 세부 정보와, 스캔이 비정상적인 방식으로 실패한 경우 AI 모델이 영수증을 읽은 결과가 포함될 수 있습니다. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보 처리방침</a>을 참조하세요.</li>
         <li><strong>Google</strong>: Gemini API가 영수증 사진을 읽고 스캔과 함께 전송된 대략적인 위치를 받습니다. Google은 유료 Gemini API 약관에 따라 이러한 요청을 처리하며, 이 약관은 Google이 이를 자사 제품 개선에 사용하는 것을 허용하지 않습니다. Google은 남용을 감지하기 위해 제한된 기간 동안만 이를 보관합니다. <a href="https://ai.google.dev/gemini-api/terms">Gemini API 약관</a>을 참조하세요.</li>
-        <li><strong>Telegram</strong>: 문제를 빨리 발견할 수 있도록, 누군가 가입하거나 구독하거나 영수증을 스캔하면 저희는 비공개 Telegram 알림을 받습니다. 알림에는 귀하의 이름, 국가, 계정 ID가 포함되며, 스캔의 경우 매장 이름, 항목 수, 합계, 구독 여부, 앱 버전도 포함됩니다. 사진, 항목, 이메일, 전화번호는 절대 포함되지 않습니다. <a href="https://telegram.org/privacy">Telegram 개인정보 처리방침</a>을 참조하세요.</li>
+        <li><strong>Telegram</strong>: 문제를 빨리 발견할 수 있도록, 누군가 가입하거나 구독하거나 영수증을 스캔하면 저희는 비공개 Telegram 알림을 받습니다. 알림에는 계정과 스캔에 관한 기본 정보가 포함됩니다. 사진, 항목, 이메일, 전화번호는 절대 포함되지 않습니다. <a href="https://telegram.org/privacy">Telegram 개인정보 처리방침</a>을 참조하세요.</li>
         <li><strong>결제 앱</strong>: 결제 링크를 탭하면, 열리는 결제 앱이 받는 사람의 사용자 이름과 금액을 받습니다.</li>
-        <li><strong>글꼴 호스트</strong>: Splitea 홈페이지(정산 페이지 제외)는 rsms.me에서 글꼴을 불러오며, rsms.me는 귀하가 방문하는 다른 웹사이트와 마찬가지로 귀하의 IP 주소를 받습니다.</li>
     </ul>
     <p>Splitea의 서버와 관리 도구에는 Raúl만 접근할 수 있으며, 이는 Cloudflare Access로 보호됩니다. Raúl은 서비스 운영, 지원 요청 응대, 남용 대응을 위해서만 계정 및 공유 데이터를 확인합니다.</p>
     <h2>데이터 처리 장소</h2>
@@ -1180,7 +1173,7 @@
     <ul>
         <li><strong>계약의 이행</strong>: 계정 및 프로필, 스캔, 공유, 친구 찾기, 알림, 구독 등 귀하가 Splitea를 사용하는 목적이 되는 기능을 제공하기 위함입니다.</li>
         <li><strong>동의</strong>: 귀하가 iOS에서 부여하는 권한(카메라, 사진, 연락처, 위치, 알림)과 귀하가 신고하기로 선택한 영수증에 대해 적용됩니다. iOS 설정에서 언제든지 동의를 철회할 수 있습니다.</li>
-        <li><strong>정당한 이익</strong>: Splitea를 안전하고 정상적으로 유지하고(App Attest, 서버 로그, 백업, 알림), 남용을 방지하며(사진 검토 및 신고), Splitea가 어떻게 사용되는지 파악하기 위함입니다(스캔 기록). 저희는 이를 귀하의 권리와 비교 형량하였으며 비례에 맞는다고 판단합니다.</li>
+        <li><strong>정당한 이익</strong>: Splitea를 안전하고 정상적으로 유지하고(App Attest, 서버 로그, 백업, 알림), 남용을 방지하며(사진 검토 및 신고), Splitea가 어떻게 사용되는지 파악하기 위함입니다(스캔 기록 및 웹사이트 방문 수). 저희는 이를 귀하의 권리와 비교 형량하였으며 비례에 맞는다고 판단합니다.</li>
     </ul>
     <h2>귀하의 권리</h2>
     <p>유럽 경제 지역, 영국, 스위스 또는 유사한 데이터 보호법이 있는 다른 지역에 있는 경우, 귀하는 다음과 같은 권리를 가집니다:</p>
@@ -1202,7 +1195,7 @@
         <li>식별자: 이름, 이메일 주소, 전화번호, 계정 ID, 결제 앱 사용자 이름, 푸시 토큰, App Attest 키.</li>
         <li>상업 정보: 구독 상태 및 Apple 거래 세부 정보.</li>
         <li>지리적 위치 데이터: 스캔과 함께 전송되는 대략적인 위치(귀하가 신고한 영수증을 제외하고는 저장하지 않음).</li>
-        <li>인터넷 또는 기타 전자적 활동: 스캔 기록 및 서버 로그.</li>
+        <li>인터넷 또는 기타 전자적 활동: 스캔 기록, 서버 로그 및 웹사이트 방문 통계.</li>
         <li>시각 정보: 영수증 사진 및 프로필 사진.</li>
         <li>다른 사람에 관한 정보: 귀하가 공유하는 정산에 추가한 사람들의 이름과 전화번호.</li>
     </ul>
@@ -1238,7 +1231,7 @@
         <li>O escaneamento não acontece no seu celular. Cada foto de recibo vai para o nosso servidor e para um modelo de IA (atualmente o Google Gemini) para ler os itens. Não guardamos a foto.</li>
         <li>Seu nome, sua foto de perfil, seu número de telefone e seus nomes de usuário de pagamento ficam no nosso diretório para que as pessoas que têm o seu número possam encontrar você no Splitea.</li>
         <li>Quando você compartilha uma divisão, uma cópia vai para o nosso servidor de compartilhamento e qualquer pessoa com o link pode abri-la. Ela é excluída 30 dias depois que você a compartilha.</li>
-        <li>Sem anúncios, sem rastreamento e sem SDKs de análise ou de publicidade. Nunca vendemos seus dados.</li>
+        <li>Sem anúncios e sem rastreamento. O app não tem SDKs de análise ou de publicidade, e nossas páginas web só contam visitas com o Cloudflare Web Analytics, que não usa cookies. Nunca vendemos seus dados.</li>
         <li>Você pode excluir sua conta no app a qualquer momento.</li>
     </ul>
     <h2>Quem é o responsável</h2>
@@ -1286,7 +1279,7 @@
     <p>O link deixa de funcionar e o servidor de compartilhamento exclui a divisão 30 dias depois que ela foi compartilhada. Você pode encerrá-la antes com Parar compartilhamento ou excluindo o recibo. Após a exclusão, a recuperação pontual da Cloudflare mantém uma cópia restaurável por até mais 30 dias, que usamos apenas para recuperar uma divisão excluída por engano. As imagens de prévia de uma divisão que apps de mensagens ou navegadores já tenham baixado podem continuar nos caches deles depois que a divisão for excluída.</p>
     <p>Se alguém da divisão usa o Splitea, enviamos para essa pessoa uma notificação pelo serviço de push da Apple que mostra o seu primeiro nome e o nome do estabelecimento.</p>
     <h2>O Splitea na web</h2>
-    <p>As pessoas com quem você compartilha podem abrir a divisão em splitea.app sem o app e sem uma conta. A página cria um ID aleatório e anônimo no armazenamento local do navegador para poder mostrar quem está editando e lembrar qual pessoa da divisão você é. Se você marcar que já pagou, isso é salvo com a divisão. Nossas páginas web não usam cookies, análises nem anúncios.</p>
+    <p>As pessoas com quem você compartilha podem abrir a divisão em splitea.app sem o app e sem uma conta. A página cria um ID aleatório e anônimo no armazenamento local do navegador para poder mostrar quem está editando e lembrar qual pessoa da divisão você é. Se você marcar que já pagou, isso é salvo com a divisão. Nossas páginas web não usam cookies nem anúncios. Para contar visitas e medir a velocidade das páginas, elas usam o Cloudflare Web Analytics, que não usa cookies nem acompanha você em outros sites.</p>
     <p><strong>Links de pagamento.</strong> Os links de pagamento do Splitea abrem um app de pagamento (como Venmo, PayPal ou ATH Móvil) com o nome de usuário de quem vai receber, o valor e uma nota curta já preenchidos. Nosso servidor repassa esses dados sem armazená-los. Quando você está no app de pagamento, vale a política de privacidade dele.</p>
     <h2>Encontrar amigos que usam o Splitea</h2>
     <p>Se você permitir o acesso aos Contatos, o app lê nomes, números de telefone e fotos da sua agenda para que você possa adicionar pessoas a uma divisão. Para mostrar quais delas usam o Splitea, o app envia ao nosso diretório os números de telefone das pessoas que você adiciona, no formato internacional padrão. Nosso servidor transforma cada número em um hash com chave usando uma chave secreta, compara com os hashes dos usuários do Splitea e retorna os perfis correspondentes. Os números que você envia não são armazenados nem registrados em log. O app nunca envia sua agenda inteira, e os nomes e as fotos dos contatos não são enviados para essa consulta.</p>
@@ -1309,11 +1302,10 @@
     <h2>Quem mais trata seus dados</h2>
     <ul>
         <li><strong>Apple</strong>: Iniciar Sessão com a Apple, iCloud, App Store, App Attest, notificações push e mapas. Consulte a <a href="https://www.apple.com/legal/privacy/">Política de Privacidade da Apple</a>.</li>
-        <li><strong>Cloudflare</strong>: hospeda todos os servidores e o armazenamento do Splitea, e verifica as fotos de perfil com o Workers AI. A Cloudflare mantém os logs dos nossos servidores por até 7 dias para podermos corrigir problemas. Eles podem incluir detalhes das solicitações e, quando um escaneamento falha de forma incomum, a leitura do recibo feita pelo modelo de IA. Consulte a <a href="https://www.cloudflare.com/privacypolicy/">Política de Privacidade da Cloudflare</a>.</li>
+        <li><strong>Cloudflare</strong>: hospeda todos os servidores e o armazenamento do Splitea, verifica as fotos de perfil com o Workers AI e conta as visitas a splitea.app com o Web Analytics. A Cloudflare mantém os logs dos nossos servidores por até 7 dias para podermos corrigir problemas. Eles podem incluir detalhes das solicitações e, quando um escaneamento falha de forma incomum, a leitura do recibo feita pelo modelo de IA. Consulte a <a href="https://www.cloudflare.com/privacypolicy/">Política de Privacidade da Cloudflare</a>.</li>
         <li><strong>Google</strong>: a Gemini API lê as fotos de recibos e recebe a localização aproximada enviada com um escaneamento. O Google processa essas solicitações de acordo com os termos da versão paga da Gemini API, que não permitem que o Google as use para melhorar seus produtos, e as mantém apenas por um tempo limitado para detectar abusos. Consulte os <a href="https://ai.google.dev/gemini-api/terms">Termos da Gemini API</a>.</li>
-        <li><strong>Telegram</strong>: recebemos alertas privados no Telegram quando alguém se cadastra, assina ou escaneia um recibo, para identificarmos problemas rapidamente. Os alertas incluem seu nome, país e ID de conta e, nos escaneamentos, o nome do estabelecimento, o número de itens, o total, se você é assinante e a versão do app. Eles nunca incluem a foto, os itens, seu e-mail nem seu número de telefone. Consulte a <a href="https://telegram.org/privacy">Política de Privacidade do Telegram</a>.</li>
+        <li><strong>Telegram</strong>: recebemos alertas privados no Telegram quando alguém se cadastra, assina ou escaneia um recibo, para identificarmos problemas rapidamente. Eles incluem dados básicos da conta e do escaneamento. Eles nunca incluem a foto, os itens, seu e-mail nem seu número de telefone. Consulte a <a href="https://telegram.org/privacy">Política de Privacidade do Telegram</a>.</li>
         <li><strong>Apps de pagamento</strong>: quando você toca em um link de pagamento, o app de pagamento que você abre recebe o nome de usuário de quem vai receber e o valor.</li>
-        <li><strong>Hospedagem de fontes</strong>: a página inicial do Splitea (não as páginas das divisões) carrega a fonte de rsms.me, que recebe seu endereço IP como qualquer site que você visita.</li>
     </ul>
     <p>Só o Raúl pode acessar os servidores e as ferramentas de administração do Splitea, que são protegidos pelo Cloudflare Access. Ele só consulta dados de contas e de compartilhamentos para operar o serviço, responder a pedidos de suporte e lidar com abusos.</p>
     <h2>Onde seus dados são tratados</h2>
@@ -1351,7 +1343,7 @@
     <ul>
         <li><strong>Contrato</strong>: para fornecer aquilo para que você usa o Splitea, incluindo sua conta e seu perfil, o escaneamento, o compartilhamento, a busca de amigos, as notificações e a sua assinatura.</li>
         <li><strong>Consentimento</strong>: para as permissões que você concede no iOS (câmera, fotos, contatos, localização e notificações) e para os recibos que você decide reportar. Você pode retirar o consentimento a qualquer momento nos Ajustes do iOS.</li>
-        <li><strong>Interesses legítimos</strong>: para manter o Splitea seguro e funcionando (App Attest, logs do servidor, backups e alertas), para evitar abusos (moderação de fotos e denúncias) e para entender como o Splitea é usado (registros de escaneamento). Ponderamos esses interesses em relação aos seus direitos e os consideramos proporcionais.</li>
+        <li><strong>Interesses legítimos</strong>: para manter o Splitea seguro e funcionando (App Attest, logs do servidor, backups e alertas), para evitar abusos (moderação de fotos e denúncias) e para entender como o Splitea é usado (registros de escaneamento e contagens de visitas ao site). Ponderamos esses interesses em relação aos seus direitos e os consideramos proporcionais.</li>
     </ul>
     <h2>Seus direitos</h2>
     <p>Se você estiver no Espaço Econômico Europeu, no Reino Unido, na Suíça ou em outro lugar com lei de proteção de dados semelhante, você tem direito a:</p>
@@ -1373,7 +1365,7 @@
         <li>Identificadores: nome, endereço de e-mail, número de telefone, ID de conta, nomes de usuário de pagamento, token de push e chave do App Attest.</li>
         <li>Informações comerciais: o status da sua assinatura e os detalhes da transação da Apple.</li>
         <li>Geolocalização: localização aproximada enviada com um escaneamento (não armazenada, exceto com os recibos que você reporta).</li>
-        <li>Atividade na internet ou outra atividade eletrônica: registros de escaneamento e logs do servidor.</li>
+        <li>Atividade na internet ou outra atividade eletrônica: registros de escaneamento, logs do servidor e estatísticas de visitas ao site.</li>
         <li>Informações visuais: fotos de recibos e fotos de perfil.</li>
         <li>Informações sobre outras pessoas: os nomes e números de telefone das pessoas que você adiciona a uma divisão que compartilha.</li>
     </ul>
@@ -1409,7 +1401,7 @@
         <li>扫描并不是在您的手机上完成的。每张收据照片都会发送到我们的服务器和一个 AI 模型（目前为 Google Gemini），以读取其中的项目。我们不会保留照片。</li>
         <li>您的姓名、头像、电话号码和付款用户名保存在我们的用户目录中，以便有您号码的人能在 Splitea 上找到您。</li>
         <li>当您分享一笔分账时，一份副本会发送到我们的分享服务器，任何拿到链接的人都可以打开它。副本会在您分享 30 天后删除。</li>
-        <li>没有广告，没有跟踪，也没有任何分析或广告 SDK。我们绝不出售您的数据。</li>
+        <li>没有广告，也没有跟踪。App 不包含任何分析或广告 SDK，我们的网页只通过 Cloudflare Web Analytics 统计访问量，该工具不使用 Cookie。我们绝不出售您的数据。</li>
         <li>您可以随时在 App 内删除您的账户。</li>
     </ul>
     <h2>由谁负责</h2>
@@ -1457,7 +1449,7 @@
     <p>分享 30 天后，链接将失效，分享服务器也会删除这笔分账。您也可以通过“停止分享”或删除收据来提前结束。删除后，Cloudflare 的时间点恢复功能会再保留一份可恢复的副本，最长 30 天，我们仅用它来恢复被误删的分账。如果即时通讯 App 或浏览器已经下载了分账的预览图，分账删除后，这些预览图可能仍会留在它们的缓存中。</p>
     <p>如果分账中有人使用 Splitea，我们会通过 Apple 的推送服务向其发送一条通知，通知中会显示您的名字（不含姓氏）和商家名称。</p>
     <h2>网页版 Splitea</h2>
-    <p>您分享的对象无需 App，也无需账户，就可以在 splitea.app 上打开分账。网页会在浏览器的本地存储中创建一个随机的匿名 ID，用来显示谁正在编辑，并记住您是分账中的哪个人。如果您将自己标记为已付，这一状态会随分账一起保存。我们的网页不使用 Cookie、分析工具或广告。</p>
+    <p>您分享的对象无需 App，也无需账户，就可以在 splitea.app 上打开分账。网页会在浏览器的本地存储中创建一个随机的匿名 ID，用来显示谁正在编辑，并记住您是分账中的哪个人。如果您将自己标记为已付，这一状态会随分账一起保存。我们的网页不使用 Cookie 或广告。为了统计访问量和衡量页面速度，网页使用 Cloudflare Web Analytics，该工具不使用 Cookie，也不会跨其他网站跟踪您。</p>
     <p><strong>付款链接。</strong>Splitea 的付款链接会打开一个付款 App（例如 Venmo、PayPal 或 ATH Móvil），并预先填好收款人的用户名、金额和一条简短备注。我们的服务器只负责传递这些信息，不会存储它们。进入付款 App 后，适用该 App 自己的隐私政策。</p>
     <h2>查找使用 Splitea 的朋友</h2>
     <p>如果您允许访问通讯录，App 会读取您通讯录中的姓名、电话号码和照片，以便您将他人添加到分账中。为了显示其中哪些人在使用 Splitea，App 会将您添加的人的电话号码以标准国际格式发送到我们的用户目录。我们的服务器会使用一个秘密密钥将每个号码转换为带密钥的哈希值，与 Splitea 用户的哈希值进行比对，并返回匹配的个人资料。您发送的号码不会被存储，也不会被记录到日志中。App 绝不会上传您的整个通讯录，进行这项查询时也不会发送联系人的姓名和照片。</p>
@@ -1480,11 +1472,10 @@
     <h2>还有谁会处理您的数据</h2>
     <ul>
         <li><strong>Apple</strong>：“通过 Apple 登录”、iCloud、App Store、App Attest、推送通知和地图。请参阅 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
-        <li><strong>Cloudflare</strong>：托管 Splitea 的全部服务器和存储，并使用 Workers AI 审核头像。Cloudflare 会将我们的服务器日志保留最多 7 天，以便我们修复问题。日志中可能包含请求详情；当扫描以不寻常的方式失败时，还可能包含 AI 模型对收据的读取结果。请参阅 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</li>
+        <li><strong>Cloudflare</strong>：托管 Splitea 的全部服务器和存储，使用 Workers AI 审核头像，并使用 Web Analytics 统计 splitea.app 的访问量。Cloudflare 会将我们的服务器日志保留最多 7 天，以便我们修复问题。日志中可能包含请求详情；当扫描以不寻常的方式失败时，还可能包含 AI 模型对收据的读取结果。请参阅 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>。</li>
         <li><strong>Google</strong>：Gemini API 读取收据照片，并接收随扫描发送的大致位置。Google 依据其付费版 Gemini API 条款处理这些请求，这些条款不允许 Google 用这些请求改进其产品；Google 仅会在有限时间内保留这些请求，用于检测滥用行为。请参阅 <a href="https://ai.google.dev/gemini-api/terms">Gemini API 条款</a>。</li>
-        <li><strong>Telegram</strong>：当有人注册、订阅或扫描收据时，我们会收到私密的 Telegram 提醒，以便快速发现问题。提醒内容包括您的姓名、国家或地区和账户 ID；对于扫描，还包括商家名称、项目数量、总额、您是否已订阅以及 App 版本。提醒中绝不会包含照片、项目、您的电子邮件或电话号码。请参阅 <a href="https://telegram.org/privacy">Telegram 隐私政策</a>。</li>
+        <li><strong>Telegram</strong>：当有人注册、订阅或扫描收据时，我们会收到私密的 Telegram 提醒，以便快速发现问题。提醒内容包括基本的账户和扫描信息。提醒中绝不会包含照片、项目、您的电子邮件或电话号码。请参阅 <a href="https://telegram.org/privacy">Telegram 隐私政策</a>。</li>
         <li><strong>付款 App</strong>：当您轻点付款链接时，您打开的付款 App 会收到收款人的用户名和金额。</li>
-        <li><strong>字体托管方</strong>：Splitea 的首页（不包括分账页面）会从 rsms.me 加载字体，rsms.me 会像您访问的任何网站一样收到您的 IP 地址。</li>
     </ul>
     <p>只有 Raúl 能访问 Splitea 的服务器和管理工具，这些都受 Cloudflare Access 保护。他只会为了运营服务、回复客服请求和处理滥用行为而查看账户和分享数据。</p>
     <h2>您的数据在哪里处理</h2>
@@ -1522,7 +1513,7 @@
     <ul>
         <li><strong>履行合同</strong>：为您提供您使用 Splitea 所需要的服务，包括您的账户和个人资料、扫描、分享、查找朋友、通知和您的订阅。</li>
         <li><strong>同意</strong>：用于您在 iOS 中授予的权限（相机、照片、通讯录、位置和通知），以及您选择报告的收据。您可以随时在 iOS“设置”中撤回同意。</li>
-        <li><strong>合法利益</strong>：用于保障 Splitea 的安全和正常运行（App Attest、服务器日志、备份和提醒）、防止滥用（照片审核和举报），以及了解 Splitea 的使用情况（扫描记录）。我们已将这些利益与您的权利进行权衡，认为它们是相称的。</li>
+        <li><strong>合法利益</strong>：用于保障 Splitea 的安全和正常运行（App Attest、服务器日志、备份和提醒）、防止滥用（照片审核和举报），以及了解 Splitea 的使用情况（扫描记录和网站访问量）。我们已将这些利益与您的权利进行权衡，认为它们是相称的。</li>
     </ul>
     <h2>您的权利</h2>
     <p>如果您位于欧洲经济区、英国、瑞士或其他具有类似数据保护法律的地方，您享有以下权利：</p>
@@ -1544,7 +1535,7 @@
         <li>标识符：姓名、电子邮件地址、电话号码、账户 ID、付款用户名、推送令牌和 App Attest 密钥。</li>
         <li>商业信息：您的订阅状态和 Apple 的交易详情。</li>
         <li>地理位置数据：随扫描发送的大致位置（不存储，您报告的收据除外）。</li>
-        <li>互联网或其他电子活动：扫描记录和服务器日志。</li>
+        <li>互联网或其他电子活动：扫描记录、服务器日志和网站访问统计数据。</li>
         <li>视觉信息：收据照片和头像。</li>
         <li>关于其他人的信息：您在分享的分账中添加的人的姓名和电话号码。</li>
     </ul>
@@ -1580,7 +1571,7 @@
         <li>掃描並不在您的手機上進行。每張收據照片都會傳送到我們的伺服器和一個 AI 模型（目前為 Google Gemini），以讀取其中的項目。我們不會保留照片。</li>
         <li>您的姓名、大頭貼、電話號碼和付款使用者名稱會保存在我們的使用者目錄中，讓有您電話號碼的人能在 Splitea 上找到您。</li>
         <li>當您分享一筆分帳時，會有一份副本傳送到我們的分享伺服器，任何取得連結的人都能打開它。副本會在您分享 30 天後刪除。</li>
-        <li>沒有廣告、沒有追蹤，也沒有任何分析或廣告 SDK。我們絕不出售您的資料。</li>
+        <li>沒有廣告，也沒有追蹤。App 不含任何分析或廣告 SDK，我們的網頁也只透過 Cloudflare Web Analytics 計算造訪次數，這項工具不使用 Cookie。我們絕不出售您的資料。</li>
         <li>您可以隨時在 App 內刪除您的帳戶。</li>
     </ul>
     <h2>由誰負責</h2>
@@ -1628,7 +1619,7 @@
     <p>分享 30 天後，連結就會失效，分享伺服器也會刪除這筆分帳。您也可以使用「停止分享」或刪除收據來提早結束。刪除後，Cloudflare 的時間點復原功能會再保留一份可還原的副本，最長 30 天，我們只會用它來復原誤刪的分帳。如果訊息 App 或瀏覽器已經下載了分帳的預覽圖片，分帳刪除後，這些圖片可能仍會留在它們的快取中。</p>
     <p>如果分帳中有人使用 Splitea，我們會透過 Apple 的推播服務傳送通知給對方，通知中會顯示您的名字（不含姓氏）和店家名稱。</p>
     <h2>網頁版 Splitea</h2>
-    <p>您分享的對象不需要 App，也不需要帳戶，就能在 splitea.app 上打開分帳。網頁會在瀏覽器的本機儲存空間中建立一個隨機的匿名 ID，用來顯示誰正在編輯，並記住您是分帳中的哪一位。如果您將自己標記為已付，這項狀態會隨分帳一起儲存。我們的網頁不使用 Cookie、分析工具或廣告。</p>
+    <p>您分享的對象不需要 App，也不需要帳戶，就能在 splitea.app 上打開分帳。網頁會在瀏覽器的本機儲存空間中建立一個隨機的匿名 ID，用來顯示誰正在編輯，並記住您是分帳中的哪一位。如果您將自己標記為已付，這項狀態會隨分帳一起儲存。我們的網頁不使用 Cookie 或廣告。為了計算造訪次數和測量網頁速度，網頁會使用 Cloudflare Web Analytics，這項工具不使用 Cookie，也不會跨其他網站追蹤您。</p>
     <p><strong>付款連結。</strong>Splitea 的付款連結會打開付款 App（例如 Venmo、PayPal 或 ATH Móvil），並預先填入收款人的使用者名稱、金額和一段簡短備註。我們的伺服器只負責轉送這些資訊，不會儲存。進入付款 App 後，則適用該 App 自己的隱私權政策。</p>
     <h2>尋找使用 Splitea 的朋友</h2>
     <p>如果您允許取用聯絡人，App 會讀取您通訊錄中的姓名、電話號碼和照片，讓您將他人加入分帳。為了顯示其中哪些人在使用 Splitea，App 會將您加入的人的電話號碼以標準國際格式傳送到我們的使用者目錄。我們的伺服器會使用一組秘密金鑰將每個號碼轉成金鑰雜湊值，與 Splitea 使用者的雜湊值比對，並傳回相符的個人檔案。您傳送的號碼不會被儲存，也不會被寫入記錄檔。App 絕不會上傳您的整個通訊錄，進行這項查詢時也不會傳送聯絡人的姓名和照片。</p>
@@ -1651,11 +1642,10 @@
     <h2>還有誰會處理您的資料</h2>
     <ul>
         <li><strong>Apple</strong>：「使用 Apple 登入」、iCloud、App Store、App Attest、推播通知和地圖。請參閱 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>。</li>
-        <li><strong>Cloudflare</strong>：託管 Splitea 的所有伺服器和儲存空間，並使用 Workers AI 審查大頭貼。Cloudflare 會將我們的伺服器記錄檔保留最多 7 天，以便我們修正問題。記錄檔可能包含請求的詳細資訊；當掃描以不尋常的方式失敗時，也可能包含 AI 模型對收據的讀取結果。請參閱 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隱私權政策</a>。</li>
+        <li><strong>Cloudflare</strong>：託管 Splitea 的所有伺服器和儲存空間，使用 Workers AI 審查大頭貼，並透過 Web Analytics 計算 splitea.app 的造訪次數。Cloudflare 會將我們的伺服器記錄檔保留最多 7 天，以便我們修正問題。記錄檔可能包含請求的詳細資訊；當掃描以不尋常的方式失敗時，也可能包含 AI 模型對收據的讀取結果。請參閱 <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隱私權政策</a>。</li>
         <li><strong>Google</strong>：Gemini API 會讀取收據照片，並接收隨掃描傳送的大約位置。Google 依據其付費版 Gemini API 條款處理這些請求，這些條款不允許 Google 將其用於改善自家產品；Google 也只會在有限期間內保留這些請求，用於偵測濫用行為。請參閱 <a href="https://ai.google.dev/gemini-api/terms">Gemini API 條款</a>。</li>
-        <li><strong>Telegram</strong>：當有人註冊、訂閱或掃描收據時，我們會收到私人的 Telegram 提醒，以便迅速發現問題。提醒內容包括您的姓名、國家或地區和帳戶 ID；若是掃描，還包括店家名稱、項目數量、總金額、您是否已訂閱以及 App 版本。提醒中絕不會包含照片、項目、您的電子郵件或電話號碼。請參閱 <a href="https://telegram.org/privacy">Telegram 隱私權政策</a>。</li>
+        <li><strong>Telegram</strong>：當有人註冊、訂閱或掃描收據時，我們會收到私人的 Telegram 提醒，以便迅速發現問題。提醒內容包括基本的帳戶與掃描資訊。提醒中絕不會包含照片、項目、您的電子郵件或電話號碼。請參閱 <a href="https://telegram.org/privacy">Telegram 隱私權政策</a>。</li>
         <li><strong>付款 App</strong>：當您點一下付款連結時，您打開的付款 App 會收到收款人的使用者名稱和金額。</li>
-        <li><strong>字型託管方</strong>：Splitea 首頁（不包括分帳頁面）會從 rsms.me 載入字型，rsms.me 會像您造訪的任何網站一樣收到您的 IP 位址。</li>
     </ul>
     <p>只有 Raúl 能存取 Splitea 的伺服器和管理工具，這些都受到 Cloudflare Access 保護。他只會為了營運服務、回覆客服請求和處理濫用行為而查看帳戶和分享資料。</p>
     <h2>您的資料在哪裡處理</h2>
@@ -1693,7 +1683,7 @@
     <ul>
         <li><strong>履行合約</strong>：為您提供您使用 Splitea 所需要的服務，包括您的帳戶和個人檔案、掃描、分享、尋找朋友、通知和您的訂閱。</li>
         <li><strong>同意</strong>：適用於您在 iOS 中授予的權限（相機、照片、聯絡人、位置和通知），以及您選擇回報的收據。您可以隨時在 iOS「設定」中撤回同意。</li>
-        <li><strong>正當利益</strong>：用於維護 Splitea 的安全與正常運作（App Attest、伺服器記錄檔、備份和提醒）、防止濫用（照片審查和回報），以及了解 Splitea 的使用情況（掃描紀錄）。我們已將這些利益與您的權利相權衡，認為這些處理合乎比例。</li>
+        <li><strong>正當利益</strong>：用於維護 Splitea 的安全與正常運作（App Attest、伺服器記錄檔、備份和提醒）、防止濫用（照片審查和回報），以及了解 Splitea 的使用情況（掃描紀錄和網站造訪次數）。我們已將這些利益與您的權利相權衡，認為這些處理合乎比例。</li>
     </ul>
     <h2>您的權利</h2>
     <p>如果您位於歐洲經濟區、英國、瑞士，或其他具有類似資料保護法律的地方，您享有以下權利：</p>
@@ -1715,7 +1705,7 @@
         <li>識別符：姓名、電子郵件地址、電話號碼、帳戶 ID、付款使用者名稱、推播權杖和 App Attest 金鑰。</li>
         <li>商業資訊：您的訂閱狀態和 Apple 的交易詳細資訊。</li>
         <li>地理位置資料：隨掃描傳送的大約位置（不儲存，但您回報的收據除外）。</li>
-        <li>網際網路或其他電子活動：掃描紀錄和伺服器記錄檔。</li>
+        <li>網際網路或其他電子活動：掃描紀錄、伺服器記錄檔和網站造訪統計資料。</li>
         <li>視覺資訊：收據照片和大頭貼。</li>
         <li>關於其他人的資訊：您在分享的分帳中加入的人的姓名和電話號碼。</li>
     </ul>
