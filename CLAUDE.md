@@ -17,7 +17,7 @@ Splitea is live on the App Store (App ID 6760237781). The rules in `/Users/rauli
 - No em dashes or en dashes in any copy. `privacy.html` is clean; `terms.html` and `support.html` still have some (existing debt). Fix them in lines you touch, never add more.
 - No explanatory comments, HTML comments included.
 - Claims must match the code and the live policy. Never "on-device" scanning, "free forever", "no rounding", ratings or user counts.
-- Every change ships in all 10 language blocks of the page in the same commit. No English-only edits.
+- Every change ships in all 14 language blocks of the page in the same commit. No English-only edits.
 
 ## Where things live
 
@@ -34,9 +34,9 @@ Everything under `dist/` is public. `.html` is stripped from URLs, and an unknow
 
 ## How a page is built
 
-- Each page holds all 10 languages: `en, es, de, fr, it, ja, ko, pt, zh, zh-Hant`.
+- Each page holds all 14 languages: `en, es, de, fr, it, ja, ko, pt, zh, zh-Hant, nl, sv, da, nb` (the last four added 2026-10-16).
 - The header title is one `<p data-lang="xx">` per language. The body is one `<div data-lang="xx">` per language (`class="legal-content"` on privacy and terms).
-- An inline script at the bottom reads `?lang=`, else `navigator.language`, keeps the first two letters (`zh` with Hant/TW/HK/MO maps to `zh-Hant`), falls back to `en` for anything unsupported, then toggles `.active`. CSS shows only `[data-lang].active`.
+- An inline script at the bottom reads `?lang=`, else `navigator.language`, keeps the first two letters (`zh` with Hant/TW/HK/MO maps to `zh-Hant`), maps `no` and `nn` to `nb`, falls back to `en` for anything unsupported, then toggles `.active`. CSS shows only `[data-lang].active`.
 - Privacy and terms carry `<p class="updated">` in every block. Support has no date.
 - Contact uses role addresses only (support@, privacy@, legal@ on splitea.app); there is no postal address.
 
@@ -49,7 +49,7 @@ Released apps open `https://splitea.app/legal/<privacy|terms|support>?lang=<code
 A fact usually lives in several places. The Web Analytics disclosure touched five spots in the policy (The Short Version, Splitea on the Web, the Cloudflare bullet, legitimate interests, the CCPA categories) plus the landing. The 30-day share lifetime touched privacy, terms and support (`b1f2c80`). Grep all three pages for the old wording before editing.
 
 1. Edit the English block first. It is the source.
-2. Make the same edit in the other 9 blocks at the same position, using the page's own terminology and register:
+2. Make the same edit in the other 13 blocks at the same position, using the page's own terminology and register:
 
 | Block | Address | receipt | split |
 |---|---|---|---|
@@ -62,8 +62,12 @@ A fact usually lives in several places. The Web Analytics disclosure touched fiv
 | `pt` | você (Brazilian; pt-PT readers get it too) | recibo | divisão |
 | `zh` | 您 (Simplified) | 收据 | 分账 |
 | `zh-Hant` | 您 | 收據 | 分帳 |
+| `nl` | je | bon | split |
+| `sv` | du | kvitto | nota |
+| `da` | du | kvittering | split |
+| `nb` | du | kvittering | regning |
 
-   Words above are from `privacy.html`; reuse whatever the surrounding paragraphs already say. In-app labels (Settings, Delete Account, Report, Stop Sharing) must match the app's own translations in `/Users/raulie/Workspace/Splitea/Splitea/Localizable.xcstrings` (`pt` uses pt-BR, `zh` uses zh-Hans).
+   Words above are from `privacy.html`; reuse whatever the surrounding paragraphs already say. In-app labels (Settings, Delete Account, Report, Stop Sharing) must match the app's own translations in `/Users/raulie/Workspace/Splitea/Splitea/Localizable.xcstrings` (`pt` uses pt-BR, `zh` uses zh-Hans, `nb` is the app's Norwegian).
 3. Reviewer pass: a separate read of each block against the English, by a reviewer that did not write the translation (for example a fresh subagent), for meaning drift, dropped clauses, register and terminology.
 4. Mechanical checks:
 
@@ -115,7 +119,7 @@ Open assumptions in the current text: the Gemini API is on the paid tier, Cloudf
 
 ## Last updated date
 
-- Bump `<p class="updated">` in all 10 blocks whenever the substance of privacy or terms changes, in each block's existing date format: `grep -n 'class="updated"' dist/legal/privacy.html`.
+- Bump `<p class="updated">` in all 14 blocks whenever the substance of privacy or terms changes, in each block's existing date format: `grep -n 'class="updated"' dist/legal/privacy.html`.
 - The policy promises an in-app notice for important changes. Flag any material change to Raúl so he can decide on the notice.
 
 ## Deploy
@@ -142,7 +146,7 @@ PATH=/opt/homebrew/opt/node@22/bin:$PATH npx wrangler deploy
 ## Known issues and stale docs
 
 - `privacy.html` and `terms.html` write the `class` attribute twice on the `en` body div (`class="legal-content" data-lang="en" class="active"`). Browsers keep the first, so with JavaScript off no body block is shown. `support.html` is fine. The fix is `class="legal-content active"` on that div in both pages.
-- `terms.html` still says June 3, 2026, though it has changed since, last in `b1f2c80` (2026-08-09).
-- `terms.html` has the renewal-charge bullet ("Your account will be charged for renewal...") only in `en` and `es`; the other 8 blocks lack it.
+- `terms.html` has the renewal-charge bullet ("Your account will be charged for renewal...") only in `en`, `es`, `nl`, `sv`, `da` and `nb`; the other 8 blocks lack it.
 - `README.md` and the `wrangler.toml` comments say the pages are JS-free; each page has the inline language script. Both say the dev route exists for an in-app About screen; the app links to prod from Settings, and the dev route serves dev splitea-web's relative links.
 - `privacy-policy-1.6.1` is a local branch already fast-forwarded into `main`. Work on `main`.
+- Facts fixed in every language on 2026-10-16: the paid tier is Splitea Unlimited (never Pro), free scans are a lifetime allowance per account (the server counts per Apple sign-in), Apple's account is "Apple Account" in Apple's own wording (es cuenta de Apple, it and ja Apple Account), in-app deletion erases receipts from the device and iCloud, and the app labels are Share Split, Restore and Report User. Terms is dated October 16, 2026.
