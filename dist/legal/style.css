@@ -48,7 +48,7 @@ h2 {
 }
 p, li { font-size: 15px; color: #424245; margin-bottom: 12px; }
 p:last-child { margin-bottom: 0; }
-ul { padding-left: 20px; }
+ul { padding-inline-start: 20px; }
 strong { color: #1d1d1f; }
 a { color: #1d1d1f; text-decoration: none; }
 a:hover { color: #424245; }

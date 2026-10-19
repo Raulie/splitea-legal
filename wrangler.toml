@@ -1,6 +1,6 @@
 # Cloudflare Workers + Static Assets config for Splitea's legal
 # pages (Privacy Policy, Terms of Service, Support / FAQ). Three
-# server-rendered HTML files plus their shared stylesheet and
+# static HTML files plus their shared stylesheet and
 # wordmark SVG, served at:
 #
 #   https://splitea.app/legal/privacy
@@ -15,8 +15,8 @@
 #   - Updates ship independently of the SPA or share-link worker.
 #     Editing a typo in the Privacy Policy doesn't require redeploying
 #     splitea-web's 100 KB JS bundle.
-#   - Apple's review process reaches a fast, JS-free page even if the
-#     reviewer's browser blocks scripts.
+#   - Apple's review process reaches a fast static page; with scripts
+#     blocked it shows the English text.
 #
 # Pairs with the existing splitea-shares and splitea-web workers:
 #   - splitea-shares owns: /r/<id>, /p/*, /live/*, /.well-known/*, favicons
@@ -38,10 +38,9 @@ compatibility_date = "2025-04-01"
 workers_dev = false
 preview_urls = false
 
-# Custom-domain routing. Both prod and dev hostnames so the in-app
-# About screen can link to `dev.splitea.app/legal/*` from
-# pre-release builds without falling through to splitea-web's
-# 404 / SPA-fallback page.
+# Custom-domain routing. Both prod and dev hostnames, so dev
+# splitea-web's relative `/legal/*` links land here instead of
+# falling through to splitea-web's 404 / SPA-fallback page.
 routes = [
   { pattern = "splitea.app/legal/*",     zone_name = "splitea.app" },
   { pattern = "dev.splitea.app/legal/*", zone_name = "splitea.app" },

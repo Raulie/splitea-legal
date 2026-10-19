@@ -14,10 +14,10 @@ Splitea is live on the App Store (App ID 6760237781). The rules in `/Users/rauli
 
 - Deploying needs Raúl's explicit go, every time.
 - Commit only when asked. One-line commit messages, no body, no Co-Authored-By lines.
-- No em dashes or en dashes in any copy. `privacy.html` is clean; `terms.html` and `support.html` still have some (existing debt). Fix them in lines you touch, never add more.
+- No em dashes or en dashes in any copy, meta tags included. All three pages are clean as of 2026-10-18; keep them that way.
 - No explanatory comments, HTML comments included.
 - Claims must match the code and the live policy. Never "on-device" scanning, "free forever", "no rounding", ratings or user counts.
-- Every change ships in all 14 language blocks of the page in the same commit. No English-only edits.
+- Every change ships in all 22 language blocks of the page in the same commit. No English-only edits.
 
 ## Where things live
 
@@ -34,9 +34,10 @@ Everything under `dist/` is public. `.html` is stripped from URLs, and an unknow
 
 ## How a page is built
 
-- Each page holds all 14 languages: `en, es, de, fr, it, ja, ko, pt, zh, zh-Hant, nl, sv, da, nb` (the last four added 2026-10-16).
+- Each page holds all 22 languages: `en, es, de, fr, it, ja, ko, pt, zh, zh-Hant, nl, sv, da, nb, fi, pl, cs, ro, hu, el, ar, he` (nl, sv, da and nb added 2026-10-16, the last eight 2026-10-18).
+- `ar` and `he` blocks carry `dir="rtl"` on their opening div; the header and footer stay left to right. Lists use `padding-inline-start` so they indent on the correct side.
 - The header title is one `<p data-lang="xx">` per language. The body is one `<div data-lang="xx">` per language (`class="legal-content"` on privacy and terms).
-- An inline script at the bottom reads `?lang=`, else `navigator.language`, keeps the first two letters (`zh` with Hant/TW/HK/MO maps to `zh-Hant`), maps `no` and `nn` to `nb`, falls back to `en` for anything unsupported, then toggles `.active`. CSS shows only `[data-lang].active`.
+- An inline script at the bottom reads `?lang=`, else `navigator.language`, keeps the first two letters (`zh` with Hant/TW/HK/MO maps to `zh-Hant`), maps `no` and `nn` to `nb` and `iw` to `he`, falls back to `en` for anything unsupported, then toggles `.active`. CSS shows only `[data-lang].active`.
 - Privacy and terms carry `<p class="updated">` in every block. Support has no date.
 - Contact uses role addresses only (support@, privacy@, legal@ on splitea.app); there is no postal address.
 
@@ -49,7 +50,7 @@ Released apps open `https://splitea.app/legal/<privacy|terms|support>?lang=<code
 A fact usually lives in several places. The Web Analytics disclosure touched five spots in the policy (The Short Version, Splitea on the Web, the Cloudflare bullet, legitimate interests, the CCPA categories) plus the landing. The 30-day share lifetime touched privacy, terms and support (`b1f2c80`). Grep all three pages for the old wording before editing.
 
 1. Edit the English block first. It is the source.
-2. Make the same edit in the other 13 blocks at the same position, using the page's own terminology and register:
+2. Make the same edit in the other 21 blocks at the same position, using the page's own terminology and register:
 
 | Block | Address | receipt | split |
 |---|---|---|---|
@@ -66,6 +67,14 @@ A fact usually lives in several places. The Web Analytics disclosure touched fiv
 | `sv` | du | kvitto | nota |
 | `da` | du | kvittering | split |
 | `nb` | du | kvittering | regning |
+| `fi` | sinä | kuitti | jako |
+| `pl` | ty (Twój, Ci capitalized) | paragon | podział |
+| `cs` | vy | účtenka | rozdělení |
+| `ro` | tu | bon | împărțire |
+| `hu` | te | blokk | felosztás |
+| `el` | εσείς | απόδειξη | μοιρασιά |
+| `ar` | أنت (Apple's Arabic register) | إيصال | تقسيم |
+| `he` | gender-neutral impersonal forms | קבלה | חלוקה |
 
    Words above are from `privacy.html`; reuse whatever the surrounding paragraphs already say. In-app labels (Settings, Delete Account, Report, Stop Sharing) must match the app's own translations in `/Users/raulie/Workspace/Splitea/Splitea/Localizable.xcstrings` (`pt` uses pt-BR, `zh` uses zh-Hans, `nb` is the app's Norwegian).
 3. Reviewer pass: a separate read of each block against the English, by a reviewer that did not write the translation (for example a fresh subagent), for meaning drift, dropped clauses, register and terminology.
@@ -77,7 +86,7 @@ awk 'function out(){if(l)print l, "h1="a, "h2="h, "p="p, "li="i, "faq="q} /<div[
 /usr/bin/grep -n -E $'\xe2\x80\x93|\xe2\x80\x94' dist/legal/privacy.html
 ```
 
-   The first prints element counts per language; every row must match (terms has one known `li` gap, below). Run it on each page you changed. The second must print nothing for lines you touched.
+   The first prints element counts per language; every row must match. Run it on each page you changed. The second must print nothing for lines you touched.
 5. Preview by opening the file in a browser and adding `?lang=ja` (and so on) to switch blocks.
 
 ## The policy must describe what the code does
@@ -119,7 +128,7 @@ Open assumptions in the current text: the Gemini API is on the paid tier, Cloudf
 
 ## Last updated date
 
-- Bump `<p class="updated">` in all 14 blocks whenever the substance of privacy or terms changes, in each block's existing date format: `grep -n 'class="updated"' dist/legal/privacy.html`.
+- Bump `<p class="updated">` in all 22 blocks whenever the substance of privacy or terms changes, in each block's existing date format: `grep -n 'class="updated"' dist/legal/privacy.html`.
 - The policy promises an in-app notice for important changes. Flag any material change to Raúl so he can decide on the notice.
 
 ## Deploy
@@ -145,8 +154,6 @@ PATH=/opt/homebrew/opt/node@22/bin:$PATH npx wrangler deploy
 
 ## Known issues and stale docs
 
-- `privacy.html` and `terms.html` write the `class` attribute twice on the `en` body div (`class="legal-content" data-lang="en" class="active"`). Browsers keep the first, so with JavaScript off no body block is shown. `support.html` is fine. The fix is `class="legal-content active"` on that div in both pages.
-- `terms.html` has the renewal-charge bullet ("Your account will be charged for renewal...") only in `en`, `es`, `nl`, `sv`, `da` and `nb`; the other 8 blocks lack it.
-- `README.md` and the `wrangler.toml` comments say the pages are JS-free; each page has the inline language script. Both say the dev route exists for an in-app About screen; the app links to prod from Settings, and the dev route serves dev splitea-web's relative links.
 - `privacy-policy-1.6.1` is a local branch already fast-forwarded into `main`. Work on `main`.
 - Facts fixed in every language on 2026-10-16: the paid tier is Splitea Unlimited (never Pro), free scans are a lifetime allowance per account (the server counts per Apple sign-in), Apple's account is "Apple Account" in Apple's own wording (es cuenta de Apple, it and ja Apple Account), in-app deletion erases receipts from the device and iCloud, and the app labels are Share Split, Restore and Report User. Terms is dated October 16, 2026.
+- Facts fixed in every language on 2026-10-18: a locked share lets others only view the split and record payments; Sign in with Apple sits at Settings → [your name] → Sign in with Apple; iOS 26 blocking is Messages → the person's icon → Info → Block Contact, or Contacts → Block Contact, with the list at Settings → Privacy & Security → Blocked Contacts; app permissions are under Settings → Apps → Splitea; in-app blocking is Block User on the edit-contact sheet, unblocked under Blocked Users; items are edited or deleted from their touch-and-hold menu and added with Add Item in edit mode; the photo-screening sentence opens the closing paragraph of User Profile Content; every terms block has the renewal-charge bullet. Privacy and terms are dated October 18, 2026.

@@ -2,7 +2,7 @@
 
 Cloudflare Worker that serves [Splitea](https://github.com/Raulie/Splitea)'s legal + support pages as static HTML at `splitea.app/legal/*`.
 
-Three pages, one stylesheet, one logo. No JavaScript, no server-side rendering — Cloudflare serves the bytes from edge cache.
+Three pages, one stylesheet, one logo. Each page holds every language and a small inline script that shows the right one; there's no server-side rendering, and Cloudflare serves the bytes from edge cache.
 
 | URL | File |
 |---|---|
@@ -16,9 +16,9 @@ Plus shared assets (`style.css`, `logo.svg`) served from the same path.
 
 Split out of `splitea-shares` and `splitea-web` so that:
 
-- The bundle stays static. No JS execution, no cold-start tax, no SPA hydration to wait on.
+- The bundle stays static. No server-side code, no cold-start tax, no SPA hydration to wait on.
 - Updates ship independently. Fixing a typo in the Privacy Policy doesn't require redeploying `splitea-web`'s SPA bundle.
-- Apple's review process reaches a fast, JS-free page even if the reviewer's browser blocks scripts.
+- Apple's review process reaches a fast static page; with scripts blocked it shows the English text.
 
 Pairs with the other workers under `splitea.app` via path-precedence routing:
 
@@ -39,9 +39,9 @@ The pages are hand-written HTML. Edit `dist/legal/*.html` directly; preview by o
 npx wrangler deploy
 ```
 
-Routes are registered for both prod and `dev.splitea.app` so the iOS in-app About screen can deep-link to `dev.splitea.app/legal/*` from pre-release builds without falling through to `splitea-web`'s 404.
+Routes are registered for both prod and `dev.splitea.app`, so dev splitea-web's relative `/legal/*` links land on these pages instead of falling through to `splitea-web`'s 404. One deploy serves both hosts.
 
 ## Related repos
 
-- [Splitea](https://github.com/Raulie/Splitea) — iOS client (links here from the About screen).
-- [splitea-web](https://github.com/Raulie/splitea-web) — apex SPA. Co-routed on `splitea.app`.
+- [Splitea](https://github.com/Raulie/Splitea): iOS client (links here from Settings and the paywall).
+- [splitea-web](https://github.com/Raulie/splitea-web): apex SPA. Co-routed on `splitea.app`.
