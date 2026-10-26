@@ -45,7 +45,7 @@
 <div class="content">
 <div class="legal-content active" data-lang="en">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 18, 2026</p>
+    <p class="updated">Last updated: October 19, 2026</p>
     <p>Splitea is a bill-splitting app made by one person, Raúl Mora ("we", "us"). This policy explains what information Splitea handles, where it goes, how long it's kept and what you can do about it. It covers the Splitea iPhone app and the Splitea pages at splitea.app.</p>
     <h2>The Short Version</h2>
     <ul>
@@ -70,6 +70,7 @@
         <li><strong>Our user directory</strong>, so people who use Splitea and have your phone number can see your name, photo and payment usernames when they split a bill with you.</li>
     </ul>
     <p>In the directory, your phone number is stored as a keyed hash (used for matching) and as an encrypted copy (so the app can show it back to you). Your name and payment usernames are stored as plain text because they are shown to other people. We also store your App Store country to understand where Splitea is used.</p>
+    <p><strong>Bank details.</strong> If you add bank details for bank transfers (the account holder's name and IBAN), they're kept on your device and in your iCloud account, not in our directory. They're included only in the links you share for bills you paid, so the people you share with can pay you back, and they're kept with that split until it expires. If someone opens your link in the Splitea app, the app keeps your bank details on their device so they can pay you later.</p>
     <p>Anyone who uses Splitea and has your phone number can find your profile. A phone number is required to have a profile, so the only way to stop being findable is to delete your account.</p>
     <p><strong>Profile photos.</strong> Before a profile photo is saved, an automated moderation model (Cloudflare Workers AI) checks it for objectionable content, and photos that fail are rejected. Saved profile photos are served from a public web address, so anyone who has that address can view them.</p>
     <h2>Your Receipts</h2>
@@ -94,7 +95,7 @@
     <ul>
         <li>The store, date, items, prices, totals and the receipt photo.</li>
         <li>Who is on the split and who owes what, with each person's name, phone number and profile photo link, as they appear in your contacts or their Splitea profile.</li>
-        <li>The payment usernames of the person who paid, so the others can pay them back.</li>
+        <li>The payment usernames of the person who paid, so the others can pay them back, and their bank details if they shared the split and added them.</li>
     </ul>
     <p><strong>Anyone with the link can open the split</strong>, in the app or in a web browser, and see everything above, including the receipt photo. Only send the link to people you trust.</p>
     <p>People who open the link can assign items, change the split and mark themselves as paid. If you lock editing, they can only view the split and record payments. While a split is open, the people viewing it can see the names and Splitea account IDs (or anonymous web IDs) of the others connected to it, along with their edits and any profile changes they make. These edits are saved with the split.</p>
@@ -186,6 +187,7 @@
     <ul>
         <li>Identifiers: name, email address, phone number, account ID, payment usernames, push token and App Attest key.</li>
         <li>Commercial information: your subscription status and Apple's transaction details.</li>
+        <li>Financial information: the account holder's name and IBAN, if you add bank details.</li>
         <li>Geolocation: approximate location sent with a scan (not stored, except with receipts you report).</li>
         <li>Internet or other electronic activity: scan records, server logs and website visit statistics.</li>
         <li>Visual information: receipt photos and profile photos.</li>
@@ -215,7 +217,7 @@
 
 <div class="legal-content" data-lang="es">
     <h1>Política de privacidad</h1>
-    <p class="updated">Última actualización: 18 de octubre de 2026</p>
+    <p class="updated">Última actualización: 19 de octubre de 2026</p>
     <p>Splitea es una app para dividir cuentas creada por una sola persona, Raúl Mora («nosotros»). Esta política explica qué información maneja Splitea, adónde va, cuánto tiempo se conserva y qué puedes hacer al respecto. Cubre la app Splitea para iPhone y las páginas de Splitea en splitea.app.</p>
     <h2>En resumen</h2>
     <ul>
@@ -240,6 +242,7 @@
         <li><strong>Nuestro directorio de usuarios</strong>, para que las personas que usan Splitea y tienen tu número de teléfono puedan ver tu nombre, tu foto y tus nombres de usuario de pago cuando dividen una cuenta contigo.</li>
     </ul>
     <p>En el directorio, tu número de teléfono se guarda como un hash con clave (que se usa para encontrar coincidencias) y como una copia cifrada (para que la app pueda mostrártelo). Tu nombre y tus nombres de usuario de pago se guardan como texto sin cifrar porque se muestran a otras personas. También guardamos el país de tu App Store para entender dónde se usa Splitea.</p>
+    <p><strong>Datos bancarios.</strong> Si agregas datos bancarios para transferencias (el nombre del titular de la cuenta y el IBAN), se guardan en tu dispositivo y en tu cuenta de iCloud, no en nuestro directorio. Solo se incluyen en los enlaces que compartes de gastos que pagaste tú, para que las personas con las que compartes puedan devolverte el dinero, y se guardan con esa división hasta que caduque. Si alguien abre tu enlace en la app Splitea, la app guarda tus datos bancarios en su dispositivo para que pueda pagarte más tarde.</p>
     <p>Cualquier persona que use Splitea y tenga tu número de teléfono puede encontrar tu perfil. Para tener un perfil hace falta un número de teléfono, así que la única forma de dejar de ser localizable es eliminar tu cuenta.</p>
     <p><strong>Fotos de perfil.</strong> Antes de guardar una foto de perfil, un modelo de moderación automática (Cloudflare Workers AI) comprueba si tiene contenido inapropiado, y las fotos que no pasan la comprobación se rechazan. Las fotos de perfil guardadas se sirven desde una dirección web pública, así que cualquiera que tenga esa dirección puede verlas.</p>
     <h2>Tus recibos</h2>
@@ -264,7 +267,7 @@
     <ul>
         <li>El establecimiento, la fecha, los artículos, los precios, los totales y la foto del recibo.</li>
         <li>Quién está en la división y cuánto debe cada uno, con el nombre, el número de teléfono y el enlace a la foto de perfil de cada persona, tal como aparecen en tus contactos o en su perfil de Splitea.</li>
-        <li>Los nombres de usuario de pago de la persona que pagó, para que los demás puedan devolverle el dinero.</li>
+        <li>Los nombres de usuario de pago de la persona que pagó, para que los demás puedan devolverle el dinero, y sus datos bancarios si compartió la división y los agregó.</li>
     </ul>
     <p><strong>Cualquiera con el enlace puede abrir la división</strong>, en la app o en un navegador web, y ver todo lo anterior, incluida la foto del recibo. Envía el enlace solo a personas de confianza.</p>
     <p>Las personas que abren el enlace pueden asignar artículos, cambiar la división y marcar que ya pagaron. Si bloqueas la edición, solo pueden ver la división y registrar pagos. Mientras una división está abierta, quienes la ven pueden ver los nombres y los ID de cuenta de Splitea (o los ID web anónimos) de las demás personas conectadas, junto con sus ediciones y cualquier cambio que hagan en su perfil. Estas ediciones se guardan con la división.</p>
@@ -356,6 +359,7 @@
     <ul>
         <li>Identificadores: nombre, dirección de correo electrónico, número de teléfono, ID de cuenta, nombres de usuario de pago, token push y clave de App Attest.</li>
         <li>Información comercial: el estado de tu suscripción y los detalles de transacción de Apple.</li>
+        <li>Información financiera: el nombre del titular de la cuenta y el IBAN, si agregas datos bancarios.</li>
         <li>Geolocalización: la ubicación aproximada enviada con un escaneo (no se guarda, salvo con los recibos que reportas).</li>
         <li>Actividad en internet u otra actividad electrónica: registros de escaneo, registros del servidor y estadísticas de visitas al sitio web.</li>
         <li>Información visual: fotos de recibos y fotos de perfil.</li>
@@ -385,7 +389,7 @@
 
 <div class="legal-content" data-lang="de">
     <h1>Datenschutzrichtlinie</h1>
-    <p class="updated">Zuletzt aktualisiert: 18. Oktober 2026</p>
+    <p class="updated">Zuletzt aktualisiert: 19. Oktober 2026</p>
     <p>Splitea ist eine App zum Aufteilen von Rechnungen, entwickelt von einer einzigen Person, Raúl Mora („wir“, „uns“). Hier erklären wir, mit welchen Informationen Splitea umgeht, wohin sie gehen, wie lange sie aufbewahrt werden und welche Möglichkeiten du dabei hast. Diese Richtlinie gilt für die Splitea-App fürs iPhone und für die Splitea-Seiten auf splitea.app.</p>
     <h2>Das Wichtigste in Kürze</h2>
     <ul>
@@ -410,6 +414,7 @@
         <li><strong>In unserem Nutzerverzeichnis</strong>, damit Personen, die Splitea nutzen und deine Telefonnummer haben, deinen Namen, dein Foto und deine Zahlungs-Benutzernamen sehen können, wenn sie eine Rechnung mit dir aufteilen.</li>
     </ul>
     <p>Im Verzeichnis wird deine Telefonnummer als schlüsselbasierter Hashwert (für den Abgleich) und als verschlüsselte Kopie (damit die App sie dir wieder anzeigen kann) gespeichert. Dein Name und deine Zahlungs-Benutzernamen werden im Klartext gespeichert, weil sie anderen Personen angezeigt werden. Außerdem speichern wir dein App-Store-Land, um zu verstehen, wo Splitea genutzt wird.</p>
+    <p><strong>Bankdaten.</strong> Wenn du Bankdaten für Überweisungen hinzufügst (Name des Kontoinhabers und IBAN), werden sie auf deinem Gerät und in deinem iCloud-Account gespeichert, nicht in unserem Verzeichnis. Sie sind nur in den Links enthalten, die du für von dir bezahlte Rechnungen teilst, damit die Personen, mit denen du teilst, dir das Geld zurückzahlen können, und sie werden mit diesem Split gespeichert, bis er abläuft. Wenn jemand deinen Link in der Splitea-App öffnet, speichert die App deine Bankdaten auf dem Gerät dieser Person, damit sie dich später bezahlen kann.</p>
     <p>Jede Person, die Splitea nutzt und deine Telefonnummer hat, kann dein Profil finden. Für ein Profil ist eine Telefonnummer erforderlich. Du kannst also nur verhindern, gefunden zu werden, indem du dein Konto löschst.</p>
     <p><strong>Profilfotos.</strong> Bevor ein Profilfoto gespeichert wird, prüft ein automatisiertes Moderationsmodell (Cloudflare Workers AI) es auf anstößige Inhalte, und Fotos, die die Prüfung nicht bestehen, werden abgelehnt. Gespeicherte Profilfotos werden über eine öffentliche Webadresse bereitgestellt, sodass jeder, der diese Adresse hat, sie ansehen kann.</p>
     <h2>Deine Belege</h2>
@@ -434,7 +439,7 @@
     <ul>
         <li>Geschäft, Datum, Posten, Preise, Summen und das Belegfoto.</li>
         <li>Wer im Split ist und wer wie viel schuldet, jeweils mit Name, Telefonnummer und Link zum Profilfoto jeder Person, so wie sie in deinen Kontakten oder in ihrem Splitea-Profil erscheinen.</li>
-        <li>Die Zahlungs-Benutzernamen der Person, die bezahlt hat, damit die anderen ihr das Geld zurückzahlen können.</li>
+        <li>Die Zahlungs-Benutzernamen der Person, die bezahlt hat, damit die anderen ihr das Geld zurückzahlen können, sowie ihre Bankdaten, wenn sie den Split geteilt und diese hinzugefügt hat.</li>
     </ul>
     <p><strong>Jeder mit dem Link kann den Split öffnen</strong>, in der App oder im Webbrowser, und alles oben Genannte sehen, auch das Belegfoto. Schick den Link nur an Personen, denen du vertraust.</p>
     <p>Personen, die den Link öffnen, können Posten zuweisen, den Split ändern und sich als bezahlt markieren. Wenn du die Bearbeitung sperrst, können sie den Split nur ansehen und Zahlungen erfassen. Solange ein Split geöffnet ist, sehen die Personen, die ihn ansehen, die Namen und Splitea-Konto-IDs (oder anonymen Web-IDs) der anderen, die mit ihm verbunden sind, sowie deren Bearbeitungen und alle Profiländerungen, die sie vornehmen. Diese Bearbeitungen werden mit dem Split gespeichert.</p>
@@ -526,6 +531,7 @@
     <ul>
         <li>Identifikatoren: Name, E-Mail-Adresse, Telefonnummer, Konto-ID, Zahlungs-Benutzernamen, Push-Token und App-Attest-Schlüssel.</li>
         <li>Geschäftsinformationen: dein Abonnementstatus und die Transaktionsdetails von Apple.</li>
+        <li>Finanzinformationen: der Name des Kontoinhabers und die IBAN, wenn du Bankdaten hinzufügst.</li>
         <li>Geolokalisierungsdaten: der ungefähre Standort, der mit einem Scan gesendet wird (nicht gespeichert, außer bei Belegen, die du meldest).</li>
         <li>Internet- oder sonstige elektronische Aktivität: Scan-Einträge, Server-Logs und Besuchsstatistiken der Website.</li>
         <li>Visuelle Informationen: Belegfotos und Profilfotos.</li>
@@ -555,7 +561,7 @@
 
 <div class="legal-content" data-lang="fr">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Dernière mise à jour : 18 octobre 2026</p>
+    <p class="updated">Dernière mise à jour : 19 octobre 2026</p>
     <p>Splitea est une application pour partager les additions, créée par une seule personne, Raúl Mora (« nous »). Cette politique explique quelles informations Splitea traite, où elles vont, combien de temps elles sont conservées et ce que vous pouvez faire à ce sujet. Elle couvre l'application Splitea pour iPhone et les pages Splitea sur splitea.app.</p>
     <h2>En bref</h2>
     <ul>
@@ -580,6 +586,7 @@
         <li><strong>Notre annuaire d'utilisateurs</strong>, pour que les personnes qui utilisent Splitea et ont votre numéro de téléphone puissent voir votre nom, votre photo et vos noms d'utilisateur de paiement lorsqu'elles partagent une addition avec vous.</li>
     </ul>
     <p>Dans l'annuaire, votre numéro de téléphone est stocké sous forme de hachage à clé (utilisé pour la mise en correspondance) et sous forme de copie chiffrée (pour que l'application puisse vous l'afficher). Votre nom et vos noms d'utilisateur de paiement sont stockés en clair, car ils sont montrés à d'autres personnes. Nous conservons aussi le pays de votre App Store pour comprendre où Splitea est utilisé.</p>
+    <p><strong>Coordonnées bancaires.</strong> Si vous ajoutez des coordonnées bancaires pour les virements (le nom du titulaire du compte et l'IBAN), elles sont conservées sur votre appareil et dans votre compte iCloud, et non dans notre annuaire. Elles ne sont incluses que dans les liens que vous partagez pour des additions que vous avez payées, afin que les personnes avec qui vous partagez puissent vous rembourser, et elles sont conservées avec cette addition jusqu'à son expiration. Si quelqu'un ouvre votre lien dans l'application Splitea, l'application conserve vos coordonnées bancaires sur l'appareil de cette personne afin qu'elle puisse vous payer plus tard.</p>
     <p>Toute personne qui utilise Splitea et a votre numéro de téléphone peut trouver votre profil. Un numéro de téléphone est obligatoire pour avoir un profil : la seule façon de ne plus être trouvable est donc de supprimer votre compte.</p>
     <p><strong>Photos de profil.</strong> Avant l'enregistrement d'une photo de profil, un modèle de modération automatisé (Cloudflare Workers AI) vérifie qu'elle ne contient pas de contenu inapproprié, et les photos qui ne passent pas cette vérification sont refusées. Les photos de profil enregistrées sont servies depuis une adresse web publique : toute personne qui dispose de cette adresse peut donc les voir.</p>
     <h2>Vos reçus</h2>
@@ -604,7 +611,7 @@
     <ul>
         <li>Le commerce, la date, les articles, les prix, les totaux et la photo du reçu.</li>
         <li>Les personnes de l'addition et ce que chacune doit, avec le nom, le numéro de téléphone et le lien vers la photo de profil de chaque personne, tels qu'ils figurent dans vos contacts ou dans son profil Splitea.</li>
-        <li>Les noms d'utilisateur de paiement de la personne qui a payé, pour que les autres puissent la rembourser.</li>
+        <li>Les noms d'utilisateur de paiement de la personne qui a payé, pour que les autres puissent la rembourser, ainsi que ses coordonnées bancaires si elle a partagé l'addition et les a ajoutées.</li>
     </ul>
     <p><strong>Toute personne disposant du lien peut ouvrir l'addition</strong>, dans l'application ou dans un navigateur web, et voir tout ce qui précède, y compris la photo du reçu. N'envoyez le lien qu'à des personnes de confiance.</p>
     <p>Les personnes qui ouvrent le lien peuvent attribuer des articles, modifier l'addition et indiquer qu'elles ont payé. Si vous verrouillez la modification, elles peuvent seulement consulter l'addition et enregistrer des paiements. Tant qu'une addition est ouverte, les personnes qui la consultent peuvent voir les noms et identifiants de compte Splitea (ou identifiants web anonymes) des autres personnes connectées, ainsi que leurs modifications et les changements qu'elles apportent à leur profil. Ces modifications sont enregistrées avec l'addition.</p>
@@ -696,6 +703,7 @@
     <ul>
         <li>Identifiants : nom, adresse e-mail, numéro de téléphone, identifiant de compte, noms d'utilisateur de paiement, jeton push et clé App Attest.</li>
         <li>Informations commerciales : votre statut d'abonnement et les détails de transaction d'Apple.</li>
+        <li>Informations financières : le nom du titulaire du compte et l'IBAN, si vous ajoutez des coordonnées bancaires.</li>
         <li>Géolocalisation : position approximative envoyée avec un scan (non stockée, sauf avec les reçus que vous signalez).</li>
         <li>Activité Internet ou autre activité électronique : enregistrements de scan, journaux de serveur et statistiques de visites du site web.</li>
         <li>Informations visuelles : photos de reçus et photos de profil.</li>
@@ -725,7 +733,7 @@
 
 <div class="legal-content" data-lang="it">
     <h1>Informativa sulla privacy</h1>
-    <p class="updated">Ultimo aggiornamento: 18 ottobre 2026</p>
+    <p class="updated">Ultimo aggiornamento: 19 ottobre 2026</p>
     <p>Splitea è un'app per dividere i conti creata da una sola persona, Raúl Mora («noi»). Questa informativa spiega quali informazioni gestisce Splitea, dove vanno, per quanto tempo vengono conservate e cosa puoi fare al riguardo. Riguarda l'app Splitea per iPhone e le pagine di Splitea su splitea.app.</p>
     <h2>In breve</h2>
     <ul>
@@ -750,6 +758,7 @@
         <li><strong>La nostra directory utenti</strong>, così le persone che usano Splitea e hanno il tuo numero di telefono possono vedere il tuo nome, la foto e i nomi utente di pagamento quando dividono un conto con te.</li>
     </ul>
     <p>Nella directory, il tuo numero di telefono è conservato come hash con chiave (usato per trovare le corrispondenze) e come copia cifrata (così l'app può mostrartelo). Il tuo nome e i nomi utente di pagamento sono conservati in chiaro perché vengono mostrati ad altre persone. Conserviamo anche il paese del tuo App Store per capire dove viene usata Splitea.</p>
+    <p><strong>Coordinate bancarie.</strong> Se aggiungi le coordinate bancarie per i bonifici (il nome dell'intestatario del conto e l'IBAN), vengono conservate sul tuo dispositivo e nel tuo account iCloud, non nella nostra directory. Sono incluse solo nei link che condividi per le spese che hai pagato tu, così le persone con cui condividi possono restituirti i soldi, e restano conservate con quella divisione finché non scade. Se qualcuno apre il tuo link nell'app Splitea, l'app conserva le tue coordinate bancarie sul suo dispositivo, così potrà pagarti in seguito.</p>
     <p>Chiunque usi Splitea e abbia il tuo numero di telefono può trovare il tuo profilo. Per avere un profilo serve un numero di telefono, quindi l'unico modo per non essere più trovabile è eliminare il tuo account.</p>
     <p><strong>Foto del profilo.</strong> Prima che una foto del profilo venga salvata, un modello di moderazione automatica (Cloudflare Workers AI) controlla che non contenga materiale inappropriato, e le foto che non superano il controllo vengono rifiutate. Le foto del profilo salvate sono servite da un indirizzo web pubblico, quindi chiunque abbia quell'indirizzo può vederle.</p>
     <h2>I tuoi scontrini</h2>
@@ -774,7 +783,7 @@
     <ul>
         <li>Il negozio, la data, gli articoli, i prezzi, i totali e la foto dello scontrino.</li>
         <li>Chi partecipa alla divisione e quanto deve ciascuno, con il nome, il numero di telefono e il link alla foto del profilo di ogni persona, così come compaiono nei tuoi contatti o nel suo profilo Splitea.</li>
-        <li>I nomi utente di pagamento di chi ha pagato, così gli altri possono restituirgli i soldi.</li>
+        <li>I nomi utente di pagamento di chi ha pagato, così gli altri possono restituirgli i soldi, e le sue coordinate bancarie se ha condiviso la divisione e le ha aggiunte.</li>
     </ul>
     <p><strong>Chiunque abbia il link può aprire la divisione</strong>, nell'app o in un browser web, e vedere tutto quanto sopra, compresa la foto dello scontrino. Invia il link solo a persone di cui ti fidi.</p>
     <p>Chi apre il link può assegnare articoli, cambiare la divisione e segnare di aver pagato. Se blocchi la modifica, può solo vedere la divisione e registrare i pagamenti. Mentre una divisione è aperta, chi la sta guardando può vedere i nomi e gli ID account Splitea (o gli ID web anonimi) delle altre persone collegate, insieme alle loro modifiche e a eventuali cambiamenti che fanno al proprio profilo. Queste modifiche vengono salvate con la divisione.</p>
@@ -866,6 +875,7 @@
     <ul>
         <li>Identificatori: nome, indirizzo email, numero di telefono, ID account, nomi utente di pagamento, token push e chiave App Attest.</li>
         <li>Informazioni commerciali: lo stato del tuo abbonamento e i dettagli della transazione di Apple.</li>
+        <li>Informazioni finanziarie: il nome dell'intestatario del conto e l'IBAN, se aggiungi le coordinate bancarie.</li>
         <li>Geolocalizzazione: posizione approssimativa inviata con una scansione (non conservata, tranne che con gli scontrini che segnali).</li>
         <li>Attività su Internet o altre attività elettroniche: registri delle scansioni, log dei server e statistiche sulle visite al sito web.</li>
         <li>Informazioni visive: foto degli scontrini e foto del profilo.</li>
@@ -895,7 +905,7 @@
 
 <div class="legal-content" data-lang="ja">
     <h1>プライバシーポリシー</h1>
-    <p class="updated">最終更新日：2026年10月18日</p>
+    <p class="updated">最終更新日：2026年10月19日</p>
     <p>Spliteaは、Raúl Mora（「当方」）が一人で作っている割り勘アプリです。本ポリシーでは、Spliteaが扱う情報、その情報の送信先、保存期間、そしてお客様にできることについて説明します。本ポリシーは、SpliteaのiPhoneアプリと、splitea.app上のSpliteaのページを対象としています。</p>
     <h2>概要</h2>
     <ul>
@@ -920,6 +930,7 @@
         <li><strong>当方のユーザーディレクトリ</strong>：Spliteaを使っていてお客様の電話番号を知っている人が、お客様と割り勘をするときに、お客様の名前、写真、決済アプリのユーザー名を見られるようにするためです。</li>
     </ul>
     <p>ディレクトリでは、電話番号は鍵付きハッシュ（照合に使用）と、暗号化されたコピー（アプリでお客様に表示するため）として保存されます。名前と決済アプリのユーザー名は他の人に表示されるため、平文で保存されます。また、Spliteaがどこで使われているかを把握するため、お客様のApp Storeの国も保存します。</p>
+    <p><strong>銀行口座情報。</strong>銀行振込用に銀行口座情報（口座名義人の名前とIBAN）を追加すると、その情報はお客様のデバイスとお客様のiCloudアカウントに保存され、当方のディレクトリには保存されません。この情報が含まれるのは、お客様が代金を支払った割り勘についてお客様が共有するリンクだけです。共有した相手がお客様にお金を返せるようにするためで、その割り勘の有効期限が切れるまで割り勘とともに保持されます。誰かがお客様のリンクをSpliteaアプリで開くと、その人が後でお客様に支払えるよう、アプリはお客様の銀行口座情報をその人のデバイスに保存します。</p>
     <p>Spliteaを使っていてお客様の電話番号を知っている人は誰でも、お客様のプロフィールを見つけることができます。プロフィールを持つには電話番号が必要なため、検索で見つからないようにする唯一の方法はアカウントを削除することです。</p>
     <p><strong>プロフィール写真。</strong>プロフィール写真は保存される前に、自動モデレーションモデル（Cloudflare Workers AI）によって不適切なコンテンツが含まれていないか確認され、確認を通過しなかった写真は拒否されます。保存されたプロフィール写真は公開のウェブアドレスから配信されるため、そのアドレスを知っている人は誰でも閲覧できます。</p>
     <h2>レシート</h2>
@@ -944,7 +955,7 @@
     <ul>
         <li>店舗、日付、品目、価格、合計金額、レシートの写真。</li>
         <li>割り勘のメンバーと各自の負担額、そしてお客様の連絡先またはその人のSpliteaプロフィールに表示されているとおりの、各メンバーの名前、電話番号、プロフィール写真へのリンク。</li>
-        <li>支払った人の決済アプリのユーザー名。ほかのメンバーがその人にお金を返せるようにするためです。</li>
+        <li>支払った人の決済アプリのユーザー名と、その人が割り勘を共有して銀行口座情報を追加している場合はその銀行口座情報。ほかのメンバーがその人にお金を返せるようにするためです。</li>
     </ul>
     <p><strong>リンクを知っている人は誰でも割り勘を開くことができ</strong>、アプリまたはウェブブラウザで、レシートの写真を含む上記のすべてを見ることができます。リンクは信頼できる人にだけ送ってください。</p>
     <p>リンクを開いた人は、品目の割り当てや割り勘の変更を行い、自分を支払い済みにすることができます。お客様が「編集をロック」を使うと、その人たちは割り勘を閲覧し、支払いを記録することしかできなくなります。割り勘が開かれている間、閲覧している人は、接続している他の人の名前とSpliteaアカウントID（またはウェブの匿名ID）に加え、その人たちの編集内容やプロフィールの変更を見ることができます。これらの編集は割り勘とともに保存されます。</p>
@@ -1036,6 +1047,7 @@
     <ul>
         <li>識別子：名前、メールアドレス、電話番号、アカウントID、決済アプリのユーザー名、プッシュトークン、App Attestキー。</li>
         <li>商取引情報：サブスクリプションの状態とAppleの取引の詳細。</li>
+        <li>金融情報：銀行口座情報を追加した場合の、口座名義人の名前とIBAN。</li>
         <li>地理位置情報：スキャン時に送信されるおおよその位置情報（お客様が報告したレシートを除き、保存しません）。</li>
         <li>インターネットまたはその他の電子的な活動：スキャン記録、サーバーログ、ウェブサイトの訪問統計。</li>
         <li>視覚情報：レシートの写真とプロフィール写真。</li>
@@ -1065,7 +1077,7 @@
 
 <div class="legal-content" data-lang="ko">
     <h1>개인정보 처리방침</h1>
-    <p class="updated">최종 업데이트: 2026년 10월 18일</p>
+    <p class="updated">최종 업데이트: 2026년 10월 19일</p>
     <p>Splitea는 Raúl Mora("저희")가 혼자 만든 더치페이 앱입니다. 본 방침은 Splitea가 어떤 정보를 다루는지, 그 정보가 어디로 가는지, 얼마나 오래 보관되는지, 그리고 이에 대해 귀하가 무엇을 할 수 있는지 설명합니다. 본 방침은 Splitea iPhone 앱과 splitea.app의 Splitea 페이지에 적용됩니다.</p>
     <h2>요약</h2>
     <ul>
@@ -1090,6 +1102,7 @@
         <li><strong>저희 사용자 디렉터리</strong>: Splitea를 사용하면서 귀하의 전화번호를 알고 있는 사람이 귀하와 비용을 나눌 때 귀하의 이름, 사진, 결제 앱 사용자 이름을 볼 수 있도록 합니다.</li>
     </ul>
     <p>디렉터리에서 전화번호는 키 기반 해시(매칭용)와 암호화된 사본(앱에서 귀하에게 다시 보여 주기 위함)으로 저장됩니다. 이름과 결제 앱 사용자 이름은 다른 사람에게 표시되므로 일반 텍스트로 저장됩니다. 또한 Splitea가 어디에서 사용되는지 파악하기 위해 귀하의 App Store 국가도 저장합니다.</p>
+    <p><strong>은행 계좌 정보.</strong> 계좌이체를 위해 은행 계좌 정보(예금주 이름과 IBAN)를 추가하면, 이 정보는 귀하의 기기와 귀하의 iCloud 계정에 보관되며 저희 디렉터리에는 저장되지 않습니다. 이 정보는 귀하가 결제한 정산에 대해 귀하가 공유하는 링크에만 포함되어 공유받은 사람들이 귀하에게 돈을 갚을 수 있게 하며, 해당 정산이 만료될 때까지 정산과 함께 보관됩니다. 누군가 귀하의 링크를 Splitea 앱에서 열면, 그 사람이 나중에 귀하에게 돈을 보낼 수 있도록 앱이 귀하의 은행 계좌 정보를 그 사람의 기기에 보관합니다.</p>
     <p>Splitea를 사용하면서 귀하의 전화번호를 알고 있는 사람은 누구나 귀하의 프로필을 찾을 수 있습니다. 프로필을 만들려면 전화번호가 필요하므로, 검색되지 않도록 하는 유일한 방법은 계정을 삭제하는 것입니다.</p>
     <p><strong>프로필 사진.</strong> 프로필 사진이 저장되기 전에 자동 검토 모델(Cloudflare Workers AI)이 부적절한 콘텐츠가 있는지 확인하며, 통과하지 못한 사진은 거부됩니다. 저장된 프로필 사진은 공개 웹 주소에서 제공되므로 해당 주소를 아는 사람은 누구나 볼 수 있습니다.</p>
     <h2>영수증</h2>
@@ -1114,7 +1127,7 @@
     <ul>
         <li>매장, 날짜, 항목, 가격, 합계, 영수증 사진.</li>
         <li>정산에 포함된 사람과 각자 내야 할 금액, 그리고 귀하의 연락처나 그 사람의 Splitea 프로필에 표시된 대로의 각 사람의 이름, 전화번호, 프로필 사진 링크.</li>
-        <li>결제한 사람의 결제 앱 사용자 이름. 다른 사람들이 그 사람에게 돈을 갚을 수 있도록 하기 위함입니다.</li>
+        <li>결제한 사람의 결제 앱 사용자 이름, 그리고 그 사람이 정산을 공유하고 은행 계좌 정보를 추가한 경우 그 은행 계좌 정보. 다른 사람들이 그 사람에게 돈을 갚을 수 있도록 하기 위함입니다.</li>
     </ul>
     <p><strong>링크가 있는 사람은 누구나 정산을 열 수 있으며</strong>, 앱이나 웹 브라우저에서 영수증 사진을 포함한 위의 모든 내용을 볼 수 있습니다. 신뢰하는 사람에게만 링크를 보내세요.</p>
     <p>링크를 연 사람은 항목을 배정하고, 정산을 변경하고, 자신을 결제 완료로 표시할 수 있습니다. 귀하가 ‘편집 잠금’을 사용하면 이들은 정산 보기와 결제 기록만 할 수 있습니다. 정산이 열려 있는 동안 보고 있는 사람들은 연결된 다른 사람들의 이름과 Splitea 계정 ID(또는 익명 웹 ID), 그리고 그들의 편집 내용과 프로필 변경 사항을 볼 수 있습니다. 이러한 편집 내용은 정산과 함께 저장됩니다.</p>
@@ -1206,6 +1219,7 @@
     <ul>
         <li>식별자: 이름, 이메일 주소, 전화번호, 계정 ID, 결제 앱 사용자 이름, 푸시 토큰, App Attest 키.</li>
         <li>상업 정보: 구독 상태 및 Apple 거래 세부 정보.</li>
+        <li>금융 정보: 은행 계좌 정보를 추가한 경우 예금주 이름 및 IBAN.</li>
         <li>지리적 위치 데이터: 스캔과 함께 전송되는 대략적인 위치(귀하가 신고한 영수증을 제외하고는 저장하지 않음).</li>
         <li>인터넷 또는 기타 전자적 활동: 스캔 기록, 서버 로그 및 웹사이트 방문 통계.</li>
         <li>시각 정보: 영수증 사진 및 프로필 사진.</li>
@@ -1235,7 +1249,7 @@
 
 <div class="legal-content" data-lang="pt">
     <h1>Política de privacidade</h1>
-    <p class="updated">Última atualização: 18 de outubro de 2026</p>
+    <p class="updated">Última atualização: 19 de outubro de 2026</p>
     <p>O Splitea é um app para dividir contas criado por uma única pessoa, Raúl Mora ("nós"). Esta política explica quais informações o Splitea trata, para onde elas vão, por quanto tempo são mantidas e o que você pode fazer a respeito. Ela abrange o app Splitea para iPhone e as páginas do Splitea em splitea.app.</p>
     <h2>Resumo</h2>
     <ul>
@@ -1260,6 +1274,7 @@
         <li><strong>No nosso diretório de usuários</strong>, para que as pessoas que usam o Splitea e têm o seu número de telefone possam ver seu nome, sua foto e seus nomes de usuário de pagamento quando dividirem uma conta com você.</li>
     </ul>
     <p>No diretório, seu número de telefone é armazenado como um hash com chave (usado para encontrar correspondências) e como uma cópia criptografada (para que o app possa mostrá-lo de volta para você). Seu nome e seus nomes de usuário de pagamento são armazenados em texto simples porque são mostrados para outras pessoas. Também armazenamos o país da sua App Store para entender onde o Splitea é usado.</p>
+    <p><strong>Dados bancários.</strong> Se você adicionar dados bancários para transferências (o nome do titular da conta e o IBAN), eles ficam armazenados no seu dispositivo e na sua conta do iCloud, não no nosso diretório. Eles só são incluídos nos links que você compartilha de despesas que você pagou, para que as pessoas com quem você compartilha possam devolver o dinheiro, e ficam guardados com essa divisão até ela expirar. Se alguém abrir o seu link no app Splitea, o app guarda seus dados bancários no dispositivo dessa pessoa para que ela possa pagar você mais tarde.</p>
     <p>Qualquer pessoa que use o Splitea e tenha o seu número de telefone pode encontrar o seu perfil. É preciso ter um número de telefone para ter um perfil, então a única forma de deixar de ser encontrado é excluir sua conta.</p>
     <p><strong>Fotos de perfil.</strong> Antes de uma foto de perfil ser salva, um modelo automático de moderação (Cloudflare Workers AI) verifica se ela tem conteúdo impróprio, e as fotos reprovadas são rejeitadas. As fotos de perfil salvas são servidas a partir de um endereço web público, então qualquer pessoa que tenha esse endereço pode vê-las.</p>
     <h2>Seus recibos</h2>
@@ -1284,7 +1299,7 @@
     <ul>
         <li>O estabelecimento, a data, os itens, os preços, os totais e a foto do recibo.</li>
         <li>Quem está na divisão e quem deve quanto, com o nome, o número de telefone e o link da foto de perfil de cada pessoa, como aparecem nos seus contatos ou no perfil do Splitea dela.</li>
-        <li>Os nomes de usuário de pagamento de quem pagou, para que os outros possam devolver o dinheiro.</li>
+        <li>Os nomes de usuário de pagamento de quem pagou, para que os outros possam devolver o dinheiro, e os dados bancários dessa pessoa, se ela compartilhou a divisão e os adicionou.</li>
     </ul>
     <p><strong>Qualquer pessoa com o link pode abrir a divisão</strong>, no app ou em um navegador, e ver tudo o que está acima, incluindo a foto do recibo. Envie o link apenas para pessoas de confiança.</p>
     <p>Quem abre o link pode atribuir itens, alterar a divisão e marcar que já pagou. Se você bloquear a edição, essas pessoas só poderão ver a divisão e registrar pagamentos. Enquanto uma divisão está aberta, as pessoas que a estão vendo podem ver os nomes e os IDs de conta do Splitea (ou IDs web anônimos) das outras pessoas conectadas a ela, junto com as edições delas e qualquer alteração que façam no próprio perfil. Essas edições são salvas com a divisão.</p>
@@ -1376,6 +1391,7 @@
     <ul>
         <li>Identificadores: nome, endereço de e-mail, número de telefone, ID de conta, nomes de usuário de pagamento, token de push e chave do App Attest.</li>
         <li>Informações comerciais: o status da sua assinatura e os detalhes da transação da Apple.</li>
+        <li>Informações financeiras: o nome do titular da conta e o IBAN, se você adicionar dados bancários.</li>
         <li>Geolocalização: localização aproximada enviada com um escaneamento (não armazenada, exceto com os recibos que você reporta).</li>
         <li>Atividade na internet ou outra atividade eletrônica: registros de escaneamento, logs do servidor e estatísticas de visitas ao site.</li>
         <li>Informações visuais: fotos de recibos e fotos de perfil.</li>
@@ -1405,7 +1421,7 @@
 
 <div class="legal-content" data-lang="zh">
     <h1>隐私政策</h1>
-    <p class="updated">最后更新：2026年10月18日</p>
+    <p class="updated">最后更新：2026年10月19日</p>
     <p>Splitea 是一款分账 App，由 Raúl Mora 一人开发（下文称“我们”）。本政策说明 Splitea 会处理哪些信息、这些信息会被发送到哪里、保留多长时间，以及您对此有哪些选择。本政策适用于 Splitea iPhone App 以及 splitea.app 上的 Splitea 网页。</p>
     <h2>简要说明</h2>
     <ul>
@@ -1430,6 +1446,7 @@
         <li><strong>我们的用户目录</strong>，以便使用 Splitea 且有您电话号码的人在与您分账时，能看到您的姓名、头像和付款用户名。</li>
     </ul>
     <p>在用户目录中，您的电话号码以带密钥的哈希值（用于匹配）和加密副本（以便 App 将号码重新显示给您）两种形式存储。您的姓名和付款用户名以明文存储，因为它们会显示给其他人。我们还会存储您的 App Store 国家或地区，以了解 Splitea 在哪些地方被使用。</p>
+    <p><strong>银行账户信息。</strong>如果您为银行转账添加了银行账户信息（账户持有人姓名和 IBAN），这些信息会保存在您的设备上和您的 iCloud 账户中，不会存入我们的用户目录。只有在您分享由您付款的分账时，这些信息才会包含在您分享的链接中，以便与您分享的人向您还款，并会随该分账一起保留，直到分账到期。如果有人在 Splitea App 中打开您的链接，App 会在其设备上保留您的银行账户信息，以便其稍后向您付款。</p>
     <p>任何使用 Splitea 且有您电话号码的人都可以找到您的个人资料。拥有个人资料必须提供电话号码，因此想不再被找到，唯一的方法是删除您的账户。</p>
     <p><strong>头像。</strong>头像保存之前，会先由自动审核模型（Cloudflare Workers AI）检查是否含有不当内容，未通过检查的照片会被拒绝。已保存的头像通过公开网址提供，因此任何拿到该网址的人都可以查看。</p>
     <h2>您的收据</h2>
@@ -1454,7 +1471,7 @@
     <ul>
         <li>商家、日期、项目、价格、总额和收据照片。</li>
         <li>分账中有哪些人、每个人应付多少，以及每个人的姓名、电话号码和头像链接（以其在您的通讯录或其 Splitea 个人资料中的显示为准）。</li>
-        <li>付款人的付款用户名，以便其他人向其还款。</li>
+        <li>付款人的付款用户名，以便其他人向其还款；如果付款人分享了这笔分账并添加了银行账户信息，还包括其银行账户信息。</li>
     </ul>
     <p><strong>任何拿到链接的人都可以打开这笔分账</strong>，无论是在 App 中还是在网页浏览器中，并能看到上述所有内容，包括收据照片。请只把链接发给您信任的人。</p>
     <p>打开链接的人可以分配项目、修改分账并将自己标记为已付。如果您使用了“锁定编辑”，他们只能查看分账和记录付款。分账处于打开状态时，正在查看的人可以看到连接到该分账的其他人的姓名和 Splitea 账户 ID（或匿名网页 ID），以及他们所做的编辑和个人资料更改。这些编辑会随分账一起保存。</p>
@@ -1546,6 +1563,7 @@
     <ul>
         <li>标识符：姓名、电子邮件地址、电话号码、账户 ID、付款用户名、推送令牌和 App Attest 密钥。</li>
         <li>商业信息：您的订阅状态和 Apple 的交易详情。</li>
+        <li>财务信息：账户持有人姓名和 IBAN（如果您添加了银行账户信息）。</li>
         <li>地理位置数据：随扫描发送的大致位置（不存储，您报告的收据除外）。</li>
         <li>互联网或其他电子活动：扫描记录、服务器日志和网站访问统计数据。</li>
         <li>视觉信息：收据照片和头像。</li>
@@ -1575,7 +1593,7 @@
 
 <div class="legal-content" data-lang="zh-Hant">
     <h1>隱私權政策</h1>
-    <p class="updated">最後更新：2026年10月18日</p>
+    <p class="updated">最後更新：2026年10月19日</p>
     <p>Splitea 是一款分帳 App，由 Raúl Mora 一人開發（下稱「我們」）。本政策說明 Splitea 會處理哪些資訊、這些資訊會被傳送到哪裡、保留多久，以及您對此有哪些選擇。本政策適用於 Splitea iPhone App 以及 splitea.app 上的 Splitea 網頁。</p>
     <h2>重點摘要</h2>
     <ul>
@@ -1600,6 +1618,7 @@
         <li><strong>我們的使用者目錄</strong>，讓使用 Splitea 且有您電話號碼的人在與您分帳時，能看到您的姓名、大頭貼和付款使用者名稱。</li>
     </ul>
     <p>在使用者目錄中，您的電話號碼會以金鑰雜湊值（用於比對）和加密副本（讓 App 能將號碼顯示給您）兩種形式儲存。您的姓名和付款使用者名稱以明文儲存，因為這些資訊會顯示給其他人看。我們也會儲存您的 App Store 國家或地區，以了解 Splitea 在哪些地方被使用。</p>
+    <p><strong>銀行帳戶資料。</strong>如果您為銀行轉帳新增了銀行帳戶資料（帳戶持有人姓名和 IBAN），這些資料會儲存在您的裝置上和您的 iCloud 帳戶中，不會存入我們的使用者目錄。只有在您分享由您付款的分帳時，這些資料才會包含在您分享的連結中，讓與您分享的人能把錢還給您，並會隨該分帳一起保留，直到分帳到期。如果有人在 Splitea App 中打開您的連結，App 會在對方的裝置上保留您的銀行帳戶資料，讓對方稍後能付款給您。</p>
     <p>任何使用 Splitea 且有您電話號碼的人都能找到您的個人檔案。建立個人檔案必須提供電話號碼，因此若不想再被找到，唯一的方法就是刪除您的帳戶。</p>
     <p><strong>大頭貼。</strong>大頭貼儲存前，會先由自動審查模型（Cloudflare Workers AI）檢查是否含有不當內容，未通過檢查的照片會被拒絕。已儲存的大頭貼透過公開網址提供，因此任何知道該網址的人都能查看。</p>
     <h2>您的收據</h2>
@@ -1624,7 +1643,7 @@
     <ul>
         <li>店家、日期、項目、價格、總金額和收據照片。</li>
         <li>分帳中有哪些人、每個人應付多少，以及每個人的姓名、電話號碼和大頭貼連結（以其在您的聯絡人或其 Splitea 個人檔案中的顯示為準）。</li>
-        <li>付款人的付款使用者名稱，讓其他人能把錢還給付款人。</li>
+        <li>付款人的付款使用者名稱，讓其他人能把錢還給付款人；如果付款人分享了這筆分帳並新增了銀行帳戶資料，也包括其銀行帳戶資料。</li>
     </ul>
     <p><strong>任何取得連結的人都能打開這筆分帳</strong>，無論是在 App 中還是在網頁瀏覽器中，並看到上述所有內容，包括收據照片。請只把連結傳給您信任的人。</p>
     <p>打開連結的人可以分配項目、修改分帳並將自己標記為已付。如果您已使用「鎖定編輯」，他們只能檢視分帳和記錄付款。分帳開啟期間，正在檢視的人可以看到連線到這筆分帳的其他人的姓名和 Splitea 帳戶 ID（或匿名網頁 ID），以及他們所做的編輯和個人檔案變更。這些編輯會隨分帳一起儲存。</p>
@@ -1716,6 +1735,7 @@
     <ul>
         <li>識別符：姓名、電子郵件地址、電話號碼、帳戶 ID、付款使用者名稱、推播權杖和 App Attest 金鑰。</li>
         <li>商業資訊：您的訂閱狀態和 Apple 的交易詳細資訊。</li>
+        <li>財務資訊：帳戶持有人姓名和 IBAN（如果您新增了銀行帳戶資料）。</li>
         <li>地理位置資料：隨掃描傳送的大約位置（不儲存，但您回報的收據除外）。</li>
         <li>網際網路或其他電子活動：掃描紀錄、伺服器記錄檔和網站造訪統計資料。</li>
         <li>視覺資訊：收據照片和大頭貼。</li>
@@ -1745,7 +1765,7 @@
 
 <div class="legal-content" data-lang="nl">
     <h1>Privacybeleid</h1>
-    <p class="updated">Laatst bijgewerkt: 18 oktober 2026</p>
+    <p class="updated">Laatst bijgewerkt: 19 oktober 2026</p>
     <p>Splitea is een app om rekeningen te splitsen, gemaakt door één persoon, Raúl Mora ("we", "ons"). Dit beleid legt uit welke gegevens Splitea verwerkt, waar ze naartoe gaan, hoe lang ze worden bewaard en wat je eraan kunt doen. Het geldt voor de Splitea-app voor iPhone en de Splitea-pagina's op splitea.app.</p>
     <h2>In het kort</h2>
     <ul>
@@ -1770,6 +1790,7 @@
         <li><strong>Ons gebruikersregister</strong>, zodat mensen die Splitea gebruiken en je telefoonnummer hebben je naam, foto en gebruikersnamen voor betaalapps kunnen zien als ze een rekening met je splitsen.</li>
     </ul>
     <p>In het register wordt je telefoonnummer opgeslagen als een hash met een geheime sleutel (gebruikt om nummers te vergelijken) en als een versleutelde kopie (zodat de app het aan jou kan tonen). Je naam en gebruikersnamen voor betaalapps worden als gewone tekst opgeslagen, omdat ze aan andere mensen worden getoond. We slaan ook het land van je App Store op om te begrijpen waar Splitea wordt gebruikt.</p>
+    <p><strong>Bankgegevens.</strong> Als je bankgegevens voor overboekingen toevoegt (de naam van de rekeninghouder en je IBAN), worden ze op je apparaat en in je iCloud-account bewaard, niet in ons register. Ze worden alleen opgenomen in de links die je deelt voor uitgaven die jij hebt betaald, zodat de mensen met wie je deelt je kunnen terugbetalen, en ze blijven bij die split bewaard tot de split verloopt. Als iemand je link opent in de Splitea-app, bewaart de app je bankgegevens op diens apparaat, zodat die persoon je later kan betalen.</p>
     <p>Iedereen die Splitea gebruikt en je telefoonnummer heeft, kan je profiel vinden. Een telefoonnummer is verplicht voor een profiel, dus de enige manier om niet meer vindbaar te zijn, is je account verwijderen.</p>
     <p><strong>Profielfoto's.</strong> Voordat een profielfoto wordt opgeslagen, controleert een geautomatiseerd moderatiemodel (Cloudflare Workers AI) de foto op aanstootgevende inhoud, en foto's die niet door de controle komen, worden geweigerd. Opgeslagen profielfoto's worden aangeboden via een openbaar webadres, dus iedereen die dat adres heeft, kan ze bekijken.</p>
     <h2>Je bonnen</h2>
@@ -1794,7 +1815,7 @@
     <ul>
         <li>De winkel, datum, artikelen, prijzen, totalen en de foto van de bon.</li>
         <li>Wie er in de split zit en wie wat verschuldigd is, met van elke persoon de naam, het telefoonnummer en de link naar de profielfoto, zoals die in je contacten of in diens Splitea-profiel staan.</li>
-        <li>De gebruikersnamen voor betaalapps van de persoon die heeft betaald, zodat de anderen die persoon kunnen terugbetalen.</li>
+        <li>De gebruikersnamen voor betaalapps van de persoon die heeft betaald, zodat de anderen die persoon kunnen terugbetalen, en diens bankgegevens als die persoon de split heeft gedeeld en ze heeft toegevoegd.</li>
     </ul>
     <p><strong>Iedereen met de link kan de split openen</strong>, in de app of in een webbrowser, en alles hierboven zien, inclusief de foto van de bon. Stuur de link alleen naar mensen die je vertrouwt.</p>
     <p>Mensen die de link openen, kunnen artikelen toewijzen, de split wijzigen en zichzelf als betaald markeren. Als je bewerken vergrendelt, kunnen ze de split alleen bekijken en betalingen registreren. Zolang een split open is, kunnen de mensen die hem bekijken de namen en Splitea-account-ID's (of anonieme web-ID's) zien van de anderen die ermee verbonden zijn, samen met hun wijzigingen en eventuele profielwijzigingen die ze doen. Deze wijzigingen worden met de split opgeslagen.</p>
@@ -1886,6 +1907,7 @@
     <ul>
         <li>Identificatiegegevens: naam, e-mailadres, telefoonnummer, account-ID, gebruikersnamen voor betaalapps, pushtoken en App Attest-sleutel.</li>
         <li>Commerciële gegevens: de status van je abonnement en de transactiegegevens van Apple.</li>
+        <li>Financiële gegevens: naam van de rekeninghouder en IBAN, als je bankgegevens toevoegt.</li>
         <li>Geolocatie: geschatte locatie die met een scan wordt meegestuurd (niet opgeslagen, behalve bij bonnen die je meldt).</li>
         <li>Internet- of andere elektronische activiteit: scanregistraties, serverlogs en bezoekstatistieken van de website.</li>
         <li>Visuele gegevens: foto's van bonnen en profielfoto's.</li>
@@ -1915,7 +1937,7 @@
 
 <div class="legal-content" data-lang="sv">
     <h1>Integritetspolicy</h1>
-    <p class="updated">Senast uppdaterad: 18 oktober 2026</p>
+    <p class="updated">Senast uppdaterad: 19 oktober 2026</p>
     <p>Splitea är en app för att dela upp notor, gjord av en enda person, Raúl Mora (”vi”, ”oss”). Den här policyn förklarar vilken information Splitea hanterar, vart den tar vägen, hur länge den sparas och vad du kan göra åt det. Den gäller Splitea-appen för iPhone och Spliteas sidor på splitea.app.</p>
     <h2>I korthet</h2>
     <ul>
@@ -1940,6 +1962,7 @@
         <li><strong>I vår användarkatalog</strong>, så att personer som använder Splitea och har ditt telefonnummer kan se ditt namn, din bild och dina användarnamn för betalningar när de delar en nota med dig.</li>
     </ul>
     <p>I katalogen sparas ditt telefonnummer som en nyckelbaserad hash (som används för matchning) och som en krypterad kopia (så att appen kan visa det för dig igen). Ditt namn och dina användarnamn för betalningar sparas i klartext eftersom de visas för andra. Vi sparar också ditt App Store-land för att förstå var Splitea används.</p>
+    <p><strong>Bankuppgifter.</strong> Om du lägger till bankuppgifter för banköverföringar (kontoinnehavarens namn och IBAN) sparas de på din enhet och i ditt iCloud-konto, inte i vår katalog. De följer bara med i länkar som du delar för notor som du har betalat, så att de som du delar med kan betala tillbaka till dig, och de sparas med notan tills den löper ut. Om någon öppnar din länk i Splitea-appen sparar appen dina bankuppgifter på personens enhet, så att hen kan betala dig senare.</p>
     <p>Alla som använder Splitea och har ditt telefonnummer kan hitta din profil. Ett telefonnummer krävs för att ha en profil, så det enda sättet att inte längre gå att hitta är att radera ditt konto.</p>
     <p><strong>Profilbilder.</strong> Innan en profilbild sparas kontrollerar en automatisk modereringsmodell (Cloudflare Workers AI) om den innehåller stötande innehåll, och bilder som inte godkänns avvisas. Sparade profilbilder hämtas från en offentlig webbadress, så alla som har den adressen kan se dem.</p>
     <h2>Dina kvitton</h2>
@@ -1964,7 +1987,7 @@
     <ul>
         <li>Handlaren, datum, artiklar, priser, totalbelopp och kvittobilden.</li>
         <li>Vilka som är med på notan och vem som är skyldig vad, med varje persons namn, telefonnummer och länk till profilbilden, så som de visas i dina kontakter eller i personens Splitea-profil.</li>
-        <li>Användarnamnen för betalningar som tillhör personen som betalade, så att de andra kan betala tillbaka.</li>
+        <li>Användarnamnen för betalningar som tillhör personen som betalade, så att de andra kan betala tillbaka, och personens bankuppgifter om hen delade notan och har lagt till dem.</li>
     </ul>
     <p><strong>Alla som har länken kan öppna notan</strong>, i appen eller i en webbläsare, och se allt ovan, inklusive kvittobilden. Skicka bara länken till personer du litar på.</p>
     <p>Personer som öppnar länken kan tilldela artiklar, ändra notan och markera sig själva som betalda. Om du låser redigeringen kan de bara se notan och registrera betalningar. Medan en nota är öppen kan de som tittar på den se namnen och Splitea-konto-ID:na (eller de anonyma webb-ID:na) för de andra som är anslutna till den, liksom deras redigeringar och eventuella profiländringar de gör. Redigeringarna sparas med notan.</p>
@@ -2056,6 +2079,7 @@
     <ul>
         <li>Identifierare: namn, e-postadress, telefonnummer, konto-ID, användarnamn för betalningar, push-token och App Attest-nyckel.</li>
         <li>Kommersiell information: din prenumerationsstatus och Apples transaktionsuppgifter.</li>
+        <li>Finansiell information: kontoinnehavarens namn och IBAN, om du lägger till bankuppgifter.</li>
         <li>Geolokalisering: ungefärlig plats som skickas med en skanning (sparas inte, utom med kvitton som du rapporterar).</li>
         <li>Internet- eller annan elektronisk aktivitet: skanningsposter, serverloggar och besöksstatistik för webbplatsen.</li>
         <li>Visuell information: kvittobilder och profilbilder.</li>
@@ -2085,7 +2109,7 @@
 
 <div class="legal-content" data-lang="da">
     <h1>Privatlivspolitik</h1>
-    <p class="updated">Senest opdateret: 18. oktober 2026</p>
+    <p class="updated">Senest opdateret: 19. oktober 2026</p>
     <p>Splitea er en app til at dele regninger, lavet af én person, Raúl Mora (»vi«, »os«). Denne politik forklarer, hvilke oplysninger Splitea håndterer, hvor de sendes hen, hvor længe de opbevares, og hvad du kan gøre ved det. Den gælder for Splitea-appen til iPhone og for Splitea-siderne på splitea.app.</p>
     <h2>Kort fortalt</h2>
     <ul>
@@ -2110,6 +2134,7 @@
         <li><strong>I vores brugerkatalog</strong>, så personer, der bruger Splitea og har dit telefonnummer, kan se dit navn, dit foto og dine brugernavne til betalingsapps, når de deler en regning med dig.</li>
     </ul>
     <p>I brugerkataloget gemmes dit telefonnummer som en nøglebaseret hashværdi (til matchning) og som en krypteret kopi (så appen kan vise det for dig igen). Dit navn og dine brugernavne til betalingsapps gemmes i klartekst, fordi de vises for andre. Vi gemmer også dit App Store-land for at forstå, hvor Splitea bliver brugt.</p>
+    <p><strong>Bankoplysninger.</strong> Hvis du tilføjer bankoplysninger til bankoverførsler (kontohaverens navn og IBAN), gemmes de på din enhed og på din iCloud-konto, ikke i vores brugerkatalog. De kommer kun med i de links, du deler for regninger, du selv har betalt, så de personer, du deler med, kan betale dig tilbage, og de gemmes sammen med splittet, indtil det udløber. Hvis nogen åbner dit link i Splitea-appen, gemmer appen dine bankoplysninger på personens enhed, så vedkommende kan betale dig senere.</p>
     <p>Alle, der bruger Splitea og har dit telefonnummer, kan finde din profil. Et telefonnummer er påkrævet for at have en profil, så den eneste måde at undgå at kunne blive fundet på er at slette din konto.</p>
     <p><strong>Profilfotos.</strong> Før et profilfoto gemmes, kontrollerer en automatisk moderationsmodel (Cloudflare Workers AI) det for anstødeligt indhold, og fotos, der ikke består kontrollen, bliver afvist. Gemte profilfotos ligger på en offentlig webadresse, så alle, der har adressen, kan se dem.</p>
     <h2>Dine kvitteringer</h2>
@@ -2134,7 +2159,7 @@
     <ul>
         <li>Forretningen, datoen, varerne, priserne, totalerne og fotoet af kvitteringen.</li>
         <li>Hvem der er med i splittet, og hvem der skylder hvad, med hver persons navn, telefonnummer og link til profilfoto, sådan som de står i dine kontakter eller i personens Splitea-profil.</li>
-        <li>Brugernavnene til betalingsapps for den person, der betalte, så de andre kan betale vedkommende tilbage.</li>
+        <li>Brugernavnene til betalingsapps for den person, der betalte, så de andre kan betale vedkommende tilbage, og personens bankoplysninger, hvis personen delte splittet og har tilføjet dem.</li>
     </ul>
     <p><strong>Alle med linket kan åbne splittet</strong>, i appen eller i en webbrowser, og se alt ovenstående, også fotoet af kvitteringen. Send kun linket til personer, du stoler på.</p>
     <p>Personer, der åbner linket, kan tildele varer, ændre splittet og markere sig selv som betalt. Hvis du låser redigeringen, kan de kun se splittet og registrere betalinger. Mens et split er åbent, kan de personer, der ser det, se navnene og Splitea-konto-id'erne (eller de anonyme web-id'er) for de andre, der er forbundet til det, sammen med deres redigeringer og eventuelle ændringer, de foretager i deres profil. Redigeringerne gemmes sammen med splittet.</p>
@@ -2226,6 +2251,7 @@
     <ul>
         <li>Identifikatorer: navn, e-mailadresse, telefonnummer, konto-id, brugernavne til betalingsapps, push-token og App Attest-nøgle.</li>
         <li>Kommercielle oplysninger: din abonnementsstatus og Apples transaktionsoplysninger.</li>
+        <li>Finansielle oplysninger: kontohaverens navn og IBAN, hvis du tilføjer bankoplysninger.</li>
         <li>Geolokation: den omtrentlige lokalitet, der sendes med en scanning (gemmes ikke, undtagen sammen med kvitteringer, du rapporterer).</li>
         <li>Internetaktivitet eller anden elektronisk aktivitet: scanningsregistreringer, serverlogs og besøgsstatistik for webstedet.</li>
         <li>Visuelle oplysninger: fotos af kvitteringer og profilfotos.</li>
@@ -2255,7 +2281,7 @@
 
 <div class="legal-content" data-lang="nb">
     <h1>Personvernerklæring</h1>
-    <p class="updated">Sist oppdatert: 18. oktober 2026</p>
+    <p class="updated">Sist oppdatert: 19. oktober 2026</p>
     <p>Splitea er en app for å dele regninger, laget av én person, Raúl Mora («vi», «oss»). Denne erklæringen forklarer hvilke opplysninger Splitea behandler, hvor de sendes, hvor lenge de oppbevares og hva du kan gjøre med det. Den gjelder Splitea-appen for iPhone og Splitea-sidene på splitea.app.</p>
     <h2>Kort fortalt</h2>
     <ul>
@@ -2280,6 +2306,7 @@
         <li><strong>Brukerkatalogen vår</strong>, slik at folk som bruker Splitea og har telefonnummeret ditt, kan se navnet, bildet og brukernavnene dine for betaling når de deler en regning med deg.</li>
     </ul>
     <p>I katalogen lagres telefonnummeret ditt som en nøkkelbasert hash (brukes til å finne treff) og som en kryptert kopi (slik at appen kan vise det til deg igjen). Navnet ditt og brukernavnene for betaling lagres som klartekst fordi de vises til andre. Vi lagrer også App Store-landet ditt for å forstå hvor Splitea brukes.</p>
+    <p><strong>Bankopplysninger.</strong> Hvis du legger til bankopplysninger for bankoverføringer (kontoinnehaverens navn og IBAN), lagres de på enheten din og i iCloud-kontoen din, ikke i katalogen vår. De tas bare med i lenker du deler for regninger du har betalt, slik at de du deler med, kan betale deg tilbake, og de lagres sammen med regningen til den utløper. Hvis noen åpner lenken din i Splitea-appen, lagrer appen bankopplysningene dine på personens enhet, slik at vedkommende kan betale deg senere.</p>
     <p>Alle som bruker Splitea og har telefonnummeret ditt, kan finne profilen din. Det kreves et telefonnummer for å ha en profil, så den eneste måten å ikke lenger være søkbar på er å slette kontoen din.</p>
     <p><strong>Profilbilder.</strong> Før et profilbilde lagres, sjekker en automatisk modereringsmodell (Cloudflare Workers AI) det for støtende innhold, og bilder som ikke består kontrollen, blir avvist. Lagrede profilbilder leveres fra en offentlig nettadresse, så alle som har den adressen, kan se dem.</p>
     <h2>Kvitteringene dine</h2>
@@ -2304,7 +2331,7 @@
     <ul>
         <li>Butikken, datoen, varene, prisene, totalbeløpene og kvitteringsbildet.</li>
         <li>Hvem som er med på regningen og hvem som skylder hva, med navnet, telefonnummeret og lenken til profilbildet for hver person, slik de står i kontaktene dine eller i Splitea-profilen deres.</li>
-        <li>Brukernavnene for betaling til personen som betalte, slik at de andre kan betale vedkommende tilbake.</li>
+        <li>Brukernavnene for betaling til personen som betalte, slik at de andre kan betale vedkommende tilbake, og personens bankopplysninger hvis personen delte regningen og har lagt dem til.</li>
     </ul>
     <p><strong>Alle som har lenken, kan åpne regningen</strong>, i appen eller i en nettleser, og se alt som står ovenfor, inkludert kvitteringsbildet. Send bare lenken til folk du stoler på.</p>
     <p>De som åpner lenken, kan tildele varer, endre regningen og markere seg selv som betalt. Hvis du låser redigeringen, kan de bare se regningen og registrere betalinger. Mens en regning er åpen, kan de som ser på den, se navnene og Splitea-konto-ID-ene (eller anonyme nett-ID-er) til de andre som er koblet til den, i tillegg til endringene deres og eventuelle profilendringer de gjør. Disse endringene lagres sammen med regningen.</p>
@@ -2396,6 +2423,7 @@
     <ul>
         <li>Identifikatorer: navn, e-postadresse, telefonnummer, konto-ID, brukernavn for betaling, push-token og App Attest-nøkkel.</li>
         <li>Kommersielle opplysninger: abonnementsstatusen din og Apples transaksjonsdetaljer.</li>
+        <li>Finansielle opplysninger: kontoinnehaverens navn og IBAN, hvis du legger til bankopplysninger.</li>
         <li>Geolokasjon: omtrentlig posisjon som sendes med en skanning (lagres ikke, unntatt sammen med kvitteringer du rapporterer).</li>
         <li>Aktivitet på internett eller annen elektronisk aktivitet: skanneoppføringer, serverlogger og besøksstatistikk for nettstedet.</li>
         <li>Visuelle opplysninger: kvitteringsbilder og profilbilder.</li>
@@ -2425,7 +2453,7 @@
 
 <div class="legal-content" data-lang="fi">
     <h1>Tietosuojakäytäntö</h1>
-    <p class="updated">Viimeksi päivitetty: 18. lokakuuta 2026</p>
+    <p class="updated">Viimeksi päivitetty: 19. lokakuuta 2026</p>
     <p>Splitea on laskujen jakamiseen tarkoitettu appi, jonka on tehnyt yksi henkilö, Raúl Mora (”me”). Tässä käytännössä kerrotaan, mitä tietoja Splitea käsittelee, minne ne päätyvät, kuinka kauan niitä säilytetään ja mitä voit asialle tehdä. Käytäntö koskee Splitean iPhone-appia ja Splitean sivuja osoitteessa splitea.app.</p>
     <h2>Lyhyesti</h2>
     <ul>
@@ -2450,6 +2478,7 @@
         <li><strong>Käyttäjähakemistossamme</strong>, jotta Spliteaa käyttävät ihmiset, joilla on puhelinnumerosi, näkevät nimesi, kuvasi ja maksupalvelujen käyttäjänimesi, kun he jakavat laskun kanssasi.</li>
     </ul>
     <p>Hakemistossa puhelinnumerosi tallennetaan avaimellisena tiivisteenä (jota käytetään vertailuun) ja salattuna kopiona (jotta appi voi näyttää sen sinulle). Nimesi ja maksupalvelujen käyttäjänimesi tallennetaan salaamattomina, koska ne näytetään muille ihmisille. Tallennamme myös App Store -maasi, jotta ymmärrämme, missä Spliteaa käytetään.</p>
+    <p><strong>Pankkitiedot.</strong> Jos lisäät pankkitiedot tilisiirtoja varten (tilinomistajan nimi ja IBAN), niitä säilytetään laitteellasi ja iCloud-tililläsi, ei hakemistossamme. Ne sisältyvät vain linkkeihin, jotka jaat itse maksamistasi laskuista, jotta ihmiset, joiden kanssa jaat ne, voivat maksaa sinulle takaisin, ja niitä säilytetään jaon mukana, kunnes jako vanhenee. Jos joku avaa linkkisi Splitea-apissa, appi säilyttää pankkitietosi hänen laitteellaan, jotta hän voi maksaa sinulle myöhemmin.</p>
     <p>Kuka tahansa Spliteaa käyttävä, jolla on puhelinnumerosi, voi löytää profiilisi. Profiili vaatii puhelinnumeron, joten ainoa tapa estää profiilisi löytyminen on poistaa tilisi.</p>
     <p><strong>Profiilikuvat.</strong> Ennen kuin profiilikuva tallennetaan, automaattinen moderointimalli (Cloudflare Workers AI) tarkistaa, onko siinä sopimatonta sisältöä, ja kuvat, jotka eivät läpäise tarkistusta, hylätään. Tallennetut profiilikuvat ovat saatavilla julkisesta verkko-osoitteesta, joten kuka tahansa, jolla on kyseinen osoite, voi nähdä ne.</p>
     <h2>Kuittisi</h2>
@@ -2474,7 +2503,7 @@
     <ul>
         <li>Liike, päivämäärä, tuotteet, hinnat, summat ja kuitin kuva.</li>
         <li>Ketkä ovat mukana jaossa ja kuka on velkaa mitäkin, sekä kunkin henkilön nimi, puhelinnumero ja profiilikuvan linkki sellaisina kuin ne näkyvät yhteystiedoissasi tai hänen Splitea-profiilissaan.</li>
-        <li>Laskun maksaneen henkilön maksupalvelujen käyttäjänimet, jotta muut voivat maksaa hänelle takaisin.</li>
+        <li>Laskun maksaneen henkilön maksupalvelujen käyttäjänimet, jotta muut voivat maksaa hänelle takaisin, sekä hänen pankkitietonsa, jos hän on jakanut jaon ja lisännyt ne.</li>
     </ul>
     <p><strong>Kuka tahansa, jolla on linkki, voi avata jaon</strong> apissa tai verkkoselaimessa ja nähdä kaiken yllä mainitun, myös kuitin kuvan. Lähetä linkki vain ihmisille, joihin luotat.</p>
     <p>Linkin avaavat ihmiset voivat kohdistaa tuotteita, muuttaa jakoa ja merkitä itsensä maksaneiksi. Jos lukitset muokkauksen, he voivat vain katsoa jakoa ja kirjata maksuja. Kun jako on auki, sitä katsovat ihmiset näkevät muiden siihen yhdistettyjen henkilöiden nimet ja Splitea-tilitunnukset (tai anonyymit verkkotunnisteet) sekä heidän tekemänsä muokkaukset ja mahdolliset profiilimuutokset. Nämä muokkaukset tallennetaan jaon yhteyteen.</p>
@@ -2566,6 +2595,7 @@
     <ul>
         <li>Tunnisteet: nimi, sähköpostiosoite, puhelinnumero, tilitunnus, maksupalvelujen käyttäjänimet, push-tunniste ja App Attest -avain.</li>
         <li>Kaupalliset tiedot: tilauksesi tila ja Applen tapahtumatiedot.</li>
+        <li>Taloudelliset tiedot: tilinomistajan nimi ja IBAN, jos lisäät pankkitiedot.</li>
         <li>Sijaintitiedot: skannauksen mukana lähetetty likimääräinen sijainti (ei tallenneta, paitsi niiden kuittien yhteydessä, joista ilmoitat).</li>
         <li>Internet- tai muu sähköinen toiminta: skannaustietueet, palvelinlokit ja verkkosivuston käyntitilastot.</li>
         <li>Visuaaliset tiedot: kuittien kuvat ja profiilikuvat.</li>
@@ -2595,7 +2625,7 @@
 
 <div class="legal-content" data-lang="pl">
     <h1>Polityka prywatności</h1>
-    <p class="updated">Ostatnia aktualizacja: 18 października 2026 r.</p>
+    <p class="updated">Ostatnia aktualizacja: 19 października 2026 r.</p>
     <p>Splitea to aplikacja do dzielenia rachunków, którą tworzy jedna osoba, Raúl Mora („my”, „nas”). Niniejsza polityka wyjaśnia, jakie informacje przetwarza Splitea, dokąd one trafiają, jak długo są przechowywane i co możesz w tej sprawie zrobić. Obejmuje aplikację Splitea na iPhone’a oraz strony Splitea w domenie splitea.app.</p>
     <h2>W skrócie</h2>
     <ul>
@@ -2620,6 +2650,7 @@
         <li><strong>W naszym katalogu użytkowników</strong>, aby osoby korzystające ze Splitea, które mają Twój numer telefonu, mogły zobaczyć Twoje imię, zdjęcie i nazwy użytkownika w aplikacjach płatniczych, gdy dzielą z Tobą rachunek.</li>
     </ul>
     <p>W katalogu Twój numer telefonu jest przechowywany jako skrót kryptograficzny z kluczem (używany do dopasowywania) oraz jako zaszyfrowana kopia (aby aplikacja mogła Ci go wyświetlić). Twoje imię i nazwy użytkownika w aplikacjach płatniczych są przechowywane jako zwykły tekst, ponieważ są pokazywane innym osobom. Przechowujemy też kraj Twojego konta App Store, aby wiedzieć, gdzie Splitea jest używana.</p>
+    <p><strong>Dane bankowe.</strong> Jeśli dodasz dane bankowe do przelewów (imię i nazwisko właściciela rachunku oraz IBAN), są one przechowywane na Twoim urządzeniu i na Twoim koncie iCloud, a nie w naszym katalogu. Są dołączane wyłącznie do linków udostępnianych przez Ciebie, gdy to Ty płacisz rachunek, aby osoby, którym udostępniasz link, mogły oddać Ci pieniądze, i są przechowywane razem z danym podziałem do czasu jego wygaśnięcia. Jeśli ktoś otworzy Twój link w aplikacji Splitea, aplikacja zachowa Twoje dane bankowe na urządzeniu tej osoby, aby mogła zapłacić Ci później.</p>
     <p>Każdy, kto korzysta ze Splitea i ma Twój numer telefonu, może znaleźć Twój profil. Numer telefonu jest wymagany, aby mieć profil, więc jedynym sposobem, aby nie można było Cię znaleźć, jest usunięcie konta.</p>
     <p><strong>Zdjęcia profilowe.</strong> Zanim zdjęcie profilowe zostanie zapisane, automatyczny model moderacji (Cloudflare Workers AI) sprawdza, czy nie zawiera niestosownych treści, a zdjęcia, które nie przejdą tej kontroli, są odrzucane. Zapisane zdjęcia profilowe są udostępniane pod publicznym adresem internetowym, więc każdy, kto zna ten adres, może je zobaczyć.</p>
     <h2>Twoje paragony</h2>
@@ -2644,7 +2675,7 @@
     <ul>
         <li>Sprzedawcę, datę, pozycje, ceny, sumy i zdjęcie paragonu.</li>
         <li>Informację, kto uczestniczy w podziale i kto ile jest winien, wraz z imieniem, numerem telefonu i linkiem do zdjęcia profilowego każdej osoby, w takiej postaci, w jakiej widnieją w Twoich kontaktach lub w jej profilu Splitea.</li>
-        <li>Nazwy użytkownika w aplikacjach płatniczych osoby, która zapłaciła, aby pozostali mogli oddać jej pieniądze.</li>
+        <li>Nazwy użytkownika w aplikacjach płatniczych osoby, która zapłaciła, aby pozostali mogli oddać jej pieniądze, oraz jej dane bankowe, jeśli to ona udostępniła podział i je dodała.</li>
     </ul>
     <p><strong>Każdy, kto ma link, może otworzyć podział</strong> w aplikacji lub w przeglądarce internetowej i zobaczyć wszystko powyższe, łącznie ze zdjęciem paragonu. Wysyłaj link tylko osobom, którym ufasz.</p>
     <p>Osoby, które otworzą link, mogą przypisywać pozycje, zmieniać podział i oznaczać swój udział jako zapłacony. Jeśli zablokujesz edycję, będą mogły jedynie przeglądać podział i odnotowywać płatności. Gdy podział jest otwarty, osoby, które go przeglądają, widzą imiona i identyfikatory kont Splitea (lub anonimowe identyfikatory webowe) pozostałych połączonych z nim osób, a także ich edycje i wszelkie zmiany, które wprowadzą w swoich profilach. Te edycje są zapisywane razem z podziałem.</p>
@@ -2736,6 +2767,7 @@
     <ul>
         <li>Identyfikatory: imię, adres e-mail, numer telefonu, identyfikator konta, nazwy użytkownika w aplikacjach płatniczych, token push i klucz App Attest.</li>
         <li>Informacje handlowe: status Twojej subskrypcji i szczegóły transakcji Apple.</li>
+        <li>Informacje finansowe: imię i nazwisko właściciela rachunku oraz IBAN, jeśli dodasz dane bankowe.</li>
         <li>Geolokalizacja: przybliżona lokalizacja wysyłana ze skanem (nieprzechowywana, z wyjątkiem zgłoszonych przez Ciebie paragonów).</li>
         <li>Aktywność w internecie lub inna aktywność elektroniczna: wpisy o skanach, logi serwerów i statystyki odwiedzin strony internetowej.</li>
         <li>Informacje wizualne: zdjęcia paragonów i zdjęcia profilowe.</li>
@@ -2765,7 +2797,7 @@
 
 <div class="legal-content" data-lang="cs">
     <h1>Zásady ochrany osobních údajů</h1>
-    <p class="updated">Poslední aktualizace: 18. října 2026</p>
+    <p class="updated">Poslední aktualizace: 19. října 2026</p>
     <p>Splitea je aplikace pro rozdělování účtů, kterou vytváří jeden člověk, Raúl Mora („my“, „nás“). Tyto zásady vysvětlují, s jakými informacemi Splitea pracuje, kam se dostávají, jak dlouho se uchovávají a co s tím můžete dělat. Vztahují se na aplikaci Splitea pro iPhone a na stránky Splitea na adrese splitea.app.</p>
     <h2>Ve zkratce</h2>
     <ul>
@@ -2790,6 +2822,7 @@
         <li><strong>V našem adresáři uživatelů</strong>, aby lidé, kteří používají Splitea a mají vaše telefonní číslo, viděli vaše jméno, fotku a uživatelská jména pro platby, když s vámi rozdělují účet.</li>
     </ul>
     <p>V adresáři je vaše telefonní číslo uloženo jako hash s klíčem (slouží k vyhledání shody) a jako zašifrovaná kopie (aby vám ho aplikace mohla zobrazit). Vaše jméno a uživatelská jména pro platby jsou uložena jako prostý text, protože se zobrazují ostatním lidem. Ukládáme také zemi vašeho App Storu, abychom věděli, kde se Splitea používá.</p>
+    <p><strong>Bankovní údaje.</strong> Pokud přidáte bankovní údaje pro bankovní převody (jméno majitele účtu a IBAN), uchovávají se ve vašem zařízení a ve vašem účtu iCloud, ne v našem adresáři. Jsou součástí pouze odkazů, které sdílíte u rozdělení, ve kterých jste platili vy, aby vám lidé, se kterými je sdílíte, mohli peníze vrátit, a uchovávají se s daným rozdělením, dokud nevyprší jeho platnost. Pokud někdo otevře váš odkaz v aplikaci Splitea, aplikace uloží vaše bankovní údaje do jeho zařízení, aby vám mohl později zaplatit.</p>
     <p>Váš profil může najít kdokoli, kdo používá Splitea a má vaše telefonní číslo. Telefonní číslo je k profilu povinné, takže jediný způsob, jak přestat být k nalezení, je smazat svůj účet.</p>
     <p><strong>Profilové fotky.</strong> Před uložením profilové fotky ji automatický moderační model (Cloudflare Workers AI) zkontroluje, zda neobsahuje závadný obsah, a fotky, které kontrolou neprojdou, jsou odmítnuty. Uložené profilové fotky se poskytují z veřejné webové adresy, takže si je může zobrazit kdokoli, kdo tuto adresu má.</p>
     <h2>Vaše účtenky</h2>
@@ -2814,7 +2847,7 @@
     <ul>
         <li>Obchod, datum, položky, ceny, celkové částky a fotku účtenky.</li>
         <li>Kdo se na rozdělení podílí a kdo kolik dluží, včetně jména, telefonního čísla a odkazu na profilovou fotku každé osoby, jak jsou uvedeny ve vašich kontaktech nebo v jejím profilu Splitea.</li>
-        <li>Uživatelská jména pro platby osoby, která platila, aby jí ostatní mohli peníze vrátit.</li>
+        <li>Uživatelská jména pro platby osoby, která platila, aby jí ostatní mohli peníze vrátit, a její bankovní údaje, pokud rozdělení nasdílela a údaje přidala.</li>
     </ul>
     <p><strong>Rozdělení může otevřít kdokoli, kdo má odkaz</strong>, v aplikaci nebo ve webovém prohlížeči, a uvidí vše výše uvedené včetně fotky účtenky. Odkaz posílejte jen lidem, kterým důvěřujete.</p>
     <p>Lidé, kteří odkaz otevřou, mohou přiřazovat položky, měnit rozdělení a označit, že zaplatili. Pokud zamknete úpravy, mohou si rozdělení jen prohlížet a zaznamenávat platby. Dokud je rozdělení otevřené, lidé, kteří si ho prohlížejí, vidí jména a ID účtů Splitea (nebo anonymní webová ID) ostatních připojených spolu s jejich úpravami a všemi změnami profilu, které provedou. Tyto úpravy se ukládají spolu s rozdělením.</p>
@@ -2906,6 +2939,7 @@
     <ul>
         <li>Identifikátory: jméno, e-mailová adresa, telefonní číslo, ID účtu, uživatelská jména pro platby, push token a klíč App Attest.</li>
         <li>Obchodní informace: stav vašeho předplatného a údaje o transakcích od společnosti Apple.</li>
+        <li>Finanční informace: jméno majitele účtu a IBAN, pokud přidáte bankovní údaje.</li>
         <li>Geolokace: přibližná poloha odeslaná se skenem (neukládá se, s výjimkou účtenek, které nahlásíte).</li>
         <li>Internetová nebo jiná elektronická aktivita: záznamy o skenech, serverové protokoly a statistiky návštěvnosti webu.</li>
         <li>Vizuální informace: fotky účtenek a profilové fotky.</li>
@@ -2935,7 +2969,7 @@
 
 <div class="legal-content" data-lang="ro">
     <h1>Politica de confidențialitate</h1>
-    <p class="updated">Ultima actualizare: 18 octombrie 2026</p>
+    <p class="updated">Ultima actualizare: 19 octombrie 2026</p>
     <p>Splitea este o aplicație pentru împărțirea notelor de plată, creată de o singură persoană, Raúl Mora („noi”). Această politică explică ce informații prelucrează Splitea, unde ajung, cât timp sunt păstrate și ce poți face în privința lor. Se aplică aplicației Splitea pentru iPhone și paginilor Splitea de pe splitea.app.</p>
     <h2>Pe scurt</h2>
     <ul>
@@ -2960,6 +2994,7 @@
         <li><strong>În directorul nostru de utilizatori</strong>, ca persoanele care folosesc Splitea și au numărul tău de telefon să îți poată vedea numele, poza și numele de utilizator pentru plăți când împart o notă cu tine.</li>
     </ul>
     <p>În director, numărul tău de telefon este stocat ca hash cu cheie (folosit pentru potrivire) și ca o copie criptată (ca aplicația să ți-l poată afișa). Numele și numele de utilizator pentru plăți sunt stocate ca text necriptat, deoarece sunt afișate altor persoane. Stocăm și țara ta din App Store, ca să înțelegem unde este folosită Splitea.</p>
+    <p><strong>Datele bancare.</strong> Dacă adaugi date bancare pentru transferuri bancare (numele titularului contului și IBAN-ul), acestea sunt păstrate pe dispozitivul tău și în contul tău iCloud, nu în directorul nostru. Sunt incluse doar în linkurile pe care le partajezi pentru notele plătite de tine, ca persoanele cu care le partajezi să îți poată da banii înapoi, și sunt păstrate împreună cu împărțirea respectivă până când aceasta expiră. Dacă cineva îți deschide linkul în aplicația Splitea, aplicația îți păstrează datele bancare pe dispozitivul persoanei respective, ca să te poată plăti mai târziu.</p>
     <p>Oricine folosește Splitea și are numărul tău de telefon îți poate găsi profilul. Numărul de telefon este obligatoriu pentru a avea un profil, așa că singura modalitate de a nu mai putea fi găsit este să îți ștergi contul.</p>
     <p><strong>Pozele de profil.</strong> Înainte ca o poză de profil să fie salvată, un model automat de moderare (Cloudflare Workers AI) verifică dacă are conținut inacceptabil, iar pozele care nu trec verificarea sunt respinse. Pozele de profil salvate sunt servite de la o adresă web publică, așa că oricine are acea adresă le poate vedea.</p>
     <h2>Bonurile tale</h2>
@@ -2984,7 +3019,7 @@
     <ul>
         <li>Comerciantul, data, produsele, prețurile, totalurile și poza bonului.</li>
         <li>Cine participă la împărțire și cine cât datorează, cu numele, numărul de telefon și linkul către poza de profil ale fiecărei persoane, așa cum apar în contactele tale sau în profilul Splitea al persoanei respective.</li>
-        <li>Numele de utilizator pentru plăți ale persoanei care a plătit, ca ceilalți să îi poată da banii înapoi.</li>
+        <li>Numele de utilizator pentru plăți ale persoanei care a plătit, ca ceilalți să îi poată da banii înapoi, și datele sale bancare, dacă a partajat împărțirea și le-a adăugat.</li>
     </ul>
     <p><strong>Oricine are linkul poate deschide împărțirea</strong>, în aplicație sau într-un browser web, și poate vedea tot ce este enumerat mai sus, inclusiv poza bonului. Trimite linkul doar persoanelor în care ai încredere.</p>
     <p>Persoanele care deschid linkul pot atribui produse, pot modifica împărțirea și își pot marca partea ca plătită. Dacă blochezi editarea, pot doar să vadă împărțirea și să înregistreze plăți. Cât timp o împărțire este deschisă, persoanele care o vizualizează pot vedea numele și ID-urile de cont Splitea (sau ID-urile web anonime) ale celorlalți conectați la ea, împreună cu editările lor și orice modificări pe care le fac în profil. Aceste editări sunt salvate împreună cu împărțirea.</p>
@@ -3076,6 +3111,7 @@
     <ul>
         <li>Identificatori: nume, adresă de e-mail, număr de telefon, ID de cont, nume de utilizator pentru plăți, token push și cheie App Attest.</li>
         <li>Informații comerciale: starea abonamentului tău și detaliile tranzacției Apple.</li>
+        <li>Informații financiare: numele titularului contului și IBAN-ul, dacă adaugi date bancare.</li>
         <li>Geolocalizare: locația aproximativă trimisă cu o scanare (nu este stocată decât împreună cu bonurile pe care le raportezi).</li>
         <li>Activitate pe internet sau altă activitate electronică: înregistrările scanărilor, jurnalele serverelor și statisticile vizitelor pe site.</li>
         <li>Informații vizuale: pozele bonurilor și pozele de profil.</li>
@@ -3105,7 +3141,7 @@
 
 <div class="legal-content" data-lang="hu">
     <h1>Adatvédelmi szabályzat</h1>
-    <p class="updated">Utolsó frissítés: 2026. október 18.</p>
+    <p class="updated">Utolsó frissítés: 2026. október 19.</p>
     <p>A Splitea egy számlafelosztó app, amelyet egyetlen személy, Raúl Mora készített (a továbbiakban: „mi”). Ez a szabályzat elmagyarázza, milyen adatokat kezel a Splitea, hová kerülnek, meddig őrizzük meg őket, és mit tehetsz velük kapcsolatban. A szabályzat a Splitea iPhone-appra és a splitea.app címen elérhető Splitea-oldalakra vonatkozik.</p>
     <h2>Röviden</h2>
     <ul>
@@ -3130,6 +3166,7 @@
         <li><strong>A felhasználói címtárunkban</strong>, hogy azok a Splitea-felhasználók, akiknek megvan a telefonszámod, láthassák a nevedet, a fotódat és a fizetési felhasználóneveidet, amikor felosztanak veled egy számlát.</li>
     </ul>
     <p>A címtárban a telefonszámodat kulcsos hash formájában (ezt használjuk az egyeztetéshez) és titkosított példányként (hogy az app vissza tudja mutatni neked) tároljuk. A nevedet és a fizetési felhasználóneveidet titkosítatlan, egyszerű szövegként tároljuk, mert ezek más személyek számára is megjelennek. Az App Store-országodat is tároljuk, hogy lássuk, hol használják a Splitea appot.</p>
+    <p><strong>Bankadatok.</strong> Ha banki átutaláshoz megadod a bankadataidat (a számlatulajdonos nevét és az IBAN-t), azok az eszközödön és az iCloud-fiókodban tárolódnak, nem a címtárunkban. Csak akkor kerülnek bele az általad megosztott linkekbe, ha a felosztásnál te fizettél, hogy akikkel megosztod, visszafizethessenek neked, és a felosztással együtt megmaradnak, amíg az le nem jár. Ha valaki a Splitea appban nyitja meg a linkedet, az app az ő eszközén megőrzi a bankadataidat, hogy később is fizethessen neked.</p>
     <p>Bármely Splitea-felhasználó, akinek megvan a telefonszámod, megtalálhatja a profilodat. Profilhoz telefonszám szükséges, így csak a fiókod törlésével érheted el, hogy ne lehessen megtalálni.</p>
     <p><strong>Profilfotók.</strong> Egy profilfotó mentése előtt egy automatikus moderálási modell (Cloudflare Workers AI) ellenőrzi, hogy nem tartalmaz-e kifogásolható tartalmat, és az ellenőrzésen fennakadt fotókat elutasítjuk. A mentett profilfotók egy nyilvános webcímről érhetők el, így bárki megtekintheti őket, aki ismeri ezt a címet.</p>
     <h2>A blokkjaid</h2>
@@ -3154,7 +3191,7 @@
     <ul>
         <li>Az üzlet, a dátum, a tételek, az árak, a végösszegek és a blokk fotója.</li>
         <li>Kik vesznek részt a felosztásban, és ki mivel tartozik, minden személy nevével, telefonszámával és profilfotójának linkjével, ahogyan a kontaktjaid között vagy a Splitea-profiljukban szerepelnek.</li>
-        <li>A fizető fizetési felhasználónevei, hogy a többiek visszafizethessenek neki.</li>
+        <li>A fizető fizetési felhasználónevei, hogy a többiek visszafizethessenek neki, valamint a bankadatai, ha ő osztotta meg a felosztást, és megadta őket.</li>
     </ul>
     <p><strong>Bárki megnyithatja a felosztást, akinél megvan a link</strong>, az appban vagy webböngészőben, és mindent láthat, ami fent szerepel, a blokk fotóját is beleértve. A linket csak olyanoknak küldd el, akikben megbízol.</p>
     <p>Akik megnyitják a linket, tételeket rendelhetnek hozzá, módosíthatják a felosztást, és kifizetettként jelölhetik meg magukat. Ha zárolod a szerkesztést, csak megtekinthetik a felosztást és rögzíthetik a kifizetéseket. Amíg egy felosztás meg van nyitva, az azt megtekintők látják a hozzá csatlakozott többi személy nevét és Splitea-fiókazonosítóját (vagy névtelen webes azonosítóját), valamint az általuk végzett szerkesztéseket és esetleges profilmódosításokat. Ezek a szerkesztések a felosztással együtt mentésre kerülnek.</p>
@@ -3246,6 +3283,7 @@
     <ul>
         <li>Azonosítók: név, e-mail-cím, telefonszám, fiókazonosító, fizetési felhasználónevek, push token és App Attest-kulcs.</li>
         <li>Kereskedelmi adatok: az előfizetésed állapota és az Apple tranzakciós adatai.</li>
+        <li>Pénzügyi adatok: a számlatulajdonos neve és az IBAN, ha megadsz bankadatokat.</li>
         <li>Földrajzi helyadatok: a beolvasással elküldött hozzávetőleges helyadat (nem tároljuk, kivéve az általad jelentett blokkok esetében).</li>
         <li>Internetes vagy egyéb elektronikus tevékenység: beolvasási rekordok, szervernaplók és a weboldal látogatottsági statisztikái.</li>
         <li>Vizuális adatok: blokkfotók és profilfotók.</li>
@@ -3275,7 +3313,7 @@
 
 <div class="legal-content" data-lang="el">
     <h1>Πολιτική απορρήτου</h1>
-    <p class="updated">Τελευταία ενημέρωση: 18 Οκτωβρίου 2026</p>
+    <p class="updated">Τελευταία ενημέρωση: 19 Οκτωβρίου 2026</p>
     <p>Το Splitea είναι μια εφαρμογή για το μοίρασμα λογαριασμών που έχει δημιουργήσει ένα μόνο άτομο, ο Raúl Mora («εμείς», «μας»). Η παρούσα πολιτική εξηγεί ποιες πληροφορίες χειρίζεται το Splitea, πού καταλήγουν, πόσο καιρό διατηρούνται και τι μπορείτε να κάνετε γι' αυτές. Καλύπτει την εφαρμογή Splitea για iPhone και τις σελίδες του Splitea στο splitea.app.</p>
     <h2>Με λίγα λόγια</h2>
     <ul>
@@ -3300,6 +3338,7 @@
         <li><strong>Στον κατάλογο χρηστών μας</strong>, ώστε όσοι χρησιμοποιούν το Splitea και έχουν τον αριθμό τηλεφώνου σας να βλέπουν το όνομα, τη φωτογραφία και τα ονόματα χρήστη πληρωμών σας όταν μοιράζονται έναν λογαριασμό μαζί σας.</li>
     </ul>
     <p>Στον κατάλογο, ο αριθμός τηλεφώνου σας αποθηκεύεται ως κατακερματισμός με κλειδί (keyed hash, που χρησιμοποιείται για την αντιστοίχιση) και ως κρυπτογραφημένο αντίγραφο (ώστε η εφαρμογή να μπορεί να σας τον εμφανίζει). Το όνομά σας και τα ονόματα χρήστη πληρωμών αποθηκεύονται ως απλό κείμενο, επειδή εμφανίζονται σε άλλους. Αποθηκεύουμε επίσης τη χώρα του App Store σας, για να κατανοούμε πού χρησιμοποιείται το Splitea.</p>
+    <p><strong>Τραπεζικά στοιχεία.</strong> Αν προσθέσετε τραπεζικά στοιχεία για τραπεζικές μεταφορές (το ονοματεπώνυμο του δικαιούχου και το IBAN), αυτά διατηρούνται στη συσκευή σας και στον λογαριασμό σας iCloud, όχι στον κατάλογό μας. Περιλαμβάνονται μόνο στους συνδέσμους που κοινοποιείτε για μοιρασιές στις οποίες πληρώσατε εσείς, ώστε όσοι τους λαμβάνουν να μπορούν να σας επιστρέψουν τα χρήματα, και διατηρούνται μαζί με τη μοιρασιά μέχρι να λήξει. Αν κάποιος ανοίξει τον σύνδεσμό σας στην εφαρμογή Splitea, η εφαρμογή διατηρεί τα τραπεζικά σας στοιχεία στη συσκευή του, ώστε να μπορεί να σας πληρώσει αργότερα.</p>
     <p>Οποιοσδήποτε χρησιμοποιεί το Splitea και έχει τον αριθμό τηλεφώνου σας μπορεί να βρει το προφίλ σας. Για να έχετε προφίλ απαιτείται αριθμός τηλεφώνου, οπότε ο μόνος τρόπος να μην μπορούν πλέον να σας βρίσκουν είναι να διαγράψετε τον λογαριασμό σας.</p>
     <p><strong>Φωτογραφίες προφίλ.</strong> Πριν αποθηκευτεί μια φωτογραφία προφίλ, ένα αυτοματοποιημένο μοντέλο ελέγχου περιεχομένου (Cloudflare Workers AI) την ελέγχει για ακατάλληλο περιεχόμενο και οι φωτογραφίες που δεν περνούν τον έλεγχο απορρίπτονται. Οι αποθηκευμένες φωτογραφίες προφίλ διατίθενται από μια δημόσια διεύθυνση web, οπότε οποιοσδήποτε έχει αυτή τη διεύθυνση μπορεί να τις δει.</p>
     <h2>Οι αποδείξεις σας</h2>
@@ -3324,7 +3363,7 @@
     <ul>
         <li>Το κατάστημα, την ημερομηνία, τα είδη, τις τιμές, τα σύνολα και τη φωτογραφία της απόδειξης.</li>
         <li>Ποιοι συμμετέχουν στη μοιρασιά και τι οφείλει ο καθένας, με το όνομα, τον αριθμό τηλεφώνου και τον σύνδεσμο της φωτογραφίας προφίλ κάθε ατόμου, όπως εμφανίζονται στις επαφές σας ή στο προφίλ του στο Splitea.</li>
-        <li>Τα ονόματα χρήστη πληρωμών του ατόμου που πλήρωσε, ώστε οι υπόλοιποι να μπορούν να του επιστρέψουν τα χρήματα.</li>
+        <li>Τα ονόματα χρήστη πληρωμών του ατόμου που πλήρωσε, ώστε οι υπόλοιποι να μπορούν να του επιστρέψουν τα χρήματα, καθώς και τα τραπεζικά του στοιχεία, αν κοινοποίησε τη μοιρασιά και τα έχει προσθέσει.</li>
     </ul>
     <p><strong>Οποιοσδήποτε έχει τον σύνδεσμο μπορεί να ανοίξει τη μοιρασιά</strong>, στην εφαρμογή ή σε πρόγραμμα περιήγησης, και να δει όλα τα παραπάνω, μαζί με τη φωτογραφία της απόδειξης. Στείλτε τον σύνδεσμο μόνο σε άτομα που εμπιστεύεστε.</p>
     <p>Όσοι ανοίγουν τον σύνδεσμο μπορούν να αναθέτουν είδη, να αλλάζουν τη μοιρασιά και να σημειώνουν ότι έχουν πληρώσει. Αν κλειδώσετε την επεξεργασία, μπορούν μόνο να βλέπουν τη μοιρασιά και να καταγράφουν πληρωμές. Όσο μια μοιρασιά είναι ανοιχτή, όσοι τη βλέπουν μπορούν να δουν τα ονόματα και τα αναγνωριστικά λογαριασμού Splitea (ή τα ανώνυμα αναγνωριστικά web) των άλλων που είναι συνδεδεμένοι σε αυτήν, καθώς και τις επεξεργασίες τους και τυχόν αλλαγές που κάνουν στο προφίλ τους. Αυτές οι επεξεργασίες αποθηκεύονται μαζί με τη μοιρασιά.</p>
@@ -3416,6 +3455,7 @@
     <ul>
         <li>Αναγνωριστικά: όνομα, διεύθυνση email, αριθμός τηλεφώνου, αναγνωριστικό λογαριασμού, ονόματα χρήστη πληρωμών, διακριτικό push και κλειδί App Attest.</li>
         <li>Εμπορικές πληροφορίες: η κατάσταση της συνδρομής σας και τα στοιχεία συναλλαγής της Apple.</li>
+        <li>Οικονομικές πληροφορίες: το ονοματεπώνυμο του δικαιούχου και το IBAN, αν προσθέσετε τραπεζικά στοιχεία.</li>
         <li>Γεωγραφική θέση: η κατά προσέγγιση τοποθεσία που αποστέλλεται με μια σάρωση (δεν αποθηκεύεται, παρά μόνο μαζί με τις αποδείξεις που αναφέρετε).</li>
         <li>Δραστηριότητα στο διαδίκτυο ή άλλη ηλεκτρονική δραστηριότητα: αρχεία σαρώσεων, αρχεία καταγραφής διακομιστή και στατιστικά επισκέψεων στον ιστότοπο.</li>
         <li>Οπτικές πληροφορίες: φωτογραφίες αποδείξεων και φωτογραφίες προφίλ.</li>
@@ -3445,7 +3485,7 @@
 
 <div class="legal-content" data-lang="ar" dir="rtl">
     <h1>سياسة الخصوصية</h1>
-    <p class="updated">آخر تحديث: 18 أكتوبر 2026</p>
+    <p class="updated">آخر تحديث: 19 أكتوبر 2026</p>
     <p>Splitea تطبيق لتقسيم الفواتير طوّره شخص واحد هو Raúl Mora (ويُشار إليه في هذه السياسة بصيغة «نحن»). توضح هذه السياسة المعلومات التي يتعامل معها Splitea، وإلى أين تذهب، ومدة الاحتفاظ بها، وما يمكنك فعله بشأنها. وتشمل تطبيق Splitea على iPhone وصفحات Splitea على splitea.app.</p>
     <h2>باختصار</h2>
     <ul>
@@ -3470,6 +3510,7 @@
         <li><strong>دليل المستخدمين لدينا</strong>، ليتمكن من يستخدمون Splitea ولديهم رقم هاتفك من رؤية اسمك وصورتك وأسماء المستخدمين الخاصة بك في تطبيقات الدفع عندما يقسّمون فاتورة معك.</li>
     </ul>
     <p>في الدليل، يُخزَّن رقم هاتفك في صورة قيمة تجزئة بمفتاح (تُستخدم للمطابقة) وفي صورة نسخة مشفّرة (ليتمكن التطبيق من عرضه لك مجددًا). ويُخزَّن اسمك وأسماء المستخدمين الخاصة بك في تطبيقات الدفع كنص عادي لأنها تُعرض لأشخاص آخرين. ونخزّن أيضًا بلد App Store الخاص بك لنفهم أين يُستخدم Splitea.</p>
+    <p><strong>البيانات المصرفية.</strong> إذا أضفت بيانات مصرفية للتحويلات البنكية (اسم صاحب الحساب وIBAN)، فإنها تُحفظ على جهازك وفي حساب iCloud الخاص بك، وليس في دليلنا. ولا تُضمَّن إلا في الروابط التي تشاركها للفواتير التي دفعتها، ليتمكن الأشخاص الذين تشارك معهم من رد المبلغ إليك، وتُحفظ مع ذلك التقسيم حتى تنتهي صلاحيته. وإذا فتح أحدهم رابطك في تطبيق Splitea، يحتفظ التطبيق ببياناتك المصرفية على جهازه ليتمكن من الدفع لك لاحقًا.</p>
     <p>يمكن لأي شخص يستخدم Splitea ولديه رقم هاتفك العثور على ملفك الشخصي. رقم الهاتف شرط لامتلاك ملف شخصي، لذا فإن الطريقة الوحيدة لكي لا يعود بالإمكان العثور عليك هي حذف حسابك.</p>
     <p><strong>صور الملف الشخصي.</strong> قبل حفظ صورة الملف الشخصي، يفحصها نموذج إشراف آلي (Cloudflare Workers AI) بحثًا عن محتوى مرفوض، وتُرفض الصور التي لا تجتاز الفحص. تُقدَّم صور الملف الشخصي المحفوظة من عنوان ويب عام، لذا يمكن لأي شخص لديه هذا العنوان مشاهدتها.</p>
     <h2>إيصالاتك</h2>
@@ -3494,7 +3535,7 @@
     <ul>
         <li>اسم المتجر والتاريخ والعناصر والأسعار والإجماليات وصورة الإيصال.</li>
         <li>المشاركون في التقسيم والمبلغ المستحق على كل منهم، مع اسم كل شخص ورقم هاتفه ورابط صورة ملفه الشخصي، كما تظهر في جهات اتصالك أو في ملفه الشخصي على Splitea.</li>
-        <li>أسماء المستخدمين في تطبيقات الدفع الخاصة بالشخص الذي دفع، ليتمكن الآخرون من رد المبلغ إليه.</li>
+        <li>أسماء المستخدمين في تطبيقات الدفع الخاصة بالشخص الذي دفع، ليتمكن الآخرون من رد المبلغ إليه، وبياناته المصرفية إذا كان قد شارك التقسيم وأضافها.</li>
     </ul>
     <p><strong>يمكن لأي شخص لديه الرابط فتح التقسيم</strong>، في التطبيق أو في متصفح ويب، ورؤية كل ما سبق، بما في ذلك صورة الإيصال. لا ترسل الرابط إلا إلى أشخاص تثق بهم.</p>
     <p>يمكن لمن يفتحون الرابط تعيين العناصر، وتغيير التقسيم، وتسجيل حصصهم كمدفوعة. وإذا فعّلت «قفل التحرير»، فلن يتمكنوا إلا من عرض التقسيم وتسجيل الدفعات. وأثناء فتح التقسيم، يمكن لمن يشاهدونه رؤية أسماء الآخرين المتصلين به ومعرّفات حساباتهم على Splitea (أو معرّفات الويب المجهولة)، إلى جانب تعديلاتهم وأي تغييرات يجرونها على ملفاتهم الشخصية. وتُحفظ هذه التعديلات مع التقسيم.</p>
@@ -3586,6 +3627,7 @@
     <ul>
         <li>المعرّفات: الاسم، وعنوان البريد الإلكتروني، ورقم الهاتف، ومعرّف الحساب، وأسماء المستخدمين في تطبيقات الدفع، ورمز الإشعارات الفورية، ومفتاح App Attest.</li>
         <li>المعلومات التجارية: حالة اشتراكك وتفاصيل المعاملات لدى Apple.</li>
+        <li>المعلومات المالية: اسم صاحب الحساب وIBAN، إذا أضفت بيانات مصرفية.</li>
         <li>الموقع الجغرافي: الموقع التقريبي المرسَل مع عملية المسح (لا يُخزَّن، إلا مع الإيصالات التي تُبلغ عنها).</li>
         <li>نشاط الإنترنت أو غيره من الأنشطة الإلكترونية: سجلات المسح، وسجلات الخادم، وإحصاءات زيارات الموقع الإلكتروني.</li>
         <li>المعلومات المرئية: صور الإيصالات وصور الملفات الشخصية.</li>
@@ -3615,7 +3657,7 @@
 
 <div class="legal-content" data-lang="he" dir="rtl">
     <h1>מדיניות פרטיות</h1>
-    <p class="updated">עדכון אחרון: 18 באוקטובר 2026</p>
+    <p class="updated">עדכון אחרון: 19 באוקטובר 2026</p>
     <p>Splitea היא אפליקציה לחלוקת חשבונות שנוצרה על ידי אדם אחד, Raúl Mora (״אנחנו״, ״אותנו״). המדיניות הזו מסבירה באיזה מידע Splitea מטפלת, לאן הוא מגיע, כמה זמן הוא נשמר ומה אפשר לעשות בנוגע לכך. היא חלה על אפליקציית Splitea ל-iPhone ועל הדפים של Splitea בכתובת splitea.app.</p>
     <h2>בקצרה</h2>
     <ul>
@@ -3640,6 +3682,7 @@
         <li><strong>מאגר המשתמשים שלנו</strong>, כדי שאנשים שמשתמשים ב-Splitea ויש להם את מספר הטלפון שלך יוכלו לראות את השם, התמונה ושמות המשתמש שלך באפליקציות תשלום כשהם מחלקים איתך חשבון.</li>
     </ul>
     <p>במאגר, מספר הטלפון שלך נשמר כגיבוב (hash) מבוסס מפתח, שמשמש להתאמה, וכעותק מוצפן, כדי שהאפליקציה תוכל להציג לך אותו. השם ושמות המשתמש שלך באפליקציות תשלום נשמרים כטקסט רגיל, כי הם מוצגים לאנשים אחרים. אנחנו שומרים גם את מדינת ה-App Store שלך, כדי להבין איפה משתמשים ב-Splitea.</p>
+    <p><strong>פרטי חשבון בנק.</strong> אם הוספת פרטי חשבון בנק להעברות בנקאיות (שם בעל החשבון ומספר ה-IBAN), הם נשמרים במכשיר שלך ובחשבון ה-iCloud שלך, ולא במאגר שלנו. הם נכללים רק בקישורים ששיתפת לחלוקות שבהן שילמת, כדי שהאנשים שמקבלים את הקישור יוכלו להחזיר לך את הכסף, והם נשמרים עם החלוקה עד שתוקפה פג. אם מישהו פותח את הקישור שלך באפליקציית Splitea, האפליקציה שומרת את פרטי הבנק שלך במכשיר שלו, כדי שיוכל לשלם לך מאוחר יותר.</p>
     <p>כל מי שמשתמש ב-Splitea ויש לו את מספר הטלפון שלך יכול למצוא את הפרופיל שלך. מספר טלפון הוא תנאי לקיום פרופיל, ולכן הדרך היחידה לגרום לכך שלא יהיה אפשר למצוא אותך היא למחוק את החשבון שלך.</p>
     <p><strong>תמונות פרופיל.</strong> לפני שתמונת פרופיל נשמרת, מודל אוטומטי לסינון תוכן (Cloudflare Workers AI) בודק אם יש בה תוכן פוגעני, ותמונות שלא עוברות את הבדיקה נדחות. תמונות פרופיל שמורות מוגשות מכתובת אינטרנט ציבורית, כך שכל מי שיש לו את הכתובת יכול לצפות בהן.</p>
     <h2>הקבלות שלך</h2>
@@ -3664,7 +3707,7 @@
     <ul>
         <li>את בית העסק, התאריך, הפריטים, המחירים, הסכומים ותמונת הקבלה.</li>
         <li>מי משתתף בחלוקה ומי חייב כמה, עם השם, מספר הטלפון והקישור לתמונת הפרופיל של כל אדם, כפי שהם מופיעים באנשי הקשר שלך או בפרופיל ה-Splitea של אותו אדם.</li>
-        <li>את שמות המשתמש באפליקציות תשלום של מי ששילם, כדי שהאחרים יוכלו להחזיר לו את הכסף.</li>
+        <li>את שמות המשתמש באפליקציות תשלום של מי ששילם, כדי שהאחרים יוכלו להחזיר לו את הכסף, ואת פרטי חשבון הבנק שלו אם הוא שיתף את החלוקה והוסיף אותם.</li>
     </ul>
     <p><strong>כל מי שיש לו את הקישור יכול לפתוח את החלוקה</strong>, באפליקציה או בדפדפן אינטרנט, ולראות את כל מה שמפורט למעלה, כולל תמונת הקבלה. יש לשלוח את הקישור רק לאנשים שסומכים עליהם.</p>
     <p>אנשים שפותחים את הקישור יכולים לשייך פריטים, לשנות את החלוקה ולסמן את עצמם כמי ששילמו. אם העריכה נעולה, הם יכולים רק לצפות בחלוקה ולרשום תשלומים. כל עוד חלוקה פתוחה, מי שצופה בה יכול לראות את השמות ואת מזהי חשבון ה-Splitea (או מזהי אינטרנט אנונימיים) של האחרים שמחוברים אליה, וגם את העריכות שלהם ואת כל שינוי שהם עושים בפרופיל שלהם. העריכות האלה נשמרות עם החלוקה.</p>
@@ -3756,6 +3799,7 @@
     <ul>
         <li>מזהים: שם, כתובת דוא״ל, מספר טלפון, מזהה חשבון, שמות משתמש באפליקציות תשלום, אסימון Push ומפתח App Attest.</li>
         <li>מידע מסחרי: סטטוס המינוי שלך ופרטי העסקאות של Apple.</li>
+        <li>מידע פיננסי: שם בעל החשבון ומספר ה-IBAN, אם הוספת פרטי חשבון בנק.</li>
         <li>מיקום גיאוגרפי: מיקום משוער שנשלח עם סריקה (לא נשמר, למעט עם קבלות שדיווחת עליהן).</li>
         <li>פעילות באינטרנט או פעילות אלקטרונית אחרת: רשומות סריקה, יומני שרת ונתונים סטטיסטיים על ביקורים באתר.</li>
         <li>מידע חזותי: תמונות קבלות ותמונות פרופיל.</li>
